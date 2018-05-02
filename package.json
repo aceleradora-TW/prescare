@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aceleradora-TW/prescare/issues"
   },
-  "homepage": "https://github.com/aceleradora-TW/prescare#readme"
+  "homepage": "https://github.com/aceleradora-TW/prescare#readme",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
 }
