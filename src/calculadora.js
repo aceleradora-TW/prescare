@@ -21,11 +21,4 @@ function dividir(umValor, outroValor) {
   resultado = umValor / outroValor
   return resultado
 }
-
-function dividir(umValor, outroValor) {
-  let resultado
-  resultado = umValor / outroValor
-  return resultado
-}
-
 module.exports = {soma, subtrai, multiplica, dividir}
