@@ -31,7 +31,6 @@ jobs:
 
   deploy:
     machine: true
-      - image: circleci/node:9
     steps:
       - checkout
       - run:
