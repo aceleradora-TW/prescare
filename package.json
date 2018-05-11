@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest test/",
-    "start": "node calculadora.js"
+    "start": "node src/calculadora.js"
   },
   "repository": {
     "type": "git",
