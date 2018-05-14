@@ -1,11 +1,10 @@
 const express = require('express')
+const home = require('./src/home')
 const app = express()
 
 app.set('port', (process.env.PORT || 3000))
 
-app.get('/', (req, res) => {
-  res.send('Bye Aceleradora!!!')
-})
+app.get('/', home)
 
 app.listen(app.get('port'), () =>
   console.log("Servidor rodando na porta: "+app.get('port')))
