@@ -1,4 +1,4 @@
-@import url(https://fonts.google.com/specimen/Amatic+SC);
+@import url(https://fonts.google.com/specimen/Open+Sans);
 
 body {background:#ccc}
 
@@ -8,7 +8,7 @@ body {background:#ccc}
 	position:relative;
     top:1,5vh;
     border-spacing: 0px;
-    font-family: Amantic SC, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .col1{
@@ -36,7 +36,8 @@ tr:nth-child(even) {
 }
 
 .edit{
+    position: absolute;
+    margin-top: -13vh;
     margin-left: 18vw;
-    margin-bottom: 50px;
 
 }
