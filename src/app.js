@@ -1,14 +1,23 @@
 const express = require('express')
 const app = express()
+const expressLayouts = require ('express-ejs-layouts')
+const port = 3000
 
 app.set('port', (process.env.PORT || 3000))
 
-app.get('/', (req, res) => {
-  res.send('Bye Aceleradora!!!')
+app.set('view engine','ejs')
+app.use(expressLayouts)
+app.get('/',(req,res)=>{
+  res.render('home')
 })
-
-app.listen(app.get('port'), () =>
-  console.log("Servidor rodando na porta: "+app.get('port')))
-
-//continuar tutorial
-//https://medium.com/@yoobi55/setting-up-heroku-server-with-node-js-express-eng-b0c8cc61a2a9
+app.get('/about',(req,res)=>{
+  const user = {
+    name: 'Márcia',
+    email: 'marcia@gmail.com',
+    avatar: 'https://pbs.twimg.com/profile_images/715629565146767363/OjnVtVFN_400x400.jpg'
+  }
+  res.render('about', { usuario: user })
+})
+app.use(express.static(__dirname + '/public'))
+app.listen(port)
+console.log('Servidor iniciado em http://localhost:'+ port)
