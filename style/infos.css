@@ -34,3 +34,9 @@ td{
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+.edit{
+    margin-left: 18vw;
+    margin-bottom: 50px;
+
+}
