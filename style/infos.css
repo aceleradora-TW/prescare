@@ -1,0 +1,20 @@
+body {background:#ccc}
+
+.box table{
+    margin-left: 10vw;
+    text-align:left;
+	position:relative;
+	top:10vh;
+}
+.box {
+	width:50%;
+	height:35vh;
+	background:#FFF;
+	margin:auto;
+}
+
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
