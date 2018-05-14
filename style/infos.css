@@ -2,7 +2,31 @@
 
 body {background:#ccc}
 
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+.img{
+    background-color: blue;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.inf{
+    background-color: palevioletred;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.edt{
+    background-color: orangered;
+    flex-grow: 1;
+    align-items: stretch;
+}
 .box table{
+
     margin-left: 1vw;
     text-align:left;
 	position:relative;
