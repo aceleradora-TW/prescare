@@ -2,13 +2,13 @@
 
 body {background:#ccc}
 
-.box table {
-  margin-left: 1vw;
-  text-align:left;
-  position:relative;
-  top:1,5vh;
-  border-spacing: 0px;
-  font-family: 'Open Sans', sans-serif;
+.box table{
+    margin-left: 1vw;
+    text-align:left;
+	position:relative;
+    top:1,5vh;
+    border-spacing: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .col1 {
