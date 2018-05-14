@@ -1,0 +1,36 @@
+body {
+    font-family: 'Amatic SC', cursive;
+
+}
+
+#logo{
+    padding-left: 20px;
+    height: 60px;
+    float: left;
+}
+
+#nome-user{
+    margin-left: 25%;
+    margin-top: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+}
+
+#botao-sair{
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-weight:  bold;
+    font-size: 20px;
+}
+
+.navbar .container{
+    background-color: #81b4db;
+}
+
+.navbar-inner {
+    padding-left: 0px;
+    padding-right: 0px;
+}
