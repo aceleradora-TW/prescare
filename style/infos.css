@@ -1,10 +1,22 @@
+@import url(https://fonts.google.com/specimen/Amatic+SC);
+
 body {background:#ccc}
 
 .box table{
-    margin-left: 10vw;
+    margin-left: 1vw;
     text-align:left;
 	position:relative;
-	top:10vh;
+    top:1,5vh;
+    border-spacing: 0px;
+    font-family: Amantic SC, sans-serif;
+}
+
+.col1{
+    font-weight: bold;
+}
+
+td{
+    padding-top: 3vh;
 }
 .box {
 	width:50%;
@@ -17,4 +29,8 @@ body {background:#ccc}
 	-webkit-box-shadow: 0 10px 6px -6px #777;
 	   -moz-box-shadow: 0 10px 6px -6px #777;
 	        box-shadow: 0 10px 6px -6px #777;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
