@@ -8,7 +8,7 @@ body {background:#ccc}
 	position:relative;
     top:1,5vh;
     border-spacing: 0px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .col1{
@@ -20,7 +20,7 @@ td{
 }
 .box {
 	width:50%;
-	height:35vh;
+	height:31vh;
 	background:#FFF;
 	margin:auto;
 }
@@ -37,7 +37,7 @@ tr:nth-child(even) {
 
 .edit{
     position: absolute;
-    margin-top: -13vh;
+    margin-top: -14.1vh;
     margin-left: 18vw;
 
 }
