@@ -2,21 +2,21 @@
 
 body {background:#ccc}
 
-.box table{
-    margin-left: 1vw;
-    text-align:left;
-	position:relative;
-    top:1,5vh;
-    border-spacing: 0px;
-    font-family: 'Open Sans', sans-serif;
+.box table {
+  margin-left: 1vw;
+  text-align:left;
+  position:relative;
+  top:1,5vh;
+  border-spacing: 0px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.col1{
-    font-weight: bold;
+.col1 {
+  font-weight: bold;
 }
 
-td{
-    padding-top: 3vh;
+td {
+  padding-top: 3vh;
 }
 .box {
 	width:50%;
@@ -35,7 +35,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.edit{
+.edit {
     position: absolute;
     margin-top: -14.1vh;
     margin-left: 18vw;
