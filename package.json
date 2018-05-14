@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx jest test/",
-    "start": "node src/calculadora.js"
+    "start": "./src/node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/aceleradora-TW/prescare#readme",
   "devDependencies": {
     "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
