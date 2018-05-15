@@ -1,4 +1,13 @@
 
+h1{
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
   table{
     width:100%;
     table-layout: fixed;
@@ -37,13 +46,6 @@
     color: black;
     border-bottom: solid 1px rgba(255,255,255,0.1);
   }
-
-  body{
-    background-color: white;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-  }
-
   a{
     text-decoration: none;
     color:black;
