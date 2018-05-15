@@ -3,10 +3,11 @@ const app = express()
 const ejs = require('ejs')
 const expressLayouts = require ('express-ejs-layouts')
 const routes = require('./src/routes/routes')
+const user = require('./public/js/user')
 
-app.set('port', (process.env.PORT || 3000))
-app.use(expressLayouts)
 app.set('view engine','ejs')
+app.use(expressLayouts)
+app.set('port', (process.env.PORT || 3000))
 
 app.get('/', (req, res) => {
   res.render('home')
