@@ -1,11 +1,22 @@
 const express = require('express')
 const app = express()
+const ejs = require('ejs')
+const expressLayouts = require('express-ejs-layouts')
+const routes = require('./src/routes/routes')
 
 app.set('port', (process.env.PORT || 3000))
+app.set('view engine', 'ejs')
+
+
 
 app.get('/', (req, res) => {
   res.send('Bye Aceleradora!!!')
 })
+
+app.get('/info', routes.info)
+
+
+
 
 app.listen(app.get('port'), () =>
   console.log("Servidor rodando na porta: "+app.get('port')))
