@@ -4,7 +4,7 @@ body {background:#ccc}
 
 .flex-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
   }
 
 .img{
@@ -14,17 +14,36 @@ body {background:#ccc}
 }
 
 .inf{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
     background-color: palevioletred;
     flex-grow: 1;
     align-items: stretch;
 }
 
-.edt{
+.text {
+    margin-left: 1vw;
+    padding-top: 2.6vh;
+    font-weight: bold;
+}
+
+.atualiza{
+    color: red;
+}
+
+/*.edt{
     background-color: orangered;
     flex-grow: 1;
     align-items: stretch;
-}
+    display: inline-flex;
+    align-self: flex-end;
+}*/
+/*
+.align_edt{
 
+    padding-top: 14vh;
+}
+*/
 .box {
 	width:50%;
 	height:31vh;
