@@ -1,0 +1,27 @@
+
+.infoAcolhido{
+    background-color: burlywood;
+    width: 200px;
+    height: 100px;
+}
+
+table{
+    margin-left: 300px;
+    margin-top: 400px;
+    border-collapse: collapse;
+    width: 800px;
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+td, th{
+    border: 1px solid;
+    height: 30px;
+}
+
+td{
+    text-align: center;
+}
+
+td.medicamento{
+    text-align: left;
+}
