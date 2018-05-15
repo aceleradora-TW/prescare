@@ -1,13 +1,4 @@
 
-h1{
-    font-size: 30px;
-    color: black;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
   table{
     width:100%;
     table-layout: fixed;
