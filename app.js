@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
+
 const expressLayouts = require ('express-ejs-layouts')
 const user = require('./public/js/user')
 const ejs = require('ejs')
+
 const routes = require('./src/routes/routes')
 
 app.set('view engine','ejs')
