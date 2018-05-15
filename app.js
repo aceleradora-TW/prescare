@@ -1,10 +1,19 @@
 const express = require('express')
 const app = express()
+const ejs = require('ejs')
+const expressLayouts = require('express-ejs-layouts')
 
 app.set('port', (process.env.PORT || 3000))
+app.set('view engine', 'ejs')
+
+
 
 app.get('/', (req, res) => {
   res.send('Bye Aceleradora!!!')
+})
+
+app.get('/info', (req, res) => {
+  res.render('pages/info')
 })
 
 app.listen(app.get('port'), () =>
