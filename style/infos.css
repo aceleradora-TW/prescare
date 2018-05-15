@@ -2,7 +2,6 @@
 
 body {background:#ccc}
 
-
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
@@ -25,15 +24,6 @@ body {background:#ccc}
     flex-grow: 1;
     align-items: stretch;
 }
-.box table{
-
-    margin-left: 1vw;
-    text-align:left;
-	position:relative;
-    top:1,5vh;
-    border-spacing: 0px;
-    font-family: 'Open Sans', sans-serif;
-}
 
 .box {
 	width:50%;
@@ -47,3 +37,4 @@ body {background:#ccc}
 	   -moz-box-shadow: 0 10px 6px -6px #777;
 	        box-shadow: 0 10px 6px -6px #777;
 }
+
