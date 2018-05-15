@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
-const expressLayouts = require ('express-ejs-layouts')
 const ejs = require('ejs')
+const expressLayouts = require ('express-ejs-layouts')
+const routes = require('./src/routes/routes')
 
 app.set('port', (process.env.PORT || 3000))
 app.use(expressLayouts)
@@ -13,6 +14,8 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', { usuario: user })
 })
+app.get('/table', routes.table)
+
 app.use(express.static(__dirname + '/public/'))
 
 app.listen(app.get('port'), () =>

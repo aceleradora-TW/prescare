@@ -17,10 +17,17 @@
   },
   "homepage": "https://github.com/murilobauerc/sessao-heroku#readme",
   "dependencies": {
+<<<<<<< 0144864e4fd2ac9257779cf56001731dcf8c733a
     "body-parser": "^1.18.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
     "faker": "^4.1.0"
+=======
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "nodemon": "^1.17.4"
+>>>>>>> :construction: <@marcos012, @claudiastrm, @murilobauerc, @DiovaneMendes> adicona ejs, rotas e tabela com scroll
   }
 }
