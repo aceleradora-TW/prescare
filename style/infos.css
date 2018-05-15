@@ -17,7 +17,6 @@ body {background:#ccc}
 .inf{
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    background-color: palevioletred;
     flex-grow: 1;
     align-items: stretch;
 }
@@ -29,8 +28,10 @@ body {background:#ccc}
 }
 
 .atualiza{
-    color: red;
+    color: grey;
+    font-size: 1vh;
 }
+
 
 /*.edt{
     background-color: orangered;
