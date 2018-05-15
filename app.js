@@ -42,7 +42,7 @@ const startApplication = () => {
   const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
       host: DB_HOST,
       dialect: 'postgres'
-  }) 
+  })
 
 databaseClient
  .sync()

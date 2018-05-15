@@ -5,7 +5,7 @@ body {background:#ccc}
 
 .flex-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
   }
 
 .img{
@@ -15,15 +15,28 @@ body {background:#ccc}
 }
 
 .inf{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
     background-color: palevioletred;
     flex-grow: 1;
     align-items: stretch;
 }
 
-.edt{
+.text {
+    margin-left: 1vw;
+    padding-top: 2.6vh;
+    font-weight: bold;
+}
+
+.atualiza{
+    color: red;
+}
+
+/*.edt{
     background-color: orangered;
     flex-grow: 1;
     align-items: stretch;
+<<<<<<< 840f1e34ba2647afc6028592589ccc45da959297
 }
 .box table{
 
@@ -42,6 +55,17 @@ body {background:#ccc}
 td {
   padding-top: 3vh;
 }
+=======
+    display: inline-flex;
+    align-self: flex-end;
+}*/
+/*
+.align_edt{
+
+    padding-top: 14vh;
+}
+*/
+>>>>>>> :construction: <@murilobauerc, @camirmarques, @laurascclaro> implementa ejs
 .box {
 	width:50%;
 	height:31vh;
