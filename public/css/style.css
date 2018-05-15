@@ -79,3 +79,19 @@ td{
 td.medicamento{
     text-align: left;
 }
+    .tabela-prescricao {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tabela-prescricao td, .tabela-prescricao th {
+  border: 1px solid;
+  height: 30px;
+  text-align: center;
+}
+
+td.medicamento {
+  text-align: left;
+}

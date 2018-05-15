@@ -13,6 +13,9 @@ app.set('view engine','ejs')
 app.get('/', (req, res) => {
   res.render('tabela', { prescricoes: prescricao })
 })
+app.get('/tabela', (req, res) => {
+    res.render('tabela-prescricao', { prescricoes: prescricao })
+  })
 app.get('/about', (req, res) => {
   res.render('about', { usuario: user })
 })
