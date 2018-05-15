@@ -1,3 +1,4 @@
+<<<<<<< 5d4a1d314b7e0c1712c0f455b30a543492e95ca3
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,3 +53,32 @@ body {
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
+=======
+
+.infoAcolhido{
+    background-color: burlywood;
+    width: 200px;
+    height: 100px;
+}
+
+table{
+    margin-left: 300px;
+    margin-top: 400px;
+    border-collapse: collapse;
+    width: 800px;
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+td, th{
+    border: 1px solid;
+    height: 30px;
+}
+
+td{
+    text-align: center;
+}
+
+td.medicamento{
+    text-align: left;
+}
+>>>>>>> :rocket: <@alineabich, @ClaudiaStrm> faz tabela com EJS
