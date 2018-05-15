@@ -1,25 +1,16 @@
 <%- contentFor('body') %>
 
-    <section onload="getfocus()">
-      <main class="main">
-         <div class="content">
-           <div class="tbl-content">
-            <table cellpadding="0" cellspacing="0" border="0">
-                <tbody>
-                    <%for (usuario of usuarioA){%>
-                    <tr>
-                        <td><a tabindex="0" href="acolhido1.html" id="myTab">usuario.name</a></td>
-                    </tr>
-                    <%}%>
-                </tbody>
-              </table>
-           </div>
-         </div>
-       </main>
-    </section>
- 
-  <script>
-    function getfocus() {
-        document.getElementById("myTab").focus()
-    }
-</script>
+<section>
+    <main class="main">
+    <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
+    <div class="content">
+        <div class="tbl-content">
+        <ul class="lista-acolhidos" id="myTab">
+            <%for (usuario of usuarioA){%>
+            <li><a href="acolhido1.html"><%= usuario.name %></a></li>
+            <%}%>
+        </ul>
+        </div>
+    </div>
+    </main>
+</section>
