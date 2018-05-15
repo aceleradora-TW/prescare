@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express()
-
 const expressLayouts = require ('express-ejs-layouts')
 const user = require('./public/js/user')
+const userArr = require ('./public/js/userArray')
 const ejs = require('ejs')
-
 const routes = require('./src/routes/routes')
 
 app.set('view engine','ejs')
@@ -20,7 +19,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/listaacolhidos', (req, res) =>{
-  res.render('table')
+  res.render('table', {usuarioA: userArr})
 })
 app.use(express.static(__dirname + '/public/'))
 
