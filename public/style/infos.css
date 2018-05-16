@@ -80,6 +80,7 @@ td {
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
+<<<<<<< 1e4cb717b1027406755b8dd35b0a9dcaa1e8ec19:style/infos.css
 tr:nth-child(even) {
     background-color: #dddddd;
 }
@@ -90,3 +91,9 @@ tr:nth-child(even) {
     margin-left: 18vw;
 
 }
+=======
+.tiracor{
+    color: black;
+    text-decoration: none;
+}
+>>>>>>> :construction: <@marcos012, @laurascclaro> adiciona dados fakes na tabela:public/style/infos.css

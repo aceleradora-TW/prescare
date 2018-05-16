@@ -31,6 +31,9 @@ const startApplication = () => {
     .get('/prescricaoAtualizadona', (req, res) => {
       res.render('pages/prescricaoAtualizada', { usuarioArray : userArray})
     })
+    .get('/acolhido', (req, res) => {
+      res.render('pages/info', {acolhido:acolhido})
+    })
 
     .get('/renderiza', (req, res) => {
       res.render('pages/renderiza', { tabelaFarmaceutica : tabelaFarmaceutica})

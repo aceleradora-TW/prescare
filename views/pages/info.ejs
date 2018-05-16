@@ -1,1 +1,27 @@
-<h3> projeto </h3>    
+<%- contentFor('body') %>
+<link rel="stylesheet" type="text/css" href="/style/infos.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<div class="box effect1 flex-container">
+    <div class="img">
+        <p>imagem</p>
+    </div>
+
+    <div class="inf">
+
+        <div class="text">
+                
+            <p>Nome: <%=acolhido.nome%>  </p>
+            <p>Idade: <%=acolhido.idade%> </p>
+            <p>Peso: <%=acolhido.peso%> 
+                <a href="#" class="tiracor">
+                    <i class="fa fa-edit edit"></i>
+                </a>
+                <span class="atualiza">Última atualização: dd/mm/aaaa </span>
+            </p>
+            <p>Alergias: <%=acolhido.alergias%>  </p>
+            <p>Via de alimentação: <%=acolhido.via_alimentacao%>  </p>
+            
+        </div>
+    </div>
+
+</div>
