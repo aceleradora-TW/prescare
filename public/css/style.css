@@ -53,14 +53,23 @@ body {
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
-table, th, td {
-  border: 1px solid black;
+.tablesfarmaceutica {
+  margin-top: 5%;
   border-collapse: collapse;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+  
 }
-th, td {
-  padding: 5px;
+
+.tablesfarmaceutica td, .tablesfarmaceutica th {
+  border: 1px solid;
+  height: 5vh;
+  text-align: center;
+}
+
+td.medicamento {
   text-align: left;
 }
 .input{
-  padding-left: 2.5vw;
+  padding-left: 1vw;
 }
