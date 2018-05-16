@@ -8,6 +8,7 @@ body {
   font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     margin: 0 auto;
+    font-size: 100%
 }
 
 .navbar, .footer {
