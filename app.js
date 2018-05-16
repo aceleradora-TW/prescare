@@ -15,6 +15,9 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', { usuario: user })
 })
+app.get('/farmaceutica',(req,res)=>{
+  res.render('farmaceutica',{usuario: user})
+})
 app.use(express.static(__dirname + '/public/'))
 
 app.listen(port)
