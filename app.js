@@ -1,5 +1,4 @@
 const express = require('express')
-<<<<<<< be7e8c05cc19612dd50095ec536bd89eb86a916b
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
@@ -31,6 +30,7 @@ databaseClient
  .sync()
  .then(startApplication)
  .catch(console.log)
+<<<<<<< 1c7b8e6b8d85f070691425975a6596374d8ce480
 =======
 const app = express()
 const expressLayouts = require ('express-ejs-layouts')
@@ -61,3 +61,5 @@ app.get('/table', routes.table)
 app.listen(app.get('port'), () =>
 console.log("Servidor rodando na porta: " + app.get('port')))
 >>>>>>> :construction:<@marcos012, @DiovaneMendes> Faz alteracoes
+=======
+>>>>>>> :fire: <@ClaudiaStrm> remove arquivos html
