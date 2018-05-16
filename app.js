@@ -20,6 +20,13 @@ app.get('/about', (req, res) => {
 app.get('/acolhido', (req, res) => {
   res.render('pages/info', { acolhido: acolhido })
 })
+
+app.get('/login', (req, res) => {
+  res.render('pages/login')
+})
+
+
+
 app.use(express.static(__dirname + '/public'));
 
 app.listen(app.get('port'), () =>
