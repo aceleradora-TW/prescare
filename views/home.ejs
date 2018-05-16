@@ -2,3 +2,63 @@
 <div>
   Casa Menino Jesus de Praga
 </div>
+
+<br><input tabindex="3" type="button" class="btn btn-info" value="Histórico" /><br>
+
+<!-- Tabela com abas -->
+<br>
+<div class="tabs-container" id="t1">
+  <div>
+    <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+    <label tabindex="4" for="tab1" onkeypress="ativaAbas(1);">Continuo</label>
+    <div>
+      da
+    </div>
+  </div>
+  <div>
+    <input type="radio" name="tabs" class="tabs" id="tab2">
+    <label tabindex="5" for="tab2" onkeypress="ativaAbas(2);">Eventual</label>
+    <div>
+      da<br>
+      de<br>
+      di<br>
+      do<br>
+      du<br>
+      da<br>
+      de<br>
+      di<br>
+      do<br>
+      du<br>
+      da<br>
+      de<br>
+      di<br>
+      do<br>
+      du<br>
+      da<br>
+      de<br>
+      di<br>
+      do<br>
+      du<br>
+    </div>
+  </div>
+  <div>
+    <input type="radio" name="tabs" class="tabs" id="tab3">
+    <label tabindex="6" for="tab3" onkeypress="ativaAbas(3);">Pomada</label>
+    <div>
+      ad
+    </div>
+  </div>
+</div>
+<!-- Tabela com abas -->
+
+<div class="acao-botao">
+  <input tabindex="7" type="button" class="btn btn-info" value="Editar" />
+  <input tabindex="8" type="button" class="btn btn-info" value="Salvar" />
+  <input tabindex="9" type="button" class="btn btn-info" value="Enviar" />
+  <input tabindex="10" type="button" class="btn btn-info" value="Imprimir" />
+</div>
+<script> 
+function ativaAbas(abas) {
+  document.getElementById("tab"+abas).checked = "checked";
+}
+</script>
