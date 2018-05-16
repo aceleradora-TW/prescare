@@ -5,8 +5,9 @@
 }
 
 body {
-    font-family: 'Amatic SC', cursive;
+    font-family: "Times New Roman", Times, serif;
     margin: 0 auto;
+    font-size: 100%
 }
 
 .navbar, .footer {
@@ -51,4 +52,15 @@ body {
   width: 50vw;
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+.input{
+  padding-left: 2.5vw;
 }
