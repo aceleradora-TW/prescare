@@ -12,10 +12,10 @@ app.use(expressLayouts)
 app.set('port', (process.env.PORT || 3000))
 
 app.get('/', (req, res) => {
-  res.render('home')
+  res.render('pages/home')
 })
 app.get('/about', (req, res) => {
-  res.render('about', { usuario: user })
+  res.render('pages/about', { usuario: user })
 })
 
 app.get('/listaacolhidos', (req, res) =>{
