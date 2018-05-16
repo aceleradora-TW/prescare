@@ -4,7 +4,7 @@ const expressLayouts = require ('express-ejs-layouts')
 const user = require('./public/js/user')
 const port = 3000
 
-app.set('port', (process.env.PORT || 3000))
+app.set('port', (process.env.port || 3000))
 app.use(expressLayouts)
 app.set('view engine','ejs')
 
