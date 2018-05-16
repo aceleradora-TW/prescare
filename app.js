@@ -11,7 +11,13 @@ const DB_USER = 'postgres'
 const DB_PASSWORD = 'prescare'
 const DB_HOST = 'localhost'
 
+<<<<<<< ce1c9571970945af23345727721acb0413a17f71
 const startApplication = () => {
+=======
+app.set('port', (process.env.port || 3000))
+app.use(expressLayouts)
+app.set('view engine','ejs')
+>>>>>>> :art: <@EngelFlores,@luizfetrindade> Refatora port
 
   const app = express()
 
