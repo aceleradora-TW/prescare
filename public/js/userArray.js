@@ -1,3 +1,5 @@
+const orderBy = require('./function.js')
+
 const arrayUsuarios = [
   {name: 'Afonso'},
   {name: 'Olimar'},
@@ -22,4 +24,6 @@ const arrayUsuarios = [
   {name: 'Mohamed'},
 ]
 
-module.exports = arrayUsuarios
+const arrayOrdenado = arrayUsuarios.sort(orderBy)
+
+module.exports = arrayOrdenado
