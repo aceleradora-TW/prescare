@@ -1,0 +1,16 @@
+<%- contentFor('body') %>
+
+<section>
+    <main class="main">
+    <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
+    <div class="content">
+        <div class="tbl-content">
+        <ul class="lista-acolhidos" id="myTab">
+            <%for (usuario of usuarioA){%>
+            <li><a href="acolhido1.html"><%= usuario.name %></a></li>
+            <%}%>
+        </ul>
+        </div>
+    </div>
+    </main>
+</section>
