@@ -19,7 +19,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/listaacolhidos', (req, res) =>{
-  res.render('table', {usuarioA: userArr})
+  res.render('pages/tableChildren', {usuarioA: userArr})
 })
 app.use(express.static(__dirname + '/public/'))
 
