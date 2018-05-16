@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const expressLayouts = require ('express-ejs-layouts')
 const ejs = require('ejs')
+
 const prescricao = require('./public/js/prescricao')
 const user = require('./public/js/user')
 
