@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /* border: 1px solid red; */
+  /* border: 1px solid red; */ 
 }
 
+/* layout.ejs */
 body {
     font-family: 'Amatic SC', cursive;
     margin: 0 auto;
@@ -53,37 +54,14 @@ body {
   background-color: khaki; /*cor apenas pra visualização*/
 }
 
-.infoAcolhido{
-    background-color: burlywood;
-    width: 200px;
-    height: 100px;
-}
+/* Tabela de prescrição */
 
-table{
-    margin-left: 300px;
-    margin-top: 400px;
-    border-collapse: collapse;
-    width: 800px;
-    font-family: 'Open Sans', sans-serif;
-}
- 
-td, th{
-    border: 1px solid;
-    height: 30px;
-}
-
-td{
-    text-align: center;
-}
-
-td.medicamento{
-    text-align: left;
-}
-    .tabela-prescricao {
+.tabela-prescricao {
   margin-top: 5%;
   border-collapse: collapse;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
+  background-color: #f5f0ba;
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
