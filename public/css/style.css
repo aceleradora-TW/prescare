@@ -52,3 +52,10 @@ body {
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
+
+.acao-botao {
+  width: 100%;
+  margin-top: 80px;
+  margin-left: -10px;
+  text-align: right;
+}

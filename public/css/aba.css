@@ -3,12 +3,13 @@
 *, *:after, *:before {
   box-sizing: border-box;
 }
-p{
+p {
   padding: 0 10px;
 }
 .tabs-container {
   position: relative;
-  height: 360px;
+  
+  height: 50vh;
   max-width: 98%;
   margin: 0 auto;
 
@@ -16,8 +17,10 @@ p{
   line-height: 1.5;
   color: #444;
   font-size: 16px;
+
+  overflow-y: scroll;
 }
-.tabs-container p{
+.tabs-container p {
   margin: 0;
   padding: 0;
 }
@@ -58,6 +61,7 @@ input.tabs + label + div {
   z-index: -1;
   transition: opacity ease-in-out .3s;
   border: 1px solid #407caa;
+  height: auto;
 }
 input.tabs:checked + label + div {
   opacity: 1;

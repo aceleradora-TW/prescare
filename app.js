@@ -16,4 +16,5 @@ app.get('/about', (req, res) => {
 app.use(express.static(__dirname + '/public/'))
 
 app.listen(app.get('port'), () =>
+
 console.log("Servidor rodando na porta: " + app.get('port')))
