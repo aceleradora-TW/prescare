@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 const expressLayouts = require ('express-ejs-layouts')
 const ejs = require('ejs')
-
-const user = require('./public/js/user')
 const prescricao = require('./public/js/prescricao')
+const user = require('./public/js/user')
+
 
 app.set('PORT', (process.env.PORT || 3000))
 app.use(expressLayouts)
@@ -16,6 +16,9 @@ app.get('/', (req, res) => {
 app.get('/tabela-prescricao', (req, res) => {
     res.render('pages/tabela-prescricao', { prescricoes: prescricao })
 })
+app.get('/tabela', (req, res) => {
+    res.render('tabela-prescricao', { prescricoes: prescricao })
+  })
 app.get('/about', (req, res) => {
   res.render('pages/about', { usuario: user })
 })

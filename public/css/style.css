@@ -54,14 +54,20 @@ body {
   background-color: khaki; /*cor apenas pra visualização*/
 }
 
+<<<<<<< HEAD
 /* Tabela de prescrição */
 
+=======
+>>>>>>> edeb7e54a357db78af12e15e76e1e7731304e318
 .tabela-prescricao {
   margin-top: 5%;
   border-collapse: collapse;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
   background-color: #f5f0ba;
+=======
+>>>>>>> edeb7e54a357db78af12e15e76e1e7731304e318
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
