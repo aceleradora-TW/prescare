@@ -1,38 +1,44 @@
 const express = require('express')
-const app = express()
 
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
 const acolhido = require('./public/js/acolhido.js')
+const Sequelize = require('sequelize')
+const PORT = process.env.PORT || 3000
+const DB_NAME = 'prescare'
+const DB_USER = 'postgres'
+const DB_PASSWORD = 'prescare'
+const DB_HOST = 'localhost'
 
-app.set('view engine', 'ejs')
-app.use(expressLayouts)
-app.set('port', (process.env.PORT || 3000))
+const startApplication = () => {
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
+  const app = express()
 
-app.get('/about', (req, res) => {
-  res.render('about', { usuario: user })
-})
+  app
+    .use(expressLayouts)
+    .use(express.static(__dirname + '/public/'))
+    .set('view engine', 'ejs')
+    .get('/', (req, res) => {
+      res.render('home')
+    })
+    .get('/about', (req, res) => {
+      res.render('about', { usuario: user })
+    })
+    .get('/login', (req, res) => {
+      res.render('pages/login')
+    })
+    .get('/acolhido', (req, res) => {
+      res.render('pages/info', { acolhido: acolhido })
+    })
+    .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
+    }
 
-app.get('/acolhido', (req, res) => {
-  res.render('pages/info', { acolhido: acolhido })
-})
+  const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+      host: DB_HOST,
+      dialect: 'postgres'
+  }) 
 
-app.get('/login', (req, res) => {
-  res.render('pages/login')
-})
-
-
-
-app.use(express.static(__dirname + '/public'));
-
-app.listen(app.get('port'), () =>
-  console.log("Servidor rodando na porta: " + app.get('port')))
-
-//continuar tutorial
-//https://medium.com/@yoobi55/setting-up-heroku-server-with-node-js-express-eng-b0c8cc61a2a9
-
-
+databaseClient
+ .sync()
+ .then(startApplication)
+ .catch(console.log)
