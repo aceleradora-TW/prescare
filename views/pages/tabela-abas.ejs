@@ -1,0 +1,48 @@
+
+
+    <link rel="stylesheet" type="text/css" href="/css/aba.css">
+    <div class = "botao-historico">
+        <input tabindex="3" type="button" class="btn btn-info" value="Histórico" />
+    </div><br>
+
+    <!-- Tabela com abas -->
+    <br>
+    <div class="tabs-container" id="t1">
+        <div>
+            <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+            <label tabindex="4" for="tab1" onkeypress="ativaAbas(1);">Contínuo</label>
+            <div>
+                Prescrição
+            </div>
+        </div>
+        <div>
+            <input type="radio" name="tabs" class="tabs" id="tab2">
+            <label tabindex="5" for="tab2" onkeypress="ativaAbas(2);">Eventual</label>
+            <div>
+                Prescrição
+            </div>
+        </div>
+        <div>
+            <input type="radio" name="tabs" class="tabs" id="tab3">
+            <label tabindex="6" for="tab3" onkeypress="ativaAbas(3);">Pomada</label>
+            <div>
+                Prescrição              
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <!-- Tabela com abas -->
+
+    <div class="acao-botao">
+        <input tabindex="7" type="button" class="btn btn-info" value="Editar" />
+        <input tabindex="8" type="button" class="btn btn-info" value="Salvar" />
+        <input tabindex="9" type="button" class="btn btn-info" value="Enviar" />
+        <input tabindex="10" type="button" class="btn btn-info" value="Imprimir" />
+    </div>
+
+    <script> 
+        function ativaAbas(abas) {
+            document.getElementById("tab" + abas).checked = "checked";
+        }
+    </script>

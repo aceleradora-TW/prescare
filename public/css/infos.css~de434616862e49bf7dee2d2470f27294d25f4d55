@@ -2,14 +2,12 @@
 
 body {background: rgb(198, 215, 230)}
 
-
 .flex-container {
     display: flex;
     flex-flow: row wrap;
   }
 
 .img {
-    background: url(../../github-logo.png);
     border-radius: 12px;
     background-color: #81b4db;
     flex-grow: 2;
@@ -52,13 +50,7 @@ body {background: rgb(198, 215, 230)}
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.edit {
-    position: absolute;
-    margin-top: -14.1vh;
-    margin-left: 18vw;
-
+.tiracor { 
+    color: black;
+    text-decoration: none;
 }

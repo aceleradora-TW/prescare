@@ -3,12 +3,10 @@
 *, *:after, *:before {
   box-sizing: border-box;
 }
-p{
-  padding: 0 10px;
-}
+
 .tabs-container {
   position: relative;
-  height: 360px;
+  height: 50vh;
   max-width: 98%;
   margin: 0 auto;
 
@@ -16,6 +14,7 @@ p{
   line-height: 1.5;
   color: #444;
   font-size: 16px;
+  overflow-y: scroll;
 }
 .tabs-container p{
   margin: 0;
@@ -37,7 +36,8 @@ input.tabs + label {
   line-height: 40px;
   padding: 0 20px;
   float: left;
-
+  border-radius: 2px 12px 0px 0px;
+  border: 1px solid #81b4db;
   background: #407caa;
   color: #fff;
   cursor: pointer;
@@ -51,7 +51,7 @@ input.tabs + label + div {
   width: 100%;
   opacity: 0;
   position: absolute;
-  background: #e7de8b;
+  background:  #e7de8b;
   top: 40px;
   left: 0;
   padding: 10px;
