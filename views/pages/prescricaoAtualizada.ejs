@@ -1,0 +1,48 @@
+<%- contentFor('body') %>
+<%for (userArray of userArray){%>
+    <button class="accordion"> <%= userArray.name%>
+      <i class="fas fa-angle-down"></i>
+    </button>
+<%}%>
+    <div class="panel">
+      <table style="width:100%">
+        <th>Medicamento</th>
+        <th>Via</th>
+        <th>Intervalo</th>
+        <th>Forma Farmacêutica</th>
+        <th>Horário</th>
+        <th>Lote</th>
+        <th>Validade</th>
+        <th>Dispensação</th>
+    </div>
+
+<%for (tabelaFarmaceutica of tabelaFarmaceutica){%>
+      <tr>
+        <td class="medicamento">
+          <%=tabelaFarmaceutica.medicamentos%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.via%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.intervalo%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.formaFarmaceutica%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.horario%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.lote%>
+        </td>
+        <td>
+          <%=tabelaFarmaceutica.validade%>
+        </td>
+        <td>
+          <div class="input">
+            <input type="checkbox"> </div>
+        </td>
+      </tr>
+      <% } %>
+        </table>
