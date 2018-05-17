@@ -47,15 +47,20 @@ body {
 }
 
 .main {
-  height: 86vh;
+  height: 90vh;
   width: 50vw;
   margin: 0 auto;
-  background-color: khaki; /*cor apenas pra visualização*/
+  /*background-color: khaki; cor apenas pra visualização*/
 }
 
 .acao-botao {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-left: -10px;
   text-align: right;
+}
+
+.botao-historico {
+  margin-left: 0.5vw;
+  margin-top: 2vh;
 }
