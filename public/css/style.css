@@ -1,12 +1,14 @@
 * {
   box-sizing: border-box;
-  margin: 0;
   /* border: 1px solid red; */
 }
 
 body {
-  font-family: 'Amatic SC', cursive;
   margin: 0 auto;
+}
+
+.container {
+  font-family: 'Amatic SC', cursive;
 }
 
 .navbar, .footer {
@@ -46,9 +48,19 @@ body {
   padding-right: 3%;
 }
 
+.botao-sair a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-sair a:hover {
+  background-color: white;
+  color: #82b6dc;
+}
+
 .main {
-  height: 86vh;
-  width: 50vw;
-  margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
+  height: 86vh;
+  margin: 0 auto;
+  width: 50vw;
 }
