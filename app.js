@@ -1,27 +1,40 @@
 const express = require('express')
-const app = express()
-
+const acolhido = require('./public/js/acolhido.js')
+const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-const acolhido = require('./public/js/acolhido.js')
+const PORT = process.env.PORT || 3000
+const DB_NAME = 'prescare'
+const DB_USER = 'postgres'
+const DB_PASSWORD = 'prescare'
+const DB_HOST = 'localhost'
+const startApplication = () => {
 
-app.set('view engine', 'ejs')
-app.use(expressLayouts)
-app.set('port', (process.env.PORT || 3000))
+  const app = express()
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
+  app
+    .use(expressLayouts)
+    .use(express.static(__dirname + '/public/'))
+    .set('view engine', 'ejs')
+    .set('port', (process.env.PORT || 3000))
+    .get('/', (req, res) => {
+      res.render('home')
+    })
+    .get('/about', (req, res) => {
+      res.render('about', { usuario: user })
+    })
+    .get('/acolhido', (req, res) => {
+      res.render('pages/info', { acolhido: acolhido })
+    })
+    .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
+    }
 
-app.get('/about', (req, res) => {
-  res.render('about', { usuario: user })
-})
+  const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
+      host: DB_HOST,
+      dialect: 'postgres'
+  }) 
 
-app.get('/acolhido', (req, res) => {
-  res.render('pages/info', { acolhido: acolhido })
-})
-app.use(express.static(__dirname + '/public'));
-
-app.listen(app.get('port'), () =>
-
-console.log("Servidor rodando na porta: " + app.get('port')))
+databaseClient
+ .sync()
+ .then(startApplication)
+ .catch(console.log)
