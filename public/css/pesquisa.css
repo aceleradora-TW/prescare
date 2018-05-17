@@ -1,0 +1,29 @@
+.titulo {
+    font-family: 'Open Sans', sans-serif;
+}
+.icon {
+    font-size: 12px;
+    margin-left: 4px;
+    margin-top: 7px; 
+} 
+
+.campo-pesquisa {
+    width: 60%;
+    height: 25px;
+    padding-left: 20px;
+}
+.icon-pesquisa {
+    position: absolute;
+
+}
+
+.pesquisa {
+    padding-top:50px; 
+    text-align: center;
+}
+input {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCC;
+}

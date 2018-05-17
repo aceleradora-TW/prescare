@@ -30,6 +30,9 @@ const startApplication = () => {
     .get('/acolhido', (req, res) => {
       res.render('pages/info', { acolhido: acolhido })
     })
+    .get('/pesquisar', (req, res) =>{
+      res.render('pages/pesquisaAcolhidos')
+    })
     .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
     }
 
