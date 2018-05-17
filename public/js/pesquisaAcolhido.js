@@ -14,5 +14,3 @@ var prescisao = [
 // $('#campo-pesquisa').autocomplete({
 //     serviceUrl: '/prescicao',
 // });
-
-
