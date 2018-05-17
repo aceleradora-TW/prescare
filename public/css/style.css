@@ -5,8 +5,9 @@
 }
 
 body {
-    font-family: 'Amatic SC', cursive;
+    font-family: "Times New Roman", Times, serif;
     margin: 0 auto;
+    font-size: 100%
 }
 
 .navbar, .footer {
@@ -51,4 +52,24 @@ body {
   width: 50vw;
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
+}
+.tablesfarmaceutica {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.tablesfarmaceutica td, .tablesfarmaceutica th {
+  border: 1px solid;
+  height: 5vh;
+  text-align: center;
+}
+
+td.medicamento {
+  text-align: left;
+}
+.input{
+  padding-left: 1vw;
 }
