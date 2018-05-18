@@ -1,4 +1,4 @@
-const orderBy = require('./function.js')
+const orderBy = require('./functions.js')
 
 const arrayUsuarios = [
   {name: 'Afonso'},
