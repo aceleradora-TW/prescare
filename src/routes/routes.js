@@ -1,8 +1,11 @@
-const table = require('../routes/table')
+const tableChildren = require('../routes/tableChildren')
+const home = require('../routes/home')
+const about = require('../routes/about')
 
 const allRoutes = {
-  table: table()
+  tableChildren: tableChildren(),
+  home: home(),
+  about: about()
 }
-
 
 module.exports = allRoutes

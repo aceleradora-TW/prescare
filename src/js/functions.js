@@ -5,4 +5,4 @@ function sortByName(a, b) {
     return 0
 }
 
-module.exports = sortByName
+module.exports = { sortByName }
