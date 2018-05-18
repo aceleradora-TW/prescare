@@ -68,14 +68,14 @@ th, td {
 .panel {
     padding: 0 18px;
     display: none;
-    background-color: white;
+    background-color: #f0e68b;
     overflow: hidden;
 }
 .accordion {
-  background-color: #eee;
+  background-color: #f0e68b;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 18px 18px 0px 18px;
   width: 100%;
   border: none;
   text-align: left;
@@ -85,12 +85,12 @@ th, td {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #f0e68b;
 }
 
 .panel {
   padding: 10px 0;
   display: none;
-  background-color: white;
+  background-color: #f0e68b;
   overflow: hidden;
 }

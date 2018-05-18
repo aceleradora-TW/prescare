@@ -31,6 +31,11 @@ const startApplication = () => {
     .get('/prescricaoAtualizadona', (req, res) => {
       res.render('pages/prescricaoAtualizada', { usuarioArray : userArray})
     })
+
+    .get('/renderiza', (req, res) => {
+      res.render('pages/renderiza', { tabelaFarmaceutica : tabelaFarmaceutica})
+    })
+
     .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
     }
 
