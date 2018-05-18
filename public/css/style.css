@@ -3,10 +3,23 @@
   margin: 0;
   /* border: 1px solid red; */
 }
+/*
+header{
+  position: fixed;
+  top:0;
+  left: 0;
+}
 
+footer{
+  position: fixed;
+  bottom:0;
+  left: 0;
+}
+*/
 .logout{
   color: #fff;
 }
+
 
 .logout:hover{
   color: #407caa;

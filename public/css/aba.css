@@ -11,6 +11,9 @@
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5; 
 }
+.input-prescricao {
+  text-transform: uppercase;
+}
 
 .scroll{
   max-width: 100%;
