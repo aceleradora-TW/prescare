@@ -42,6 +42,7 @@ body {background: rgb(198, 215, 230)}
 }
 
 .box {
+    position: static;
     border-radius: 12px;
 	width:63%;
 	height:18vh;

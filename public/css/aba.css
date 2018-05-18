@@ -7,7 +7,7 @@
 .tabs-container {
   position: relative;  
   height: 50vh;
-  width: 580px;
+  width: 677px;
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5; 
 }
@@ -22,9 +22,9 @@
 }
 .scroll::-webkit-scrollbar {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  margin-left: 100px;
   width: 5px;
 }
+
 .scroll::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #81b4db; 
@@ -34,7 +34,6 @@ input.tabs {
   display: none;
 }
 input.tabs + label {
-  position: static;
   line-height: 40px;
   padding: 0 20px;
   float: left;
@@ -59,7 +58,7 @@ input.tabs + label + div {
   padding: 10px;
   z-index: -1;
   transition: opacity ease-in-out .3s;
-  border: 1px solid #407caa;
+  border: 2px solid #407caa;
   height: auto;
 }
 input.tabs:checked + label + div {
@@ -68,6 +67,7 @@ input.tabs:checked + label + div {
 }
 
 .button {
+  box-flex: 2vh;
   height: 25px;
   width: 80px;
   text-align: center;
