@@ -2,6 +2,7 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
+
 const routes = require('./src/routes/routes')
 const PORT = process.env.PORT || 3000
 
@@ -18,7 +19,7 @@ const startApplication = () => {
     .set('view engine', 'ejs')
     .get('/', routes.home)
     .get('/about', routes.about)
-    .get('/acolhidas', routes.tableChildren)
+    .get('/acolhidas', routes.listChildren)
     .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
     }
 

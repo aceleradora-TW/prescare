@@ -1,6 +1,6 @@
 const userArray = require('../js/userArray.js')
 
 
-const tableChildren = () => (req, res) => res.render('pages/tableChildren', { users: userArray } )
+const listChildren = () => (req, res) => res.render('pages/listChildren', { users: userArray } )
 
-module.exports = tableChildren
+module.exports = listChildren
