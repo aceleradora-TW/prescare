@@ -8,12 +8,17 @@ body {background: rgb(198, 215, 230)}
     flex-flow: row wrap;
   }
 
-.img {
-    background: url(../../github-logo.png);
-    border-radius: 12px;
+.foto-acolhido{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.img-acolhido {
     background-color: #81b4db;
+    border-radius: 12px;
     flex-grow: 2;
-    align-items: left;
+    align-items: center;
     margin:2px;
 }
 

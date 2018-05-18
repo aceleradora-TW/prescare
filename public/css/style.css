@@ -4,6 +4,14 @@
   /* border: 1px solid red; */
 }
 
+.logout{
+  color: #fff;
+}
+
+.logout:hover{
+  color: #407caa;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -24,6 +32,7 @@ body {
 }
 
 .footer {
+  color: #fff;
   font-size: 2em;
   height: 5vh;
   text-align: center;
