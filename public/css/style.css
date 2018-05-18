@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  /* border: 1px solid red; */
+ 
 }
 
 body {
@@ -46,9 +45,20 @@ body {
   padding-right: 3%;
 }
 
+.botao-sair a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-sair a:hover {
+  background-color: white;
+  color: #82b6dc;
+}
+
 .main {
-  height: 86vh;
-  width: 50vw;
+  /* background-color: khaki; cor apenas pra visualização */
+  height: 82vh;
   margin: 0 auto;
-  background-color: khaki; /*cor apenas pra visualização*/
+  width: 50vw;
+  
 }

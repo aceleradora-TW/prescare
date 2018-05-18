@@ -10,16 +10,12 @@
 .lista-acolhidos {
   font-family: 'Open Sans', sans-serif;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   width: 100%;
-  height: 70vh;
-  margin: 0;
   overflow-y: scroll;
-  color: white;
-  height: 81vh;
-  overflow-x:auto;
   background-color: lightblue;
+  height: 65vh;
+  width: 100%;
 }
 
 .lista-acolhidos li {
@@ -28,22 +24,21 @@
   padding-left: 3.5%;
   padding-top: 0.7%;
   background-color: #bfd2e0;
+  font-size: 100%;
+  margin: 0;
+  text-align: center;
 }
-
 .lista-acolhidos li:nth-child(even) {
   background-color: #d5dce4;
 }
-
 .lista-acolhidos li:hover {
   background-color: #bdc3c7;
 }
-
 .lista-acolhidos li a {
   text-decoration: none;
   color:black;
   display:block;
 }
-/* for custom scrollbar for webkit browser*/
 
 ::-webkit-scrollbar {
     width: 6px;
