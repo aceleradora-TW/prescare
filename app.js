@@ -2,12 +2,9 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
+const settings = require('./settings')
 
 const routes = require('./src/routes/routes')
-const PORT = process.env.PORT || 3000
-
-const user = require('./src/mocks/user')
-const users = require('./src/mocks/userArray')
 
 const startApplication = () => {
   const app = express()
@@ -20,11 +17,11 @@ const startApplication = () => {
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/acolhidas', routes.listChildren)
-    .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
+    .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
     }
 
-const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
-  host: DB_HOST,
+const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
+  host: settings.DB_HOST,
   dialect: 'postgres'
 })
 
