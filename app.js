@@ -1,14 +1,10 @@
 const express = require('express')
-const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-const prescricao = require('./public/js/prescricao')
-const user = require('./public/js/user')
-const PORT = process.env.PORT || 3000
-const DB_NAME = 'prescare'
-const DB_USER = 'postgres'
-const DB_PASSWORD = 'prescare'
-const DB_HOST = 'localhost'
+const Sequelize = require('sequelize')
+const prescricao = require('./src/mocks/prescricao')
+const user = require('./src/mocks/user')
+const settings = require('./settings')
 
 const startApplication = () => {
   const app = express()
@@ -25,16 +21,16 @@ const startApplication = () => {
     .get('/tabela-prescricao', (req, res) => {
       res.render('pages/tabela-prescricao', { prescricoes: prescricao })
     })
-    .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT)
-  )
+    .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT)
+    )
 }
 
-const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
-    host: DB_HOST,
-    dialect: 'postgres'
+const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
+  host: settings.DB_HOST,
+  dialect: 'postgres'
 })
 
 databaseClient
- .sync()
- .then(startApplication)
- .catch(console.log)
+  .sync()
+  .then(startApplication)
+  .catch(console.log)
