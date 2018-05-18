@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/app.js",
     "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
+    "db:create": "docker exec -it prescare-database psql -U postgres -c 'CREATE DATABASE prescare' ",
+    "db:console": "docker exec -it prescare-database psql -U postgres -d prescare",
+    "db:reset": "npm run db:stop; npm run db:start; sleep 1; npm run db:create",
     "db:stop": "docker stop prescare-database"
   },
   "repository": {
