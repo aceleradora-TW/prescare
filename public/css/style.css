@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
+  font-family: 'Amatic SC', cursive;
   margin: 0 auto;
 }
 

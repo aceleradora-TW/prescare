@@ -6,16 +6,16 @@ const ejs = require('ejs')
 const routes = require('./src/routes/routes')
 const PORT = process.env.PORT || 3000
 
-const DB_NAME = 'prescare'
-const DB_USER = 'postgres'
-const DB_PASSWORD = 'prescare'
-const DB_HOST = 'localhost'
+const user = require('./src/mocks/user')
+const users = require('./src/mocks/userArray')
 
 const startApplication = () => {
   const app = express()
   app
     .use(expressLayouts)
+
     .use(express.static(__dirname + '/public/'))
+
     .set('view engine', 'ejs')
     .get('/', routes.home)
     .get('/about', routes.about)
