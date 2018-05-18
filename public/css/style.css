@@ -49,7 +49,7 @@ body {
 
 .main {
   height: 86vh;
-  width: 50vw;
+  width: 55vw;
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
@@ -73,3 +73,10 @@ td.medicamento {
 .input{
   padding-left: 1vw;
 }
+
+.add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
