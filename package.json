@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
+    "db:stop": "docker stop prescare-database"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,10 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
-    "faker": "^4.1.0",
+    "pg": "^7.4.3",
+    "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
     "nodemon": "^1.17.4"
   }
 }

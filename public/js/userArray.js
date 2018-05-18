@@ -1,4 +1,4 @@
-const arrayUsuarios = [
+const users = [
   {name: 'Afonso'},
   {name: 'Olimar'},
   {name: 'Alvaro'},
@@ -22,4 +22,4 @@ const arrayUsuarios = [
   {name: 'Mohamed'},
 ]
 
-module.exports = arrayUsuarios
+module.exports = users
