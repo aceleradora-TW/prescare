@@ -1,4 +1,5 @@
 const express = require('express')
+const acolhido = require('./public/js/acolhido.js')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
@@ -17,6 +18,8 @@ const startApplication = () => {
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
+    .set('views/pages', 'tabela-abas')
+    .set('port', (process.env.PORT || 3000))
     .get('/', (req, res) => {
       res.render('pages/home')
     })
@@ -31,6 +34,9 @@ const startApplication = () => {
     })
 
 
+    .get('/acolhido', (req, res) => {
+      res.render('pages/info', { acolhido: acolhido })
+    })
     .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
 }
 
@@ -40,6 +46,6 @@ const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
 })
 
 databaseClient
-  .sync()
-  .then(startApplication)
-  .catch(console.log)
+ .sync()
+ .then(startApplication)
+ .catch(console.log)

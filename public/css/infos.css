@@ -1,0 +1,63 @@
+@import url(https://fonts.google.com/specimen/Open+Sans);
+
+body {background: rgb(198, 215, 230)}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+.foto-acolhido{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.img-acolhido {
+    background-color: #81b4db;
+    border-radius: 12px;
+    flex-grow: 2;
+    align-items: center;
+    margin:2px;
+}
+
+.inf {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.text {
+    margin-left: 1vw;
+    padding-top: 2.3vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+.atualiza {
+    color: grey;
+    font-size: 1vh;
+}
+
+.box {
+    position: static;
+    border-radius: 12px;
+	width:63%;
+	height:18vh;
+	background:#FFF;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.effect1 {
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+.tiracor { 
+    color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.tabs-container {
+  position: relative;  
+  height: 50vh;
+  width: 770px;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.5; 
+}
+
+.scroll{
+  max-width: 100%;
+  max-height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+  color: #444;
+  font-size: 16px;  
+  overflow-y: auto; 
+}
+.scroll::-webkit-scrollbar {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  width: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #81b4db; 
+}
+
+input.tabs {
+  display: none;
+}
+input.tabs + label {
+  line-height: 40px;
+  padding: 0 20px;
+  float: left;
+  border-radius: 2px 12px 0px 0px;
+  border: 1px solid #81b4db; 
+  background: #407caa;
+  color: #fff;
+  cursor: pointer;
+  transition: background ease-in-out .3s;
+}
+input.tabs:checked + label {
+  color: #000;
+  background: #81b4db;
+}
+input.tabs + label + div {
+  width: auto;
+  opacity: 0;
+  position: absolute;
+  background:  #e7de8b;
+  top: 40px;
+  left: 0;
+  padding: 10px;
+  z-index: -1;
+  transition: opacity ease-in-out .3s;
+  border: 2px solid #407caa;
+  height: auto;
+}
+input.tabs:checked + label + div {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.button {
+  box-flex: 2vh;
+  height: 25px;
+  width: 80px;
+  text-align: center;
+  border-radius:40px;
+  background: #fff;
+  border: 2px solid #407caa;
+  color:#407caa;
+  font-size:12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button:hover {
+    color:white;
+    background: #81b4db;
+    border: 2px solid #fff;
+}
+
+  
