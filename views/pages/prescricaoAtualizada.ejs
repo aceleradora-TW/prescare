@@ -1,7 +1,7 @@
 <%- contentFor('body') %>
-  <%for (tabelaFarmaceutica of tabelaFarmaceutica){%>
+  <%for (listaPrescricoes of listaPrescricoes){%>
     <button class="accordion">
-      <%= tabelaFarmaceutica.name%>
+      <%= listaPrescricoes.name%>
         <i class="fas fa-angle-down"></i>
     </button>
     <div class="panel">
@@ -17,25 +17,25 @@
         <body>
           <tr>
             <td class="medicamento">
-              <%=tabelaFarmaceutica.farm[0].medicamentos%>
+              <%=listaPrescricoes.farm[0].medicamentos%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].via%>
+              <%=listaPrescricoes.farm[0].via%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].intervalo%>
+              <%=listaPrescricoes.farm[0].intervalo%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].formaFarmaceutica%>
+              <%=listaPrescricoes.farm[0].formaFarmaceutica%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].horario%>
+              <%=listaPrescricoes.farm[0].horario%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].lote%>
+              <%=listaPrescricoes.farm[0].lote%>
             </td>
             <td>
-              <%=tabelaFarmaceutica.farm[0].validade%>
+              <%=listaPrescricoes.farm[0].validade%>
             </td>
             <td>
               <div class="input">

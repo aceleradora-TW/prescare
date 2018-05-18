@@ -1,4 +1,4 @@
-const tabelaFarmaceutica = [
+const listaPrescricoes = [
 {
     name: 'Afonso',
     farm: [{
@@ -53,4 +53,4 @@ const tabelaFarmaceutica = [
 }
 ]
 
-module.exports = tabelaFarmaceutica
+module.exports = listaPrescricoes
