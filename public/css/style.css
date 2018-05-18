@@ -1,16 +1,15 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
-  font-family: 'Amatic SC', cursive;
   margin: 0 auto;
 }
 
 .navbar, .footer {
+  font-family: 'Amatic SC', cursive;
   background-color: #81b4db;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar {
