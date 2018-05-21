@@ -6,6 +6,7 @@ const user = require('./src/mocks/user')
 const routes = require('./src/routes/routes')
 const settings = require('./settings')
 
+
 const startApplication = () => {
 
   const app = express()
@@ -20,9 +21,7 @@ const startApplication = () => {
     .get('/about', (req, res) => {
       res.render('pages/about', { usuario: user })
     })
-    
     .get('/farmaceutica', routes.prescr)
-
 
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
