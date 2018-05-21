@@ -16,6 +16,7 @@ footer{
   left: 0;
 }
 */
+
 .logout{
   color: #fff;
 }
@@ -81,7 +82,9 @@ body {
 .tablesfarmaceutica {
   margin-top: 5%;
   border-collapse: collapse;
-  width: 55vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'Open Sans', sans-serif;
 
 }
