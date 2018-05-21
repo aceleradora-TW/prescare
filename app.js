@@ -11,6 +11,8 @@ const DB_NAME = 'prescare'
 const DB_USER = 'postgres'
 const DB_PASSWORD = 'prescare'
 const DB_HOST = 'localhost'
+const acolhido =require('./public/js/acolhido')
+
 
 const startApplication = () => {
 
@@ -35,7 +37,7 @@ const startApplication = () => {
       res.render('pages/prescricaoAtualizada', { usuarioArray : userArray})
     })
     .get('/acolhido', (req, res) => {
-      res.render('pages/info', {acolhido:acolhido})
+      res.render('pages/info', { acolhido:acolhido })
     })
 
     .get('/renderiza', (req, res) => {
