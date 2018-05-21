@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-const farmacia = [{
-=======
 const dadosFarmacia = [{
->>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
     medicamentos: 'Paracetamol 500mg',
     via: 'Oral',
     intervalo: '8-8h',
@@ -45,8 +41,4 @@ const dadosFarmacia = [{
 },
 ]
 
-<<<<<<< HEAD
-module.exports = farmacia
-=======
 module.exports = dadosFarmacia
->>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f

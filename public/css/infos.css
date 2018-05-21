@@ -2,10 +2,6 @@
 
 body {background: rgb(198, 215, 230)}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
 .flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -61,20 +57,7 @@ body {background: rgb(198, 215, 230)}
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
-<<<<<<< HEAD
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.edit {
-    position: absolute;
-    margin-top: -14.1vh;
-    margin-left: 18vw;
-
-}
-=======
 .tiracor { 
     color: black;
     text-decoration: none;
 }
->>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
