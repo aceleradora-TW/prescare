@@ -1,16 +1,42 @@
-function add_row(a) {
-    console.log(a);
-    let novo_medicamento = document.getElementById("novo_medicamento").value;
-    let novo_via = document.getElementById("novo_via").value;
-    let novo_intervalo = document.getElementById("novo_intervalo").value;
-    let novo_formaFarmaceutica = document.getElementById("novo_formaFarmaceutica").value;
+window.addEventListener('load', () => {
+    let tables = document.getElementsByClassName('js-table-container')
 
-    let table = document.getElementById("data_table");
-    let table_len = (table.rows.length) - 1;
-    let row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='medicamento_row" + table_len + "'>" + novo_medicamento + "</td><td id='via_row" + table_len + "'>" + novo_via + "</td><td id='intervalor_row" + table_len + "'>" + novo_intervalo + "</td><td id='formaFarmaceutica_row" + table_len + "'>" + novo_formaFarmaceutica + "</td></tr>";
+    for (let table of tables) {
+        let tableObj = Table(table)
+        tableObj.initializeButton()
+        table.table = tableObj
+    }
+})
 
-    document.getElementById("novo_medicamento").value = "";
-    document.getElementById("novo_via").value = "";
-    document.getElementById("novo_intervalo").value = "";
-    document.getElementById("novo_formaFarmaceutica").value = "";
-}
+let Table = (tableContainer) => ({
+    tableContainer: tableContainer,
+    tableBody: tableContainer.getElementsByTagName('tbody').item(0),
+    novoElForm: tableContainer.getElementsByClassName('js-novo-elemento').item(0),
+
+    appendRow(row) {
+        this.tableBody.insertBefore(row, this.novoElForm)
+    },
+
+    initializeButton() {
+        tableContainer.getElementsByClassName('js-add').item(0).addEventListener('click', () => {
+            let novoMedicamento = this.novoElForm.getElementsByClassName('js-novo-medicamento').item(0).value
+            let novoVia = this.novoElForm.getElementsByClassName('js-novo-via').item(0).value
+            let novoIntervalo = this.novoElForm.getElementsByClassName('js-novo-intervalo').item(0).value
+            let novoFormaFarmaceutica = this.novoElForm.getElementsByClassName('js-novo-forma-farmaceutica').item(0).value
+
+            this.appendRow(this.createRow(novoMedicamento, novoVia, novoIntervalo, novoFormaFarmaceutica)) 
+        })
+    },
+
+    createRow(novoMedicamento, noovVia, novoIntervalo, novoFormaFarmaceutica) {
+        let row = document.createElement('tr')
+        
+        for(let arg of arguments) {
+            let td = document.createElement('td')
+            td.innerHTML = arg
+            row.appendChild(td)
+        }
+
+        return row;
+    }
+})
