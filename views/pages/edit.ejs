@@ -1,5 +1,5 @@
-<div id="wrapper">
-    <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+<div id="wrapper" class="js-table-container">
+    <table align='center' cellspacing=2 cellpadding=5 class="js-table" border=1>
         <tr>
             <th>Medicamento</th>
             <th>Via</th>
@@ -7,24 +7,22 @@
             <th>Forma Farmaceutica</th>
         </tr>
 
-        <tr>
+        <tr class="js-novo-elemento">
             <div class="prescricao-table">
                 <td>
-                    <input type="text" class="input-prescricao" id="novo_medicamento">
+                    <input type="text" class="input-prescricao js-novo-medicamento">
                 </td>
                 <td>
-                    <input type="text" class="input-prescricao" id="novo_via">
+                    <input type="text" class="input-prescricao js-novo-via">
                 </td>
                 <td>
-                    <input type="text" class="input-prescricao" id="novo_intervalo">
+                    <input type="text" class="input-prescricao js-novo-intervalo">
                 </td>
                 <td>
-                    <input type="text" class="input-prescricao" id="novo_formaFarmaceutica">
+                    <input type="text" class="input-prescricao js-novo-forma-farmaceutica">
                 </td>
-        </tr>
             </div>
+        </tr>
     </table>
-    <input type="button" class="add" onclick="add_row();" value="Adicionar medicamento">
+    <input type="button" class="js-add" onclick="" value="Adicionar medicamento">
 </div>
-
-<script src="/js/tableFunctions.js"></script>
