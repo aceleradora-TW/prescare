@@ -11,6 +11,7 @@ const DB_USER = 'postgres'
 const DB_PASSWORD = 'prescare'
 const DB_HOST = 'localhost'
 
+
 const startApplication = () => {
 
   const app = express()
@@ -44,7 +45,34 @@ const startApplication = () => {
       dialect: 'postgres'
   }) 
 
+
+
+  /*BANCO*/
+  const initializeModels = require('./views/src/models')
+
+  const {Acolhido, Medicamento, Prescricao} = initializeModels(databaseClient)
+
+  /*INSERINDO CONTEUDO NA TABELA*/
+  const criaExemplos = () => {
+
+    Acolhido.create({
+      nome: 'Silva',
+      idade: 15
+    })
+
+    Medicamento.create({
+      nome: 'Pantoprazol'
+    })
+
+  //  Prescricao.create({
+  //    intervalo: '16h',
+  //    acolhidoId: 1,
+  //    medicamentoId: 1
+  //  })
+  }
+  //=================================================================================
 databaseClient
  .sync()
+ .then(criaExemplos)
  .then(startApplication)
  .catch(console.log)
