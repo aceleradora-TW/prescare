@@ -3,11 +3,11 @@ const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
 const settings = require('./settings')
-const routes = require('./src/routes/routes')
+const routes = require('./src/routes')
 
 const startApplication = () => {
   const app = express()
-  
+
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
