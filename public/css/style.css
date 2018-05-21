@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  /* border: 1px solid red; */
 }
 
-.body {
-  font-family: 'Amatic SC', cursive;
-  margin: 0 auto;
+body {
+  font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin: 0 auto;
 }
 
 .navbar, .footer {
-  font-family: 'Amatic SC', cursive;
   background-color: #81b4db;
-  width: 100%;
+  width: 100vw;
 }
 
 .navbar {
@@ -22,8 +24,10 @@
 
 .footer {
   font-size: 2em;
-  height: 7vh;
+  height: 5vh;
   text-align: center;
+  position:fixed;
+  margin-top: 15px;
 }
 
 .logo {
@@ -45,19 +49,48 @@
   padding-right: 3%;
 }
 
-.botao-sair a {
-  color: white;
-  text-decoration: none;
-}
-
-.botao-sair a:hover {
-  background-color: white;
-  color: #82b6dc;
-}
-
 .main {
-  height: 82vh;
-  margin: 0 auto;
+  height: 86vh;
   width: 50vw;
+  margin: 0 auto;
+  background-color: khaki; /*cor apenas pra visualização*/
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    width:100%;
+}
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #f0e68b;
+    overflow: hidden;
+}
+.accordion {
+  background-color: #f0e68b;
+  color: #444;
+  cursor: pointer;
+  padding: 18px 18px 0px 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #f0e68b;
+}
+
+.panel {
+  padding: 10px 0;
+  display: none;
+  background-color: #f0e68b;
+  overflow: hidden;
 }
