@@ -1,25 +1,42 @@
 const express = require('express')
+const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
-const user = require('./public/js/user')
 const ejs = require('ejs')
-const farmacia =require('./public/js/farmacia')
-const app = express()
+const user = require('./src/mocks/user')
+const routes = require('./src/routes/routes')
+const settings = require('./settings')
+
+const startApplication = () => {
+
+  const app = express()
+
+  app
+    .use(expressLayouts)
+    .use(express.static(__dirname + '/public/'))
+    .set('view engine', 'ejs')
+    .get('/', (req, res) => {
+      res.render('pages/home')
+    })
+    .get('/about', (req, res) => {
+      res.render('pages/about', { usuario: user })
+    })
+    
+    .get('/farmaceutica', routes.prescr)
 
 
-app.set('port', (process.env.port || 3000))
-app.use(expressLayouts)
-app.set('view engine', 'ejs')
+    .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
+}
 
-app.get('/', (req, res) => {
-  res.render('pages/home')
+const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
+  host: settings.DB_HOST,
+  dialect: 'postgres'
 })
-app.get('/about', (req, res) => {
-  res.render('pages/about', { usuario: user })
-})
-app.get('/farmaceutica', (req, res) => {
-  res.render('pages/farmaceutica', { farmacia: farmacia })
-})
-app.use(express.static(__dirname + '/public/'))
 
-app.listen(app.get('port'), () =>
-  console.log("Servidor rodando na porta: " + app.get('port')))
+databaseClient
+  .sync()
+  .then(startApplication)
+  .catch(console.log)
+
+
+
+

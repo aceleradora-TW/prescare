@@ -1,18 +1,17 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  /* border: 1px solid red; */
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Open Sans";
     margin: 0 auto;
     font-size: 100%
 }
 
 .navbar, .footer {
+  font-family: 'Amatic SC', cursive;
   background-color: #81b4db;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar {
@@ -47,11 +46,21 @@ body {
   padding-right: 3%;
 }
 
+.botao-sair a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-sair a:hover {
+  background-color: white;
+  color: #82b6dc;
+}
+
 .main {
-  height: 86vh;
-  width: 50vw;
+  height: 82vh;
   margin: 0 auto;
-  background-color: khaki; /*cor apenas pra visualização*/
+  width: 50vw;
+
 }
 .tablesfarmaceutica {
   margin-top: 5%;
@@ -73,3 +82,5 @@ td.medicamento {
 .input{
   padding-left: 1vw;
 }
+
+

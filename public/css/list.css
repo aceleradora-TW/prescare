@@ -1,0 +1,55 @@
+.titulo-lista-acolhidos {
+  color: black;
+  font-family: 'Open Sans';
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 0 0 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lista-acolhidos {
+  background-color: #81b4db;
+  font-family: 'Open Sans';
+  list-style-type: none;
+  height: 60vh;
+  padding: 0;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.lista-acolhidos li {
+  height: 3.3vh;
+  width: 80vh;
+}
+
+.lista-acolhidos li a {
+  padding: 2%;
+  text-decoration: none;
+  color:black;
+}
+
+.lista-acolhidos li:nth-child(even) {
+  background-color: #a9d1fb;
+}
+
+.lista-acolhidos li:hover {
+  background-color: #bdc3c7;
+}
+
+.section {
+  margin: 10%;
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
