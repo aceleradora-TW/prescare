@@ -7,9 +7,12 @@
 .tabs-container {
   position: relative;
   height: 50vh;
-  width: 677px;
+  width: 770px;
   font-family: 'Titillium Web', sans-serif;
   line-height: 1.5;
+}
+.input-prescricao {
+  text-transform: uppercase;
 }
 
 .scroll{
@@ -58,12 +61,10 @@ input.tabs + label + div {
   padding: 10px;
   z-index: -1;
   transition: opacity ease-in-out .3s;
-<<<<<<< 459cb206e4a68ff9cab275b5f5abfa96d5f0c0d0
-  border: 1px solid #407caa;
-=======
   border: 2px solid #407caa;
   height: auto;
->>>>>>> :art: <@natymoraes, @diovanemendes> Refatora tabela em abas #2
+  border: 2px solid #407caa;
+  height: auto;
 }
 input.tabs:checked + label + div {
   opacity: 1;

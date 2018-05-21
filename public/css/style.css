@@ -16,7 +16,10 @@ footer{
   left: 0;
 }
 */
+<<<<<<< HEAD
 
+=======
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
 .logout{
   color: #fff;
 }
@@ -27,8 +30,12 @@ footer{
 }
 
 body {
+<<<<<<< HEAD
   font-family: 'Open Sans', sans-serif;
     font-size: 15px;
+=======
+    font-family: "Times New Roman", Times, serif;
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
     margin: 0 auto;
     font-size: 100%
 }
@@ -74,19 +81,30 @@ body {
 }
 
 .main {
+<<<<<<< HEAD
   height: 86vh;
   width: 55vw;
+=======
+  height: 90vh;
+  width: 50vw;
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
   margin: 0 auto;
   /*background-color: khaki; cor apenas pra visualização*/
 }
 .tablesfarmaceutica {
   margin-top: 5%;
   border-collapse: collapse;
+<<<<<<< HEAD
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Open Sans', sans-serif;
 
+=======
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+  
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
 }
 
 .tablesfarmaceutica td, .tablesfarmaceutica th {
@@ -97,6 +115,7 @@ body {
 
 td.medicamento {
   text-align: left;
+<<<<<<< HEAD
   outline: none;
   font-size: 15px;
   transition: 0.4s;
@@ -113,6 +132,20 @@ td.medicamento {
   overflow: hidden;
 }
 
+=======
+}
+.input{
+  padding-left: 1vw;
+}
+
+.add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
 .acao-botao {
   width: 100%;
   margin-top: 50px;
@@ -123,10 +156,13 @@ td.medicamento {
 .botao-historico {
   margin-left: 0.5vw;
   margin-top: 2vh;
+<<<<<<< HEAD
 }
 
 .add {
   display: block;
   margin-left: auto;
   margin-right: auto;
+=======
+>>>>>>> dd4706fa614e4b6f7416152844555e24ea4b2d4f
 }
