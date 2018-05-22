@@ -1,0 +1,49 @@
+<%- contentFor('body') %>
+  <%for (tabelaFarmaceutica of tabelaFarmaceutica){%>
+    <button class="accordion">
+      <%= tabelaFarmaceutica.name%>
+        <i class="fas fa-angle-down"></i>
+    </button>
+    <div class="panel">
+      <table style="width:100%">
+        <th>Medicamento</th>
+        <th>Via</th>
+        <th>Intervalo</th>
+        <th>Forma Farmacêutica</th>
+        <th>Horário</th>
+        <th>Lote</th>
+        <th>Validade</th>
+        <th>Dispensação</th>
+        <body>
+          <tr>
+            <td class="medicamento">
+              <%=tabelaFarmaceutica.farm[0].medicamentos%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].via%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].intervalo%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].formaFarmaceutica%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].horario%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].lote%>
+            </td>
+            <td>
+              <%=tabelaFarmaceutica.farm[0].validade%>
+            </td>
+            <td>
+              <div class="input">
+                <input type="checkbox"> </div>
+            </td>
+          </tr>
+        </body>
+      </table>
+    </div>
+    <%}%>
+    
