@@ -4,4 +4,5 @@ const user = {
   avatar: 'https://www.w3schools.com/css/img_chania.jpg'
 }
 
+
 module.exports = user

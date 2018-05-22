@@ -1,18 +1,20 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
-
-body {background: rgb(198, 215, 230)}
-
 .flex-container {
     display: flex;
     flex-flow: row wrap;
   }
 
-.img {
-    border-radius: 12px;
+.foto-acolhido{
+    width: 100px;
+    height: 100px;
+}
+
+.img-acolhido {
     background-color: #81b4db;
+    border-radius: 12px;
     flex-grow: 2;
-    align-items: left;
-    margin:2px;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .inf {
@@ -23,8 +25,8 @@ body {background: rgb(198, 215, 230)}
 }
 
 .text {
-    margin-left: 1vw;
-    padding-top: 2.3vh;
+    
+    margin: 1vh;
 }
 
 .bold {
@@ -36,12 +38,14 @@ body {background: rgb(198, 215, 230)}
 }
 
 .box {
+    position: static;
     border-radius: 12px;
 	width:63%;
 	height:18vh;
 	background:#FFF;
     margin: auto;
-    margin-top: 3vh;
+    padding-top:10px;
+    padding-left: 10px;
 }
 
 .effect1 {
