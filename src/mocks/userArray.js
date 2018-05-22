@@ -20,6 +20,7 @@ const users = [
   { name: 'Marta' },
   { name: 'Juliana' },
   { name: 'Mohamed' },
+  { name: 'Filéps' },
 ]
 
 module.exports = users.sort()

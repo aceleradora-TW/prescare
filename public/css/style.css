@@ -29,6 +29,7 @@
   display: flex;
   height: 7vh;
   justify-content: space-between;
+  margin-bottom: 5vh;
 }
 
 .footer {
@@ -37,14 +38,13 @@
   height: 7vh;
   text-align: center;
   position:fixed;
-  margin-top: 15px;
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
   color: white;
 }
 
 .logo {
-  height: 100%;
+  width: 72%;
   padding-left: 2%;
 }
 
@@ -58,7 +58,7 @@
 
 .botao-sair {
   font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
+  font-size: 1.8em;
   font-weight: bold;
   padding-right: 3%;
 }
@@ -67,6 +67,12 @@
   color: white;
   text-decoration: none;
 }
+
+.botao-sair a:hover {
+  color: #81b4db;
+  background-color: white;
+}
+
 .main {
   height: 90vh;
   width: 50vw;
@@ -78,7 +84,7 @@
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 
 .tablesfarmaceutica td, .tablesfarmaceutica th {
