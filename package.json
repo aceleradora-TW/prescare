@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "test": "npx jest test/",
+    "test:watch": "npx jest --watchAll test/",
+    "dev": "npx nodemon app.js",
     "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
     "db:stop": "docker stop prescare-database"
   },
