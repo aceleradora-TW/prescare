@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /* border: 1px solid red; */
 }
 
 .body {
@@ -20,6 +19,7 @@
   display: flex;
   height: 7vh;
   justify-content: space-between;
+  margin-bottom: 5vh;
 }
 
 .footer {
@@ -27,14 +27,13 @@
   height: 5vh;
   text-align: center;
   position:fixed;
-  margin-top: 15px;
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
   color: white;
 }
 
 .logo {
-  height: 100%;
+  width: 70%;
   padding-left: 2%;
 }
 
@@ -48,7 +47,7 @@
 
 .botao-sair {
   font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
+  font-size: 1.8em;
   font-weight: bold;
   padding-right: 3%;
 }
@@ -58,38 +57,40 @@
   text-decoration: none;
 }
 .main {
-  height: 86vh;
+  height: 83vh;
   width: 50vw;
   margin: 0 auto;
-  /*background-color: khaki; /*cor apenas pra visualização*/
 }
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-
 }
+
 th, td {
     padding: 5px;
     text-align: left;
     width:100%;
 }
+
 .panel {
     padding: 0 18px;
     display: none;
     background-color: #f0e68b;
     overflow: hidden;
 }
+
 .accordion {
-  background-color: #f0e68b;
-  color: #444;
-  cursor: pointer;
-  padding: 18px 18px 0px 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+    background-color: #f0e68b;
+    color: #444;
+    cursor: pointer;
+    padding: 18px 18px 0px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
 }
 
 .active, .accordion:hover {
