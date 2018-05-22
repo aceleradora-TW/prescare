@@ -1,6 +1,16 @@
+@import url(https://fonts.google.com/specimen/Open+Sans);
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+.logout{
+  color: #fff;
+}
+
+
+.logout:hover{
+  color: #407caa;
 }
 
 .body {
@@ -23,8 +33,9 @@
 }
 
 .footer {
+  color: #fff;
   font-size: 2em;
-  height: 5vh;
+  height: 7vh;
   text-align: center;
   position:fixed;
   font-family: 'Amatic SC', cursive;
@@ -63,46 +74,50 @@
 }
 
 .main {
-  height: 83vh;
+  height: 90vh;
   width: 50vw;
   margin: 0 auto;
+  padding-top: 20px;
+}
+.tablesfarmaceutica {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+.tablesfarmaceutica td, .tablesfarmaceutica th {
+  border: 1px solid;
+  height: 5vh;
+  text-align: center;
 }
 
-th, td {
-    padding: 5px;
-    text-align: left;
-    width:100%;
+td.medicamento {
+  text-align: left;
+}
+.input{
+  padding-left: 1vw;
 }
 
-.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: #f0e68b;
-    overflow: hidden;
+.add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.accordion {
-    background-color: #f0e68b;
-    color: #444;
-    cursor: pointer;
-    padding: 18px 18px 0px 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+
+.acao-botao {
+  width: 100%;
+  margin-top: 50px;
+  margin-left: -10px;
+  text-align: right;
 }
 
-.active, .accordion:hover {
-  background-color: #f0e68b;
+.botao-historico {
+  margin-left: 0.5vw;
+  margin-top: 2vh;
 }
-
 .panel {
   padding: 10px 0;
   display: none;
