@@ -2,6 +2,7 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
+
 const settings = require('./settings')
 const routes = require('./src/routes')
 
