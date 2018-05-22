@@ -31,6 +31,9 @@ a:active { color: wheat; }
   text-align: center;
   position:fixed;
   margin-top: 15px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  color: white;
 }
 
 .logo {
@@ -50,6 +53,12 @@ a:active { color: wheat; }
   font-weight: bold;
   margin-right: 15px;
   font-size: 1.4em;
+  color:white;
+  font-family: 'Amatic SC', cursive;
+}
+
+.botao-sair a {
+  color: white;
 }
 
 .nav-itens {
@@ -59,6 +68,11 @@ a:active { color: wheat; }
   margin-top: -8px;
   padding: 0 0 0 40px;
   position: absolute;
+  font-family: 'Amatic SC', cursive;
+}
+
+.nav-itens a {
+  color: white;
 }
 
 /*
@@ -73,8 +87,8 @@ a:active { color: wheat; }
   height: 86vh;
   width: 50vw;
   margin: 0 auto;
-  background-color: khaki; /*cor apenas pra visualização*/
-}
+  /* background-color: khaki; /*cor apenas pra visualização*/
+} 
 
 /* Tabela de prescrição */
 
