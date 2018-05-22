@@ -5,7 +5,7 @@ body {background: rgb(198, 215, 230)}
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-  }
+}
 
 .img {
     border-radius: 12px;
@@ -37,9 +37,9 @@ body {background: rgb(198, 215, 230)}
 
 .box {
     border-radius: 12px;
-	width:63%;
-	height:18vh;
-	background:#FFF;
+    width:63%;
+    height:18vh;
+    background:#FFF;
     margin: auto;
     margin-top: 3vh;
 }
@@ -50,7 +50,7 @@ body {background: rgb(198, 215, 230)}
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
-.tiracor { 
+.tiracor {
     color: black;
     text-decoration: none;
 }
