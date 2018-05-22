@@ -1,57 +1,51 @@
 window.addEventListener('load', () => {
     let tables = document.getElementsByClassName('js-table-container')
 
-
     for (let table of tables) {
-        let tableObj = Table(table)
-        tableObj.initializeButton()
-        table.table = tableObj
+        let tableComponent = Table(table)
+        tableComponent.initialize()
     }
-
 })
-
 
 let Table = (tableContainer) => ({
     tableContainer: tableContainer,
-    tableBody: tableContainer.getElementsByTagName('tbody').item(0),
-    novoElForm: tableContainer.getElementsByClassName('js-novo-elemento').item(0),
+    tableBody: tableContainer.querySelector('tbody'),
+    novoElForm: tableContainer.querySelector('.js-novo-elemento'),
+    inputs: tableContainer.querySelectorAll('input:not(.js-add)'),
+
+    initialize() {
+        this.linkComponentToDOMObject()
+        this.appendButtonEventListener()
+    },
 
     appendRow(row) {
         this.tableBody.insertBefore(row, this.novoElForm)
+        this.clearInputs()
     },
 
-    initializeButton() {
-        tableContainer.getElementsByClassName('js-add').item(0).addEventListener('click', () => {
-            let novoMedicamento = this.novoElForm.getElementsByClassName('js-novo-medicamento').item(0).value
-            let novoVia = this.novoElForm.getElementsByClassName('js-novo-via').item(0).value
-            let novoIntervalo = this.novoElForm.getElementsByClassName('js-novo-intervalo').item(0).value
-            let novoFormaFarmaceutica = this.novoElForm.getElementsByClassName('js-novo-forma-farmaceutica').item(0).value
-            this.appendRow(this.createRow(novoMedicamento.toUpperCase(), novoVia.toUpperCase(), novoIntervalo.toUpperCase(), novoFormaFarmaceutica.toUpperCase()))
-
-        let clearMed = document.getElementsByClassName('js-novo-medicamento')
-        clearMed[0].value = ""
-
-        let clearVia = document.getElementsByClassName('js-novo-via')
-        clearVia[0].value = ""
-
-        let clearInter = document.getElementsByClassName('js-novo-intervalo')
-        clearInter[0].value = ""
-
-        let clearForma = document.getElementsByClassName('js-novo-forma-farmaceutica')
-        clearForma[0].value = ""
-        })
+    appendButtonEventListener() {
+        tableContainer.querySelector('.js-add').addEventListener('click', () => this.appendRow(this.createRow()))
     },
 
-    createRow(novoMedicamento, novoVia, novoIntervalo, novoFormaFarmaceutica) {
+    createRow() {
         let row = document.createElement('tr')
 
-        for (let arg of arguments) {
+        for (let input of this.inputs) {
             let td = document.createElement('td')
-            td.innerHTML = arg
+            td.innerHTML = input.value
             row.appendChild(td)
         }
 
         return row
     },
-    
+
+    clearInputs() {
+        for(input of this.inputs) {
+            input.value = ""
+        }
+    },
+
+    linkComponentToDOMObject() {
+        this.tableContainer.table = this;
+    }
 })
