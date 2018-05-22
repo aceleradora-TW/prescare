@@ -17,13 +17,11 @@
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-
 }
 
 .lista-acolhidos li {
   height: 5.3vh;
   width: 100vh;
-
 }
 
 .lista-acolhidos li a {
@@ -35,13 +33,11 @@
 
 .lista-acolhidos li:nth-child(even) {
   background-color: #a9d1fb;
-
 }
 
 .lista-acolhidos li:hover {
   background-color: #bdc3c7;
 }
-
 
 /* for custom scrollbar for webkit browser*/
 
