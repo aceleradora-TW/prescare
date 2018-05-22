@@ -2,20 +2,32 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-
+const index = require ('./src/routes')
+const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
+const userArray = require('./src/mocks/userArray')
+const user = require('./src/mocks/user')
 const settings = require('./settings')
-const routes = require('./src/routes')
+const farmacia = require('./public/js/farmacia')
+const app = express()
 
 const startApplication = () => {
-  const app = express()
-
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
-    .get('/', routes.home)
-    .get('/about', routes.about)
-    .get('/acolhidas', routes.listChildren)
+    .set('views/pages', 'tabela-abas')
+    .set('port', (process.env.PORT || 3000))
+    .get('/', index.home)
+    .get('/about', index.about)
+    .get('/acolhidas', index.listChildren)
+    .get('/acolhido', index.acolhido)
+    
+    .get('/prescricaoAtualizada', (req, res) => {
+      res.render('pages/prescricaoAtualizada', { tabelaFarmaceutica: tabelaFarmaceutica})
+    })
+    .get('/farmaceutica', (req, res) => {
+      res.render('pages/farmaceutica', {farmacia : farmacia})
+    })
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
 
