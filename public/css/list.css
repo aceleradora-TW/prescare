@@ -3,7 +3,7 @@
   font-family: 'Open Sans';
   font-size: 1.8em;
   font-weight: 300;
-  margin: 0 0 15px 0;
+  margin: 0 0 5vh 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -12,40 +12,42 @@
   background-color: #81b4db;
   font-family: 'Open Sans';
   list-style-type: none;
-  height: 60vh;
+  height: 65vh;
   padding: 0;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+
 }
 
 .lista-acolhidos li {
-  height: 3.3vh;
-  width: 80vh;
+  height: 5.3vh;
+  width: 100vh;
+
 }
 
 .lista-acolhidos li a {
-  padding: 2%;
   text-decoration: none;
   color:black;
+  display: table-cell;
+  padding: 1vh 0 0 1vh;
 }
 
 .lista-acolhidos li:nth-child(even) {
   background-color: #a9d1fb;
+
 }
 
 .lista-acolhidos li:hover {
   background-color: #bdc3c7;
 }
 
-.section {
-  margin: 10%;
-}
 
 /* for custom scrollbar for webkit browser*/
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 12px;
+  background-color: #9dd1f7;
 }
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
