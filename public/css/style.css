@@ -47,17 +47,27 @@ a:active { color: wheat; }
 }
 
 .botao-sair {
-  font-weight:  bold;
+  font-weight: bold;
+  margin-right: 15px;
   font-size: 1.4em;
-  padding-right: 3%;
 }
 
+.nav-itens {
+  width: 400px;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: -8px;
+  padding: 0 0 0 40px;
+  position: absolute;
+}
+
+/*
 .botao-voltar {
   font-weight:  bold;
   position: absolute;
   padding: 0 0 0 17%;
   font-size: 1.4em;
-}
+}*/
 
 .main {
   height: 86vh;
