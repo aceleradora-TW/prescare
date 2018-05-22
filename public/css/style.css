@@ -10,6 +10,9 @@ body {
     margin: 0 auto;
 }
 
+a:link, :visited { text-decoration: none; }                    
+a:active { color: wheat; }
+
 .navbar, .footer {
   background-color: #81b4db;
   width: 100vw;
@@ -19,7 +22,6 @@ body {
   align-items: center;
   display: flex;
   height: 7vh;
-  justify-content: space-between;
 }
 
 .footer {
@@ -45,6 +47,13 @@ body {
   font-weight:  bold;
   font-size: 1.4em;
   padding-right: 3%;
+}
+
+.botao-voltar {
+  font-weight:  bold;
+  position: absolute;
+  padding: 0 0 0 17%;
+  font-size: 1.4em;
 }
 
 .main {
