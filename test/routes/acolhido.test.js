@@ -8,6 +8,6 @@ describe('Quando acesso acolhido', () => {
         
         acolhidoRoute(acolhido)(req,res)
         
-        expect(res.render).toBeCalledWith('pages/tabela-abas', { acolhido })
+        expect(res.render).toBeCalledWith('pages/info', { acolhido })
     })
 })

@@ -1,5 +1,5 @@
 {
-  "name": "aceleradora13",
+  "name": "prescare",
   "version": "1.0.0",
   "description": "PresCare",
   "main": "index.js",
@@ -27,7 +27,6 @@
     "express-ejs-layouts": "^2.4.0",
     "nodemon": "^1.17.4",
     "body-parser": "^1.18.2",
-    "faker": "^4.1.0",
     "pg": "^7.4.3",
     "sequelize": "^4.37.7"
   },

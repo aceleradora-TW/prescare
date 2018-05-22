@@ -2,12 +2,11 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-const index = require ('./src/routes')
+const rotas = require ('./src/routes')
 const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
-const userArray = require('./src/mocks/userArray')
-const user = require('./src/mocks/user')
+const usuarios = require('./src/mocks/userArray')
+const usuario = require('./src/mocks/user')
 const settings = require('./settings')
-const farmacia = require('./public/js/farmacia')
 const app = express()
 
 const startApplication = () => {
@@ -17,17 +16,12 @@ const startApplication = () => {
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .set('port', (process.env.PORT || 3000))
-    .get('/', index.home)
-    .get('/about', index.about)
-    .get('/acolhidas', index.listChildren)
-    .get('/acolhido', index.acolhido)
-    
-    .get('/prescricaoAtualizada', (req, res) => {
-      res.render('pages/prescricaoAtualizada', { tabelaFarmaceutica: tabelaFarmaceutica})
-    })
-    .get('/farmaceutica', (req, res) => {
-      res.render('pages/farmaceutica', {farmacia : farmacia})
-    })
+    .get('/', rotas.home)
+    .get('/about', rotas.about)
+    .get('/acolhidas', rotas.listChildren)
+    .get('/acolhido', rotas.acolhido)
+    .get('/prescricaoAtualizada', rotas.prescricaoAtualizada)
+    .get('/farmaceutica', rotas.farmaceutica)
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
 

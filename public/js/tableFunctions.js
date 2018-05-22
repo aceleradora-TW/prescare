@@ -51,7 +51,7 @@ let Table = (tableContainer) => ({
             row.appendChild(td)
         }
 
-        return row;
+        return row
     },
     
 })
