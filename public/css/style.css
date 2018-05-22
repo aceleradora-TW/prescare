@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /* border: 1px solid red; */
 }
 
 body {
+
   font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     margin: 0 auto;
@@ -55,16 +55,27 @@ body {
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+.tablesfarmaceutica {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+  
+}
 
+.tablesfarmaceutica td, .tablesfarmaceutica th {
+  border: 1px solid;
+  height: 5vh;
+  text-align: center;
 }
-th, td {
-    padding: 5px;
-    text-align: left;
-    width:100%;
+
+td.medicamento {
+  text-align: left;
 }
+.input{
+  padding-left: 1vw;
+}
+
 .panel {
     padding: 0 18px;
     display: none;
@@ -86,6 +97,7 @@ th, td {
 
 .active, .accordion:hover {
   background-color: #f0e68b;
+
 }
 
 .panel {
@@ -94,3 +106,4 @@ th, td {
   background-color: #f0e68b;
   overflow: hidden;
 }
+
