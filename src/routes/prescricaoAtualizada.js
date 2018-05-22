@@ -1,3 +1,3 @@
-const prescricaoAtual = (listaPrescricoes) => (req, res) => res.render('pages/prescricaoAtualizada', { listaPrescricoes: listaPrescricoes })
+const prescricaoRoute = (listaPrescricoes) => (req, res) => res.render('pages/prescricaoAtualizada', { listaPrescricoes: listaPrescricoes })
 
-module.exports = prescricaoAtual
+module.exports = prescricaoRoute

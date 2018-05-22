@@ -16,7 +16,7 @@ const startApplication = () => {
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/acolhidas', routes.listChildren)
-    .get('/prescricaoAtualizada',routes.prescricaoAtual)
+    .get('/prescricaoAtualizada',routes.prescricaoRoute)
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
 
