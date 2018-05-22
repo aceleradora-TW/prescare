@@ -2,49 +2,29 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-const user = require('./public/js/user')
-const userArray = require('./public/js/userArray')
-const tabelaFarmaceutica = require('./public/js/tabelaFarmaceutica')
-const PORT = process.env.PORT || 3000
-const DB_NAME = 'prescare'
-const DB_USER = 'postgres'
-const DB_PASSWORD = 'prescare'
-const DB_HOST = 'localhost'
+
+const settings = require('./settings')
+const routes = require('./src/routes')
 
 const startApplication = () => {
-
   const app = express()
 
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
-    .get('/', (req, res) => {
-      res.render('pages/home')
-    })
-    .get('/about', (req, res) => {
-      res.render('pages/about', { usuario: user })
-    })
-    .get('/prescricaoAtualizada', (req, res) => {
-      res.render('pages/prescricaoAtualizada', { tabelaFarmaceutica: tabelaFarmaceutica})
-    })
-    .get('/prescricaoAtualizadona', (req, res) => {
-      res.render('pages/prescricaoAtualizada', { usuarioArray : userArray})
-    })
+    .get('/', routes.home)
+    .get('/about', routes.about)
+    .get('/acolhidas', routes.listChildren)
+    .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
+}
 
-    .get('/renderiza', (req, res) => {
-      res.render('pages/renderiza', { tabelaFarmaceutica : tabelaFarmaceutica})
-    })
-
-    .listen(PORT, () => console.log('Servidor iniciado em http://localhost:' + PORT))
-    }
-
-  const databaseClient = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
-      host: DB_HOST,
-      dialect: 'postgres'
-  }) 
+const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
+  host: settings.DB_HOST,
+  dialect: 'postgres'
+})
 
 databaseClient
- .sync()
- .then(startApplication)
- .catch(console.log)
+  .sync()
+  .then(startApplication)
+  .catch(console.log)
