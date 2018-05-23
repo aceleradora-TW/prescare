@@ -36,14 +36,14 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px 0px 70px;
+    margin: 4px 2px 0px 80px;
     cursor: pointer;
     background-color: #f44336;
     border-radius: 8px;
 }
 
 #user{
-    width: 20%;
+    width: 200px;
     padding: 12px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -53,7 +53,7 @@
 }
 
 #pass{
-    width: 20%;
+    width: 200px;
     padding: 12px 10px;
     margin: 8px 0;
     display: inline-block;
