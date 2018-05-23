@@ -48,7 +48,7 @@ body {
 
 .main {
   height: 86vh;
-  width: 50vw;
+  width: 100vw;
   margin: 0 auto;
   background-color: khaki; /*cor apenas pra visualização*/
 }
