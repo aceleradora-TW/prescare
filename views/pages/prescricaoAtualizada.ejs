@@ -1,49 +1,52 @@
 <%- contentFor('body') %>
-  <%for (listaPrescricoes of listaPrescricoes){%>
+  <%for (prescricao of listaPrescricoes){%>
     <button class="accordion">
-      <%= listaPrescricoes.name%>
+      <%= prescricao.nome%>
         <i class="fas fa-angle-down"></i>
     </button>
     <div class="panel">
       <table style="width:100%">
-        <th>Medicamento</th>
-        <th>Via</th>
-        <th>Intervalo</th>
-        <th>Forma Farmacêutica</th>
-        <th>Horário</th>
-        <th>Lote</th>
-        <th>Validade</th>
-        <th>Dispensação</th>
-        <body>
+        <thead>
+          <th>Medicamento</th>
+          <th>Via</th>
+          <th>Intervalo</th>
+          <th>Forma Farmacêutica</th>
+          <th>Horário</th>
+          <th>Lote</th>
+          <th>Validade</th>
+          <th>Dispensação</th>
+        </thead>
+        <tbody>
+        <% for(var i=0; i < prescricao.farmaceutica.length; i++) {%>
           <tr>
-            <td class="medicamento">
-              <%=listaPrescricoes.farm[0].medicamentos%>
+            <td>
+              <%= prescricao.farmaceutica[i].medicamentos%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].via%>
+              <%= prescricao.farmaceutica[i].via%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].intervalo%>
+              <%=prescricao.farmaceutica[i].intervalo%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].formaFarmaceutica%>
+              <%=prescricao.farmaceutica[i].formaFarmaceutica%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].horario%>
+              <%=prescricao.farmaceutica[i].horario%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].lote%>
+              <%=prescricao.farmaceutica[i].lote%>
             </td>
             <td>
-              <%=listaPrescricoes.farm[0].validade%>
+              <%=prescricao.farmaceutica[i].validade%>
             </td>
             <td>
               <div class="input">
                 <input type="checkbox"> </div>
             </td>
           </tr>
-        </body>
+        <% } %>
+        </tbody>
       </table>
     </div>
     <%}%>
-    
