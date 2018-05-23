@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
+  <title>Prescare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/list.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="/js/tableFunctions.js"></script>
 </head>
 
-<body>
+<body class="body">
   <header>
     <div class="navbar">
-      <img src="img/logo.png" class="logo" data-target="Imagem Logo">
-      <div class="nome-user"> <i class="fas fa-user"></i> Marlene,  médica </div>
+      <a href="/"> <img src="img/logo.png" class="logo" data-target="Imagem Logo"></a>
+      <div class="nome-user">
+        <i class="fas fa-user"></i> Marlene, médica </div>
+
       <div class="icon-bar"></div>
       <div class="icon-bar"></div>
       <div class="botao-sair">
-        <a href="">Sair <i class="fas fa-sign-out-alt"></i></a>
+        <a href="">Sair
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
       </div>
     </div>
   </header>
-
-   <main class="main">
-     <div class="content">
+  <main class="main">
+    <div class="content">
       <%- body %>
-     </div>
-   </main>
-
+    </div>
+  </main>
   <footer>
     <div class="footer">
       FOOTER
     </div>
   </footer>
-
+  <script src="/js/tabelaCollapse.js"></script>
 </body>
 </html>

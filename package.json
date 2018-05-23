@@ -1,10 +1,13 @@
 {
-  "name": "sessao-heroku",
+  "name": "prescare",
   "version": "1.0.0",
-  "description": "",
+  "description": "PresCare",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "test": "npx jest test/",
+    "test:watch": "npx jest --watchAll test/",
+    "dev": "npx nodemon app.js",
     "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
     "db:stop": "docker stop prescare-database"
   },
@@ -24,8 +27,10 @@
     "express-ejs-layouts": "^2.4.0",
     "nodemon": "^1.17.4",
     "body-parser": "^1.18.2",
-    "faker": "^4.1.0",
     "pg": "^7.4.3",
     "sequelize": "^4.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
   }
 }

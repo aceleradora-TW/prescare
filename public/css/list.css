@@ -1,0 +1,54 @@
+.titulo-lista-acolhidos {
+  color: black;
+  font-family: 'Open Sans';
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 0 0 5vh 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.lista-acolhidos {
+  background-color: #81b4db;
+  font-family: 'Open Sans';
+  list-style-type: none;
+  height: 65vh;
+  padding: 0;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.lista-acolhidos li {
+  height: 5.3vh;
+  width: 100vh;
+}
+
+.lista-acolhidos li a {
+  text-decoration: none;
+  color:black;
+  display: block;
+  padding: 1vh 0 0 1vh;
+}
+
+.lista-acolhidos li:nth-child(even) {
+  background-color: #a9d1fb;
+}
+
+.lista-acolhidos li:hover {
+  background-color: #bdc3c7;
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #9dd1f7;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
