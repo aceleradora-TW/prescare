@@ -1,0 +1,44 @@
+<%- contentFor('body') %>
+    <div class="tablesfarmaceutica">
+        <table class="tablesfarmaceutica" style="width:90%">
+            <th>Medicamento</th>
+            <th>Via</th>
+            <th>Intervalo</th>
+            <th>Forma Farmacêutica</th>
+            <th>Horário</th>
+            <th>Lote</th>
+            <th>Validade</th>
+            <th>Dispensação</th>
+    </div>
+
+
+    <%for (dadosFarmacia of farmacia){%>
+        <tr>
+            <td class="medicamento">
+                <%=dadosFarmacia.medicamentos%>
+            </td>
+            <td>
+                <%=dadosFarmacia.via%>
+            </td>
+            <td>
+                <%=dadosFarmacia.intervalo%>
+            </td>
+            <td>
+                <%=dadosFarmacia.formaFarmaceutica%>
+            </td>
+            <td>
+                <%=dadosFarmacia.horario%>
+            </td>
+            <td>
+                <%=dadosFarmacia.lote%>
+            </td>
+            <td>
+                <%=dadosFarmacia.validade%>
+            </td>
+            <td>
+                <div class="input">
+                    <input type="checkbox"> </div>
+            </td>
+        </tr>
+        <% } %>
+            </table>
