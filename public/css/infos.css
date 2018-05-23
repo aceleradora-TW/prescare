@@ -1,19 +1,23 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
-
-body {background:#ccc}
-
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-  }
-
-.img{
-    background-color: blue;
-    flex-grow: 1;
-    align-items: stretch;
 }
 
-.inf{
+.foto-acolhido{
+    width: 100px;
+    height: 100px;
+}
+
+.img-acolhido {
+    background-color: #81b4db;
+    border-radius: 12px;
+    flex-grow: 2;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.inf {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     flex-grow: 1;
@@ -31,34 +35,24 @@ body {background:#ccc}
     font-size: 1vh;
 }
 
-
-/*.edt{
-    background-color: orangered;
-    flex-grow: 1;
-    align-items: stretch;
-    display: inline-flex;
-    align-self: flex-end;
-}*/
-/*
-.align_edt{
-
-    padding-top: 14vh;
-}
-*/
 .box {
-	width:50%;
-	height:31vh;
-	background:#FFF;
-	margin:auto;
+    position: static;
+    border-radius: 12px;
+    width:63%;
+    height:18vh;
+    background:#FFF;
+    margin: auto;
+    padding-top:10px;
+    padding-left: 10px;
 }
 
-.effect1{
+.effect1 {
 	-webkit-box-shadow: 0 10px 6px -6px #777;
 	   -moz-box-shadow: 0 10px 6px -6px #777;
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
-.tiracor{
+.tiracor {
     color: black;
     text-decoration: none;
 }
