@@ -15,12 +15,6 @@
     padding-top: 50px;
 }
 
-.form{
-    margin-bottom: 30px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center; 
-    align-items: center;
-}
 .entrar{
     padding-top: 10px;
 }
@@ -31,23 +25,25 @@
 
 .senha{
     padding-top: 20px;
+    padding-left: 8px;
 }
 
 .botao{
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 4px 2px 0px 70px;
     cursor: pointer;
     background-color: #f44336;
+    border-radius: 8px;
 }
 
 #user{
-    width: 30%;
+    width: 20%;
     padding: 12px 10px;
     margin: 8px 0;
     display: inline-block;
@@ -57,12 +53,23 @@
 }
 
 #pass{
-    width: 30%;
+    width: 20%;
     padding: 12px 10px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
+}
 
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.container {
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; 
+    align-items: center;
 }
