@@ -5,9 +5,9 @@
 
 .tabs-container {
   position: relative;  
-  height: 50vh;
+  height: 40vh;
   width: 800px;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .input-prescricao {

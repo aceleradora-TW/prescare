@@ -1,0 +1,23 @@
+
+.imgLogin{
+    width: 40vh;
+    text-align: center;
+}
+
+.imgCenter {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.login{
+    text-align: center;
+}
+
+.form{
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; 
+    align-items: center;
+}
+
+
