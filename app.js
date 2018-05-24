@@ -2,21 +2,25 @@ const express = require('express')
 const Sequelize = require('sequelize')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-
+const rotas = require ('./src/routes')
+const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
+const usuarios = require('./src/mocks/userArray')
+const usuario = require('./src/mocks/user')
 const settings = require('./settings')
-const routes = require('./src/routes')
+const app = express()
 
 const startApplication = () => {
-  const app = express()
-
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
-    .get('/', routes.home)
-    .get('/about', routes.about)
-    .get('/acolhidas', routes.listChildren)
-    .get('/prescricaoAtualizada',routes.prescricaoRoute)
+    .set('views/pages', 'tabela-abas')
+    .get('/', rotas.home)
+    .get('/about', rotas.about)
+    .get('/acolhidas', rotas.listChildren)
+    .get('/acolhido', rotas.acolhido)
+    .get('/prescricaoAtualizada', rotas.prescricaoAtualizada)
+    .get('/farmaceutica', rotas.farmaceutica)
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
 

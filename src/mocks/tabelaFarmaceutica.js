@@ -66,3 +66,4 @@ const tabelaFarmaceutica = [
 
 
 module.exports = tabelaFarmaceutica
+  
