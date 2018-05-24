@@ -9,15 +9,19 @@
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../css/list.css">
   <link rel="stylesheet" href="../css/style.css">
   <script src="/js/tableFunctions.js"></script>
 </head>
 
 <body class="body">
-  <header>
+  <header class="nav">
     <div class="navbar">
-      <a href="/"> <img src="img/logo.png" class="logo" data-target="Imagem Logo"></a>
+      <a href="/">
+        <img src="img/logoSemFundo.png" class="logo" data-target="Imagem Logo">
+      </a>
       <div class="nome-user">
         <i class="fas fa-user"></i> Marlene, médica </div>
 
@@ -30,11 +34,13 @@
       </div>
     </div>
   </header>
-  <main class="main">
-    <div class="content">
-      <%- body %>
-    </div>
-  </main>
+  <div class="container">
+    <main class="main">
+      <div class="content">
+        <%- body %>
+      </div>
+    </main>
+  </div>
   <footer>
     <div class="footer">
       FOOTER
@@ -42,4 +48,11 @@
   </footer>
   <script src="/js/tabelaCollapse.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+  crossorigin="anonymous"></script>
+
 </html>

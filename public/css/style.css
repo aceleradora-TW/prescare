@@ -17,6 +17,7 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   margin: 0 auto;
+  background-color: #a9d1fb
 }
 
 .navbar, .footer {
@@ -44,8 +45,8 @@
 }
 
 .logo {
-  width: 72%;
-  padding-left: 2%;
+  width: 60%;
+  /* padding-left: 2%; */
 }
 
 .nome-user {
@@ -53,7 +54,7 @@
   font-family: 'Amatic SC', cursive;
   font-size: 2.3em;
   font-weight: bold;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .botao-sair {
@@ -96,13 +97,13 @@
   background-color: #81b4db;
   color: #444;
   cursor: pointer;
-  padding: 18px 18px 0px 18px;
+  padding: 10px 18px 10px 18px;
   width: 100%;
   border: none;
-}
-td.medicamento {
+  font-size: 1.03em;
   text-align: left;
-}
+  }
+
 .input{
   padding-left: 1vw;
 }
@@ -129,8 +130,24 @@ td.medicamento {
   margin-top: 2vh;
 }
 .panel {
+  width:100%;
   padding: 10px 0;
   display: none;
-  background-color: #a9d1fb;
+  background-color: #e7de8b;
   overflow: hidden;
+  text-align: justify;
+  border: 3px solid;
+  border-color: #81b4db;
+}
+
+.teste {
+  width:100%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.teste th, .teste tr td {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  text-align: center;
 }
