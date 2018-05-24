@@ -25,11 +25,12 @@
   },
   "homepage": "https://github.com/murilobauerc/sessao-heroku#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
     "faker": "^4.1.0",
-    "body-parser": "^1.18.2",
     "pg": "^7.4.3",
     "sequelize": "^4.37.7"
   },

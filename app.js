@@ -44,15 +44,14 @@ const startApplication = () => {
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/acolhidas', routes.listChildren)
-    .get('/acolhido', routes.acolhido)
+    .get('/acolhido/:id', routes.acolhido)
     .get('/prescricaoAtualizada', routes.prescricaoAtualizada)
     .get('/farmaceutica', routes.farmaceutica)
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
 
-
 databaseConnection
  .sync()
- .then(criaExemplos)
+ //.then(criaExemplos)
  .then(startApplication)
  .catch(console.log)

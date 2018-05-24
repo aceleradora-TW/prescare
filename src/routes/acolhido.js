@@ -1,3 +1,13 @@
-const acolhido = (acolhido) => (req, res) => res.render('pages/info',  { acolhido: acolhido })
+const acolhidos = (acolhido) => (req, res) => {
+    acolhido
+        .find({
+            where: { id: req.params.id }
+        })
+        .then(acolhidos => {    
+            ////req.params.id //mostrar somente primeiro registro
+            res.render('pages/info',  { acolhidos: acolhidos })
+        })
+        .catch(console.log)  
+}
 
-module.exports = acolhido 
+module.exports = acolhidos
