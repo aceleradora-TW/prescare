@@ -1,13 +1,20 @@
 const listChildren = require("../../src/routes/listChildren")
 
 describe('Quando acesso ListChildren', () => {
-    it('Deve mostrar uma lista de nomes', () => {
+    it('Deve mostrar uma lista de nomes', (done) => {
+
+        const acolhido = {
+            findAll : jest.fn() 
+        }
+
         const req = {}
         const res = {render : jest.fn()}
-        const users = [{ nome: 'Leo' }, { nome: 'Luna' } ]
+        const acolhidos = [{ nome: 'Leo' }]
+        acolhido.findAll.mockResolvedValue(acolhidos)
         
-        listChildren(users)(req,res)
-        
-        expect(res.render).toBeCalledWith('pages/listChildren', { users } )
+        return listChildren(acolhido)(req,res)
+        .then(() => expect(res.render).toBeCalledWith('pages/listChildren', { acolhidos }))
+        .then(done)
+        .catch(done)
     })
 })

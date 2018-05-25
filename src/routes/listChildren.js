@@ -1,5 +1,5 @@
 const listChildren = (Acolhido) => (req, res) => { 
-    Acolhido
+    return Acolhido
       .findAll()
       .then(acolhidos => {
         res.render('pages/listChildren', { acolhidos })

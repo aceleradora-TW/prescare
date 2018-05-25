@@ -1,5 +1,5 @@
 const acolhidos = (acolhido) => (req, res) => {
-    acolhido
+    return acolhido
         .find({
             where: { id: req.params.id }
         })
