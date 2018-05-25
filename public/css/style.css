@@ -16,40 +16,32 @@
 .body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  margin: 0 auto;
+  margin-top: auto;
   background-color: #a9d1fb
+   
 }
 
-.navbar, .footer {
+.navbar {
   background-color: #81b4db;
   width: 100vw;
 
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
   align-items: center;
   display: flex;
-  /* height: 7vh; */
   justify-content: space-between;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
   overflow: hidden;
-  
+  z-index: 1071;  
 }
 
 .centraliza-itens{
   text-align: center;
 }
 
-.footer {
-  color: #fff;
-  font-size: 2em;
-  height: 7vh;
-  text-align: center;
-  position:fixed;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  color: white;
-}
 
 .logo {
   width: 60%;
@@ -62,7 +54,8 @@
   font-size: 2.3em;
   font-weight: bold;
   margin: 0 auto;
-  
+  padding-right: 15%;
+ 
 }
 
 .botao-sair {
@@ -70,6 +63,7 @@
   font-size: 1.8em;
   font-weight: bold;
   padding-right: 3%;
+  height: 7vh;
 }
 
 .botao-sair a {
@@ -83,10 +77,10 @@
 }
 
 .main {
-  height: 90vh;
+  height: 50vh;
   width: 50vw;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 5vh;
 }
 .tablesfarmaceutica {
   margin-top: 5%;
