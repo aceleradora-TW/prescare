@@ -1,5 +1,5 @@
 
-const dadosFarmacia = [{
+const farmacia = [{
     medicamentos: 'Paracetamol 500mg',
     via: 'Oral',
     intervalo: '8-8h',
@@ -41,4 +41,4 @@ const dadosFarmacia = [{
 },
 ]
 
-module.exports = dadosFarmacia
+module.exports = farmacia

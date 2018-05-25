@@ -1,0 +1,37 @@
+.titulo {
+    font-family: 'Open Sans', sans-serif;
+}
+.icon {
+    font-size: 12px;
+    margin-left: 4px;
+    margin-top: 7px; 
+} 
+
+.campo-pesquisa {
+    width: 60%;
+    height: 25px;
+    padding-left: 20px;
+}
+.icon-pesquisa {
+    position: absolute;
+
+}
+
+.pesquisa {
+    padding-top:50px; 
+    text-align: center;
+}
+input {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCC;
+}
+
+.autocomplete-suggestions { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+.autocomplete-suggestion { font-family: 'Open Sans', sans-serif; font-size: 12px; padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-no-suggestion { padding: 2px 5px;}
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; color: #000; }
+.autocomplete-group { padding: 2px 5px; font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+

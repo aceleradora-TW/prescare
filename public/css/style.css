@@ -1,13 +1,13 @@
+@import url(https://fonts.google.com/specimen/Open+Sans);
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
-
-  font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
     margin: 0 auto;
+    font-size: 100%
 }
 
 .navbar, .footer {
@@ -20,18 +20,22 @@ body {
   display: flex;
   height: 7vh;
   justify-content: space-between;
+  margin-bottom: 5vh;
 }
 
 .footer {
+  color: #fff;
   font-size: 2em;
-  height: 5vh;
+  height: 7vh;
   text-align: center;
   position:fixed;
-  margin-top: 15px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  color: white;
 }
 
 .logo {
-  height: 100%;
+  width: 72%;
   padding-left: 2%;
 }
 
@@ -44,16 +48,72 @@ body {
 }
 
 .botao-sair {
-  font-weight:  bold;
-  font-size: 1.4em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  font-weight: bold;
   padding-right: 3%;
 }
 
+.botao-sair a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-sair a:hover {
+  color: #81b4db;
+  background-color: white;
+}
+
 .main {
-  height: 86vh;
+  height: 90vh;
   width: 50vw;
   margin: 0 auto;
-  background-color: khaki; /*cor apenas pra visualização*/
+  padding-top: 20px;
+}
+.tablesfarmaceutica {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 55vw;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.tablesfarmaceutica td, .tablesfarmaceutica th {
+  border: 1px solid;
+  height: 5vh;
+  text-align: center;
+}
+
+td.medicamento {
+  text-align: left;
+}
+.input{
+  padding-left: 1vw;
+}
+
+.add {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.acao-botao {
+  width: 100%;
+  margin-top: 50px;
+  margin-left: -10px;
+  text-align: right;
+}
+
+.botao-historico {
+  margin-left: 0.5vw;
+  margin-top: 2vh;
+}
+.panel {
+  padding: 10px 0;
+  display: none;
+  background-color: #f0e68b;
+  overflow: hidden;
 }
 .tablesfarmaceutica {
   margin-top: 5%;
@@ -75,35 +135,3 @@ td.medicamento {
 .input{
   padding-left: 1vw;
 }
-
-.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: #f0e68b;
-    overflow: hidden;
-}
-.accordion {
-  background-color: #f0e68b;
-  color: #444;
-  cursor: pointer;
-  padding: 18px 18px 0px 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #f0e68b;
-
-}
-
-.panel {
-  padding: 10px 0;
-  display: none;
-  background-color: #f0e68b;
-  overflow: hidden;
-}
-
