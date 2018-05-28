@@ -18,7 +18,6 @@ const allRoutes = models => ({
   acolhido: acolhido(models.Acolhido),
   prescricaoAtualizada: prescricaoAtualizada(tabelaFarmaceutica),
   farmaceutica : farmaceutica(dadosFarmacia)
-
 })
 
 module.exports = allRoutes
