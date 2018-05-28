@@ -9,28 +9,14 @@
   margin: 0 auto;
 }
 
-.navbar, .footer {
-  background-color: #81b4db;
-  width: 100vw;
-}
-
 .navbar {
   align-items: center;
+  background-color: #81b4db;
   display: flex;
   height: 7vh;
   justify-content: space-between;
   margin-bottom: 5vh;
-}
-
-.footer {
-  color: #fff;
-  font-size: 2em;
-  height: 7vh;
-  text-align: center;
-  position:fixed;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  color: white;
+  width: 100vw;
 }
 
 .logo {

@@ -13,12 +13,12 @@ const app = express()
 
 const databaseConnection = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
   host: settings.DB_HOST,
-  dialect: 'postgres'
-})
+  dialect: 'postgres'})
+
+const models = modelsInitializer(databaseConnection)
+const routes = routesInitializer(models)
 
 const startApplication = () => {
-  const models = modelsInitializer(databaseConnection)
-  const routes = routesInitializer(models)
 
   app
     .use(expressLayouts)
