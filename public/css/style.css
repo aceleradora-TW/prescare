@@ -15,7 +15,7 @@
   display: flex;
   height: 7vh;
   justify-content: space-between;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   width: 100vw;
 }
 
@@ -50,10 +50,9 @@
 }
 
 .main {
-  height: 90vh;
-  width: 50vw;
   margin: 0 auto;
   padding-top: 20px;
+  width: 50vw;
 }
 
 .logout {
