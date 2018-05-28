@@ -8,8 +8,6 @@ const routesInitializer = require ('./src/routes')
 const modelsInitializer = require ('./src/models')
 
 const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
-const usuarios = require('./src/mocks/userArray')
-const usuario = require('./src/mocks/user')
 const settings = require('./settings')
 const app = express()
 
@@ -26,6 +24,8 @@ const startApplication = () => {
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
+    .set('views/pages', 'tabela-abas')
+  
     .get('/login', (req, res) => {
       res.render('pages/login')
     })
@@ -35,12 +35,6 @@ const startApplication = () => {
     .get('/historico', (req, res) => {
       res.render('pages/historicoPrescricao')
     })
-    .get('/teste', (req,res) => {
-      res.render('pages/testeBanco')
-    })
-
-    .set('views/pages', 'tabela-abas')
-    .set('port', (process.env.PORT || 3000))
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/acolhidas', routes.listChildren)
@@ -52,6 +46,5 @@ const startApplication = () => {
 
 databaseConnection
  .sync()
- //.then(criaExemplos)
  .then(startApplication)
  .catch(console.log)
