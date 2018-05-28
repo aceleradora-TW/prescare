@@ -4,7 +4,6 @@ const acolhidos = (acolhido) => (req, res) => {
             where: { id: req.params.id }
         })
         .then(acolhidos => {    
-            ////req.params.id //mostrar somente primeiro registro
             res.render('pages/info',  { acolhidos: acolhidos })
         })
         .catch(console.log)  
