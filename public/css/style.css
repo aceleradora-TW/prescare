@@ -8,26 +8,13 @@
   color: #fff;
 }
 
-
 .logout:hover{
   color: #407caa;
-}
-
-.body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  margin-top: auto;
-  background-color: #a9d1fb
-   
 }
 
 .navbar {
   background-color: #81b4db;
   width: 100vw;
-
-}
-
-.navbar {
   position: sticky;
   top: 0;
   align-items: center;
@@ -42,7 +29,6 @@
   text-align: center;
 }
 
-
 .logo {
   width: 60%;
   padding-left: 2%;
@@ -55,7 +41,6 @@
   font-weight: bold;
   margin: 0 auto;
   padding-right: 15%;
- 
 }
 
 .botao-sair {
@@ -82,12 +67,12 @@
   margin: 0 auto;
   padding-top: 5vh;
 }
+
 .tablesfarmaceutica {
   margin-top: 5%;
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 .tablesfarmaceutica td, .tablesfarmaceutica th {
@@ -95,6 +80,7 @@
   height: 5vh;
   text-align: center;
 }
+
 .accordion {
   background-color: #81b4db;
   color: #444;
@@ -118,7 +104,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .acao-botao {
   width: 100%;
