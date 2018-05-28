@@ -1,3 +1,19 @@
+body {
+  background: rgb(198, 215, 230)
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.img {
+  border-radius: 12px;
+  background-color: #81b4db;
+  flex-grow: 2;
+  align-items: left;
+  margin:2px;
+}
 .flex-container {
     display: flex;
     flex-flow: row wrap;
@@ -18,10 +34,10 @@
 }
 
 .inf {
-    text-align: left;
-    font-family: 'Open Sans', sans-serif;
-    flex-grow: 1;
-    align-items: stretch;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  flex-grow: 1;
+  align-items: stretch;
 }
 
 .text {
@@ -36,20 +52,21 @@
 }
 
 .box {
-    position: static;
-    border-radius: 12px;
-    width:63%;
-    height:18vh;
-    background:#FFF;
-    margin: auto;
-    padding-top:10px;
-    padding-left: 10px;
+  position: static;
+  border-radius: 12px;
+  width:63%;
+  height:18vh;
+  background:#FFF;
+  margin: auto;
+  margin-top: 3vh;
+  padding-top:10px;
+  padding-left: 10px;
 }
 
 .effect1 {
-	-webkit-box-shadow: 0 10px 6px -6px #777;
-	   -moz-box-shadow: 0 10px 6px -6px #777;
-	        box-shadow: 0 10px 6px -6px #777;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
 }
 
 .tiracor {

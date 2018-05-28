@@ -12,7 +12,7 @@ const acolhidos = require('../mocks/acolhido')
 const tabelaFarmaceutica = require('../mocks/tabelaFarmaceutica')
 const dadosFarmacia = require('../mocks/farmacia')
 
-const allRoutes = {
+const allRoutes = {   
   listChildren: listChildren(users),
   home: home(),
   about: about(user),

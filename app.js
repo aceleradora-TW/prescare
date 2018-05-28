@@ -28,6 +28,7 @@ const startApplication = () => {
 
 const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
   host: settings.DB_HOST,
+
   dialect: 'postgres'
 })
 
