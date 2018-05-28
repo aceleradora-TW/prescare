@@ -6,16 +6,15 @@ describe('Quando acesso acolhido', () => {
             find: jest.fn()
         }
        
-        const req = {  params: { id: 1 } }
+        const req = { params: { id: 1 } }
         const res = { render: jest.fn() }
         const acolhidos = [{ nome: 'Leo' }, { id: '1' }, { idade: 'Luna' }, { peso: 'Luna' }, { alergias: 'Luna' }, { via_alimentacao: 'Luna' }]
         acolhido.find.mockResolvedValue(acolhidos)
 
         return acolhidoRoute(acolhido)(req, res)
-        .then(() => expect(acolhido.find).toBeCalledWith( {"where": {"id": 1}}))
+        .then(() => expect(acolhido.find).toBeCalledWith( {'where': {'id': 1}}))
         .then(() => expect(res.render).toBeCalledWith('pages/info', { acolhidos }))
             .then(done)
             .catch(done)
-
     })
 })
