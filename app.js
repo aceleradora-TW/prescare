@@ -15,7 +15,6 @@ const startApplication = () => {
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
-    .set('port', (process.env.PORT || 3000))
     .get('/', rotas.home)
     .get('/about', rotas.about)
     .get('/acolhidas', rotas.listChildren)
@@ -27,6 +26,7 @@ const startApplication = () => {
 
 const databaseClient = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
   host: settings.DB_HOST,
+
   dialect: 'postgres'
 })
 

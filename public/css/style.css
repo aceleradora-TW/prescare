@@ -8,43 +8,29 @@
   color: #fff;
 }
 
-
 .logout:hover{
   color: #407caa;
 }
 
-.body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  margin: 0 auto;
-}
-
-.navbar, .footer {
+.navbar {
   background-color: #81b4db;
   width: 100vw;
-}
-
-.navbar {
+  position: sticky;
+  top: 0;
   align-items: center;
   display: flex;
-  height: 7vh;
   justify-content: space-between;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
+  overflow: hidden;
+  z-index: 1071;  
 }
 
-.footer {
-  color: #fff;
-  font-size: 2em;
-  height: 7vh;
+.centraliza-itens{
   text-align: center;
-  position:fixed;
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
-  color: white;
 }
 
 .logo {
-  width: 72%;
+  width: 60%;
   padding-left: 2%;
 }
 
@@ -53,7 +39,8 @@
   font-family: 'Amatic SC', cursive;
   font-size: 2.3em;
   font-weight: bold;
-  margin: 0 auto
+  margin: 0 auto;
+  padding-right: 15%;
 }
 
 .botao-sair {
@@ -61,6 +48,7 @@
   font-size: 1.8em;
   font-weight: bold;
   padding-right: 3%;
+  height: 7vh;
 }
 
 .botao-sair a {
@@ -74,17 +62,17 @@
 }
 
 .main {
-  height: 90vh;
+  height: 50vh;
   width: 50vw;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 5vh;
 }
+
 .tablesfarmaceutica {
   margin-top: 5%;
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 .tablesfarmaceutica td, .tablesfarmaceutica th {
@@ -93,19 +81,29 @@
   text-align: center;
 }
 
-td.medicamento {
+.accordion {
+  background-color: #81b4db;
+  color: #444;
+  cursor: pointer;
+  padding: 10px 18px 10px 18px;
+  width: 100%;
+  border: none;
+  font-size: 1.03em;
   text-align: left;
-}
+  }
+
 .input{
   padding-left: 1vw;
 }
 
+.active, .accordion:hover {
+  background-color: #81b4db;
+}
 .add {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .acao-botao {
   width: 100%;
@@ -119,8 +117,28 @@ td.medicamento {
   margin-top: 2vh;
 }
 .panel {
-  padding: 10px 0;
+  width:100%;
   display: none;
-  background-color: #f0e68b;
+  background-color: #e7de8b;
   overflow: hidden;
+  text-align: justify;
+  border: 3px solid;
+  border-color: #81b4db;
+}
+
+.teste {
+  width:100%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.teste th, .teste tr td {
+  border: 1px solid;
+  border-color: #9b9b9b;
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+.w-auto {
+  width: auto;
 }

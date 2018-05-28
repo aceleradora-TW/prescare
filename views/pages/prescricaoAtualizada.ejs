@@ -1,49 +1,59 @@
 <%- contentFor('body') %>
-  <%for (tabelaFarmaceutica of tabelaFarmaceutica){%>
-    <button class="accordion">
-      <%= tabelaFarmaceutica.name%>
-        <i class="fas fa-angle-down"></i>
-    </button>
-    <div class="panel">
-      <table style="width:100%">
-        <th>Medicamento</th>
-        <th>Via</th>
-        <th>Intervalo</th>
-        <th>Forma Farmacêutica</th>
-        <th>Horário</th>
-        <th>Lote</th>
-        <th>Validade</th>
-        <th>Dispensação</th>
-        <body>
-          <tr>
-            <td class="medicamento">
-              <%=tabelaFarmaceutica.farm[0].medicamentos%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].via%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].intervalo%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].formaFarmaceutica%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].horario%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].lote%>
-            </td>
-            <td>
-              <%=tabelaFarmaceutica.farm[0].validade%>
-            </td>
-            <td>
-              <div class="input">
-                <input type="checkbox"> </div>
-            </td>
-          </tr>
-        </body>
-      </table>
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <%for (prescricao of tabelaFarmaceutica){%>
+        <button class="accordion">
+          <%= prescricao.nome%>
+            <i class="fas fa-angle-down"></i>
+        </button>
+        <div class="panel">
+          <div class="table-responsive-sm">
+            
+            <table class="teste">
+              <thead>
+                <th>Medicamento</th>
+                <th>Via</th>
+                <th>Intervalo</th>
+                <th>Forma Farmacêutica</th>
+                <th>Horário</th>
+                <th>Lote</th>
+                <th>Validade</th>
+                <th>Dispensação</th>
+              </thead>
+              <tbody>
+                <% for(var i=0; i < prescricao.farmaceutica.length; i++) {%>
+                  <tr>
+                    <td>
+                      <%= prescricao.farmaceutica[i].medicamentos%>
+                    </td>
+                    <td>
+                      <%= prescricao.farmaceutica[i].via%>
+                    </td>
+                    <td>
+                      <%=prescricao.farmaceutica[i].intervalo%>
+                    </td>
+                    <td>
+                      <%=prescricao.farmaceutica[i].formaFarmaceutica%>
+                    </td>
+                    <td>
+                      <%=prescricao.farmaceutica[i].horario%>
+                    </td>
+                    <td>
+                      <%=prescricao.farmaceutica[i].lote%>
+                    </td>
+                    <td>
+                      <%=prescricao.farmaceutica[i].validade%>
+                    </td>
+                    <td>
+                      <div class="input">
+                        <input type="checkbox"> </div>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <%}%>
     </div>
-    <%}%>
-    
+  </div>
