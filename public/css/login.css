@@ -1,74 +1,62 @@
+.main {
+    height:100vh;
+    width: 100vw;
+    margin: 0 auto;
+    background-color:#81b4db;
+  }
 
-.imgLogin{
+.img-Login{
     width: 40vh;
     text-align: center;
+    padding-bottom: 8vh;
 }
 
-.imgCenter {
-    padding-top: 40px;
+.img-Center {
+    padding-top: 15vh;
     text-align: center;
 }
 
-.login{
+.login {
     text-align: center;
-    padding-bottom: 40px;
-    padding-top: 50px;
+    padding-bottom: 5vh;
+    font-family: 'Open Sans';
 }
 
-.entrar{
-    padding-top: 10px;
+.usuario {
+    padding-bottom: 1vh;
 }
 
-.usuario{
-    padding-top: 5px;
+.senha {
+    padding-bottom: 4vh;
+    padding-left: 1vw;
 }
 
-.senha{
-    padding-top: 20px;
-    padding-left: 8px;
-}
-
-.botao{
-    border: none;
-    color: white;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px 0px 80px;
-    cursor: pointer;
-    background-color: #f44336;
-    border-radius: 8px;
-}
-
-#user{
-    width: 200px;
-    padding: 12px 10px;
-    margin: 8px 0;
+.user {
+    width: 15vw;
+    padding: 1vh 1vw;
+    margin: 1vh 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 1vh;
     box-sizing: border-box;
 }
 
-#pass{
-    width: 200px;
-    padding: 12px 10px;
-    margin: 8px 0;
+.pass {
+    width: 15vw;
+    padding: 1vh 1vw;
+    margin: 1vh 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 1vh;
     box-sizing: border-box;
 }
 
-label {
-    padding: 12px 12px 12px 0;
+.label {
+    padding: 1vh 1vw 1vh 0;
     display: inline-block;
 }
 
 .container {
-    margin-bottom: 30px;
     font-family: 'Open Sans', sans-serif;
     text-align: center; 
     align-items: center;
