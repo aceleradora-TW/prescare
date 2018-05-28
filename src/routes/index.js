@@ -1,4 +1,4 @@
-const listChildren = require('../routes/listChildren')
+const listaAcolhidos = require('../routes/listaAcolhidos')
 const home = require('../routes/home')
 const about = require('../routes/about')
 const acolhido = require('../routes/acolhido')
@@ -12,7 +12,7 @@ const dadosFarmacia = require('../mocks/farmacia')
 
 
 const allRoutes = models => ({
-  listChildren: listChildren(models.Acolhido),
+  listaAcolhidos: listaAcolhidos(models.Acolhido),
   home: home(),
   about: about(user),
   acolhido: acolhido(models.Acolhido),

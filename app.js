@@ -37,7 +37,7 @@ const startApplication = () => {
     })
     .get('/', routes.home)
     .get('/about', routes.about)
-    .get('/acolhidas', routes.listChildren)
+    .get('/lista-acolhidos', routes.listaAcolhidos)
     .get('/acolhido/:id', routes.acolhido)
     .get('/prescricaoAtualizada', routes.prescricaoAtualizada)
     .get('/farmaceutica', routes.farmaceutica)

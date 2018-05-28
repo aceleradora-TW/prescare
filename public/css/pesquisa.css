@@ -1,6 +1,7 @@
 .titulo {
     font-family: 'Open Sans', sans-serif;
 }
+
 .icon {
     font-size: 12px;
     margin-left: 4px;
@@ -14,13 +15,13 @@
 }
 .icon-pesquisa {
     position: absolute;
-
 }
 
 .pesquisa {
     padding-top:50px; 
     text-align: center;
 }
+
 input {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

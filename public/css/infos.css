@@ -1,12 +1,10 @@
 
-@import url(https://fonts.google.com/specimen/Open+Sans);
-
 .flex-container {
     display: flex;
     flex-flow: row wrap;
 }
 
-.foto-acolhido{
+.foto-acolhido {
     width: 100px;
     height: 100px;
 }
@@ -37,7 +35,7 @@
     font-weight: bold;
 }
 
-.atualiza{
+.atualiza {
     margin: 1vh;
     color: grey;
     font-size: 1vh;

@@ -1,15 +1,6 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
 * {
   box-sizing: border-box;
   margin: 0;
-}
-
-.logout{
-  color: #fff;
-}
-
-.logout:hover{
-  color: #407caa;
 }
 
 .body {
@@ -78,12 +69,20 @@
   margin: 0 auto;
   padding-top: 20px;
 }
+
+.logout {
+  color: #fff;
+}
+
+.logout:hover {
+  color: #407caa;
+}
+
 .tablesfarmaceutica {
   margin-top: 5%;
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 .tablesfarmaceutica td, .tablesfarmaceutica th {
@@ -95,7 +94,8 @@
 td.medicamento {
   text-align: left;
 }
-.input{
+
+.input {
   padding-left: 1vw;
 }
 
@@ -116,6 +116,7 @@ td.medicamento {
   margin-left: 0.5vw;
   margin-top: 2vh;
 }
+
 .panel {
   padding: 10px 0;
   display: none;

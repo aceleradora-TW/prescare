@@ -1,6 +1,6 @@
-const listChildren = require("../../src/routes/listChildren")
+const listaAcolhidos = require("../../src/routes/listaAcolhidos")
 
-describe('Quando acesso ListChildren', () => {
+describe('Quando acesso listaAcolhidos', () => {
     it('Deve mostrar uma lista de nomes', (done) => {
 
         const acolhido = {
@@ -12,8 +12,8 @@ describe('Quando acesso ListChildren', () => {
         const acolhidos = [{ nome: 'Leo' }]
         acolhido.findAll.mockResolvedValue(acolhidos)
         
-        return listChildren(acolhido)(req,res)
-        .then(() => expect(res.render).toBeCalledWith('pages/listChildren', { acolhidos }))
+        return listaAcolhidos(acolhido)(req,res)
+        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos }))
         .then(done)
         .catch(done)
     })
