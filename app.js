@@ -10,6 +10,7 @@ const modelsInitializer = require('./src/models')
 const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
+const passport = require('passport')
 
 const databaseConnection = new Sequelize(settings.DATABASE_URL, { dialect: 'postgres' })
 
