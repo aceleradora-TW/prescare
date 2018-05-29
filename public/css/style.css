@@ -1,7 +1,12 @@
-@import url(https://fonts.google.com/specimen/Open+Sans);
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+.body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
 }
 
 .logout{
@@ -18,11 +23,12 @@
   position: sticky;
   top: 0;
   align-items: center;
+  background-color: #81b4db;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3vh;
   overflow: hidden;
-  z-index: 1071;  
+  z-index: 1071;
 }
 
 .centraliza-itens{
@@ -90,15 +96,16 @@
   border: none;
   font-size: 1.03em;
   text-align: left;
-  }
+}
 
-.input{
+.input {
   padding-left: 1vw;
 }
 
 .active, .accordion:hover {
   background-color: #81b4db;
 }
+
 .add {
   display: block;
   margin-left: auto;
@@ -116,6 +123,7 @@
   margin-left: 0.5vw;
   margin-top: 2vh;
 }
+
 .panel {
   width:100%;
   display: none;
@@ -137,8 +145,8 @@
   border-color: #9b9b9b;
   text-align: center;
   padding-bottom: 10px;
-
 }
+
 .w-auto {
   width: auto;
 }
