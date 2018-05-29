@@ -6,7 +6,6 @@ const farmaceutica = require('../routes/farmaceutica')
 const prescricaoAtualizada = require('../routes/prescricaoAtualizada')
 
 const user = require('../mocks/user')
-const acolhidos = require('../mocks/acolhido')
 const tabelaFarmaceutica = require('../mocks/tabelaFarmaceutica')
 const dadosFarmacia = require('../mocks/farmacia')
 

@@ -4,21 +4,19 @@ const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
 const acolhido = require('./public/js/acolhido.js')
 const Sequelize = require('sequelize')
-const routesInitializer = require ('./src/routes')
-const modelsInitializer = require ('./src/models')
+const routesInitializer = require('./src/routes')
+const modelsInitializer = require('./src/models')
 
 const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
 
-const databaseConnection = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
-  host: settings.DB_HOST,
-  dialect: 'postgres'})
+const databaseConnection = new Sequelize(settings.DATABASE_URL, {dialect: 'postgres'})
 
-  const models = modelsInitializer(databaseConnection)
-  const routes = routesInitializer(models)
+const models = modelsInitializer(databaseConnection)
+const routes = routesInitializer(models)
 
-  const startApplication = () => {
+const startApplication = () => {
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
@@ -44,6 +42,6 @@ const databaseConnection = new Sequelize(settings.DB_NAME, settings.DB_USER, set
 }
 
 databaseConnection
- .sync()
- .then(startApplication)
- .catch(console.log)
+  .sync()
+  .then(startApplication)
+  .catch(console.log)
