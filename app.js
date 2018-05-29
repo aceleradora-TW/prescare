@@ -27,16 +27,16 @@ const startApplication = () => {
       res.render('pages/login')
     })
     .get('/pesquisar', (req, res) => {
-      res.render('pages/pesquisaAcolhidos')
+      res.render('pages/pesquisa-acolhidos')
     })
     .get('/historico', (req, res) => {
-      res.render('pages/historicoPrescricao')
+      res.render('pages/historico-prescricao')
     })
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/lista-acolhidos', routes.listaAcolhidos)
     .get('/acolhido/:id', routes.acolhido)
-    .get('/prescricaoAtualizada', routes.prescricaoAtualizada)
+    .get('/prescricao-atualizada', routes.prescricaoAtualizada)
     .get('/farmaceutica', routes.farmaceutica)
     .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
 }
