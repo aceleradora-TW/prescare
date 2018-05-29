@@ -4,10 +4,10 @@
         <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
         <div class="content">
             <ul class="lista-acolhidos">
-                <%for (users of users){%>
+                <%for (acolhido of acolhidos){%>
                     <li>
-                        <a href="acolhido1.html">
-                            <%= users.name %>
+                        <a href="acolhido/<%= acolhido.id %>">
+                            <%= acolhido.nome %>
                         </a>
                     </li>
                 <%}%>

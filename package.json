@@ -9,29 +9,31 @@
     "test:watch": "npx jest --watchAll test/",
     "dev": "npx nodemon app.js",
     "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
+    "db:create": "docker exec -it prescare-database psql -U postgres -c 'CREATE DATABASE prescare' ",
+    "db:console": "docker exec -it prescare-database psql -U postgres -d prescare",
+    "db:reset": "npm run db:stop; sleep 1; npm run db:start; sleep 2; npm run db:create",
     "db:stop": "docker stop prescare-database"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murilobauerc/sessao-heroku.git"
+    "url": "https://github.com/aceleradora-TW/prescare"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/murilobauerc/sessao-heroku/issues"
+    "url": "https://github.com/aceleradora-TW/prescare"
   },
-  "homepage": "https://github.com/murilobauerc/sessao-heroku#readme",
+  "homepage": "https://github.com/aceleradora-TW/prescare/blob/master/README.md",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
-    "nodemon": "^1.17.4",
-    "body-parser": "^1.18.2",
     "pg": "^7.4.3",
     "sequelize": "^4.37.7"
   },
   "devDependencies": {
-    "jest": "^23.0.0",
+    "jest": "^23.0.1",
     "nodemon": "^1.17.4"
   }
 }

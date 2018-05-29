@@ -14,23 +14,24 @@ body {
   align-items: left;
   margin:2px;
 }
+
 .flex-container {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.foto-acolhido{
-    width: 100px;
-    height: 100px;
+.foto-acolhido {
+  height: 100px;
+  width: 100px;
 }
 
 .img-acolhido {
-    background-color: #81b4db;
-    border-radius: 12px;
-    flex-grow: 2;
-    align-items: center;
-    margin-right: 10px;
-    margin-bottom: 10px;
+  align-items: center;
+  background-color: #81b4db;
+  border-radius: 12px;
+  flex-grow: 2;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .inf {
@@ -41,18 +42,19 @@ body {
 }
 
 .text {
+  margin: 1vh;
   margin-left: 1vw;
   padding-top: 2.3vh;
-
-    margin: 1vh;
 }
 
 .bold {
   font-weight: bold;
 }
+
 .atualiza {
   color: grey;
   font-size: 1vh;
+  margin: 1vh;
 }
 
 .box {
@@ -74,6 +76,6 @@ body {
 }
 
 .tiracor {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
