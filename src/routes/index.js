@@ -4,6 +4,7 @@ const about = require('../routes/about')
 const acolhido = require('../routes/acolhido')
 const farmaceutica = require('../routes/farmaceutica')
 const prescricaoAtualizada = require('../routes/prescricaoAtualizada')
+const login = require('../routes/login')
 
 const user = require('../mocks/user')
 const tabelaFarmaceutica = require('../mocks/tabelaFarmaceutica')
@@ -16,7 +17,8 @@ const allRoutes = models => ({
   about: about(user),
   acolhido: acolhido(models.Acolhido),
   prescricaoAtualizada: prescricaoAtualizada(tabelaFarmaceutica),
-  farmaceutica : farmaceutica(dadosFarmacia)
+  farmaceutica : farmaceutica(dadosFarmacia),
+  login: login()
 })
 
 module.exports = allRoutes
