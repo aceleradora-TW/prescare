@@ -1,67 +1,66 @@
 .titulo {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .icon {
-    font-size: 12px;
-    margin-left: 4px;
-    margin-top: 7px; 
-} 
+  font-size: 12px;
+  margin-left: 4px;
+  margin-top: 7px;
+}
 
 .campo-pesquisa {
-    height: 25px;
-    width: 60%;
-    padding-left: 20px;
+  height: 25px;
+  width: 60%;
+  padding-left: 20px;
 }
 .icon-pesquisa {
-    position: absolute;
+  position: absolute;
 }
 
 .pesquisa {
-    padding-top:50px; 
-    text-align: center;
+  padding-top:50px;
+  text-align: center;
 }
 
-.autocomplete-suggestions { 
-    -moz-box-sizing: border-box; 
-    -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
-    -webkit-box-sizing: border-box; 
-    -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
-    background: #FFF; 
-    border: 1px solid #999; 
-    box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
-    box-sizing: border-box; 
-    cursor: default; 
-    overflow: auto; 
+.autocomplete-suggestions {
+  -moz-box-sizing: border-box;
+  -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  -webkit-box-sizing: border-box;
+  -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  background: #FFF;
+  border: 1px solid #999;
+  box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+  box-sizing: border-box;
+  cursor: default;
+  overflow: auto;
 }
 
-.autocomplete-suggestion { 
-    font-family: 'Open Sans', sans-serif; 
-    font-size: 12px; 
-    overflow: hidden; 
-    padding: 2px 5px; 
-    white-space: nowrap; 
+.autocomplete-suggestion {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 2px 5px;
+  white-space: nowrap;
 }
 
-.autocomplete-no-suggestion { 
-    padding: 2px 5px;
+.autocomplete-no-suggestion {
+  padding: 2px 5px;
 }
 
-.autocomplete-selected { 
-    background: #F0F0F0; 
+.autocomplete-selected {
+  background: #F0F0F0;
 }
 
-.autocomplete-suggestions strong { 
-    font-weight: bold; 
-    color: #000; 
+.autocomplete-suggestions strong {
+  color: #000;
+  font-weight: bold;
 }
 
-.autocomplete-group { 
-    border-bottom: 1px solid #000; 
-    color: #000; 
-    display: block; 
-    font-size: 16px; 
-    font-weight: bold; 
-    padding: 2px 5px; 
+.autocomplete-group {
+  border-bottom: 1px solid #000;
+  color: #000;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 5px;
 }
-

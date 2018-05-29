@@ -14,7 +14,7 @@ const app = express()
 const databaseConnection = new Sequelize(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, {
   host: settings.DB_HOST,
   dialect: 'postgres'})
-  
+
   const models = modelsInitializer(databaseConnection)
   const routes = routesInitializer(models)
 
@@ -24,7 +24,7 @@ const databaseConnection = new Sequelize(settings.DB_NAME, settings.DB_USER, set
     .use(express.static(__dirname + '/public/'))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
-  
+
     .get('/login', (req, res) => {
       res.render('pages/login')
     })

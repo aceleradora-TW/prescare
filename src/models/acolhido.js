@@ -11,4 +11,8 @@ module.exports = db => db.define('acolhidos', {
   peso: sequelize.FLOAT,
   alergias: sequelize.STRING,
   via_alimentacao: sequelize.STRING
-},{timestamps: false})
+  },
+  {
+    timestamps: false
+  }
+)
