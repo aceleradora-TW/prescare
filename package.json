@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murilobauerc/sessao-heroku.git"
+    "url": "https://github.com/aceleradora-TW/prescare"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/murilobauerc/sessao-heroku/issues"
+    "url": "https://github.com/aceleradora-TW/prescare"
   },
-  "homepage": "https://github.com/murilobauerc/sessao-heroku#readme",
+  "homepage": "https://github.com/aceleradora-TW/prescare/blob/master/README.md",
   "dependencies": {
     "body-parser": "^1.18.2",
     "ejs": "^2.6.1",
