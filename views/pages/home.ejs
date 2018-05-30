@@ -1,4 +1,9 @@
 <%- contentFor('body') %>
 <div>
+  <% if (user) { %>
+    <p>Usuário logado: <%- user.username %></p>  
+  <% } %>
+</div>
+<div>
   Casa Menino Jesus de Praga
 </div>
