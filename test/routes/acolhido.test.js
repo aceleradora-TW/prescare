@@ -5,7 +5,7 @@ describe('Quando acesso acolhido', () => {
         const Acolhido = {
             findOne: jest.fn()
         }
-       
+
         const req = { params: { acolhido_id: 1 } }
         const res = { render: jest.fn() }
         const acolhido = { nome: 'Leo', id: '1', idade: 'Luna' , peso: 'Luna' , alergias: 'Luna' , via_alimentacao: 'Luna' }

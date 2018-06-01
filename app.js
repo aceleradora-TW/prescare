@@ -54,18 +54,26 @@ const startApplication = () => {
     .get('/farmaceutica', routes.farmaceutica)
 
     .get('/acolhido/:acolhido_id', routes.acolhido)
+<<<<<<< e85fd9dfcc250a44ff9bc1ae5de075e68e05ce68
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
     .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+=======
+    .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
+>>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
     .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
     .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
     
+<<<<<<< e85fd9dfcc250a44ff9bc1ae5de075e68e05ce68
     .get('/cuidado/:cuidado_id', routes.getCuidado)
     .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado', routes.createCuidado)
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.editCuidado)
     .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.updateCuidado)
 >>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
 
+=======
+>>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
