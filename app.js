@@ -35,8 +35,11 @@ const startApplication = () => {
 <<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
 =======
 
+<<<<<<< 6824887ccef712d7efba8de68442e7be65a1ce6d
 
 >>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
+=======
+>>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
