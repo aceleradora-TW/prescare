@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize')
 module.exports = Prescricao => (req, res) => {
   return Prescricao.findOne({
     where: {
