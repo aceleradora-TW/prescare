@@ -13,7 +13,11 @@ describe('Quando acesso acolhido', () => {
 
         return acolhidoRoute(Acolhido)(req, res)
         .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
+<<<<<<< 9546b7f5e4d175f09346d462f5d8673f4d969912
         .then(() => expect(res.render).toBeCalledWith('pages/acolhido', { acolhido }))
+=======
+        .then(() => expect(res.render).toBeCalledWith('pages/info', { acolhido }))
+>>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
         .then(done)
         .catch(done)
     })
