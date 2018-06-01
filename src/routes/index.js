@@ -15,12 +15,6 @@ const getPrescricao = require('./prescricao/get')
 const destroyPrescricao = require('./prescricao/destroy')
 const updatePrescricao = require('./prescricao/update')
 
-const createCuidado = require('./cuidado/create')
-const editCuidado = require('./cuidado/edit')
-const getCuidado = require('./cuidado/get')
-const updateCuidado = require('./cuidado/update')
-
-
 const allRoutes = models => ({
   listaAcolhidos: listaAcolhidos(models.Acolhido),
   home: home(),
