@@ -1,4 +1,5 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
@@ -20,25 +21,37 @@ const startApplication = () => {
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
+    .use(bodyParser.urlencoded({
+      extended: false
+    }))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
 
     .get('/login', (req, res) => {
-      res.render('pages/login')
+      res.render('pages/login');
     })
     .get('/pesquisar', (req, res) => {
-      res.render('pages/pesquisa-acolhidos')
+      res.render('pages/pesquisa-acolhidos');
     })
     .get('/historico', (req, res) => {
-      res.render('pages/historico-prescricao')
+      res.render('pages/historico-prescricao');
     })
     .get('/', routes.home)
     .get('/about', routes.about)
     .get('/lista-acolhidos', routes.listaAcolhidos)
-    .get('/acolhido/:id', routes.acolhido)
     .get('/prescricao-atualizada', routes.prescricaoAtualizada)
     .get('/farmaceutica', routes.farmaceutica)
-    .listen(settings.PORT, () => console.log('Servidor iniciado em http://localhost:' + settings.PORT))
+
+    .get('/acolhido/:acolhido_id', routes.acolhido)
+    .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
+    .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
+    
+    .listen(settings.PORT, () =>
+      console.log('Servidor iniciado em http://localhost:' + settings.PORT)
+    );
 }
 
 databaseConnection

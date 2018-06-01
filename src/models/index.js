@@ -7,8 +7,10 @@ module.exports = db => {
   const Medicamento = medicamento(db)
   const Prescricao = prescricao(db)
 
-  Acolhido.belongsToMany(Medicamento, {through: Prescricao})
-  Medicamento.belongsToMany(Acolhido, {through: Prescricao})
+  Prescricao.hasMany(Medicamento)
+  Medicamento.belongsTo(Prescricao)
+  Acolhido.hasMany(Prescricao)
+  Prescricao.belongsTo(Acolhido)
 
   return {Acolhido, Medicamento, Prescricao}
 }
