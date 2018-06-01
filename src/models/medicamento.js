@@ -2,6 +2,11 @@
 const sequelize = require('sequelize')
 
 module.exports = db => db.define('medicamento', {
+  id: {
+    type: sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   nome: sequelize.STRING,
   intervalo: sequelize.STRING,
 <<<<<<< 6c8c9ea9c54affd40c7c5c7a9a1888abf5984be3
@@ -10,6 +15,7 @@ module.exports = db => db.define('medicamento', {
   dosagem:sequelize.STRING,
   validade:sequelize.STRING,
   lote:sequelize.STRING,
+<<<<<<< 7747365a9c47848e1717859045ce63bcc52896ee
 <<<<<<< bb21fa6d6124ad7e0079c387520d5dcf259fc62e
 })
 =======
@@ -35,3 +41,7 @@ module.exports = db => db.define('medicamento', {
 >>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 })
 >>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
+=======
+  tipo: sequelize.STRING
+}
+>>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
