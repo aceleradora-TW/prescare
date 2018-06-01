@@ -1,5 +1,13 @@
 const sequelize = require('sequelize')
 
 module.exports = db => db.define('prescricao', {
-  intervalo: sequelize.STRING
+  id: {
+    type: sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  data: sequelize.DATEONLY,
+  validade: sequelize.DATEONLY
+}, {
+  underscored: true
 })

@@ -13,6 +13,7 @@ module.exports = db => db.define('acolhidos', {
   via_alimentacao: sequelize.STRING
   },
   {
-    timestamps: false
+    timestamps: false,
+    underscored: true
   }
 )

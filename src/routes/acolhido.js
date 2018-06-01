@@ -1,12 +1,12 @@
-const acolhidos = (acolhido) => (req, res) => {
+const acolhido = (acolhido) => (req, res) => {
     return acolhido
-        .find({
-            where: { id: req.params.id }
+        .findOne({
+            where: { id: req.params.acolhido_id }
         })
-        .then(acolhidos => {    
-            res.render('pages/info',  { acolhidos : acolhidos })
+        .then(acolhido => {    
+            res.render('pages/info',  { acolhido })
         })
         .catch(console.log)  
 }
 
-module.exports = acolhidos
+module.exports = acolhido
