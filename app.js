@@ -31,6 +31,7 @@ const startApplication = () => {
     }))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
+<<<<<<< 26e5661ff1ceb7faa4e9fa0f11310ef6ba10a1f7
 <<<<<<< ff66160b0f34de8e41fc2749e7f82f67dca14fe2
     .use('/', routes.applicationRoutes)
     .use('/acolhido', routes.acolhidoRoutes)
@@ -64,6 +65,12 @@ const startApplication = () => {
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
     .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
     .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
+=======
+    .use('/', routes.applicationRoutes)
+    .use('/acolhido', routes.acolhidoRoutes)
+    .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
+
+>>>>>>> Removendo roteamento do app e utilizando routes index para isso
     
 <<<<<<< e85fd9dfcc250a44ff9bc1ae5de075e68e05ce68
     .get('/cuidado/:cuidado_id', routes.getCuidado)
