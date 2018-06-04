@@ -1,9 +1,12 @@
 module.exports = Medicamento => (req, res) => {
-    return Medicamento
-      .findAll()
-      .then(medicamento => {
-        res.render('pages/medicamento', { medicamento })
-      })
-      .catch(console.log)
+    Medicamento.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(medicamento => {
+      if (!medicamento) res.redirect('404')
+  
+      res.render('pages/medicamento', { medicamento })
+    }).catch(err => console.log(err))  
   }
   
