@@ -6,11 +6,19 @@
         <div class="inf">
             <div class="text">
                 <div>
-                    <p1 class="bold"> Nome: </p1>
-                    <p2>
-                        <%=acolhido.nome%>
-                    </p2>
-                </div>
+                    <span class="nome-left">
+                        <p1 class="bold"> Nome: </p1>
+                        <p2>
+                            <%=acolhido.nome%>
+                        </p2>
+                    </span>
+                    <span class="edit-right">
+                        <a href="#" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                        </a>
+                        <span class="atualiza">Última atualização: dd/mm/aaaa </span>
+                    </span>
+                </div><br>
                 <div>
                     <p1 class="bold"> Idade: </p1>
                     <p2>
@@ -22,7 +30,6 @@
                     <p2>
                         <%=acolhido.peso%>
                     </p2>
-                    <span class="atualiza">Última atualização: dd/mm/aaaa </span>
                 </div>
                 <div>
                     <p1 class="bold"> Alergias: </p1>
