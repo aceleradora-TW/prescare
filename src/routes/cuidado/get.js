@@ -8,3 +8,7 @@ module.exports = Cuidado => (req, res) => {
     })
     .catch(err => console.log(err))
 }
+      res.render('pages/cuidados', { cuidado })
+    })
+    .catch(console.log)
+}
