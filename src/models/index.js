@@ -17,11 +17,15 @@ module.exports = db => {
   Prescricao.belongsTo(Acolhido)
   Prescricao.hasMany(Medicamento)
   Acolhido.hasMany(Prescricao)
+<<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
 <<<<<<< 6c8c9ea9c54affd40c7c5c7a9a1888abf5984be3
+=======
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
   Medicamento.belongsTo(Prescricao)
   Cuidado.belongsTo(Prescricao)
   Dieta.belongsTo(Prescricao)
   Prescricao.belongsToMany(Usuario,{through:'usuario_prescricao'})
+<<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
   Prescricao.hasMany(Cuidado)
   Prescricao.hasMany(Dieta)
 =======
@@ -33,15 +37,8 @@ module.exports = db => {
 
   return {Acolhido, Medicamento, Prescricao, Cuidado, Dieta}
 }
+=======
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 
-// exibir prescricao com os medicamentos 
-// como introduzir ele no projeto
-// como ele funciona por de trás dos panos 
-// comandos 
-// End to End (baby steps)
-// pq usar 
-// exemplo no projeto 
-// quisso
-// ORM 
-// CRUD 
-// QUERY 
+  return {Acolhido, Medicamento, Prescricao,Cuidado,Dieta}
+}
