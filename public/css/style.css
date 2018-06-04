@@ -150,14 +150,12 @@
 .w-auto {
   width: auto;
 }
-<<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
 
 label{
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
-<<<<<<< bb21fa6d6124ad7e0079c387520d5dcf259fc62e
-=======
+
 a.botaoo{
   border: 1px solid;
   background-color: #0a95f1;
@@ -169,22 +167,3 @@ a.botaoo:hover{
   text-decoration: none;
   background-color: #3d8bf0;
   }
-<<<<<<< 66c45d1f076cdd06e2d61897498f8c7064ce76d4
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
-=======
-
-tr.js-novo-elemento-cuidados{
-  margin-right: 110px;
-}
-
-.cuidado{
-  margin-left: 203px;
-  overflow-y: auto;
-}
-
-h1{
-  margin-left: 250px;
-}
->>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
-=======
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
