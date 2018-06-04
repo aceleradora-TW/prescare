@@ -4,6 +4,7 @@ const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
 const cuidadoRoutes = require('./cuidado')
+const medicamentoRoutes = require('./medicamento')
 const dietaRoutes = require('./dieta')
 
 module.exports = models => {
@@ -12,5 +13,5 @@ module.exports = models => {
     prescricaoRoutes(models.Prescricao, models.Dieta, router),
     dietaRoutes(models.Dieta, router),
     cuidadoRoutes(models.Cuidado, router)
-  return router;
-}
+    medicamentoRoutes(models.Medicamento, router)
+  }
