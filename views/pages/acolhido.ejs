@@ -52,3 +52,17 @@
     <form action="<%= acolhido.id %>/prescricao" method="POST">
         <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
     </form>
+
+    <%for (prescricao of presc){%>
+        - Prescrição -
+        <br> Id:
+        <%= prescricao.id %>
+            <br> Intervalo:
+            <%= prescricao.intervalo%>
+                <br> Acolhido id:
+                <%= prescricao.acolhido_id%>
+                    <%}%>
+
+    <form action="<%= acolhido.id %>/prescricao/prescricao.id" method="DELETE">
+        <input type="submit" value="Excluir">
+    </form>
