@@ -1,4 +1,4 @@
-const acolhidoRoute = require("../../src/routes/acolhido")
+const acolhidoRoute = require("../../src/routes/acolhido/get")
 
 describe('Quando acesso acolhido', () => {
     it('Deve mostrar pagina com prescrição e suas abas atualizaveis', (done) => {
