@@ -24,4 +24,6 @@ module.exports = db => {
   Prescricao.hasMany(Dieta)
 
   return { Acolhido, Medicamento, Prescricao, Cuidado, Dieta }
+  return {Acolhido, Medicamento, Prescricao, Cuidado, Dieta}
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 }

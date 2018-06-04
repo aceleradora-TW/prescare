@@ -160,8 +160,6 @@ label {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
-<<<<<<< dd060883b6004671187261c5a7286c98cc05fa4c
-
 .botaoPrescricao {
   margin-top: 5vh;
   margin-left: 33vh;
@@ -182,22 +180,17 @@ padding-top: 3vh;
   margin-bottom: 1vh;
   height:5vh;
 
-=======
-<<<<<<< bb21fa6d6124ad7e0079c387520d5dcf259fc62e
-=======
 a.botaoo{
   border: 1px solid;
   background-color: #0a95f1;
   color: #000000;
   padding:3px;
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 }
 
 a.botaoo:hover{
   text-decoration: none;
   background-color: #3d8bf0;
   }
-
 
 tr.js-novo-elemento-cuidados{
   margin-right: 110px;
@@ -207,13 +200,3 @@ tr.js-novo-elemento-cuidados{
   margin-left: 203px;
   overflow-y: auto;
 }
-
-<<<<<<< dd060883b6004671187261c5a7286c98cc05fa4c
-=======
-h1{
-  margin-left: 250px;
-}
->>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
-=======
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
