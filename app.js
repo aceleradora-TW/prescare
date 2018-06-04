@@ -35,7 +35,6 @@ const startApplication = () => {
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
 
-
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
