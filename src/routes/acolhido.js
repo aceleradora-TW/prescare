@@ -3,10 +3,10 @@ const acolhido = (acolhido) => (req, res) => {
         .findOne({
             where: { id: req.params.acolhido_id }
         })
-        .then(acolhido => {    
+        .then(acolhido => {
             res.render('pages/acolhido',  { acolhido })
         })
-        .catch(console.log)  
+        .catch(console.log)
 }
 
 module.exports = acolhido

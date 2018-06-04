@@ -13,4 +13,3 @@ module.exports = (Acolhido, router) => {
 
   return router;
 }
-
