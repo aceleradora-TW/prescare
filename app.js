@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
-const acolhido = require('./public/js/acolhido.js')
+// const acolhido = require('./public/js/acolhido.js')
 const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
@@ -42,13 +42,14 @@ const startApplication = () => {
     .get('/prescricao-atualizada', routes.prescricaoAtualizada)
     .get('/farmaceutica', routes.farmaceutica)
 
-    .get('/acolhido/:acolhido_id', routes.acolhido)
+    .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
     .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+    .get('/acolhido/:acolhido_id', routes.getAcolhido)
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
     .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
-    .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
-    
+    .get('/acolhido/:acolhido_id/edit', routes.editAcolhido)
+    .post('/acolhido/:acolhido_id/edit', routes.updateAcolhido)
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
