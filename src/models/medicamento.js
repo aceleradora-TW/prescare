@@ -14,5 +14,8 @@ module.exports = db => db.define('medicamento', {
   dosagem:sequelize.STRING,
   validade:sequelize.STRING,
   lote:sequelize.STRING,
+<<<<<<< 8db5b842256a5735adb3d7d5f4a005715d41f326
   tipo: sequelize.STRING
+=======
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 })
