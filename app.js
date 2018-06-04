@@ -37,6 +37,7 @@ const startApplication = () => {
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
     .use('/', routes.cuidadoRoutes)
+<<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
 =======
 
     .get('/login', (req, res) => {
@@ -71,6 +72,8 @@ const startApplication = () => {
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
 
 >>>>>>> Removendo roteamento do app e utilizando routes index para isso
+=======
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
     
 <<<<<<< e85fd9dfcc250a44ff9bc1ae5de075e68e05ce68
     .get('/cuidado/:cuidado_id', routes.getCuidado)
