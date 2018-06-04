@@ -43,6 +43,7 @@ const startApplication = () => {
 =======
 =======
 
+<<<<<<< bb21fa6d6124ad7e0079c387520d5dcf259fc62e
     .get('/login', (req, res) => {
       res.render('pages/login');
     })
@@ -118,6 +119,8 @@ const startApplication = () => {
 =======
 
 >>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
+=======
+>>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
