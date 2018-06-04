@@ -28,7 +28,6 @@ const startApplication = () => {
     .use(bodyParser.urlencoded({
       extended: false
     }))
-
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)
@@ -36,7 +35,6 @@ const startApplication = () => {
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
 }
-
 databaseConnection
   .sync()
   .then(startApplication)
