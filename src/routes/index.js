@@ -17,6 +17,8 @@ const allRoutes = models => ({
   prescricaoRoutes: prescricaoRoutes(models.Prescricao),
   applicationRoutes: applicationRoutes(),
   cuidadoRoutes: cuidadoRoutes(models.Cuidado)
+  applicationRoutes: applicationRoutes(),
+  cuidadoRoutes: cuidadoRoutes(models.Cuidado)
 })
 
 module.exports = allRoutes
