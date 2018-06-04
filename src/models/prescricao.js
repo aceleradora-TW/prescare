@@ -6,8 +6,8 @@ module.exports = db => db.define('prescricao', {
     primaryKey: true,
     autoIncrement: true,
   },
-  data: sequelize.DATEONLY,
-  validade: sequelize.DATEONLY
-}, {
+  data:sequelize.STRING,
+  validade: sequelize.STRING,
+},{
   underscored: true
 })

@@ -6,12 +6,9 @@ module.exports = db => db.define('acolhido', {
     primaryKey: true,
     autoIncrement: true,
   },
-  nome: sequelize.STRING,
-  idade: sequelize.INTEGER,
-  rg:sequelize.INTEGER,
-  peso: sequelize.FLOAT,
-  alergias: sequelize.STRING,
-  viaAlimentacao: sequelize.STRING
+  descricao:sequelize.STRING,
+  intervalo:sequelize.STRING,
+  observacoes:sequelize.STRING
 }, {
   underscored: true
 })

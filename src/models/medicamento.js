@@ -7,13 +7,12 @@ module.exports = db => db.define('medicamento', {
     autoIncrement: true,
   },
   nome: sequelize.STRING,
-  via: sequelize.STRING,
-  formaFarmaceutica: sequelize.STRING,
   intervalo: sequelize.STRING,
-  dosagem: sequelize.STRING,
-  validade: sequelize.STRING,
-  lote: sequelize.STRING,
-  tipo: sequelize.STRING
+  dosagem:sequelize.STRING,
+  validade:sequelize.STRING,
+  lote:sequelize.STRING,
+  via: sequelize.STRING,
+  formaFarmaceutica: sequelize.STRING
 },
 {
   underscored: true
