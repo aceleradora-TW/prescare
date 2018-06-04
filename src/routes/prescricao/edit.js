@@ -6,6 +6,7 @@ module.exports = (Prescricao, Dieta) => (req, res) => {
     include:[Dieta]
       })
   .then(prescricao => {
+<<<<<<< 5bb20c44a3657288dae6585d837bb34c4f9612a1
     console.log(prescricao)
     res.render('pages/editarPrescricao', { 
       prescricao, 
@@ -13,5 +14,8 @@ module.exports = (Prescricao, Dieta) => (req, res) => {
       updateUrl: req.originalUrl,
       acolhidoId: req.params.acolhido_id,
      })
+=======
+    res.render('pages/editarPrescricao', { prescricao, updateUrl: req.originalUrl })
+>>>>>>> :construction: <@marcos012, @ClaudiaStrm> adiciona rotas dos medicamentos
   })
 }
