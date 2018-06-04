@@ -1,14 +1,7 @@
 const sequelize = require('sequelize')
 
-module.exports = db => db.define('acolhido', {
-  id: {
-    type: sequelize.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
+module.exports = db => db.define('cuidado', {
   descricao:sequelize.STRING,
   intervalo:sequelize.STRING,
   observacoes:sequelize.STRING
-}, {
-  underscored: true
 })
