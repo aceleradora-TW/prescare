@@ -21,6 +21,8 @@ module.exports = db => {
   Cuidado.belongsTo(Prescricao)
   Dieta.belongsTo(Prescricao)
   Prescricao.belongsToMany(Usuario,{through:'usuario_prescricao'})
+  Prescricao.hasMany(Cuidado)
+  Prescricao.hasMany(Dieta)
 
   return {Acolhido, Medicamento, Prescricao,Cuidado,Dieta}
 }

@@ -1,7 +1,7 @@
 module.exports = Prescricao => (req, res) => {
   Prescricao.findOne({
     where: {
-      id: req.params.id
+      id: req.params_id
     }
   }).then(prescricao => {
     if (!prescricao) res.redirect('404')

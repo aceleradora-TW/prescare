@@ -11,9 +11,13 @@ const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
 
-const databaseConnection = new Sequelize(settings.DATABASE_URL, {dialect: 'postgres', define: {
-  underscored: true
-}})
+const databaseConnection = new Sequelize(settings.DATABASE_URL, {
+  dialect: 'postgres',
+  define: {
+    underscored: true,
+    timestamps: false,
+  }
+})
 
 const models = modelsInitializer(databaseConnection)
 const routes = routesInitializer(models)
@@ -31,7 +35,7 @@ const startApplication = () => {
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
 
-    
+
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
