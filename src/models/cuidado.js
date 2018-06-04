@@ -1,5 +1,7 @@
-module.exports = db => db.define('acolhido', {
+const sequelize = require('sequelize')
+
+module.exports = db => db.define('cuidado', {
   descricao:sequelize.STRING,
   intervalo:sequelize.STRING,
-  observacoes:sequelize.TEXT
+  observacoes:sequelize.STRING
 })
