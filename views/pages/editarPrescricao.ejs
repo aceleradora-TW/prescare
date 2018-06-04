@@ -49,7 +49,6 @@
     </form>
 
     <%- include tabelaDieta.ejs %>
-
       <form action="<%= updateUrl %>" method="POST">
         <label for="validade">Validade</label>
         <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
@@ -61,6 +60,8 @@
       <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
         <input type="submit" value="Excluir">
       </form>
+    </form>
+    <input type="button"  value="Voltar">
   </div>
   <form action="<%= updateUrl %>/cuidado" method="POST">
     <input type="submit" value="Adicionar cuidado">
