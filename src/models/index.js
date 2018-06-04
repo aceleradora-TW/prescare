@@ -24,15 +24,3 @@ module.exports = db => {
 
   return {Acolhido, Medicamento, Prescricao,Cuidado,Dieta}
 }
-
-// exibir prescricao com os medicamentos 
-// como introduzir ele no projeto
-// como ele funciona por de trás dos panos 
-// comandos 
-// End to End (baby steps)
-// pq usar 
-// exemplo no projeto 
-// quisso
-// ORM 
-// CRUD 
-// QUERY 
