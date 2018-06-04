@@ -34,6 +34,14 @@ body {
   margin-right: 10px;
 }
 
+.nome-left {
+  float: left;
+}
+
+.edit-right {
+  float: right;
+}
+
 .inf {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
