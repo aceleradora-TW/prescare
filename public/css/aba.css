@@ -12,13 +12,8 @@
 .input-prescricao {
   text-transform: uppercase;
   color: #444;
-<<<<<<< 220d3f6630b9d1c30e0922748bef8f0148e36239
   overflow-y: auto;
   padding: 10px;
-=======
-  overflow-y: auto;  
-  padding: 10px;	   
->>>>>>> :art: <@marcos012>atualiza com a master
 }
 
 .scroll {
