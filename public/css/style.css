@@ -74,17 +74,19 @@
   padding-top: 5vh;
 }
 
-.tablesfarmaceutica {
-  margin-top: 5%;
+.tabelaPrescricao {
+  /* margin-top: 5%; */
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
+  
 }
 
-.tablesfarmaceutica td, .tablesfarmaceutica th {
+.tabelaPrescricao td, .tabelaPrescricao th {
   border: 1px solid;
-  height: 5vh;
+  height: 4vh;
   text-align: center;
+  
 }
 
 .accordion {
@@ -149,4 +151,9 @@
 
 .w-auto {
   width: auto;
+}
+
+label{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
 }
