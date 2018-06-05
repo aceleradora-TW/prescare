@@ -182,3 +182,19 @@ padding-top: 3vh;
   height:5vh;
 
 }
+
+a.botaoo:hover{
+  text-decoration: none;
+  background-color: #3d8bf0;
+  }
+
+
+tr.js-novo-elemento-cuidados{
+  margin-right: 110px;
+}
+
+.cuidado{
+  margin-left: 203px;
+  overflow-y: auto;
+}
+
