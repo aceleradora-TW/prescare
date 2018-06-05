@@ -1,12 +1,11 @@
-module.exports = Acolhido => (req, res) => {
-    Acolhido.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(acolhido => {
-      if (!acolhido) res.redirect('404')
-  
-      res.render('pages/info', { acolhido: acolhido })
-    }).catch(err => console.log(err))  
-  }
-  
+const acolhido = (acolhido) => (req, res) => {
+    return acolhido
+        .findOne({
+            where: { id: req.params.acolhido_id }
+        })
+        .then(acolhido => {    
+            res.render('pages/info',  { acolhido })
+        })
+}
+
+module.exports = acolhido

@@ -1,17 +1,22 @@
+
+const Sequelize = require('sequelize')
+
 module.exports = Acolhido => (req, res) => {
-    Acolhido.findOne({
+  return Acolhido
+    .findOne({
       where: {
         id: req.params.acolhido_id
       }
     }).then(acolhido => {
-      if(!acolhido) res.redirect('/404')
-  
-      acolhido.update({
-        data: req.body.data,
-        validade: req.body.validade
+      if (!acolhido) res.redirect('/404')
+
+      acolhido.updateAttributes({
+        idade: req.body.idade,
+        peso: req.body.peso,
+        alergias: req.body.alergia,
       }).then(() => {
-        res.redirect(req.originalUrl)
+        res.render('pages/info', { acolhido: acolhido })
       })
     })
-  }
-  
+}
+
