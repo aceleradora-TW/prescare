@@ -3,13 +3,13 @@
 <div>
     <form action="<%= updateUrl %>" method="POST">
       <label for="idade">Idade</label>
-      <input type="text" name="idade" id="idade" value="<%= acolhido.idade %>">
+      <input type="text" name="idade" id="idade" value="<%= acolhido.idade %>"><br>
       <label for="peso">Peso</label>
-      <input type="text" name="peso" id="peso" value="<%= acolhido.peso %>">
-      <label for="alegia">Peso</label>
-      <input type="text" name="alergia" id="alergia" value="<%= acolhido.alergia %>">
-      <label for="alegia">Peso</label>
-      <input type="text" name="via" id="via" value="<%= acolhido.via %>">
+      <input type="text" name="peso" id="peso" value="<%= acolhido.peso %>"><br>
+      <label for="alegia">Alergia</label>
+      <input type="text" name="alergia" id="alergia" value="<%= acolhido.alergias %>"><br>
+      <label for="via">Via Alimentação</label>
+      <input type="text" name="via" id="via" value="<%= acolhido.via_alimentacao %>"><br>
       <input type="submit" value="Salvar">
       <a href="#">
     </form>

@@ -1,7 +1,10 @@
 <%- contentFor('body') %>
+
+
     <div class="box effect1 flex-container">
         <div class="img-acolhido">
         </div>
+
 
         <div class="inf">
             <div class="text">
@@ -13,7 +16,7 @@
                         </p2>
                     </span>
                     <span class="edit-right">
-                        <a href="#" class="tiracor">
+                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
                         <i class="fa fa-edit edit"></i>
                         </a>
                         <span class="atualiza">Última atualização: dd/mm/aaaa </span>
@@ -47,5 +50,5 @@
         </div>
     </div>
     <form action="<%= acolhido.id %>/prescricao" method="POST">
-        <input type="submit" value="Criar nova prescrição">
+        <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
     </form>
