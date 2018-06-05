@@ -4,11 +4,11 @@ module.exports = Medicamento => (req, res) => {
       id: req.params.medicamento_id
     }
   }).then(medicamento => {
-    res.render('pages/editarMedicamento', { 
+    res.render('pages/editarMedicamento', {
       acolhidoId: req.params.acolhido_id,
       prescricaoId: req.params.prescricao_id,
-      medicamento, 
-      updateUrl: req.originalUrl 
+      medicamento,
+      updateUrl: req.originalUrl
     })
   })
 }

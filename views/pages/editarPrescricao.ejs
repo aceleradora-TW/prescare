@@ -113,9 +113,15 @@
     <form action="<%= updateUrl %>/cuidado" method="POST">
       <input type="submit" value="Adicionar cuidados">
     </form>
+    <form action="<%= updateUrl %>" method="POST">
+      <label for="validade">Validade</label>
+      <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+      <input type="submit" value="Salvar">
+    </form>
 
     <form action="" method="">
       <input type="submit" value="Adicionar dieta">
     </form>
+
   </div>
 >>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23

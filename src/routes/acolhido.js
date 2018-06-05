@@ -13,7 +13,7 @@ const acolhido = (acolhido) => (req, res) => {
 module.exports = acolhido
 =======
         .then(acolhido => {    
-            res.render('pages/info',  { acolhido })
+            res.render('pages/acolhido',  { acolhido })
         })
         .catch(console.log)  
 }
