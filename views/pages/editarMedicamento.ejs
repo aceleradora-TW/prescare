@@ -43,8 +43,11 @@
 		<input type="text" name="tipo" id="tipo" value="<%= medicamento.tipo %>">
 	</div>
 	<input type="submit" value="Salvar" onclick="alerta()"> 
-	<input type="submit" value="Voltar">
+	<button value="Voltar" ><a href="/lista-acolhidos">Voltar</a></button>
 </form>
+
+<div><%= medicamento.nome %></div>
+
 
 <script>
 	function alerta(){
