@@ -37,6 +37,7 @@ const startApplication = () => {
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
     .use('/', routes.cuidadoRoutes)
+<<<<<<< 66c45d1f076cdd06e2d61897498f8c7064ce76d4
 <<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
 =======
 
@@ -84,6 +85,9 @@ const startApplication = () => {
 
 =======
 >>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
+=======
+
+>>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );

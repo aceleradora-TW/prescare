@@ -168,4 +168,20 @@ a.botaoo:hover{
   text-decoration: none;
   background-color: #3d8bf0;
   }
+<<<<<<< 66c45d1f076cdd06e2d61897498f8c7064ce76d4
 >>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
+=======
+
+tr.js-novo-elemento-cuidados{
+  margin-right: 110px;
+}
+
+.cuidado{
+  margin-left: 203px;
+  overflow-y: auto;
+}
+
+h1{
+  margin-left: 250px;
+}
+>>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
