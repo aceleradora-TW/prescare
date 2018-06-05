@@ -1,12 +1,13 @@
 module.exports = Medicamento => (req, res) => {
-    Medicamento.findOne({
+    return Medicamento
+    .findOne({
       where: {
-        id: req.params.id
+        id: req.params.medicamento_id
       }
     }).then(medicamento => {
       if (!medicamento) res.redirect('404')
   
-      res.render('pages/medicamento', { medicamento })
+      res.render('pages/editarMedicamento', { medicamento })
     }).catch(err => console.log(err))  
   }
   
