@@ -34,6 +34,7 @@ const startApplication = () => {
     .use('/', routes.applicationRoutes)
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
+<<<<<<< 5ea9029118c6845df1be84661f4fbc566a5892dd
 <<<<<<< 262c4491b7590eaf8e244a04e2b5a10ca05903c6
 
 <<<<<<< 73a2a91d7ca9e4d81cfcbe7da0a9bdb512513694
@@ -70,6 +71,10 @@ const startApplication = () => {
     
 >>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
 >>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
+=======
+    .use('/', routes.cuidadoRoutes)
+
+>>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
