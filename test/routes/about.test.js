@@ -1,4 +1,4 @@
-const about = require("../../src/routes/application/about")
+const about = require("../../src/routes/about")
 
 describe('Quando acesso about', () => {
     it('Deve mostrar pagina com informacoes', () => {
