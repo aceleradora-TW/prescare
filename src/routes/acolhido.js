@@ -4,7 +4,7 @@ const acolhido = (acolhido) => (req, res) => {
             where: { id: req.params.acolhido_id }
         })
         .then(acolhido => {    
-            res.render('pages/info',  { acolhido })
+            res.render('pages/acolhido',  { acolhido })
         })
         .catch(console.log)  
 }
