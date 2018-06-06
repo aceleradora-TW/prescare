@@ -8,19 +8,19 @@
                 <div>
                     <p1 class="bold"> Nome: </p1>
                     <p2>
-                        <%=acolhidos.nome%>
+                        <%=acolhido.nome%>
                     </p2>
                 </div>
                 <div>
                     <p1 class="bold"> Idade: </p1>
                     <p2>
-                        <%=acolhidos.idade%>
+                        <%=acolhido.idade%>
                     </p2>
                 </div>
                 <div>
                     <p1 class="bold"> Peso: </p1>
                     <p2>
-                        <%=acolhidos.peso%>
+                        <%=acolhido.peso%>
                     </p2>
                     <a href="#" class="tiracor">
                         <i class="fa fa-edit edit"></i>
@@ -30,17 +30,20 @@
                 <div>
                     <p1 class="bold"> Alergias: </p1>
                     <p2>
-                        <%=acolhidos.alergias%>
+                        <%=acolhido.alergias%>
                     </p2>
                 </div>
                 <div>
                     <p1 class="bold"> Via de alimentação: </p1>
                     <p2>
-                        <%=acolhidos.via_alimentacao%>
+                        <%=acolhido.via_alimentacao%>
                     </p2>
                 </div>
             </div>
         </div>
     </div>
 
-    <%- include tabela-abas %>
+    <form action="<%= acolhido.id %>/prescricao" method="POST">
+        <input type="submit" value="Abrir prescrição">
+    </form>
+    
