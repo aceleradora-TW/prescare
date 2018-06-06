@@ -1,0 +1,22 @@
+<div class="cuidado">
+  <form action="<%= updateUrl %>" method="POST">
+    <h1>Cuidado</h1>
+    <div>
+      <label for="descricao">Descricao:</label>
+      <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
+    </div>
+  
+    <div>
+      <label for="intervalo">Intervalo:</label>
+      <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
+    </div>
+  
+    <div>
+      <label for="observacoes">Observações:</label>
+      <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
+    </div>
+ 
+    <button value="Voltar" ><a href="/lista-acolhidos">Voltar para lista de acolhidos</a></button>
+    <input type="submit" value="Adicionar" onclick="alerta()">
+  </form>
+</div>

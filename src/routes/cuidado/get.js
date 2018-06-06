@@ -4,7 +4,9 @@ module.exports = Cuidado => (req, res) => {
       where: { id: req.params.cuidado_id }
     })
     .then(cuidado => {
-      res.render('pages/cuidados', { cuidado })
+      if(!cuidado) res.redirect('404')
+      
+      res.render('pages/editarCuidado', { cuidado })
     })
-    .catch(console.log)
+    .catch(err => console.log(err))
 }

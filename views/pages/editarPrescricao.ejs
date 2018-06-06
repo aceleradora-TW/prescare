@@ -34,9 +34,16 @@
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
       <input type="submit" value="Save">
     </form>
-    <input type="button"  value="Voltar">
-    <input type="button"  value="Adicionar Medicamento">
-    <input type="button"  value="Adicionar Cuidados">
-    <input type="button"  value="Adicionar Dieta">
 
+    <form action="" method="">
+      <input type="submit" value="Adicionar medicamento">
+    </form>
+
+    <form action="<%= updateUrl %>/cuidado" method="POST">
+      <input type="submit" value="Adicionar cuidados">
+    </form>
+
+    <form action="" method="">
+      <input type="submit" value="Adicionar dieta">
+    </form>
   </div>
