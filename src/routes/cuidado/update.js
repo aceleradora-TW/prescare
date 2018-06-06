@@ -1,5 +1,6 @@
 module.exports = Cuidado => (req, res) => {
-    Cuidado.findOne({
+    return Cuidado
+    .findOne({
       where: {
         id: req.params.cuidado_id
       }
