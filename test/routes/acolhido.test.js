@@ -13,7 +13,7 @@ describe('Quando acesso acolhido', () => {
 
         return acolhidoRoute(Acolhido)(req, res)
         .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
-        .then(() => expect(res.render).toBeCalledWith('pages/info', { acolhido }))
+        .then(() => expect(res.render).toBeCalledWith('pages/acolhido', { acolhido }))
         .then(done)
         .catch(done)
     })
