@@ -1,6 +1,3 @@
-
-const Sequelize = require('sequelize')
-
 module.exports = Acolhido => (req, res) => {
   return Acolhido
     .findOne({

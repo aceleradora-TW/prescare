@@ -1,6 +1,7 @@
 <%- contentFor('body') %> 
 
 <div>
+    <p> Nome: <%= acolhido.nome %> </p>
     <form action="<%= updateUrl %>" method="POST">
       <label for="idade">Idade</label>
       <input type="text" name="idade" id="idade" value="<%= acolhido.idade %>"><br>

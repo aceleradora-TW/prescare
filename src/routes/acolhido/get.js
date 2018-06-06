@@ -9,4 +9,3 @@ module.exports = Acolhido => (req, res) => {
       res.render('pages/info', { acolhido: acolhido })
     }).catch(err => console.log(err))  
   }
-  
