@@ -31,6 +31,7 @@ const startApplication = () => {
     }))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
+<<<<<<< b5692ea198e01b005fc256e3680cb934b49524d5
 <<<<<<< 26e5661ff1ceb7faa4e9fa0f11310ef6ba10a1f7
 <<<<<<< ff66160b0f34de8e41fc2749e7f82f67dca14fe2
     .use('/', routes.applicationRoutes)
@@ -40,6 +41,35 @@ const startApplication = () => {
 <<<<<<< 66c45d1f076cdd06e2d61897498f8c7064ce76d4
 <<<<<<< 68d9f3ccff2b724a766950d7cbe575639d5d5407
 =======
+=======
+
+    .get('/login', (req, res) => {
+      res.render('pages/login');
+    })
+    .get('/pesquisar', (req, res) => {
+      res.render('pages/pesquisa-acolhidos');
+    })
+    .get('/historico', (req, res) => {
+      res.render('pages/historico-prescricao');
+    })
+    .get('/', routes.home)
+    .get('/about', routes.about)
+    .get('/lista-acolhidos', routes.listaAcolhidos)
+    .get('/prescricao-atualizada', routes.prescricaoAtualizada)
+    .get('/farmaceutica', routes.farmaceutica)
+
+    .get('/acolhido/:acolhido_id', routes.acolhido)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
+    .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
+    .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
+
+    .get('/cuidado/:cuidado_id', routes.getCuidado)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado', routes.createCuidado)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.editCuidado)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.updateCuidado)
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
 
     .get('/login', (req, res) => {
       res.render('pages/login');
