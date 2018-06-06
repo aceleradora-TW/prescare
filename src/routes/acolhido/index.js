@@ -3,6 +3,7 @@ const router = require('express').Router()
 const edit = require('./edit')
 const get = require('./get')
 const update = require('./update')
+const list = require('./list')
 
 module.exports = (Acolhido, router) => {
   router.get('/acolhido/lista', list(Acolhido))
