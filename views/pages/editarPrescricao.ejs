@@ -23,11 +23,17 @@
           </tr>
         </thead>
         <tbody>
-            <%for (cuidado of cuidados){%>
+          <%for (cuidado of cuidados){%>
             <tr>
-                <td><%= cuidado.descricao %></td>
-                <td><%= cuidado.intervalo %></td>
-                <td><%= cuidado.observacoes %> </td>
+              <td>
+                <%= cuidado.descricao %>
+              </td>
+              <td>
+                <%= cuidado.intervalo %>
+              </td>
+              <td>
+                <%= cuidado.observacoes %>
+              </td>
             </tr>
             <%}%>
         </tbody>
@@ -45,7 +51,7 @@
     <form action="<%= updateUrl %>" method="POST">
       <label for="validade">Validade</label>
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-      <input type="submit" value="Salvar"> 
+      <input type="submit" value="Salvar">
     </form>
 
 
@@ -65,4 +71,6 @@
   <form action="<%= updateUrl %>/cuidado" method="POST">
     <input type="submit" value="Adicionar cuidados">
   </form>
-  <input type="button" value="Adicionar Dieta">
+  <form action="<%= updateUrl %>/dieta" method="POST">
+    <input type="submit" value="Adicionar dieta">
+  </form>
