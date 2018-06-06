@@ -17,15 +17,6 @@ module.exports = db => {
   Prescricao.belongsTo(Acolhido)
   Prescricao.hasMany(Medicamento)
   Acolhido.hasMany(Prescricao)
-<<<<<<< 73a2a91d7ca9e4d81cfcbe7da0a9bdb512513694
-  Prescricao.hasMany(Cuidado)
-  Prescricao.hasMany(Dieta)
-  Medicamento.belongsToMany(Prescricao, {through: 'prescricao_medicamento'})
-  Cuidado.belongsToMany(Prescricao)
-  Dieta.belongsToMany(Prescricao)
-  Prescricao.belongsToMany(Usuario)
-
-=======
   Medicamento.belongsTo(Prescricao)
   Cuidado.belongsTo(Prescricao)
   Dieta.belongsTo(Prescricao)
@@ -33,6 +24,5 @@ module.exports = db => {
   Prescricao.hasMany(Cuidado)
   Prescricao.hasMany(Dieta)
   
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
-  return {Acolhido, Medicamento, Prescricao, Cuidado, Dieta}
+  return { Acolhido, Medicamento, Prescricao, Cuidado, Dieta }
 }
