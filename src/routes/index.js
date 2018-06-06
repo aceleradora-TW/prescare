@@ -1,4 +1,3 @@
-<<<<<<< bb21fa6d6124ad7e0079c387520d5dcf259fc62e
 const listaAcolhidos = require('./acolhido/list')
 const home = require('./application/home')
 const about = require('./application/about')
@@ -21,26 +20,6 @@ const editCuidado = require('./cuidado/edit')
 const getCuidado = require('./cuidado/get')
 const updateCuidado = require('./cuidado/update')
 
-
-const allRoutes = models => ({
-  listaAcolhidos: listaAcolhidos(models.Acolhido),
-  home: home(),
-  about: about(user),
-  acolhido: acolhido(models.Acolhido),
-  prescricaoAtualizada: prescricaoAtualizada(tabelaFarmaceutica),
-  farmaceutica: farmaceutica(dadosFarmacia),
-
-  createPrescricao: createPrescricao(models.Prescricao),
-  editPrescricao: editPrescricao(models.Prescricao),
-  getPrescricao: getPrescricao(models.Prescricao),
-  destroyPrescricao: destroyPrescricao(models.Prescricao),
-  updatePrescricao: updatePrescricao(models.Prescricao),
-
-  createCuidado: createCuidado(models.Cuidado),
-  editCuidado: editCuidado(models.Cuidado),
-  getCuidado: getCuidado(models.Cuidado),
-  updateCuidado: updateCuidado(models.Cuidado)
-=======
 const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
@@ -51,7 +30,6 @@ const allRoutes = models => ({
   prescricaoRoutes: prescricaoRoutes(models.Prescricao),
   applicationRoutes: applicationRoutes(),
   cuidadoRoutes: cuidadoRoutes(models.Cuidado)
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 })
 
 module.exports = allRoutes
