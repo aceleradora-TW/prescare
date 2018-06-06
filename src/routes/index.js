@@ -1,7 +1,9 @@
+const acolhidoRotas = require('./acolhido')
+
+
 const listaAcolhidos = require('../routes/listaAcolhidos')
 const home = require('../routes/home')
 const about = require('../routes/about')
-const acolhido = require('../routes/acolhido')
 const farmaceutica = require('../routes/farmaceutica')
 const prescricaoAtualizada = require('../routes/prescricaoAtualizada')
 
@@ -15,15 +17,10 @@ const editPrescricao = require('./prescricao/edit')
 const getPrescricao = require('./prescricao/get')
 const updatePrescricao = require('./prescricao/update')
 
-const editAcolhido = require('./acolhido/edit')
-const getAcolhido = require('./acolhido/get')
-const updateAcolhido = require('./acolhido/update')
-const createAcolhido = require('./acolhido/create')
 const allRoutes = models => ({
   listaAcolhidos: listaAcolhidos(models.Acolhido),
   home: home(),
   about: about(user),
-  // acolhido: acolhido(models.Acolhido),
   prescricaoAtualizada: prescricaoAtualizada(tabelaFarmaceutica),
   farmaceutica: farmaceutica(dadosFarmacia),
 
@@ -32,10 +29,8 @@ const allRoutes = models => ({
   getPrescricao: getPrescricao(models.Prescricao),
   destroyPrescricao: destroyPrescricao(models.Prescricao),
   updatePrescricao: updatePrescricao(models.Prescricao),
-  createAcolhido:createAcolhido(models.Acolhido),
-  editAcolhido: editAcolhido(models.Acolhido),
-  getAcolhido: getAcolhido(models.Acolhido),
-  updateAcolhido: updateAcolhido(models.Acolhido)
+  
+  acolhidoRotas: acolhidoRotas(models.Acolhido),
 })
 
 module.exports = allRoutes
