@@ -37,7 +37,6 @@
       <label for="validade">Validade</label>
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
       <input type="submit" value="Save">
-      <input type="submit" value="Excluir">
     </form>
   </div>
 
@@ -48,3 +47,18 @@
   <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="post">
     <input type="submit" value="Excluir">
   </form>
+<<<<<<< 8e2b8405bab16fbe495e4fcab50e1ad95727eeb1
+=======
+
+  
+    <input type="button"  value="Voltar">
+    <input type="button"  value="Adicionar Medicamento">
+    <input type="button"  value="Adicionar Cuidados">
+    <input type="button"  value="Adicionar Dieta">
+
+  </div>
+  
+  <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="post">
+    <input type="submit" value="Excluir">
+  </form>
+>>>>>>> :rocket: <@ilizakoski, @murilobauerc> Excluir a prescrição
