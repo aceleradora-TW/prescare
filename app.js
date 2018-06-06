@@ -32,6 +32,11 @@ const startApplication = () => {
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)
+<<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
+=======
+
+
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );

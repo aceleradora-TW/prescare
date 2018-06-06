@@ -21,7 +21,18 @@
     </table>
   </form>
 
+<<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
     <%- include tabelaDieta.ejs %>
+=======
+  <form >
+      <label for="dieta">Dieta</label>
+      <table class="tabelaPrescricao">
+      <th>Tipo</th>
+      <th>Intervalo</th>
+      </table>
+    </form>
+
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
 
       <form action="<%= updateUrl %>" method="POST">
       <label for="validade">Validade</label>
@@ -32,6 +43,7 @@
 
   </div>
 
+<<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
   <form action="<%= updateUrl %>/cuidado" method="POST">
     <input type="submit" value="Adicionar cuidado">
   </form>
@@ -43,3 +55,15 @@
   <form action="<%= updateUrl %>/dieta" method="POST">
     <input type="submit" value="Adicionar dieta">
   </form>
+=======
+  <div class="botoes">
+    <form action="<%= updateUrl %>/medicamento" method="POST">
+      <input type="submit" value="Adicionar Medicamento">
+    </form>
+    <input type="button" value="Adicionar Cuidados">
+    <input type="button" value="Adicionar Dieta">
+    <form action="/acolhido/ <%= acolhido.id %>" method="GET">
+      <input type="submit" value="Voltar">
+    </form>
+  </div>
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
