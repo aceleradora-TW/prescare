@@ -1,46 +1,55 @@
 <%- contentFor('body') %>
+
+
     <div class="box effect1 flex-container">
         <div class="img-acolhido">
         </div>
 
+
         <div class="inf">
             <div class="text">
                 <div>
-                    <p1 class="bold"> Nome: </p1>
-                    <p2>
-                        <%=acolhidos.nome%>
-                    </p2>
-                </div>
+                    <span class="nome-left">
+                        <p1 class="bold"> Nome: </p1>
+                        <p2>
+                            <%=acolhido.nome%>
+                        </p2>
+                    </span>
+                    <span class="edit-right">
+                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                        </a>
+                        <span class="atualiza">Última atualização: dd/mm/aaaa </span>
+                    </span>
+                </div><br>
                 <div>
                     <p1 class="bold"> Idade: </p1>
                     <p2>
-                        <%=acolhidos.idade%>
+                        <%=acolhido.idade%>
                     </p2>
                 </div>
                 <div>
                     <p1 class="bold"> Peso: </p1>
                     <p2>
-                        <%=acolhidos.peso%>
+                        <%=acolhido.peso%>
                     </p2>
-                    <a href="#" class="tiracor">
-                        <i class="fa fa-edit edit"></i>
-                    </a>
-                    <span class="atualiza">Última atualização: dd/mm/aaaa </span>
                 </div>
                 <div>
                     <p1 class="bold"> Alergias: </p1>
                     <p2>
-                        <%=acolhidos.alergias%>
+                        <%=acolhido.alergias%>
                     </p2>
                 </div>
                 <div>
                     <p1 class="bold"> Via de alimentação: </p1>
                     <p2>
-                        <%=acolhidos.via_alimentacao%>
+                        <%=acolhido.via_alimentacao%>
                     </p2>
                 </div>
             </div>
         </div>
     </div>
 
-    <%- include tabela-abas %>
+    <form action="<%= acolhido.id %>/prescricao" method="POST">
+        <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
+    </form>

@@ -1,0 +1,16 @@
+<%- contentFor('body') %> 
+
+<div>
+    <form action="<%= updateUrl %>" method="POST">
+      <label for="idade">Idade</label>
+      <input type="text" name="idade" id="idade" value="<%= acolhido.idade %>"><br>
+      <label for="peso">Peso</label>
+      <input type="text" name="peso" id="peso" value="<%= acolhido.peso %>"><br>
+      <label for="alegia">Alergia</label>
+      <input type="text" name="alergia" id="alergia" value="<%= acolhido.alergias %>"><br>
+      <label for="via">Via Alimentação</label>
+      <input type="text" name="via" id="via" value="<%= acolhido.via_alimentacao %>"><br>
+      <input type="submit" value="Salvar">
+      <input type = "button" onclick = "location.href = '/acolhido/<%= acolhido.id%>';" value ="Voltar">
+    </form>
+  </div>
