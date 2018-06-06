@@ -31,6 +31,7 @@ const startApplication = () => {
     }))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
+<<<<<<< 0b31603be60ce589e88fa9244f47819a453d203d
     .use('/', routes.applicationRoutes)
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
@@ -42,6 +43,9 @@ const startApplication = () => {
 <<<<<<< c2998168d9853e6436e0d63e75b3b966cbf2160b
 <<<<<<< 9546b7f5e4d175f09346d462f5d8673f4d969912
 =======
+=======
+
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
     .get('/login', (req, res) => {
       res.render('pages/login');
     })
@@ -58,6 +62,7 @@ const startApplication = () => {
     .get('/farmaceutica', routes.farmaceutica)
 
     .get('/acolhido/:acolhido_id', routes.acolhido)
+<<<<<<< 0b31603be60ce589e88fa9244f47819a453d203d
     .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
     .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
@@ -73,6 +78,18 @@ const startApplication = () => {
 >>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
 =======
     .use('/', routes.cuidadoRoutes)
+=======
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.getPrescricao)
+    .post('/acolhido/:acolhido_id/prescricao', routes.createPrescricao)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.editPrescricao)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', routes.updatePrescricao)
+    .delete('/acolhido/:acolhido_id/prescricao/:prescricao_id', routes.destroyPrescricao)
+
+    .get('/cuidado/:cuidado_id', routes.getCuidado)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado', routes.createCuidado)
+    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.editCuidado)
+    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.updateCuidado)
+>>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
 
 >>>>>>> :bug: <@NatyMoraes , @DiovaneMendes> arrruma bugs
     .listen(settings.PORT, () =>
