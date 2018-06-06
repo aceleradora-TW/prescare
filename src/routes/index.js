@@ -3,6 +3,10 @@ const router = require('express').Router()
 const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
+const createCuidado = require('./cuidado/create')
+const editCuidado = require('./cuidado/edit')
+const getCuidado = require('./cuidado/get')
+const updateCuidado = require('./cuidado/update')
 const cuidadoRoutes = require('./cuidado')
 const medicamentoRoutes = require('./medicamento')
 const dietaRoutes = require('./dieta')
@@ -14,5 +18,5 @@ module.exports = models => {
     dietaRoutes(models.Dieta, router),
     cuidadoRoutes(models.Cuidado, router),
     medicamentoRoutes(models.Medicamento, router)
-    return router;
-  }
+  return router;
+}
