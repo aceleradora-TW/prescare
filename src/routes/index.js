@@ -13,8 +13,4 @@ module.exports = models => {
   cuidadoRoutes(models.Cuidado, router)
   dietaRoutes(models.Dieta, router)
   return router;
-<<<<<<< b20a422915ceb093b02a7af0f7e7b4992613704c
 }
-=======
-}
->>>>>>> :construction: <@murilobauerc, @luizfetrindade, @ilizakoski> implementa teste
