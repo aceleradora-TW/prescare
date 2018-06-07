@@ -1,13 +1,21 @@
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
-const cuidadoRoutes = require('./cuidado')
 const prescricaoRoutes = require('./prescricao')
+
+const createCuidado = require('./cuidado/create')
+const editCuidado = require('./cuidado/edit')
+const getCuidado = require('./cuidado/get')
+const updateCuidado = require('./cuidado/update')
 
 const allRoutes = models => ({
   acolhidoRoutes: acolhidoRoutes(models.Acolhido),
   applicationRoutes: applicationRoutes(),
-  cuidadoRoutes: cuidadoRoutes(models.Cuidado),
   prescricaoRoutes: prescricaoRoutes(models.Prescricao),
+
+  createCuidado: createCuidado(models.Cuidado),
+  editCuidado: editCuidado(models.Cuidado),
+  getCuidado: getCuidado(models.Cuidado),
+  updateCuidado: updateCuidado(models.Cuidado)
 })
 
 
