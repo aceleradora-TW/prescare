@@ -11,8 +11,4 @@ module.exports = models => {
   prescricaoRoutes(models.Prescricao, router)
   cuidadoRoutes(models.Cuidado, router)
   return router;
-<<<<<<< b20a422915ceb093b02a7af0f7e7b4992613704c
 }
-=======
-}
->>>>>>> :construction: <@murilobauerc, @luizfetrindade, @ilizakoski> implementa teste
