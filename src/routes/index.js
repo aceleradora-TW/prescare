@@ -14,4 +14,3 @@ module.exports = models => {
   dietaRoutes(models.Dieta, router)
   return router;
 }
-
