@@ -10,7 +10,6 @@ const modelsInitializer = require('./src/models')
 const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
-const seedDatabase = require('./seed')
 
 const databaseConnection = new Sequelize(settings.DATABASE_URL, {
   dialect: 'postgres',
@@ -44,6 +43,5 @@ const startApplication = () => {
 
 databaseConnection
   .sync()
-  .then(seedDatabase(models))
   .then(startApplication)
   .catch(console.log)

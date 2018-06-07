@@ -1,9 +1,17 @@
-module.exports = models => () => {
-  console.log('Seeding!')
-  if(process.env.NODE_ENV && process.env.NODE_ENV === 'production') {
-    return;
-  }
+const Sequelize = require('sequelize')
+const settings = require('./settings')
 
+const databaseConnection = new Sequelize(settings.DATABASE_URL, {
+  dialect: "postgres",
+  define: {
+    underscored: true,
+    timestamps: false
+  }
+})
+
+const models = require('./src/models')(databaseConnection)
+
+const seedDatabase = models => () => {
   models.Acolhido.findOrCreate({
     where: { nome: "Josicleiso Dores" },
     defaults: {
@@ -15,7 +23,7 @@ module.exports = models => () => {
       viaAlimentacao: "Oral"
     }
   }).spread((acolhido, created) => {
-    if(!created) {
+    if (!created) {
       return;
     }
 
@@ -50,3 +58,8 @@ module.exports = models => () => {
     });
   });
 }
+
+databaseConnection
+  .sync()
+  .then(seedDatabase(models))
+  .then(process.exit)
