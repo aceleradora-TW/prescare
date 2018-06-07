@@ -10,6 +10,10 @@ module.exports = (Prescricao, router) => {
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', edit(Prescricao))
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', update(Prescricao))
   router.delete('/acolhido/:acolhido_id/prescricao/:prescricao_id/destroy', destroy(Prescricao))
+<<<<<<< f4c75e4dc8c9e311e46ef9468433a98748b5991e
   
+=======
+
+>>>>>>> Criando um router exterior e chamando ele no app
   return router;
 }

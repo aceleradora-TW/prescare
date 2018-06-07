@@ -10,6 +10,5 @@ module.exports = models => {
   acolhidoRoutes(models.Acolhido, router)
   prescricaoRoutes(models.Prescricao, router)
   cuidadoRoutes(models.Cuidado, router)
-  
   return router;
 }
