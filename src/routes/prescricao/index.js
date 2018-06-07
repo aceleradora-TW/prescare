@@ -1,16 +1,15 @@
-const router = require('express').Router()
 const create = require('./create')
 const edit = require('./edit')
 const get = require('./get')
 const destroy = require('./destroy')
 const update = require('./update')
 
-module.exports = Prescricao => {
-  router.post('/', create(Prescricao))
-  router.get('/:prescricao_id', get(Prescricao))
-  router.get('/:prescricao_id/edit', edit(Prescricao))
-  router.post('/:prescricao_id/edit', update(Prescricao))
-  router.delete('/:prescricao_id/destroy', destroy(Prescricao))
+module.exports = (Prescricao, router) => {
+  router.post('/acolhido/:acolhido_id/prescricao', create(Prescricao))
+  router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id', get(Prescricao))
+  router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', edit(Prescricao))
+  router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', update(Prescricao))
+  router.delete('/acolhido/:acolhido_id/prescricao/:prescricao_id/destroy', destroy(Prescricao))
 
   return router;
 }
