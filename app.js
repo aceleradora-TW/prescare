@@ -33,7 +33,7 @@ const startApplication = () => {
     .use('/', routes.applicationRoutes)
     .use('/acolhido', routes.acolhidoRoutes)
     .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
-    .use('/acolhido/:acolhido_id/prescricao/:prescricao_id/cuidado/', routes.cuidadoRoutes)
+    .use('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/', routes.cuidadoRoutes)
 
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
