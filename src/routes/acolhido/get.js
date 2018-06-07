@@ -1,7 +1,7 @@
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido
     .findOne({
-      where: { 
+      where: {
         id: req.params.acolhido_id
       },
       include: [Prescricao]
