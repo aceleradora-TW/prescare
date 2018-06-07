@@ -7,7 +7,6 @@ const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
 
-const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
 
@@ -28,21 +27,16 @@ const startApplication = () => {
     .use(bodyParser.urlencoded({
       extended: false
     }))
+
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
-    .use('/', routes.applicationRoutes)
-    .use('/acolhido', routes.acolhidoRoutes)
-    .use('/acolhido/:acolhido_id/prescricao', routes.prescricaoRoutes)
-
-    .get('/cuidado/:cuidado_id', routes.getCuidado)
-    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado', routes.createCuidado)
-    .get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.editCuidado)
-    .post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/cuidado/:cuidado_id/edit', routes.updateCuidado)
+    .use('/', routes)
 
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
 }
+
 databaseConnection
   .sync()
   .then(startApplication)

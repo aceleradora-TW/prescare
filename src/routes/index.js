@@ -1,22 +1,15 @@
+const router = require('express').Router()
+
+const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
-const prescricaoRoutes = require('./prescricao')
+const cuidadoRoutes = require('./cuidado')
 
-const createCuidado = require('./cuidado/create')
-const editCuidado = require('./cuidado/edit')
-const getCuidado = require('./cuidado/get')
-const updateCuidado = require('./cuidado/update')
-
-const allRoutes = models => ({
-  acolhidoRoutes: acolhidoRoutes(models.Acolhido),
-  applicationRoutes: applicationRoutes(),
-  prescricaoRoutes: prescricaoRoutes(models.Prescricao),
-
-  createCuidado: createCuidado(models.Cuidado),
-  editCuidado: editCuidado(models.Cuidado),
-  getCuidado: getCuidado(models.Cuidado),
-  updateCuidado: updateCuidado(models.Cuidado)
-})
-
-
-module.exports = allRoutes
+module.exports = models => {
+  applicationRoutes(router)
+  acolhidoRoutes(models.Acolhido, router)
+  prescricaoRoutes(models.Prescricao, router)
+  cuidadoRoutes(models.Cuidado, router)
+  
+  return router;
+}
