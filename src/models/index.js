@@ -5,7 +5,6 @@ const cuidado = require('./cuidado')
 const dieta = require('./dieta')
 const usuario = require('./usuario')
 
-
 module.exports = db => {
   const Acolhido = acolhido(db)
   const Medicamento = medicamento(db)
