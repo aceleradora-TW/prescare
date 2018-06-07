@@ -1,9 +1,7 @@
-const router = require('express').Router()
-
 const about = require('./about')
 const home = require('./home')
 
-module.exports = () => {
+module.exports = router => {
   router.get('/', home())
   router.get('/about', about())
 

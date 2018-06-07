@@ -1,11 +1,14 @@
+const router = require('express').Router()
+
 const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
 
-const allRoutes = models => ({
-  acolhidoRoutes: acolhidoRoutes(models.Acolhido),
-  prescricaoRoutes: prescricaoRoutes(models.Prescricao),
-  applicationRoutes: applicationRoutes()
-})
+module.exports = models => {
+  applicationRoutes(router)
+  acolhidoRoutes(models.Acolhido, router)
+  prescricaoRoutes(models.Prescricao, router)
 
-module.exports = allRoutes
+  return router;
+}
+
