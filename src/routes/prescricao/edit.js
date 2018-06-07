@@ -9,3 +9,4 @@ module.exports = Prescricao => (req, res) => {
     res.render('pages/editarPrescricao', { prescricao, updateUrl: req.originalUrl })
   })
 }
+  
