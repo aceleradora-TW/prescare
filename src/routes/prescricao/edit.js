@@ -1,4 +1,4 @@
-module.exports = Prescricao => (req, res) => {
+module.exports = (Prescricao)  => (req, res) => {
   Prescricao.findOne({
     where: {
       id: req.params.prescricao_id
