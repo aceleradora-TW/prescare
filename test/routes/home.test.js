@@ -1,4 +1,4 @@
-const home = require("../../src/routes/home")
+const home = require("../../src/routes/application/home")
 
 describe('Quando acesso home', () => {
     it('Deve mostrar a pagina inicial', () => {

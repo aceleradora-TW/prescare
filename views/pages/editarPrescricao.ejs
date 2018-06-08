@@ -21,18 +21,19 @@
     </table>
   </form>
 
-  <form >
-      <label for="dieta">Dieta</label>
+    <form>
+      <label for="cuidado">Cuidados</label>
       <table class="tabelaPrescricao">
-      <th>Tipo</th>
-      <th>Intervalo</th>
+        <th>Descrição</th>
+        <th>Intervalo</th>
+        <th>Observações</th>
       </table>
     </form>
 
     <form action="<%= updateUrl %>" method="POST">
       <label for="validade">Validade</label>
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-      <input type="submit" value="Salvar"> 
+      <input type="submit" value="Salvar">
     </form>
     <input type="button"  value="Voltar">
     <input type="button"  value="Adicionar Cuidados">
@@ -45,5 +46,5 @@
   </form>
   
   <form action="<%= updateUrl %>/dieta" method="POST">
-      <input type="submit" value="Adicionar dieta">  
-    </form>
+    <input type="submit" value="Adicionar dieta">
+  </form>

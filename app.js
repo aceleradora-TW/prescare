@@ -32,7 +32,6 @@ const startApplication = () => {
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)
-
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
