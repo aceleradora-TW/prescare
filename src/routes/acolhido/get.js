@@ -4,7 +4,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       where: {
         id: req.params.acolhido_id
       },
-      include: [Prescricao]
+      include: {Prescricao}
     }).then(acolhido => {
       res.render('pages/acolhido', { acolhido, prescricoes: acolhido.prescricaos})
     })
