@@ -1,5 +1,4 @@
-
-const listaAcolhidos = (Acolhido) => (req, res) => { 
+module.exports = Acolhido => (req, res) => { 
     return Acolhido
       .findAll()
       .then(acolhidos => {
@@ -7,5 +6,3 @@ const listaAcolhidos = (Acolhido) => (req, res) => {
       })
       .catch(console.log)   
 }
-
-module.exports = listaAcolhidos

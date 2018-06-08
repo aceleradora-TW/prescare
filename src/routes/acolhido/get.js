@@ -1,9 +1,10 @@
-module.exports = Acolhido => (req, res) => {
-  return Acolhido.findOne({
-    where: {
-      id: req.params.acolhido_id
-    }
-  }).then(acolhido => {
-    res.render('pages/infoAcolhido', { acolhido: acolhido})
-  }).catch(err => console.log(err))
+module.exports = acolhido => (req, res) => {
+    return acolhido
+        .findOne({
+            where: { id: req.params.acolhido_id }
+        })
+        .then(acolhido => {
+            res.render('pages/acolhido',  { acolhido })
+        })
+        .catch(console.log)
 }
