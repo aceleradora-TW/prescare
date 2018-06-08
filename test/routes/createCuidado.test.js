@@ -5,14 +5,15 @@ describe('Quando acesso cuidado', () => {
         const Cuidado = {
             create: jest.fn()
         }
-        const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado/' }
+        const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado' }
         const res = { redirect: jest.fn() }
+        const novoCuidado = { id: 2 }
                 
-        Cuidado.create.mockResolvedValue(req.params)
+        Cuidado.create.mockResolvedValue(novoCuidado)
         
         return cuidadoRoute(Cuidado)(req, res)
         .then(() => expect(Cuidado.create).toBeCalledWith(req.params))
-        .then(() => expect(res.redirect).toBeCalledWith(  req.originalUrl + '2/edit'))
+        .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl + '/2/edit'))
         .then(done)
         .catch(done)
     })
