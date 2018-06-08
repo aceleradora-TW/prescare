@@ -7,7 +7,7 @@ const cuidadoRoutes = require('./cuidado')
 
 module.exports = models => {
   applicationRoutes(router)
-  acolhidoRoutes(models.Acolhido, router)
+  acolhidoRoutes(models.Acolhido, models.Prescricao, router)
   prescricaoRoutes(models.Prescricao, router)
   cuidadoRoutes(models.Cuidado, router)
   return router;
