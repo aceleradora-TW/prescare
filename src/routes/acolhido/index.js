@@ -10,6 +10,6 @@ module.exports = (Acolhido, router) => {
   router.get('/acolhido/:acolhido_id', get(Acolhido))
   router.get('/acolhido/:acolhido_id/edit', edit(Acolhido))
   router.post('/acolhido/:acolhido_id/edit', update(Acolhido))
-
+  router.get('/listaAcolhidos', list(Acolhido))
   return router;
 }
