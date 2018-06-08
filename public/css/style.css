@@ -29,9 +29,9 @@
   margin-bottom: 3vh;
   overflow: hidden;
   z-index: 1071;
-  background-image: url("../img/logoSemFundo.png"); 
+  background-image: url("../img/logoSemFundo.png");
   background-repeat: no-repeat;
-  background-position: bottom left; 
+  background-position: bottom left;
   text-decoration: none;
   background-size: 15vw;
 }
