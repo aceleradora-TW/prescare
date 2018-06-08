@@ -10,30 +10,6 @@
         <th>Dosagem</th>
       </table>
     </form>
-
-<<<<<<< 6c13e485d21b0d7bcf8b22152aff4c60dbfbe3c0
-      <th>Nome</th>
-      <th>Intervalo</th>
-      <th>Via</th>
-      <th>Forma Farmacêutica</th>
-      <th>Dosagem</th>
-    </table>
-  </form>
-
-  <form >
-    <label for="cuidado">Cuidados</label>
-    <table class="tabelaPrescricao">
-    <th>Descrição</th>
-    <th>Intervalo</th>
-    <th>Observações</th>
-    </table>
-  </form>
-
-<<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
-    <%- include tabelaDieta.ejs %>
-=======
-  <form >
-=======
     <form>
       <label for="cuidado">Cuidados</label>
       <table class="tabelaPrescricao">
@@ -42,74 +18,34 @@
         <th>Observações</th>
       </table>
     </form>
-
     <form>
->>>>>>> :rocket: <@natymoraes , @diovanemendes> Cria botão salvar e voltar com link #23
       <label for="dieta">Dieta</label>
       <table class="tabelaPrescricao">
-      <th>Tipo</th>
-      <th>Intervalo</th>
+        <th>Tipo</th>
+        <th>Intervalo</th>
       </table>
     </form>
 
-<<<<<<< bbdde599490bb33577fa52b589dc623c3b34ece7
->>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23
-
-<<<<<<< 58b0416bf895ecd98cb9a0e8822575d4210fdafa
-      <form action="<%= updateUrl %>" method="POST">
-=======
-=======
->>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
     <form action="<%= updateUrl %>" method="POST">
       <label for="data">Data</label>
       <input type="date" name="data" id="data" value="<%= prescricao.data %>">
->>>>>>> Fazendo o CRUD de prescrição para acolhido, baseado na discussão do dia 01/06/2018
       <label for="validade">Validade</label>
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
       <input type="submit" value="Salvar">
     </form>
-    <input type="button"  value="Voltar">
+    <input type="button" value="Voltar">
 
   </div>
-
-<<<<<<< 1a1dc0511da4d4b547ef8e89f4a35c9518352ded
-  <form action="<%= updateUrl %>/cuidado" method="POST">
-    <input type="submit" value="Adicionar cuidado">
-  </form>
-
-  <form action="<%= updateUrl %>/medicamento" method="POST">
-    <input type="submit" value="Adicionar medicamento">
-  </form>
-
-  <form action="<%= updateUrl %>/dieta" method="POST">
-    <input type="submit" value="Adicionar dieta">
-  </form>
-=======
   <div class="botoes">
     <form action="<%= updateUrl %>/medicamento" method="POST">
       <input type="submit" value="Adicionar Medicamento">
     </form>
-
-    <input type="button" value="Adicionar Dieta">
+    <form action="<%= updateUrl %>/dieta" method="POST">
+      <input type="submit" value="Adicionar dieta">
+    </form>
     <form action="/acolhido/ <%= acolhido.id %>" method="GET">
       <input type="submit" value="Voltar">
     </form>
-
-    <form action="" method="">
-      <input type="submit" value="Adicionar medicamento">
-    </form>
-    <form action="<%= updateUrl %>/cuidado" method="POST">
-      <input type="submit" value="Adicionar cuidados">
-    </form>
-
-    <form action="" method="">
-      <input type="submit" value="Adicionar dieta">
-    </form>
-
-    <form action="" method="">
-      <input type="submit" value="Adicionar medicamento">
-    </form>
-
     <form action="<%= updateUrl %>/cuidado" method="POST">
       <input type="submit" value="Adicionar cuidados">
     </form>
@@ -118,10 +54,4 @@
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
       <input type="submit" value="Salvar">
     </form>
-
-    <form action="" method="">
-      <input type="submit" value="Adicionar dieta">
-    </form>
-
   </div>
->>>>>>> :rocket: <@Claudiastrm, @DiovaneMendes> Adiciona CRUD cuidados #23

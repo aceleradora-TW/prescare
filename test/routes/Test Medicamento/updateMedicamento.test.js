@@ -3,8 +3,8 @@ const medicamentoRoute = require("../../../src/routes/medicamento/update")
 describe('Quando acesso Medicamentos', () => {
     it('Deve atualizar informações dos Medicamentos', (done) => {
         const Medicamento = { findOne: jest.fn() }
-        const req = { 
-            params: { 
+        const req = {
+            params: {
                 medicamento_id: 1,
                 acolhido_id: 1,
                 prescricao_id: 1
@@ -22,7 +22,7 @@ describe('Quando acesso Medicamentos', () => {
         const res = { redirect: jest.fn() }
 
         const medicamento = { id: 1, update: jest.fn() }
-        const novoMedicamento = { 
+        const novoMedicamento = {
             nome:  req.body.nome,
             intervalo:  req.body.intervalo,
             via:  req.body.via,
@@ -31,9 +31,9 @@ describe('Quando acesso Medicamentos', () => {
             validade: req.body.validade,
             lote: req.body.lote
         }
-      
+
         Medicamento.findOne.mockResolvedValue(medicamento)
-        medicamento.update.mockResolvedValue(novoMedicamento) 
+        medicamento.update.mockResolvedValue(novoMedicamento)
 
         medicamentoRoute(Medicamento)(req, res)
         .then(() => expect(Medicamento.findOne).toBeCalledWith({'where': {'id': req.params.medicamento_id }}))

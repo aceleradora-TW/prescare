@@ -18,10 +18,10 @@ describe('Quando acesso acolhido', () => {
         }
         Acolhido.findOne.mockResolvedValue(acolhido);
 
-        acolhidoRoute(Acolhido)(req, res)
-        .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
-        .then(() => expect(res.render).toBeCalledWith('pages/acolhido', { acolhido }))
-        .then(done)
-        .catch(done)
+        return acolhidoRoute(Acolhido)(req, res)
+            .then(() => expect(Acolhido.findOne).toBeCalledWith({ 'where': { 'id': req.params.acolhido_id } }))
+            .then(() => expect(res.render).toBeCalledWith('pages/acolhido', { acolhido }))
+            .then(done)
+            .catch(done)
     })
 })
