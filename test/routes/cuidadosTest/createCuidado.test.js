@@ -1,4 +1,4 @@
-const cuidadoRoute = require('../../src/routes/cuidado/create')
+const cuidadoRoute = require('../../../src/routes/cuidado/create')
 
 describe('Quando acesso cuidado', () => {
     it('Deve criar página com informações dos cuidados', (done) => {
@@ -11,7 +11,7 @@ describe('Quando acesso cuidado', () => {
                 
         Cuidado.create.mockResolvedValue(novoCuidado)
         
-        return cuidadoRoute(Cuidado)(req, res)
+        cuidadoRoute(Cuidado)(req, res)
         .then(() => expect(Cuidado.create).toBeCalledWith(req.params))
         .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl + '/2/edit'))
         .then(done)

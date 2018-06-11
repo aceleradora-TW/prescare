@@ -1,4 +1,4 @@
-const cuidadoRoute = require('../../src/routes/cuidado/update')
+const cuidadoRoute = require('../../../src/routes/cuidado/update')
 
 describe('Quando acesso cuidado', () => {
     it('Deve atualizar informações dos cuidados', (done) => {
@@ -27,7 +27,7 @@ describe('Quando acesso cuidado', () => {
         Cuidado.findOne.mockResolvedValue(cuidado)
         cuidado.update.mockResolvedValue(novoCuidado) 
 
-        return cuidadoRoute(Cuidado)(req, res)
+        cuidadoRoute(Cuidado)(req, res)
         .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidado_id }}))
         .then(() => expect(cuidado.update).toBeCalledWith(novoCuidado))
         .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))
