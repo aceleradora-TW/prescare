@@ -12,7 +12,7 @@ describe('Quando acesso listaAcolhidos', () => {
         const acolhidos = [{ nome: 'Leo' }]
         acolhido.findAll.mockResolvedValue(acolhidos)
 
-        return listaAcolhidos(acolhido)(req,res)
+        listaAcolhidos(acolhido)(req,res)
         .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos }))
         .then(done)
         .catch(done)

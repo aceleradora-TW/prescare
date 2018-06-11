@@ -7,7 +7,6 @@ const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
 
-const tabelaFarmaceutica = require('./src/mocks/tabelaFarmaceutica')
 const settings = require('./settings')
 const app = express()
 
@@ -21,7 +20,6 @@ const databaseConnection = new Sequelize(settings.DATABASE_URL, {
 
 const models = modelsInitializer(databaseConnection)
 const routes = routesInitializer(models)
-
 const startApplication = () => {
   app
     .use(expressLayouts)
@@ -29,6 +27,7 @@ const startApplication = () => {
     .use(bodyParser.urlencoded({
       extended: false
     }))
+
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)

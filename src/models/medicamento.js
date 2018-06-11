@@ -1,3 +1,4 @@
+
 const sequelize = require('sequelize')
 
 module.exports = db => db.define('medicamento', {
@@ -8,4 +9,5 @@ module.exports = db => db.define('medicamento', {
   dosagem:sequelize.STRING,
   validade:sequelize.STRING,
   lote:sequelize.STRING,
+  tipo: sequelize.STRING
 })

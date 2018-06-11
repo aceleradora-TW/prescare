@@ -69,8 +69,7 @@
 
 .main {
   height: 50vh;
-  width: 50vw;
-  margin: 0 auto;
+  width: 80vw;
   padding-top: 5vh;
 }
 
@@ -78,14 +77,14 @@
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
-  
+
 }
 
 .tabelaPrescricao td, .tabelaPrescricao th {
   border: 1px solid;
   height: 4vh;
   text-align: center;
-  
+
 }
 
 .accordion {
