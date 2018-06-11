@@ -21,6 +21,7 @@ const databaseConnection = new Sequelize(settings.DATABASE_URL, {
 
 const models = modelsInitializer(databaseConnection)
 const routes = routesInitializer(models)
+
 const startApplication = () => {
   app
     .use(expressLayouts)
