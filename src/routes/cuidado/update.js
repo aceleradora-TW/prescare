@@ -6,12 +6,9 @@ module.exports = Cuidado => (req, res) => {
       }
     }).then(cuidado => {
       if(!cuidado) res.send('Essa página não existe')
-  
-      cuidado.update({
-        descricao: req.body.descricao,
-        intervalo: req.body.intervalo,
-        observacoes: req.body.observacoes
-      }).then(() => {
+        
+      cuidado.update(req.body)
+      .then(() => {
         res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
       })
     })

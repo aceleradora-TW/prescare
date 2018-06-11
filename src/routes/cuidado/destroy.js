@@ -5,6 +5,5 @@ module.exports = Cuidado => (req, res) => {
         }
     }).then(() => {
         res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
-        console.log('Cuidado deletado.')
     })
 }
