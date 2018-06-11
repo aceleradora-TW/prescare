@@ -6,7 +6,6 @@
     <form>
       <label for="medicamento">Medicamentos</label>
       <table class="tabela-prescricao">
-
         <th>Nome</th>
         <th>Intervalo</th>
         <th>Via</th>
@@ -14,6 +13,16 @@
         <th>Dosagem</th>
       </table>
     </form>
+
+    <form>
+      <label for="cuidado">Cuidados</label>
+      <table class="tabela-prescricao">
+        <th>Descrição</th>
+        <th>Intervalo</th>
+        <th>Observações</th>
+      </table>
+    </form>
+
     <%- include tabelaDieta.ejs %>
 
       <form action="<%= updateUrl %>" method="POST">
