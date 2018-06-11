@@ -1,1 +1,0 @@
-const medicamentoRoute = require("../../../src/routes/medicamento/edit")

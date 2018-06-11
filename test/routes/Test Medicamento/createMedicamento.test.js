@@ -7,9 +7,9 @@ describe('Quando crio medicamento', () => {
             create: jest.fn()
         }
 
-        const req = { params: { medicamento_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/medicamento' }
+        const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/medicamento' }
         const res = { redirect: jest.fn() }
-        const novoMedicamento = { id: 2 }
+        const novoMedicamento = { id: 2}
 
         Medicamento.create.mockResolvedValue(novoMedicamento)
 

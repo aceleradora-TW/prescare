@@ -1,5 +1,6 @@
 module.exports = Medicamento => (req, res) => {
-  Medicamento.findOne({
+  return Medicamento
+  .findOne({
     where: {
       id: req.params.medicamento_id
     }
@@ -14,7 +15,7 @@ module.exports = Medicamento => (req, res) => {
       lote: req.body.lote,
       tipo: req.body.tipo
     }).then(() => {
-      res.redirect(req.originalUrl)
+      res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     })
   })
 }
