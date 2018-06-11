@@ -6,7 +6,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       },
       include: [Prescricao]
     }).then(acolhido => {
-      res.render('pages/info', { acolhido, presc: acolhido.prescricaos})
+      res.render('pages/acolhido', { acolhido, presc: acolhido.prescricaos})
     })
     .catch(console.log)
 }
