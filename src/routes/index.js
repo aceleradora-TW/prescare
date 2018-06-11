@@ -1,6 +1,5 @@
 const router = require('express').Router()
 
-const prescricaoRoutes = require('./prescricao')
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
 const cuidadoRoutes = require('./cuidado')
