@@ -132,7 +132,7 @@
 .panel {
   width:100%;
   display: none;
-  background-color: #e7de8b;
+  background-color: #fae953;
   overflow: hidden;
   text-align: justify;
   border: 3px solid;
@@ -164,4 +164,21 @@ label {
 .botaoPrescricao {
   margin-top: 5vh;
   margin-left: 33vh;
+}
+
+.botoes{
+text-align:  center;
+padding-top: 3vh;
+
+}
+
+
+.botoes input{
+  color: white;
+  background-color: #81b4db;
+  width: 62%;
+  border-radius: 7px;
+  margin-bottom: 1vh;
+  height:5vh;
+
 }
