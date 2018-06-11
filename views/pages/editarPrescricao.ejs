@@ -39,46 +39,15 @@
       <input type="submit" value="Adicionar medicamento">
     </form>
 
-    <form action="<%= updateUrl %>" method="POST">
-      <label for="validade">Validade</label>
-      <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-      <input type="submit" value="Save">
+    <form action="/acolhido/<%= prescricao.acolhido_id %>" method="GET">
+      <input type="submit" value="Voltar">
+    </form>
+    <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
+      <input type="submit" value="Excluir">
     </form>
   </div>
-
-  <form action="/acolhido/<%= prescricao.acolhido_id %>" method="GET">
-    <input type="submit" value="Voltar">
-  </form>
-<<<<<<< 28c44a131d5f46c9046f463373cff507e213195c
-  
-  <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="post">
-    <input type="submit" value="Excluir">
-  </form>
-<<<<<<< 8e2b8405bab16fbe495e4fcab50e1ad95727eeb1
-=======
-
-  
-    <input type="button"  value="Voltar">
-    <input type="button"  value="Adicionar Medicamento">
-    <input type="button"  value="Adicionar Cuidados">
-    <input type="button"  value="Adicionar Dieta">
-
+  <input type="button" value="Voltar">
+  <input type="button" value="Adicionar Medicamento">
+  <input type="button" value="Adicionar Cuidados">
+  <input type="button" value="Adicionar Dieta">
   </div>
-  
-  <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="post">
-    <input type="submit" value="Excluir">
-  </form>
->>>>>>> :rocket: <@ilizakoski, @murilobauerc> Excluir a prescrição
-=======
-  <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
-    <input type="submit" value="Excluir">
-  </form>
-<<<<<<< 171465b2402194b45c2b3190e5b3d7c49ab354f0
-    <input type="button" value="Adicionar Medicamento">
-    <input type="button" value="Adicionar Cuidados">
-    <input type="button" value="Adicionar Dieta">
-  </div>
->>>>>>> :rocket: <@murilobauerc, @ilizakoski> funciona botao voltar e botao excluir
-=======
-  </div>
->>>>>>> :rocket: <@murilobauerc, @alineabich, @DiovaneMendes> implementa fluxo
