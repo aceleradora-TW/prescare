@@ -36,10 +36,13 @@ body {
 
 .nome-left {
   float: left;
+  width: 50%;
 }
 
 .edit-right {
   float: right;
+  width: 50%;
+  text-align: right;
 }
 
 .inf {
