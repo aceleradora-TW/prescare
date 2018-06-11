@@ -31,7 +31,6 @@ describe('Quando acesso Medicamentos', () => {
             validade: req.body.validade,
             lote: req.body.lote
         }
-
         Medicamento.findOne.mockResolvedValue(medicamento)
         medicamento.update.mockResolvedValue(novoMedicamento)
 
