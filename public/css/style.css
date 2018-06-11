@@ -30,11 +30,10 @@
   overflow: hidden;
   z-index: 1071;
   background-image: url("../img/logoSemFundo.png"); 
-    background-repeat: no-repeat;
-    background-position: bottom left; 
-    text-decoration: none;
-
-background-size: 15vw;
+  background-repeat: no-repeat;
+  background-position: bottom left; 
+  text-decoration: none;
+  background-size: 15vw;
 }
 
 .centraliza-itens{
@@ -157,11 +156,12 @@ background-size: 15vw;
   width: auto;
 }
 
-label{
+label {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
-.botaoPrescricao{
+
+.botaoPrescricao {
   margin-top: 5vh;
   margin-left: 33vh;
 }

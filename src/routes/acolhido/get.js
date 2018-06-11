@@ -4,8 +4,10 @@ module.exports = Acolhido => (req, res) => {
       id: req.params.acolhido_id
     }
   }).then(acolhido => {
-    if (!acolhido) res.redirect('404')
+    if (!acolhido) {
+      return res.redirect('/404')
+    } 
 
-    res.render('pages/info', { acolhido: acolhido})
+    res.render('pages/infoAcolhido', { acolhido: acolhido})
   }).catch(err => console.log(err))  
 }

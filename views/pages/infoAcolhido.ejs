@@ -1,0 +1,49 @@
+<%- contentFor('body') %>
+    <div class="box effect1 flex-container">
+        <div class="img-acolhido">
+        </div>
+     <div class="inf">
+            <div class="text">
+                <div>
+                    <span class="nome-left">
+                        <p1 class="bold"> Nome: </p1>
+                        <p2>
+                            <%=acolhido.nome%>
+                        </p2>
+                    </span>
+                    <span class="edit-right">
+                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                        </a>
+                    </span>
+                </div>
+                <div>
+                    <p1 class="bold"> Idade: </p1>
+                    <p2>
+                        <%=acolhido.idade%>
+                    </p2>
+                </div>
+                <div>
+                    <p1 class="bold"> Peso: </p1>
+                    <p2>
+                        <%=acolhido.peso%> kg
+                    </p2>
+                </div>
+                <div>
+                    <p1 class="bold"> Alergias: </p1>
+                    <p2>
+                        <%=acolhido.alergias%>
+                    </p2>
+                </div>
+                <div>
+                    <p1 class="bold"> Via de alimentação: </p1>
+                    <p2>
+                        <%=acolhido.via_alimentacao%>
+                    </p2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="<%= acolhido.id %>/prescricao" method="POST">
+        <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
+    </form>

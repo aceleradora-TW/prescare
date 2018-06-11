@@ -1,0 +1,29 @@
+const acolhidoRoutes = require("../../src/routes/acolhido/update")
+
+describe('Quando acesso Acolhido', () => {
+  it('Deve atualizar informações dos acolhidos', (done) => {
+
+    const acolhido = {acolhido_id:1, update: jest.fn().mockResolvedValue() }
+    const Acolhido = { findOne: jest.fn().mockResolvedValue(acolhido) }
+    const req = {
+      params: {
+        acolhido_id: 1,
+      },
+      body: {
+        idade: '15',
+        peso: '100',
+        alergias: 'código',
+        via_alimentacao: 'boca',
+      }
+    }
+    
+    const res = { redirect: jest.fn() }
+  
+    acolhidoRoutes(Acolhido)(req, res)
+      .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
+      .then(() => expect(acolhido.update).toBeCalledWith(req.body))
+      .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id ))
+      .then(done)
+      .catch(done)
+  })
+})
