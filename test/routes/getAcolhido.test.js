@@ -11,15 +11,9 @@ describe('Quando acesso acolhido', () => {
         const acolhido = { nome: 'Leo', id: '1', idade: 'Luna' , peso: 'Luna' , alergias: 'Luna' , viaAlimentacao: 'Luna' }
         Acolhido.findOne.mockResolvedValue(acolhido);
 
-<<<<<<< 69949da8fb065bbe2b7413d89666eeba62a58b81:test/routes/acolhido.test.js
-        acolhidoRoute(Acolhido)(req, res)
-        .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
-        .then(() => expect(res.render).toBeCalledWith('pages/acolhido', { acolhido }))
-=======
          acolhidoRoutes(Acolhido)(req, res)
         .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
         .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido }))
->>>>>>> <@luizfetrindade, @lindicell> :art: Refatora info acolhidos:test/routes/getAcolhido.test.js
         .then(done)
         .catch(done)
     })
