@@ -6,11 +6,20 @@
         <div class="inf">
             <div class="text">
                 <div>
-                    <p1 class="bold"> Nome: </p1>
-                    <p2>
-                        <%=acolhido.nome%>
-                    </p2>
+                    <span class="nome-left">
+                        <p1 class="bold"> Nome: </p1>
+                        <p2>
+                            <%=acolhido.nome%>
+                        </p2>
+                    </span>
+                    <span class="edit-right">
+                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                            <i class="fa fa-edit edit"></i>
+                        </a>
+                        <span class="atualiza">Última atualização: dd/mm/aaaa </span>
+                    </span>
                 </div>
+                <br>
                 <div>
                     <p1 class="bold"> Idade: </p1>
                     <p2>
@@ -43,8 +52,11 @@
         </div>
     </div>
 
-    <form action="<%= acolhido.id %>/prescricao" method="POST">
-        <input type="submit" value="Nova Prescrição">
-    <form action="/listaAcolhidos" method="GET">
-        <input type="submit" value="Voltar">
-      </form>
+    <div class="botoes">
+        <form action="<%= acolhido.id %>/prescricao" method="POST">
+            <input type="submit" value="Abrir prescrição">
+        </form>
+        <form action="/listaAcolhidos" method="GET">
+            <input type="submit" value="Voltar">
+        </form>
+    </div>
