@@ -155,15 +155,3 @@ label{
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
-
-a.botaoo{
-  border: 1px solid;
-  background-color: #0a95f1;
-  color: #000000;
-  padding:3px;
-}
-
-a.botaoo:hover{
-  text-decoration: none;
-  background-color: #3d8bf0;
-  }

@@ -4,6 +4,7 @@ module.exports = Acolhido => (req, res) => {
       where: { id: req.params.acolhido_id }
     })
     .then(acolhido => {
+      if(!acolhido) res.send('Essa página não existe')
       res.render('pages/acolhido', { acolhido })
     })
     .catch(console.log)
