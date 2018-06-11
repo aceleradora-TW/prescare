@@ -6,15 +6,15 @@
 
     <%- include tabelaMedicamentos.ejs %>
 
-      <%- include tabelaDieta.ejs %>
+    <%- include tabelaDieta.ejs %>
 
-        <%- include tabelaCuidados.ejs %>
+    <%- include tabelaCuidados.ejs %>
 
-          <form action="<%= updateUrl %>" method="POST">
-            <label for="validade">Validade</label>
-            <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-            <input type="submit" value="Salvar">
-          </form>
+      <form action="<%= updateUrl %>" method="POST">
+        <label for="validade">Validade</label>
+        <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+        <input type="submit" value="Salvar">
+      </form>
   </div>
 
   <div class="botoes">
