@@ -161,7 +161,13 @@ label {
   font-size: 25px;
 }
 
-.botaoPrescricao {
+.botao-prescricao {
   margin-top: 5vh;
   margin-left: 33vh;
 }
+
+.botao-voltar {
+  margin-top: 5vh;
+  margin-left: 33vh;
+}
+
