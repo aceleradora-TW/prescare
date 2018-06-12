@@ -1,18 +1,17 @@
-module.exports = (Prescricao, Dieta, Acolhido) => (req, res) => {
-  console.log(req.params);
-  
-  return Prescricao.findOne({
+module.exports = (Prescricao, Cuidado, Dieta, Acolhido) => (req, res) => {
+    return Prescricao.findOne({
     where: {
       id: req.params.prescricao_id
     },
-    include:[Dieta, Acolhido]
+    include:[Cuidado, Dieta, Acolhido]
       })
   .then(prescricao => {
-    console.log(prescricao);
+    if(!prescricao) res.render('/404')
     
     res.render('pages/editarPrescricao', { 
       prescricao, 
       acolhido: prescricao.acolhido,
+      cuidado : prescricao.cuidados,
       dietas: prescricao.dieta,
       updateUrl: req.originalUrl,
      })
