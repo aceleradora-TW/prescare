@@ -15,8 +15,6 @@
   padding-top: 5vh;
 }
 
-
-
 .logout{
   color: #fff;
 }
@@ -26,8 +24,6 @@
 }
 
 .navbar {
-  background-color: #81b4db;
-  width: 100vw;
   background-color: #81b4db;
   background-image: url("../img/logoSemFundo.png");
   background-repeat: no-repeat;
@@ -61,16 +57,6 @@
   background-color: white;
 }
 
-.panel {
-  width:100%;
-  display: none;
-  background-color: #fae953;
-  overflow: hidden;
-  text-align: justify;
-  border: 3px solid;
-  border-color: #81b4db;
-}
-
 .botoes{
   padding-top: 3vh;
 }
@@ -83,6 +69,7 @@
   margin-bottom: 1vh;
   height:5vh;
 }
+
 a.botaoo{
   border: 1px solid;
   background-color: #0a95f1;
@@ -93,13 +80,12 @@ a.botaoo{
 a.botaoo:hover{
   text-decoration: none;
   background-color: #3d8bf0;
-  }
+}
 
 .cuidado{
   margin-left: 203px;
   overflow-y: auto;
 }
-
 
 .tabelaPrescricao {
   border-collapse: collapse;
@@ -117,18 +103,15 @@ a.botaoo:hover{
   border: 1px solid;
   height: 4vh;
   text-align: center;
-
 }
 .input {
   padding-left: 1vw;
-  
 }
 
 label {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
 }
-
 
 .medicamento{
  padding-left: 25%;

@@ -30,7 +30,7 @@ const seedDatabase = models => () => {
     models.Prescricao.create({
       data: Date.now(),
       validade: Date.now(),
-      acolhidoId: acolhido.id
+      acolhido_id: acolhido.id
     }).then(prescricao => {
       models.Medicamento.create({
         nome: "Dorflex",
@@ -40,18 +40,18 @@ const seedDatabase = models => () => {
         dosagem: "1cp",
         validade: "2018",
         lote: "213213iu1griusadoas",
-        prescricaoId: prescricao.id
+        prescricao_id: prescricao.id
       }).then(() => {
         models.Cuidado.create({
           descricao: "Dar banho",
           intervalo: "12h-12h",
           observacoes: "Com Jhonsons Baby",
-          prescricaoId: prescricao.id
+          prescricao_id: prescricao.id
         }).then(() => {
           models.Dieta.create({
             tipo: "Hipercalórica",
             intervalo: "12h-12h",
-            prescricaoId: prescricao.id
+            prescricao_id: prescricao.id
           });
         });
       });

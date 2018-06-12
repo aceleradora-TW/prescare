@@ -1,7 +1,7 @@
 module.exports = Prescricao => (req, res) => {
   Prescricao.destroy({
     where: {
-      id: req.params.PrescricaoId
+      id: req.params.prescricaoId
     }
   }).then(() => { console.log('Prescrição deletada.') })
 }
