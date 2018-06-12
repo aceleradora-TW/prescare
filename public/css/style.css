@@ -6,7 +6,8 @@
 .body {
   background: #aedbfdb0;
   font-family: 'Open Sans', sans-serif;
-  margin:  auto;
+  font-size: 15px;
+  margin: 0 auto;
 }
 
 .main{
