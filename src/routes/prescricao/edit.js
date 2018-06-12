@@ -16,4 +16,13 @@ module.exports = (Prescricao, Cuidado, Dieta, Acolhido) => (req, res) => {
       updateUrl: req.originalUrl,
      })
   })
-}
+    .then(prescricao => {
+      res.render('pages/editarPrescricao', {
+        prescricao,
+        updateUrl: req.originalUrl,
+        cuidado: prescricao.cuidados,
+        dietas: prescricao.dieta,
+        acolhidoId: req.params.acolhido_id,
+      })
+    })
+  }
