@@ -263,3 +263,75 @@ label {
 .float {
   float: left;
 }
+
+.flex-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 6px -6px #777;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 37vw;
+  padding: 1%;
+}
+
+.img {
+  border-radius: 12px;
+  background-color: #81b4db;
+  flex-grow: 2;
+  align-items: left;
+  margin: 2px;
+}
+
+.img-acolhido {
+  background-color: #81b4db;
+  border-radius: 12px;
+  flex-grow: 2;
+}
+
+.text {
+  padding-left: 5px;
+}
+
+.inf {
+  text-align: left;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+.tiracor {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.botoes {
+  display: inline;
+}
+
+.botoes input{
+  background-color: #81b4db;
+  border-radius: 7px;
+  color: white;
+  height:5vh;
+  margin: 1vh;
+  min-width: fit-content;
+  width: 19vh;
+}
+
+.centraliza {
+  margin: 0 auto;
+  text-align: center;
+  width: 38vw;
+}
