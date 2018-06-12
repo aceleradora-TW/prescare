@@ -6,7 +6,7 @@ describe('Quando acesso medicamento', () => {
             findOne: jest.fn()
         }
        
-        const req = { params: { medicamento_id: 1 } }
+        const req = { params: { medicamentoId: 1 } }
         const res = { render: jest.fn() }
         const medicamento = { 
             id: 1,
@@ -23,7 +23,7 @@ describe('Quando acesso medicamento', () => {
         Medicamento.findOne.mockResolvedValue(medicamento);
 
         return medicamentoRoute(Medicamento)(req, res)
-        .then(() => expect(Medicamento.findOne).toBeCalledWith( {'where': {'id': req.params.medicamento_id }}))
+        .then(() => expect(Medicamento.findOne).toBeCalledWith( {'where': {'id': req.params.medicamentoId }}))
         .then(() => expect(res.render).toBeCalledWith('pages/editarMedicamento', { medicamento }))
         .then(done)
         .catch(done)

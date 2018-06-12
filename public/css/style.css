@@ -72,7 +72,6 @@
 }
 
 .botoes{
-  text-align:  center;
   padding-top: 3vh;
 }
 
@@ -101,9 +100,6 @@ a.botaoo:hover{
   overflow-y: auto;
 }
 
-tr.js-novo-elemento-cuidados{
-  margin-right: 110px;
-}
 
 .tabelaPrescricao {
   border-collapse: collapse;

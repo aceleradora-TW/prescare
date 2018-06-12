@@ -5,7 +5,7 @@ describe('Quando acesso cuidado', () => {
         const Cuidado = {
             create: jest.fn()
         }
-        const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado' }
+        const req = { params: { prescricaoId: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado' }
         const res = { redirect: jest.fn() }
         const novoCuidado = { id: 2 }
                 

@@ -4,10 +4,10 @@ const get = require('./get')
 const update = require('./update')
 
 module.exports = (Medicamento, router) => {
-  router.post('/acolhido/:acolhidoId/prescricao/:prescricao_id/edit/medicamento', create(Medicamento))
-  router.get('/acolhido/:acolhidoId/prescricao/:prescricao_id/medicamento/:medicamento_id', get(Medicamento))
-  router.get('/acolhido/:acolhidoId/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/edit', edit(Medicamento))
-  router.post('/acolhido/:acolhidoId/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/edit', update(Medicamento))
+  router.post('/acolhido/:acolhidoId/prescricao/:prescricaoId/edit/medicamento', create(Medicamento))
+  router.get('/acolhido/:acolhidoId/prescricao/:prescricaoId/medicamento/:medicamentoId', get(Medicamento))
+  router.get('/acolhido/:acolhidoId/prescricao/:prescricaoId/edit/medicamento/:medicamentoId/edit', edit(Medicamento))
+  router.post('/acolhido/:acolhidoId/prescricao/:prescricaoId/edit/medicamento/:medicamentoId/edit', update(Medicamento))
 
   return router;
 }

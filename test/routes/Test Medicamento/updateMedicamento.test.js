@@ -5,9 +5,9 @@ describe('Quando acesso Medicamentos', () => {
         const Medicamento = { findOne: jest.fn() }
         const req = {
             params: {
-                medicamento_id: 1,
+                medicamentoId: 1,
                 acolhidoId: 1,
-                prescricao_id: 1
+                prescricaoId: 1
             },
             body: {
                 nome: 'medicamento',
@@ -21,23 +21,17 @@ describe('Quando acesso Medicamentos', () => {
         }
         const res = { redirect: jest.fn() }
 
-        const medicamento = { id: 1, update: jest.fn() }
-        const novoMedicamento = {
-            nome:  req.body.nome,
-            intervalo:  req.body.intervalo,
-            via:  req.body.via,
-            formaFarmaceutica:  req.body.formaFarmaceutica,
-            dosagem: req.body.dosagem,
-            validade: req.body.validade,
-            lote: req.body.lote
-        }
+        const medicamento = { id: 1,
+             update: jest.fn() 
+            }
+     
         Medicamento.findOne.mockResolvedValue(medicamento)
-        medicamento.update.mockResolvedValue(novoMedicamento)
+        medicamento.update.mockResolvedValue(req.body)
 
         medicamentoRoute(Medicamento)(req, res)
-        .then(() => expect(Medicamento.findOne).toBeCalledWith({'where': {'id': req.params.medicamento_id }}))
-        .then(() => expect(medicamento.update).toBeCalledWith(novoMedicamento))
-        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricao_id + '/edit'))
+        .then(() => expect(Medicamento.findOne).toBeCalledWith({'where': {'id': req.params.medicamentoId }}))
+        .then(() => expect(medicamento.update).toBeCalledWith(req.body))
+        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricaoId + '/edit'))
         .then(done)
         .catch(done)
     })

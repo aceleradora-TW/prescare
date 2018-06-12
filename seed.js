@@ -40,18 +40,18 @@ const seedDatabase = models => () => {
         dosagem: "1cp",
         validade: "2018",
         lote: "213213iu1griusadoas",
-        prescricao_id: prescricao.id
+        prescricaoId: prescricao.id
       }).then(() => {
         models.Cuidado.create({
           descricao: "Dar banho",
           intervalo: "12h-12h",
           observacoes: "Com Jhonsons Baby",
-          prescricao_id: prescricao.id
+          prescricaoId: prescricao.id
         }).then(() => {
           models.Dieta.create({
             tipo: "Hipercalórica",
             intervalo: "12h-12h",
-            prescricao_id: prescricao.id
+            prescricaoId: prescricao.id
           });
         });
       });

@@ -5,9 +5,9 @@ describe('Quando acesso cuidado', () => {
         const Cuidado = { findOne: jest.fn() }
         const req = { 
             params: { 
-                cuidado_id: 1,
+                cuidadoId: 1,
                 acolhidoId: 1,
-                prescricao_id: 1
+                prescricaoId: 1
             },
             body: {
                 descricao: 'cuidado',
@@ -18,19 +18,14 @@ describe('Quando acesso cuidado', () => {
         const res = { redirect: jest.fn() }
 
         const cuidado = { id: 1, update: jest.fn() }
-        const novoCuidado = { 
-            descricao: req.body.descricao,
-            intervalo: req.body.intervalo,
-            observacoes: req.body.observacoes
-        }
-      
+        
         Cuidado.findOne.mockResolvedValue(cuidado)
-        cuidado.update.mockResolvedValue(novoCuidado) 
+        cuidado.update.mockResolvedValue(req.body) 
 
         cuidadoRoute(Cuidado)(req, res)
-        .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidado_id }}))
-        .then(() => expect(cuidado.update).toBeCalledWith(novoCuidado))
-        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricao_id + '/edit'))
+        .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidadoId }}))
+        .then(() => expect(cuidado.update).toBeCalledWith(req.body))
+        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricaoId + '/edit'))
         .then(done)
         .catch(done)
     })
