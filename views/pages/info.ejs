@@ -1,27 +1,16 @@
 <%- contentFor('body') %>
-
-
     <div class="box effect1 flex-container">
         <div class="img-acolhido">
         </div>
 
-
         <div class="inf">
             <div class="text">
                 <div>
-                    <span class="nome-left">
-                        <p1 class="bold"> Nome: </p1>
-                        <p2>
-                            <%=acolhido.nome%>
-                        </p2>
-                    </span>
-                    <span class="edit-right">
-                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-                        <i class="fa fa-edit edit"></i>
-                        </a>
-                        <span class="atualiza">Última atualização: dd/mm/aaaa </span>
-                    </span>
-                </div><br>
+                    <p1 class="bold"> Nome: </p1>
+                    <p2>
+                        <%=acolhido.nome%>
+                    </p2>
+                </div>
                 <div>
                     <p1 class="bold"> Idade: </p1>
                     <p2>
@@ -31,8 +20,12 @@
                 <div>
                     <p1 class="bold"> Peso: </p1>
                     <p2>
-                        <%=acolhido.peso%> kg
+                        <%=acolhido.peso%>
                     </p2>
+                    <a href="#" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                    </a>
+                    <span class="atualiza">Última atualização: dd/mm/aaaa </span>
                 </div>
                 <div>
                     <p1 class="bold"> Alergias: </p1>
@@ -43,29 +36,29 @@
                 <div>
                     <p1 class="bold"> Via de alimentação: </p1>
                     <p2>
-                        <%=acolhido.via_alimentacao%>
+                        <%=acolhido.viaAlimentacao%>
                     </p2>
                 </div>
             </div>
         </div>
     </div>
 
-    <table class="margin-top-5" width="100%">
+    <table style="margin-top:5vh;" width="100%">
         <thead>
             <tr>
             <th>ID</th>
-            <th class="text-center">Data</th>
-            <th class="text-center">Validade</th>
-            <th class="text-right">Ação</th>
+            <th style="text-align: center;">Data</th>
+            <th style="text-align: center;">Validade</th>
+            <th style="text-align: right;">Ação</th>
             </tr>
         </thead>
         <tbody>
-            <%for (prescricao of prescricoes){%>
+            <%for (prescricao of presc){%>
             <tr>
                 <td><%= prescricao.id %></td>
-                <td class="text-center"> <%= prescricao.data %></td>
-                <td class="text-center"><%= prescricao.validade %> </td>
-                <td class="text-right">
+                <td style="text-align: center;"><%= prescricao.data %></td>
+                <td style="text-align: center;"><%= prescricao.validade %> </td>
+                <td style="text-align: right;">
                     <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/edit" method="POST">
                         <input type="submit" value="Abrir">
                     </form>
@@ -79,10 +72,14 @@
                     <form action="<%= acolhido.id %>/prescricao" method="POST">
                         <input type="submit" value="Criar nova prescrição">
                     </form>
-                    <form action="/acolhido/lista" method="GET" >
-                        <input type="submit" value="Voltar">            
-                    </form>
                 </td>
             </tr>
         </tfoot>
     </table>
+
+   
+
+
+
+
+

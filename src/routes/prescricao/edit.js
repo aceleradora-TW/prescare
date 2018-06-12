@@ -1,11 +1,14 @@
-module.exports = Prescricao => (req, res) => {
-  Prescricao.findOne({
-    where: {
-      id: req.params.prescricao_id
-    }
-  })
-  .then(prescricao => {
-    if(!prescricao) res.render('/404')
-    res.render('pages/editarPrescricao', { prescricao, updateUrl: req.originalUrl })
-  })
+module.exports = (Prescricao, Cuidado)  => (req, res) => {
+  return Prescricao
+    .findOne({
+      where: {
+        id: req.params.prescricao_id
+      },
+      include: [Cuidado]
+    }).then(prescricao => {
+      if (!prescricao) {
+        return res.send('Essa página não existe')
+      }
+      res.render('pages/editarPrescricao', { prescricao, cuidados: prescricao.cuidados, updateUrl: req.originalUrl })
+    })
 }

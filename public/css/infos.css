@@ -90,3 +90,15 @@ body {
   color: black;
   text-decoration: none;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.margin-top-5 {
+  margin-top:5vh;
+}

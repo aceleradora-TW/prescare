@@ -1,36 +1,45 @@
 <%- contentFor('body') %>
-<div>
-  <form >
-    <label for="medicamento">Medicamentos</label>
-    <table class="tabelaPrescricao">
-
-      <th>Nome</th>
-      <th>Intervalo</th>
-      <th>Via</th>
-      <th>Forma Farmacêutica</th>
-      <th>Dosagem</th>
-    </table>
-  </form>
-
-  <form >
-    <label for="cuidado">Cuidados</label>
-    <table class="tabelaPrescricao">
-    <th>Descrição</th>
-    <th>Intervalo</th>
-    <th>Observações</th>
-    </table>
-  </form>
-
-  <form >
-      <label for="dieta">Dieta</label>
+  <div>
+    <form>
+      <label for="medicamento">Medicamentos</label>
       <table class="tabelaPrescricao">
-      <th>Tipo</th>
-      <th>Intervalo</th>
+
+        <th>Nome</th>
+        <th>Intervalo</th>
+        <th>Via</th>
+        <th>Forma Farmacêutica</th>
+        <th>Dosagem</th>
       </table>
     </form>
 
-    <form action="" method="">
-      <input type="submit" value="Adicionar medicamento">
+    <form>
+      <label for="cuidado">Cuidados</label>
+      <table class="tabelaPrescricao">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Intervalo</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%for (cuidado of cuidados){%>
+            <tr>
+                <td><%= cuidado.descricao %></td>
+                <td><%= cuidado.intervalo %></td>
+                <td><%= cuidado.observacoes %> </td>
+            </tr>
+            <%}%>
+        </tbody>
+      </table>
+    </form>
+
+    <form>
+      <label for="dieta">Dieta</label>
+      <table class="tabelaPrescricao">
+        <th>Tipo</th>
+        <th>Intervalo</th>
+      </table>
     </form>
 
     <form action="<%= updateUrl %>" method="POST">
@@ -38,7 +47,22 @@
       <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
       <input type="submit" value="Save">
     </form>
-    <input type="button"  value="Voltar">
-    <input type="button"  value="Adicionar Medicamento">
-    <input type="button"  value="Adicionar Cuidados">
-    <input type="button"  value="Adicionar Dieta">
+
+
+
+    <form action="/acolhido/<%= prescricao.acolhido_id %>" method="GET">
+      <input type="submit" value="Voltar">
+    </form>
+    <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
+      <input type="submit" value="Excluir">
+    </form>
+  </div>
+
+  <form action="" method="">
+    <input type="submit" value="Adicionar medicamento">
+  </form>
+
+  <form action="<%= updateUrl %>/cuidado" method="POST">
+    <input type="submit" value="Adicionar cuidados">
+  </form>
+  <input type="button" value="Adicionar Dieta">

@@ -1,13 +1,12 @@
-module.exports = Acolhido => (req, res) => {
-  return Acolhido.findOne({
-    where: {
-      id: req.params.acolhido_id
-    }
-  }).then(acolhido => {
-    if (!acolhido) {
-      return res.redirect('/404')
-    } 
-
-    res.render('pages/infoAcolhido', { acolhido: acolhido})
-  }).catch(err => console.log(err))  
+module.exports = (Acolhido, Prescricao) => (req, res) => {
+  return Acolhido
+    .findOne({
+      where: { 
+        id: req.params.acolhido_id
+      },
+      include: [Prescricao]
+    }).then(acolhido => {
+      res.render('pages/acolhido', { acolhido, prescricoes: acolhido.prescricaos})
+    })
+    .catch(console.log)
 }
