@@ -6,7 +6,7 @@ describe('Quando acesso cuidado', () => {
         const req = { 
             params: { 
                 cuidado_id: 1,
-                acolhido_id: 1,
+                acolhidoId: 1,
                 prescricao_id: 1
             },
             body: {
@@ -30,7 +30,7 @@ describe('Quando acesso cuidado', () => {
         cuidadoRoute(Cuidado)(req, res)
         .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidado_id }}))
         .then(() => expect(cuidado.update).toBeCalledWith(novoCuidado))
-        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))
+        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricao_id + '/edit'))
         .then(done)
         .catch(done)
     })

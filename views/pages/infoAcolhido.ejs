@@ -2,7 +2,7 @@
     <div class="box effect1 flex-container">
         <div class="img-acolhido">
         </div>
-     <div class="inf">
+        <div class="inf">
             <div class="text">
                 <div>
                     <span class="nome-left">
@@ -13,9 +13,9 @@
                     </span>
                     <span class="edit-right">
                         <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-                        <i class="fa fa-edit edit"></i>
+                            <i class="fa fa-edit edit"></i>
                             Editar
-                    </a>
+                        </a>
                     </span>
                 </div>
                 <div>
@@ -45,6 +45,12 @@
             </div>
         </div>
     </div>
-    <form action="<%= acolhido.id %>/prescricao" method="POST">
-        <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
-    </form>
+    <div class="botoes">
+        <form action="<%= acolhido.id %>/prescricao" method="POST">
+            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+        </form>
+
+        <form action="/listaAcolhidos" method="GET">
+            <input class="botaoPrescricao" type="submit" value="Voltar">
+        </form>
+    </div>

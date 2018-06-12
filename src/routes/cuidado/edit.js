@@ -6,6 +6,11 @@ module.exports = Cuidado => (req, res) => {
         }
     }).then(cuidado => {
         if(!cuidado) res.send('Essa página não existe')
-        res.render('pages/editarCuidado', { cuidado, updateUrl: req.originalUrl })
+        res.render('pages/editarCuidado', { 
+            acolhidoId: req.params.acolhidoId,
+            prescricaoId: req.params.prescricao_id,
+            cuidado,
+            updateUrl: req.originalUrl 
+        })
     })
 }

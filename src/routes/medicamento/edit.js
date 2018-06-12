@@ -5,7 +5,7 @@ module.exports = Medicamento => (req, res) => {
     }
   }).then(medicamento => {
     res.render('pages/editarMedicamento', { 
-      acolhidoId: req.params.acolhido_id,
+      acolhidoId: req.params.acolhidoId,
       prescricaoId: req.params.prescricao_id,
       medicamento, 
       updateUrl: req.originalUrl 

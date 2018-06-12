@@ -1,6 +1,7 @@
 module.exports = Prescricao => (req, res) => {
-  Prescricao.create({
-    acolhido_id: req.params.acolhido_id
+  return Prescricao
+  .create({
+    acolhidoId: req.params.acolhidoId
   }).then(prescricao => {
     res.redirect(req.originalUrl + '/' + prescricao.id + '/edit')
   })

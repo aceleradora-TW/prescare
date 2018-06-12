@@ -30,7 +30,7 @@ const seedDatabase = models => () => {
     models.Prescricao.create({
       data: Date.now(),
       validade: Date.now(),
-      acolhido_id: acolhido.id
+      acolhidoId: acolhido.id
     }).then(prescricao => {
       models.Medicamento.create({
         nome: "Dorflex",

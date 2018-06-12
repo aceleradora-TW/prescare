@@ -6,13 +6,13 @@ describe('Quando acesso acolhido', () => {
             findOne: jest.fn()
         }
 
-        const req = { params: { acolhido_id: 1 } }
+        const req = { params: { acolhidoId: 1 } }
         const res = { render: jest.fn() }
         const acolhido = { nome: 'Leo', id: '1', idade: 'Luna' , peso: 'Luna' , alergias: 'Luna' , viaAlimentacao: 'Luna' }
         Acolhido.findOne.mockResolvedValue(acolhido);
 
          acolhidoRoutes(Acolhido)(req, res)
-        .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }}))
+        .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhidoId }}))
         .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido }))
         .then(done)
         .catch(done)
