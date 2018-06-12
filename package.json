@@ -13,7 +13,7 @@
     "db:console": "docker exec -it prescare-database psql -U postgres -d prescare",
     "db:reset": "npm run db:stop;sleep 1; npm run db:start; sleep 2; npm run db:create",
     "db:stop": "docker stop prescare-database",
-    "db:seed": "cat seed.sql | docker exec -i prescare-database psql -U postgres -d prescare"
+    "db:seed": "node seed.js"
   },
   "repository": {
     "type": "git",
