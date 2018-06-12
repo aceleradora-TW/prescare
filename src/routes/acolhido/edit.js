@@ -4,8 +4,10 @@ module.exports = Acolhido => (req, res) => {
         id: req.params.acolhido_id
       }
     }).then(acolhido => {
-      if(!acolhido) res.render('/404')
-        res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
+      if (!acolhido) {
+        return res.send('Essa página não existe')
+      }
+      res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     })
   }
   

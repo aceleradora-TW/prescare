@@ -6,7 +6,9 @@ module.exports = (Prescricao, Cuidado)  => (req, res) => {
       },
       include: [Cuidado]
     }).then(prescricao => {
-      if (!prescricao) res.send('Essa página não existe')
-      res.render('pages/editarPrescricao', { prescricao, cuid: prescricao.cuidados, updateUrl: req.originalUrl })
+      if (!prescricao) {
+        return res.send('Essa página não existe')
+      }
+      res.render('pages/editarPrescricao', { prescricao, cuidados: prescricao.cuidados, updateUrl: req.originalUrl })
     })
 }
