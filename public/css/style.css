@@ -81,6 +81,13 @@
   height: 4vh;
 }
 
+.tabelaPrescricao {
+  border-collapse: collapse;
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  margin-bottom: 1vh;
+}
+
 label {
   font-size: 25px;
 }
