@@ -49,11 +49,37 @@
             </div>
         </div>
     </div>
-    <form action="<%= acolhido.id %>/prescricao" method="POST">
-        <input class = "botaoPrescricao" type="submit" value="Nova Prescrição">
-    </form>
-<!-- 
-    <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id%>/edit" method="POST">
-        <input type="submit" value="Abrir">
-    </form>
- -->
+
+    <table class="margin-top-5" width="100%">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th class="text-center">Data</th>
+            <th class="text-center">Validade</th>
+            <th class="text-right">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for (prescricao of presc){%>
+            <tr>
+                <td><%= prescricao.id %></td>
+                <td class="text-center"> <%= prescricao.data %></td>
+                <td class="text-center"><%= prescricao.validade %> </td>
+                <td class="text-right">
+                    <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/edit" method="POST">
+                        <input type="submit" value="Abrir">
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <form action="<%= acolhido.id %>/prescricao" method="POST">
+                        <input type="submit" value="Criar nova prescrição">
+                    </form>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
