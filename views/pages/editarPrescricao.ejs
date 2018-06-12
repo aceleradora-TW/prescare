@@ -15,9 +15,22 @@
     <form>
       <label for="cuidado">Cuidados</label>
       <table class="tabelaPrescricao">
-        <th>Descrição</th>
-        <th>Intervalo</th>
-        <th>Observações</th>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Intervalo</th>
+            <th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%for (cuidado of cuid){%>
+            <tr>
+                <td><%= cuidado.descricao %></td>
+                <td><%= cuidado.intervalo %></td>
+                <td><%= cuidado.observacoes %> </td>
+            </tr>
+            <%}%>
+        </tbody>
       </table>
     </form>
 
@@ -48,7 +61,7 @@
   <form action="" method="">
     <input type="submit" value="Adicionar medicamento">
   </form>
-  
+
   <form action="<%= updateUrl %>/cuidado" method="POST">
     <input type="submit" value="Adicionar cuidados">
   </form>
