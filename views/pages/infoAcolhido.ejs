@@ -45,12 +45,9 @@
             </div>
         </div>
     </div>
-    <div class="botoes medicamento">
-        <form action="<%= acolhido.id %>/prescricao" method="POST">
-            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
-        </form>
-
-        <form action="/lista-acolhidos" method="GET">
-            <input class="botaoPrescricao" type="submit" value="Voltar">
-        </form>
-    </div>
+    <form action="<%= acolhido.id %>/prescricao" method="POST">
+        <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+    </form>
+    <form action="/acolhido/lista">
+        <input class="botao-voltar" type="submit" value="Voltar">
+    </form>

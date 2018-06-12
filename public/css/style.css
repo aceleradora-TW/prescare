@@ -9,13 +9,7 @@
   margin: 0 auto;
 }
 
-.main {
-  height: 50vh;
-  width: 80vw;
-  padding-top: 5vh;
-}
-
-.logout{
+.logout {
   color: #fff;
 }
 
@@ -103,4 +97,61 @@ label {
 
 .medicamento{
  padding-left: 25%;
+}
+.botaoPrescricao {
+  margin-top: 5vh;
+  margin-left: 33vh;
+}
+
+.botao-voltar {
+  margin-top: 5vh;
+  margin-left: 33vh;
+}
+
+.titulo-lista-acolhidos {
+  font-size: 1.8em;
+  margin: 0 0 5vh 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.lista-acolhidos {
+  background-color: #81b4db;
+  height: 65vh;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow-y: scroll;
+  width: 60%;
+}
+
+.lista-acolhidos li {
+  padding: 1%;
+}
+
+.lista-acolhidos li a {
+  text-decoration: none;
+  color:black;
+  display: block;
+}
+
+.lista-acolhidos li:nth-child(even) {
+  background-color: #a9d1fb;
+}
+
+.lista-acolhidos li:hover {
+  background-color: #bdc3c7;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #9dd1f7;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }

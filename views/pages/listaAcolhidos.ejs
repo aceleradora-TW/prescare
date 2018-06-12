@@ -2,16 +2,14 @@
 <section class="section">
     <main class="main">
         <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
-        <div class="content">
-            <ul class="lista-acolhidos">
-                <%for (acolhido of acolhidos){%>
-                    <li>
-                        <a href="acolhido/<%= acolhido.id %>">
-                            <%= acolhido.nome %>
-                        </a>
-                    </li>
-                <%}%>
-            </ul>
-        </div>
+        <ul class="lista-acolhidos">
+            <%for (acolhido of acolhidos){%>
+                <li>
+                    <a href="<%= acolhido.id %>">
+                        <%= acolhido.nome %>
+                    </a>
+                </li>
+            <%}%>
+        </ul>
     </main>
 </section>
