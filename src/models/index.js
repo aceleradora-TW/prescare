@@ -3,7 +3,6 @@ const medicamento = require('./medicamento')
 const dieta = require('./dieta')
 const prescricao = require('./prescricao')
 const cuidado = require('./cuidado')
-const dieta = require('./dieta')
 const usuario = require('./usuario')
 
 module.exports = db => {
@@ -12,7 +11,6 @@ module.exports = db => {
   const Dieta = dieta(db)
   const Prescricao = prescricao(db)
   const Cuidado = cuidado(db)
-  const Dieta = dieta(db)
   const Usuario = usuario(db)
 
   Prescricao.belongsTo(Acolhido)
