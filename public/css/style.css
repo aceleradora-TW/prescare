@@ -9,10 +9,6 @@
   margin:  auto;
 }
 
-.main{
-  width: 73vw;
-}
-
 .logout {
   color: #fff;
 }
@@ -64,12 +60,37 @@
 }
 
 .botoes {
-  margin: auto;
+  margin: 0 1.5vw;
+  text-align: center;
   display: inline;
   font-size: 15px;
 }
 
-.medicamento{
+.botoes input {
+  background-color: #81b4db;
+  border-radius: 7px;
+  color: white;
+  height: 35px;
+  margin: 1vh;
+  max-width: 150px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 12vw;
+}
+
+.centraliza {
+  margin: 0 auto;
+  text-align: center;
+  width: 38vw;
+}
+
+.editar-acolhido {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.medicamento {
  padding-left: 25%;
 }
 
