@@ -9,6 +9,10 @@
   margin:  auto;
 }
 
+.main{
+  width: 73vw;
+}
+
 .logout {
   color: #fff;
 }
@@ -56,16 +60,19 @@
   margin: auto;
   margin-bottom: 1vh;
   text-align: center;
-  width: 100%;
+  width: 68vw;
 }
 
-.input {
-  padding-left: 1vw;
+.botoes {
+  margin: auto;
+  display: inline;
+  font-size: 15px;
 }
 
 .medicamento{
  padding-left: 25%;
 }
+
 .botaoPrescricao {
   margin-top: 5vh;
   margin-left: 33vh;
@@ -100,11 +107,8 @@
 }
 
 label {
+  margin-left: 2.6vw;
   font-size: 25px;
-}
-
-.sub-titulo {
-  font-size: 20px;
 }
 
 .titulo-lista-acolhidos {
@@ -147,9 +151,11 @@ label {
   width: 20px;
   background-color: #9dd1f7;
 }
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
+
 ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
@@ -163,7 +169,6 @@ label {
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 2%;
-  min-width: fit-content;
   width: 37vw;
   padding: 1%;
 }
@@ -318,9 +323,10 @@ label {
 
 .botoes {
   display: inline;
+  margin: 0 1.5vw;
 }
 
-.botoes input{
+.botoes input {
   background-color: #81b4db;
   border-radius: 7px;
   color: white;
@@ -334,4 +340,8 @@ label {
   margin: 0 auto;
   text-align: center;
   width: 38vw;
+}
+
+.editar-acolhido {
+  margin: 0 22vw;
 }
