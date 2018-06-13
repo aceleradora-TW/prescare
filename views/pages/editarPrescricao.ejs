@@ -51,27 +51,23 @@
     <%- include tabelaDieta.ejs %>
 
       <form action="<%= updateUrl %>" method="POST">
-      <label for="validade">Validade</label>
-      <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-      <input type="submit" value="Salvar">
-    </form>
-
-
-
-    <form action="/acolhido/<%= prescricao.acolhido_id %>" method="GET">
-      <input type="submit" value="Voltar">
-    </form>
-    <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
-      <input type="submit" value="Excluir">
-    </form>
+        <label for="validade">Validade</label>
+        <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+        <input type="submit" value="Salvar">
+      </form>
+      <form action="/acolhido/<%= prescricao.acolhido_id %>" method="GET">
+        <input type="submit" value="Voltar">
+      </form>
+      <form action="/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>" method="POST">
+        <input type="submit" value="Excluir">
+      </form>
   </div>
-
-  <form action="" method="">
-    <input type="submit" value="Adicionar medicamento">
+  <form action="<%= updateUrl %>/cuidado" method="POST">
+    <input type="submit" value="Adicionar cuidado">
   </form>
 
-  <form action="<%= updateUrl %>/cuidado" method="POST">
-    <input type="submit" value="Adicionar cuidados">
+  <form action="<%= updateUrl %>/medicamento" method="POST">
+    <input type="submit" value="Adicionar medicamento">
   </form>
   <form action="<%= updateUrl %>/dieta" method="POST">
     <input type="submit" value="Adicionar dieta">
