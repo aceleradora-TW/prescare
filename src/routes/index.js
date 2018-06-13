@@ -7,12 +7,12 @@ const cuidadoRoutes = require('./cuidado')
 const dietaRoutes = require('./dieta')
 
 module.exports = models => {
-  applicationRoutes(router)
-  acolhidoRoutes(models.Acolhido, router)
-  prescricaoRoutes(models.Prescricao, models.Dieta, router)
-  cuidadoRoutes(models.Cuidado, router)
-  dietaRoutes(models.Dieta, router)
-  
+  applicationRoutes(router),
+    acolhidoRoutes(models.Acolhido, router),
+    prescricaoRoutes(models.Prescricao, models.Dieta, router),
+    dietaRoutes(models.Dieta, router),
+    cuidadoRoutes(models.Cuidado, router)
+
   return router;
 }
 
