@@ -6,8 +6,11 @@
 .body {  
   background: #aedbfdb0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  margin: 0 auto;
+  margin:  auto;
+}
+
+.main{
+  width: 73vw;
 }
 
 .logout {
@@ -39,7 +42,6 @@
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
   font-weight: bold;
-  height: 7vh;
 }
 
 .botao-sair a {
@@ -52,47 +54,15 @@
   background-color: white;
 }
 
-.botoes{
-  padding-top: 3vh;
-}
-
-.botoes input{
-  color: white;
-  background-color: #81b4db;
-  width: 50%;
-  border-radius: 7px;
-  margin-bottom: 1vh;
-  height:5vh;
-}
-
-.cuidado{
-  margin-left: 203px;
-  overflow-y: auto;
-}
-
-.tabelaPrescricao {
+.tabela-prescricao {
   border-collapse: collapse;
-  font-family: 'Open Sans', sans-serif;
   margin: auto;
   margin-bottom: 1vh;
-}
-
-.prescricao{
   text-align: center;
-}
-
-.tabelaPrescricao td, .tabelaPrescricao th {
-  border: 1px solid;
-  height: 4vh;
-  text-align: center;
+  width: 68vw;
 }
 .input {
   padding-left: 1vw;
-}
-
-label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
 }
 
 .medicamento{
@@ -108,12 +78,22 @@ label {
   margin-left: 33vh;
 }
 
+.tabela-prescricao td, .tabela-prescricao th {
+  border: 1px solid;
+  height: 4vh;
+}
+
+label {
+  margin-left: 2.6vw;
+  font-size: 25px;
+}
+
 .titulo-lista-acolhidos {
   font-size: 1.8em;
+  font-weight: bold;
   margin: 0 0 5vh 0;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .lista-acolhidos {
@@ -144,9 +124,8 @@ label {
   background-color: #bdc3c7;
 }
 
-
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 20px;
   background-color: #9dd1f7;
 }
 ::-webkit-scrollbar-track {
@@ -156,7 +135,7 @@ label {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-.flex-container {
+.box-acolhido {
   background: white;
   border-radius: 12px;
   box-shadow: 0 10px 6px -6px #777;
@@ -170,28 +149,18 @@ label {
   padding: 1%;
 }
 
-.img {
-  border-radius: 12px;
-  background-color: #81b4db;
-  flex-grow: 2;
-  align-items: left;
-  margin: 2px;
-}
-
 .img-acolhido {
   background-color: #81b4db;
   border-radius: 12px;
   flex-grow: 2;
+  margin: 2px;
 }
 
-.text {
-  padding-left: 5px;
-}
-
-.inf {
-  text-align: left;
-  flex-grow: 1;
+.texto-acolhido {
   align-items: stretch;
+  flex-grow: 1;
+  padding-left: 5px;
+  text-align: left;
 }
 
 .bold {
@@ -209,11 +178,20 @@ label {
   text-decoration: none;
 }
 
-.botoes {
-  display: inline;
+.nome-acolhido {
+  margin: 0px 0 2vh 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4em;
 }
 
-.botoes input{
+
+.botoes {
+  display: inline;
+  margin: 0 1.5vw;
+}
+
+.botoes input {
   background-color: #81b4db;
   border-radius: 7px;
   color: white;
@@ -228,4 +206,8 @@ label {
   margin: 0 auto;
   text-align: center;
   width: 38vw;
+}
+
+.editar-acolhido {
+  margin: 0 22vw;
 }
