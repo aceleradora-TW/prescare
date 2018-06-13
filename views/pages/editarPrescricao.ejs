@@ -12,32 +12,32 @@
         <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
       </div>
     </form>
-      <div class="prescricao">
-        <%- include partials/tabelaMedicamento.ejs %>
+    <div class="prescricao">
+      <%- include partials/tabelaMedicamento.ejs %>
+
+        <div class="botoes">
+          <form action="<%= updateUrl %>/medicamento" method="POST">
+            <input type="submit" value="Adicionar medicamento">
+          </form>
+        </div>
+
+        <%- include partials/tabelaCuidados.ejs %>
 
           <div class="botoes">
-            <form action="<%= updateUrl %>/medicamento" method="POST">
-              <input type="submit" value="Adicionar medicamento">
+            <form action="<%= updateUrl %>/cuidado" method="POST">
+              <input type="submit" value="Adicionar cuidados">
             </form>
           </div>
 
-          <%- include partials/tabelaCuidados.ejs %>
+          <%- include partials/tabelaDieta.ejs %>
 
             <div class="botoes">
-              <form action="<%= updateUrl %>/cuidado" method="POST">
-                <input type="submit" value="Adicionar cuidados">
+              <form action="<%= updateUrl %>/dieta" method="POST">
+                <input type="submit" value="Adicionar dieta">
               </form>
             </div>
+    </div>
 
-            <%- include partials/tabelaDieta.ejs %>
-
-              <div class="botoes">
-                <form action="<%= updateUrl %>/dieta" method="POST">
-                  <input type="submit" value="Adicionar dieta">
-                </form>
-              </div>
-      </div>
-
-      <div class="right botao-voltar">
-        <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
-      </div>
+    <div class="right botao-voltar">
+      <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
+    </div>
