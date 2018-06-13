@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
+
 const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
@@ -31,7 +32,6 @@ const startApplication = () => {
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)
-
     .listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );

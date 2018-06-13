@@ -1,4 +1,4 @@
-const listaAcolhidos = require("../../src/routes/acolhido/list")
+const listaAcolhidos = require("../../src/routes/listaAcolhidos")
 
 describe('Quando acesso listaAcolhidos', () => {
     it('Deve mostrar uma lista de nomes', (done) => {
