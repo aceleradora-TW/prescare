@@ -11,11 +11,14 @@
 =======
 }
 
+<<<<<<< e6e5f1b69d21fba6c48ef7e897436dbef61437b8
 .main{
   width: 73vw;
 >>>>>>> :art: <@natymoraes @ClaudiaStrm> Refatora e arruma css
 }
 
+=======
+>>>>>>> :art: <@ClaudiaStrm, @NatyMoraes> arruma css de edição de acolhido
 .logout {
   color: #fff;
 }
@@ -195,7 +198,12 @@ label {
   font-size: 15px;
 =======
   margin: 0 1.5vw;
+<<<<<<< e6e5f1b69d21fba6c48ef7e897436dbef61437b8
 >>>>>>> :art: <@natymoraes @ClaudiaStrm> Refatora e arruma css
+=======
+  text-align: center;
+  display: inline;
+>>>>>>> :art: <@ClaudiaStrm, @NatyMoraes> arruma css de edição de acolhido
 }
 
 .botoes input {
