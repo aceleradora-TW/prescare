@@ -1,8 +1,8 @@
 <%- contentFor('body') %>
   <div>
-      <p class="nome-acolhido"> Nome:
-          <%= acolhido.nome %>
-        </p>
+    <p class="nome-acolhido"> Nome:
+      <%= acolhido.nome %>
+    </p>
     <form>
       <label for="medicamento">Medicamentos</label>
       <table class="tabela-prescricao">
@@ -16,26 +16,31 @@
     </form>
     <%- include tabelaDieta.ejs %>
 
-    <form action="<%= updateUrl %>" method="POST">
-      <label for="data">Data</label>
-      <input type="date" name="data" id="data" value="<%= prescricao.data %>">
-      <label for="validade">Validade</label>
-      <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-      <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-    </form>
-  </div>
+      <form action="<%= updateUrl %>" method="POST">
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data" value="<%= prescricao.data %>">
+        <label for="validade">Validade</label>
+        <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
 
-  <div class="botoes">
-    <form action="<%= updateUrl %>/medicamento" method="POST">
-      <input type="submit" value="Adicionar medicamento">
-    </form>
-    <form action="<%= updateUrl %>/cuidado" method="POST">
-      <input type="submit" value="Adicionar cuidados">
-    </form>
-    <form action="<%= updateUrl %>/dieta" method="POST">
-      <input type="submit" value="Adicionar dieta">
-    </form>
-    <form action="/acolhido/ <%= acolhido_id %>" method="GET">
-      <input type="submit" value="Voltar">
-    </form>
+
+        <div class="botoes">
+          <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
+        </div>
+      </form>
+
+      <div class="botoes">
+        <form action="<%= updateUrl %>/medicamento" method="POST">
+          <input type="submit" value="Adicionar medicamento">
+        </form>
+        <form action="<%= updateUrl %>/cuidado" method="POST">
+          <input type="submit" value="Adicionar cuidados">
+        </form>
+        <form action="<%= updateUrl %>/dieta" method="POST">
+          <input type="submit" value="Adicionar dieta">
+        </form>
+        <form action="/acolhido/ <%= acolhido_id %>" method="GET">
+          <input type="submit" value="Voltar">
+        </form>
+      </div>
+
   </div>

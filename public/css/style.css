@@ -9,10 +9,6 @@
   margin:  auto;
 }
 
-.main{
-  width: 73vw;
-}
-
 .logout {
   color: #fff;
 }
@@ -28,6 +24,7 @@
   background-position: left;
   text-decoration: none;
   background-size: 14vw;
+  margin-bottom: 3vh;
 }
 
 .nome-user {
@@ -59,7 +56,7 @@
   margin: auto;
   margin-bottom: 1vh;
   text-align: center;
-  width: 68vw;
+  width: 100%;
 }
 .input {
   padding-left: 1vw;
@@ -84,7 +81,6 @@
 }
 
 label {
-  margin-left: 2.6vw;
   font-size: 25px;
 }
 
@@ -187,8 +183,9 @@ label {
 
 
 .botoes {
-  display: inline;
   margin: 0 1.5vw;
+  text-align: center;
+  display: inline;
 }
 
 .botoes input {
@@ -197,6 +194,7 @@ label {
   color: white;
   height: 35px;
   margin: 1vh;
+  max-width: 150px;
   min-width: fit-content;
   min-height: fit-content;
   width: 12vw;
@@ -209,5 +207,7 @@ label {
 }
 
 .editar-acolhido {
-  margin: 0 22vw;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
