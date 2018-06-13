@@ -1,7 +1,7 @@
 module.exports = Dieta => (req, res) => {
   console.log(req.params);
 
-  Dieta.findOne({
+  return Dieta.findOne({
     where: {
       id: req.params.dieta_id
     }
