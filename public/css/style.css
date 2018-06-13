@@ -7,6 +7,13 @@
   background: #aedbfdb0;
   font-family: 'Open Sans', sans-serif;
   margin:  auto;
+<<<<<<< b36fea85e03f8574848a20e5800dc38ef3fdb57c
+=======
+}
+
+.main{
+  width: 73vw;
+>>>>>>> :art: <@natymoraes @ClaudiaStrm> Refatora e arruma css
 }
 
 .logout {
@@ -184,7 +191,11 @@ label {
 .botoes {
   margin: auto;
   display: inline;
+<<<<<<< b36fea85e03f8574848a20e5800dc38ef3fdb57c
   font-size: 15px;
+=======
+  margin: 0 1.5vw;
+>>>>>>> :art: <@natymoraes @ClaudiaStrm> Refatora e arruma css
 }
 
 .botoes input {
