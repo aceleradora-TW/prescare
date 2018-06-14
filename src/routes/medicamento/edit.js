@@ -9,12 +9,13 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         include: [{ model: Acolhido, where: { id: req.params.acolhido_id } }] }
     ]
   }).then(medicamento => {
-    if(!medicamento) res.send('Essa página não existe')
-    res.render('pages/editarMedicamento', { 
+    if (!medicamento) res.send('Essa página não existe')
+    res.render('pages/editarMedicamento', {
       acolhidoId: req.params.acolhido_id,
       prescricaoId: req.params.prescricao_id,
       medicamento,
       updateUrl: req.originalUrl,
+      acolhido: medicamento.prescricao.acolhido
     })
   })
 }

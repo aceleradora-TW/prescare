@@ -1,20 +1,11 @@
-<div class="box effect1 flex-container">
-    <div class="img-acolhido">
-    </div>
-    <div class="inf">
-        <div class="text">
+<div class="box-acolhido">
+        <div class="img-acolhido">
+        </div>
+        <div class="texto-acolhido">    
             <div>
-                <span class="nome-left">
-                    <span class="bold"> Nome: </span>
-                    <span>
-                        <%=acolhido.nome%>
-                    </span>
-                </span>
-                <span class="edit-right">
-                    <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-                        <i class="fa fa-edit edit"></i>
-                        Editar
-                    </a>
+                <span class="bold"> Nome: </span>
+                <span>
+                    <%=acolhido.nome%>
                 </span>
             </div>
             <div>
@@ -41,6 +32,9 @@
                     <%=acolhido.viaAlimentacao%>
                 </span>
             </div>
+            <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                <i class="fa fa-edit edit"></i>
+                Editar informações
+            </a>
         </div>
     </div>
-</div>

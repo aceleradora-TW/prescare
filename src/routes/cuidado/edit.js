@@ -14,7 +14,8 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                 acolhido_id: req.params.acolhido_id,
                 prescricao_id: req.params.prescricao_id,
                 cuidado,
-                updateUrl: req.originalUrl
+                updateUrl: req.originalUrl,
+                acolhido: cuidado.prescricao.acolhido
             })
         })
 }
