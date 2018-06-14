@@ -182,8 +182,9 @@ label {
 }
 
 
+
 .botoes {
-  margin: 0 1.5vw;
+  margin: auto;
   display: inline;
 }
 

@@ -16,12 +16,12 @@
       <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
     </div>
 
-   
+
     <div class='botoes'>
       <form action="<%= updateUrl %>/Adicionar" method="POST">
         <input type="submit" value="Adicionar" onclick="alert('Cuidado adicionado')">
       </form>
-      <form action="<%= updateUrl %>/excluir" method="POST">
+      <form action="<%= updateUrl %>" method="POST">
         <input type="submit" value="Voltar" onclick="alert('Cuidado não adicionado')">
       </form>
     </div>

@@ -6,6 +6,6 @@ module.exports = Acolhido => (req, res) => {
       id: req.params.acolhido_id
     }
   }).then(acolhido => {
-    res.render('pages/infoAcolhido', { acolhido: acolhido})
+    res.render('pages/infoAcolhido', { acolhido })
   }).catch(err => console.log(err))  
 }

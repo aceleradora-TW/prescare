@@ -5,8 +5,8 @@ module.exports = Dieta => (req, res) => {
     }
   }).then(dieta => {
     res.render('pages/editarDieta', {
-      acolhido_id: req.params.acolhido_id,
-      prescricao_id: req.params.prescricao_id,
+      acolhidoId: req.params.acolhido_id,
+      prescricaoId: req.params.prescricao_id,
       dieta,
       updateUrl: req.originalUrl
     })

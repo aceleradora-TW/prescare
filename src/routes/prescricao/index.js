@@ -4,10 +4,10 @@ const get = require('./get')
 const destroy = require('./destroy')
 const update = require('./update')
 
-module.exports = (Prescricao, Dieta, router) => {
+module.exports = (Prescricao, Dieta, Acolhido, router) => {
   router.post('/acolhido/:acolhido_id/prescricao', create(Prescricao))
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id', get(Prescricao))
-  router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', edit(Prescricao, Dieta))
+  router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', edit(Prescricao, Dieta, Acolhido))
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', update(Prescricao))
   router.delete('/acolhido/:acolhido_id/prescricao/:prescricao_id/destroy', destroy(Prescricao))
   
