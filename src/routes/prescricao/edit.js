@@ -10,7 +10,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
 
       res.render('pages/editarPrescricao', {
         prescricao,
-        acolhido: prescricao.acolhido,
         dietas: prescricao.dieta,
         cuidados: prescricao.cuidados,
         medicamentos: prescricao.medicamentos,
