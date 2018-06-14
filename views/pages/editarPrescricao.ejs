@@ -11,8 +11,6 @@
     <%- include tabelaCuidados.ejs %>
 
         <form action="<%= updateUrl %>" method="POST">
-          <label for="data">Data</label>
-          <input type="date" name="data" id="data" value="<%= prescricao.data %>">
           <label for="validade">Validade</label>
           <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
           <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
@@ -32,7 +30,7 @@
       <input type="submit" value="Adicionar dieta">
     </form>
 
-    <form action="/acolhido/ <%= acolhido_id %>" method="GET">
+    <form action="/acolhido/ <%=prescricao.acolhido_id %>" method="GET">
       <input type="submit" value="Voltar">
 
   </div>
