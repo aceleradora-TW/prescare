@@ -7,34 +7,32 @@
   <%- include partials/cabecalhoAcolhido.ejs %>
 
     <div class="medicamento">
+      <h1>Cuidado</h1>
 
-      <div class="medicamento">
-        <h1>Cuidado</h1>
-
-        <form action="<%= updateUrl %>" method="POST">
-          <div>
-            <label for="descricao">Descricao:</label>
-            <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
-          </div>
-
-          <div>
-            <label for="intervalo">Intervalo:</label>
-            <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
-          </div>
-
-          <div>
-            <label for="observacoes">Observações:</label>
-            <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
-          </div>
-
-          <div class="botoes float">
-            <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
-          </div>
-        </form>
-
-        <div class="botoes">
-          <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/cuidado/<%=cuidado.id%>/edit/excluir" method="POST">
-            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-          </form>
+      <form action="<%= updateUrl %>" method="POST">
+        <div>
+          <label for="descricao">Descricao:</label>
+          <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
         </div>
+
+        <div>
+          <label for="intervalo">Intervalo:</label>
+          <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
+        </div>
+
+        <div>
+          <label for="observacoes">Observações:</label>
+          <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
+        </div>
+
+        <div class="botoes float">
+          <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
+        </div>
+      </form>
+
+      <div class="botoes">
+        <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/cuidado/<%=cuidado.id%>/edit/excluir" method="POST">
+          <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+        </form>
       </div>
+    </div>
