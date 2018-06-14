@@ -1,56 +1,14 @@
 <%- contentFor('body') %>
+    <%- include partials/cabecalhoAcolhido.ejs %>
 
-    <div class="right botao-voltar">
-        <a href="/lista-acolhidos">Voltar</a>
-    </div>
 
-    <div class="texto-acolhido">
-
-        <div class="box-acolhido">
-            <div class="img-acolhido">
-            </div>
-            <div class="texto-acolhido">
-
-                <div>
-                    <span class="bold"> Nome: </span>
-                    <span>
-                        <%=acolhido.nome%>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Idade: </span>
-                    <span>
-                        <%=acolhido.idade%>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Peso: </span>
-                    <span>
-                        <%=acolhido.peso%> kg
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Alergias: </span>
-                    <span>
-                        <%=acolhido.alergias%>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Via de alimentação: </span>
-                    <span>
-                        <%=acolhido.viaAlimentacao%>
-                    </span>
-                </div>
-                <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-                    <i class="fa fa-edit edit"></i>
-                    Editar informações
-                </a>
-            </div>
+        <div class="right botao-voltar">
+            <a href="/lista-acolhidos">Voltar</a>
         </div>
-    </div>
 
-    <%- include tabelaPrescricaoAcolhido.ejs%>
-
-        <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST" class="botoes">
-            <input type="submit" value="Nova Prescrição">
-        </form>
+        <div class="botoes medicamento">
+            <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
+                <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+            </form>
+        </div>
+        <%- include tabelaPrescricaoAcolhido.ejs%>

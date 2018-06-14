@@ -1,0 +1,46 @@
+<div class="box effect1 flex-container">
+    <div class="img-acolhido">
+    </div>
+    <div class="inf">
+        <div class="text">
+            <div>
+                <span class="nome-left">
+                    <span class="bold"> Nome: </span>
+                    <span>
+                        <%=acolhido.nome%>
+                    </span>
+                </span>
+                <span class="edit-right">
+                    <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                        Editar
+                    </a>
+                </span>
+            </div>
+            <div>
+                <span class="bold"> Idade: </span>
+                <span>
+                    <%=acolhido.idade%>
+                </span>
+            </div>
+            <div>
+                <span class="bold"> Peso: </span>
+                <span>
+                    <%=acolhido.peso%> kg
+                </span>
+            </div>
+            <div>
+                <span class="bold"> Alergias: </span>
+                <span>
+                    <%=acolhido.alergias%>
+                </span>
+            </div>
+            <div>
+                <span class="bold"> Via de alimentação: </span>
+                <span>
+                    <%=acolhido.viaAlimentacao%>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

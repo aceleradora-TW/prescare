@@ -16,7 +16,7 @@
   </form>
 
   <div>
-    <%- include tabelaMedicamentos.ejs %>
+    <%- include partials/tabelaMedicamento.ejs %>
 
       <div class="botoes">
         <form action="<%= updateUrl %>/medicamento" method="POST">
@@ -24,7 +24,7 @@
         </form>
       </div>
 
-      <%- include tabelaCuidados.ejs %>
+      <%- include partials/tabelaCuidados.ejs %>
 
         <div class="botoes">
           <form action="<%= updateUrl %>/cuidado" method="POST">
@@ -32,7 +32,7 @@
           </form>
         </div>
 
-        <%- include tabelaDieta.ejs %>
+        <%- include partials/tabelaDieta.ejs %>
 
           <div class="botoes">
             <form action="<%= updateUrl %>/dieta" method="POST">
