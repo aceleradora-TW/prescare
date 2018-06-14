@@ -1,45 +1,45 @@
 <form>
-  <label for="medicamento">Medicamentos</label>
-  <table class="tabela-prescricao">
-      <tr>
-          <th>Nome</th>
-          <th>Via</th>
-          <th>Forma Farmacêutica</th>
-          <th>Intervalo</th>
-          <th>Dosagem</th>
-          <th>Tipo</th>
-          <th width="100px">Edição</th>
-      </tr>
-      <tr>
-          <%for (medicamento of prescricao.medicamentos){%>
+    <label for="medicamento">Medicamentos</label>
+    <table class="tabela-prescricao">
+        <tr>
+            <th>Nome</th>
+            <th>Via</th>
+            <th>Forma Farmacêutica</th>
+            <th>Intervalo</th>
+            <th>Dosagem</th>
+            <th>Tipo</th>
+            <th width="100px">Edição</th>
+        </tr>
+        <tr>
+            <%for (medicamento of prescricao.medicamentos){%>
 
-              <td>
-                  <%= medicamento.nome %>
-              </td>
-              <td>
-                  <%= medicamento.via %>
-              </td>
-              <td>
-                  <%= medicamento.formaFarmaceutica %>
-              </td>
-              <td>
-                  <%= medicamento.intervalo %>
-              </td>
-              <td>
-                  <%= medicamento.dosagem %>
-              </td>
-              <td>
-                  <%= medicamento.tipo %>
-              </td>
-              <td>
-                  <div class="botoes">
-                      <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="tiracor">
-                          <i class="fa fa-edit edit"></i>
-                          Editar
-                      </a>
-                  </div>
-              </td>
-      </tr>
-      <%}%>
-  </table>
+                <td>
+                    <%= medicamento.nome %>
+                </td>
+                <td>
+                    <%= medicamento.via %>
+                </td>
+                <td>
+                    <%= medicamento.formaFarmaceutica %>
+                </td>
+                <td>
+                    <%= medicamento.intervalo %>
+                </td>
+                <td>
+                    <%= medicamento.dosagem %>
+                </td>
+                <td>
+                    <%= medicamento.tipo %>
+                </td>
+                <td>
+                    <div class="botoes">
+                        <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="tiracor">
+                            <i class="fa fa-edit edit"></i>
+                            Editar
+                        </a>
+                    </div>
+                </td>
+        </tr>
+        <%}%>
+    </table>
 </form>
