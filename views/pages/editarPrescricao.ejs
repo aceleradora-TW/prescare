@@ -7,6 +7,11 @@
     <%- include partials/cabecalhoTelas.ejs %>
   </div>
 
+  <%- include partials/cabecalhoAcolhido.ejs %>
+
+  <p class="nome-acolhido"> Nome:
+    <%= prescricao.acolhido.nome %>
+  </p>
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Revisar em</label>
     <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
