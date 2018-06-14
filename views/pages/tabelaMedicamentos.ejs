@@ -1,0 +1,40 @@
+<form>
+    <label for="medicamento">Medicamentos</label>
+    <table class="tabelaPrescricao">
+        <tr>
+            <th>Nome</th>
+            <th>Intervalo</th>
+            <th>Via</th>
+            <th>Forma Farmacêutica</th>
+            <th>Dosagem</th>
+        </tr>
+        <tr>
+            <%for (medicamentos of medicamentos){%>
+
+                <td>
+                    <%= medicamentos.nome %>
+                </td>
+                <td>
+                    <%= medicamentos.intervalo %>
+                </td>
+                <td>
+                    <%= medicamentos.via %>
+                </td>
+                <td>
+                    <%= medicamentos.formaFarmaceutica %>
+                </td>
+                <td>
+                    <%= medicamentos.dosagem %>
+                </td>
+                <td>
+                    <div class="botoes">
+                        <form action= "/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>/edit/medicamento/<%= medicamentos.acolhido_id %>/edit/excluir" method="POST">
+                            <input type="submit" value="Excluir">
+                        </form>
+                    </div>
+                </td>
+        </tr>
+</form>
+<%}%>
+    </table>
+    </form>

@@ -1,9 +1,9 @@
-module.exports = (Prescricao, Cuidado, Dieta, Acolhido) => (req, res) => {
+module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, res) => {
   return Prescricao.findOne({
     where: {
       id: req.params.prescricao_id
     },
-    include: [Cuidado, Dieta, Acolhido]
+    include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
     .then(prescricao => {
       if (!prescricao) res.render('/404')
@@ -13,7 +13,8 @@ module.exports = (Prescricao, Cuidado, Dieta, Acolhido) => (req, res) => {
         acolhido: prescricao.acolhido,
         cuidado: prescricao.cuidados,
         dietas: prescricao.dieta,
-        cuidado: prescricao.cuidados,
+        medicamentos: prescricao.medicamentos,
+        acolhidoId: req.params.acolhido_id,
         updateUrl: req.originalUrl,
       })
     })

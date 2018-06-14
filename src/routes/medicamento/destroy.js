@@ -1,5 +1,6 @@
-module.exports = Cuidado => (req, res) => {
-    return Medicamento.destroy({
+module.exports = Medicamento => (req, res) => {
+    return Medicamento
+    .destroy({
         where: {
             id: req.params.medicamento_id
         }
