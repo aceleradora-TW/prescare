@@ -16,19 +16,13 @@
       <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
     </div>
 
-    <div class="botoes">
-      <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
-
-
-    </div>
+   
     <div class='botoes'>
-      <input type="submit" value="Adicionar">
-
-      <form action="<%= updateUrl %>/excluir" method="POST">
-        <input type="submit" value="Excluir">
+      <form action="<%= updateUrl %>/Adicionar" method="POST">
+        <input type="submit" value="Adicionar" onclick="alert('Cuidado adicionado')">
       </form>
-      <form action="" method="GET">
-        <input type="submit" value="Voltar">
+      <form action="<%= updateUrl %>/excluir" method="POST">
+        <input type="submit" value="Voltar" onclick="alert('Cuidado não adicionado')">
       </form>
     </div>
   </form>

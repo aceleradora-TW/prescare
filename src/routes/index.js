@@ -16,4 +16,3 @@ module.exports = models => {
     medicamentoRoutes(models.Medicamento, router)
   return router;
 }
-

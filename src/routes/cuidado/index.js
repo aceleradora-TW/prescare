@@ -1,7 +1,6 @@
-
 const create = require('./create')
-const get = require('./get')
 const edit = require('./edit')
+const get = require('./get')
 const update = require('./update')
 const destroy = require('./destroy')
 
