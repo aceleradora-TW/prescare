@@ -10,10 +10,9 @@ const prescricaoRoutes = require('./prescricao')
 module.exports = models => {
   applicationRoutes(router),
     acolhidoRoutes(models.Acolhido, router),
-    prescricaoRoutes(models.Prescricao, models.Dieta, router),
+    prescricaoRoutes(models.Prescricao, models.Dieta, models.Acolhido, router),
     dietaRoutes(models.Dieta, router),
     cuidadoRoutes(models.Cuidado, router),
     medicamentoRoutes(models.Medicamento, router)
   return router;
 }
-

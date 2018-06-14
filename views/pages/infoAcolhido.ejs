@@ -1,56 +1,52 @@
 <%- contentFor('body') %>
-    <div class="box effect1 flex-container">
-        <div class="img-acolhido">
-        </div>
-        <div class="inf">
-            <div class="text">
-                <div>
-                    <span class="nome-left">
-                        <span class="bold"> Nome: </span>
-                        <span>
-                            <%=acolhido.nome%>
-                        </span>
-                    </span>
-                    <span class="edit-right">
-                        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-                            <i class="fa fa-edit edit"></i>
-                            Editar
-                        </a>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Idade: </span>
-                    <span>
-                        <%=acolhido.idade%>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Peso: </span>
-                    <span>
-                        <%=acolhido.peso%> kg
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Alergias: </span>
-                    <span>
-                        <%=acolhido.alergias%>
-                    </span>
-                </div>
-                <div>
-                    <span class="bold"> Via de alimentação: </span>
-                    <span>
-                        <%=acolhido.viaAlimentacao%>
-                    </span>
-                </div>
-            </div>
-        </div>
+<div class="box-acolhido">
+    <div class="img-acolhido">
     </div>
-    <div class="botoes medicamento">
-        <form action="<%= acolhido.id %>/prescricao" method="POST">
-            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
-        </form>
+    <div class="texto-acolhido">
 
-        <form action="/lista-acolhidos" method="GET">
-            <input class="botaoPrescricao" type="submit" value="Voltar">
-        </form>
+        <div>
+            <span class="bold"> Nome: </span>
+            <span>
+                <%=acolhido.nome%>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Idade: </span>
+            <span>
+                <%=acolhido.idade%>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Peso: </span>
+            <span>
+                <%=acolhido.peso%> kg
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Alergias: </span>
+            <span>
+                <%=acolhido.alergias%>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Via de alimentação: </span>
+            <span>
+                <%=acolhido.viaAlimentacao%>
+            </span>
+        </div>
+        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+            <i class="fa fa-edit edit"></i>
+            Editar informações
+        </a>
     </div>
+</div>
+
+<div class="centraliza">
+    <form action="/lista-acolhidos" class="botoes">
+        <input type="submit" value="Voltar">
+    </form>
+    
+    <form action="<%= acolhido.id %>/prescricao" method="POST" class="botoes">
+        <input type="submit" value="Nova Prescrição">
+    </form>
+</div>

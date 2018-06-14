@@ -1,19 +1,23 @@
 <%- contentFor('body') %>
 
-<h1>Dieta</h1>
+	<h1>Dieta</h1>
 
-<form action="<%= updateUrl %>" method="POST">
-    <div>
-        <label for="tipo">Tipo:</label>
-        <input type="text" name="tipo" id="tipo" value="<%= dieta.tipo %>">
-    </div>
+	<form action="<%= updateUrl %>" method="POST">
+		<div>
+			<label for="tipo">Tipo:</label>
+			<input type="text" name="tipo" id="tipo" value="<%= dieta.tipo %>">
+		</div>
 
-	<div>
-		<label for="intervalo">Intervalo:</label>
-		<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>">
-    </div>
+		<div>
+			<label for="intervalo">Intervalo:</label>
+			<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>">
+		</div>
 
-	
-	<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')"> 
-	<button value="Voltar" ><a href="/acolhido/<%=acolhido_id%>/prescricao/<%=prescricao_id%>/edit">Voltar</a></button>
-</form>
+		<div class="botoes">
+			<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
+			
+			
+			
+			<input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
+		</div>
+	</form>
