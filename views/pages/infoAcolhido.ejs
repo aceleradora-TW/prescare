@@ -1,5 +1,8 @@
 <%- contentFor('body') %>
-    <div class="box effect1 flex-container">
+<%for (prescricao of prescricao){%>
+<p>Prescricao Id: <%= prescricao.id %></p>
+<%}%>
+<div class="box effect1 flex-container">
         <div class="img-acolhido">
         </div>
         <div class="inf">
@@ -46,7 +49,7 @@
         </div>
     </div>
     <div class="botoes medicamento">
-        <form action="<%= acolhido.id %>/farmaceutica/<%= prescricaos.id %>/edit" method="GET">
+        <form action="<%= acolhido.id %>/farmaceutica/<%= prescricao.id %>/edit" method="GET">
             <input class="botaoPrescricao" type="submit" value="Abrir">
         </form>
 

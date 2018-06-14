@@ -5,6 +5,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
     },
     include: [Prescricao]
   }).then(acolhido => {
-    res.render('pages/infoAcolhido', { acolhido: acolhido, prescricaos: acolhido.prescricao })
+    console.log(acolhido.prescricaos);
+    res.render('pages/infoAcolhido', { acolhido: acolhido, prescricao : acolhido.prescricaos })
   }).catch(err => console.log(err))  
 }
