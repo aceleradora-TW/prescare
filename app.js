@@ -21,6 +21,7 @@ const databaseConnection = new Sequelize(settings.DATABASE_URL, {
 
 const models = modelsInitializer(databaseConnection)
 const routes = routesInitializer(models)
+
 const startApplication = () => {
   app
     .use(expressLayouts)
@@ -28,15 +29,13 @@ const startApplication = () => {
     .use(bodyParser.urlencoded({
       extended: false
     }))
-
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
     .use('/', routes)
-    .listen(settings.PORT, () =>
+.listen(settings.PORT, () =>
       console.log('Servidor iniciado em http://localhost:' + settings.PORT)
     );
 }
-
 databaseConnection
   .sync()
   .then(startApplication)

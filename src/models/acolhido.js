@@ -7,3 +7,4 @@ module.exports = db => db.define('acolhido', {
   alergias: sequelize.TEXT,
   viaAlimentacao: sequelize.STRING
 })
+

@@ -6,12 +6,11 @@ module.exports = (Prescricao, Dieta) => (req, res) => {
     include:[Dieta]
       })
   .then(prescricao => {
-    console.log(prescricao)
     res.render('pages/editarPrescricao', { 
       prescricao, 
       dietas: prescricao.dieta,
       updateUrl: req.originalUrl,
-      acolhidoId: req.params.acolhido_id,
+      acolhido_id: req.params.acolhido_id,
      })
   })
 }

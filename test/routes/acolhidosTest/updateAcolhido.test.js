@@ -1,4 +1,4 @@
-const acolhidoRoutes = require("../../src/routes/acolhido/update")
+const acolhidoRoutes = require("../../../src/routes/acolhido/update")
 
 describe('Quando acesso Acolhido', () => {
   it('Deve atualizar informações dos acolhidos', (done) => {

@@ -9,6 +9,12 @@
   margin: 0 auto;
 }
 
+.main {
+  height: 50vh;
+  width: 80vw;
+  padding-top: 5vh;
+}
+
 .logout{
   color: #fff;
 }
@@ -19,30 +25,11 @@
 
 .navbar {
   background-color: #81b4db;
-  width: 100vw;
-  position: sticky;
-  top: 0;
-  align-items: center;
-  background-color: #81b4db;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3vh;
-  overflow: hidden;
-  z-index: 1071;
-  background-image: url("../img/logoSemFundo.png"); 
+  background-image: url("../img/logoSemFundo.png");
   background-repeat: no-repeat;
-  background-position: bottom left; 
+  background-position: left;
   text-decoration: none;
-  background-size: 15vw;
-}
-
-.centraliza-itens{
-  text-align: center;
-}
-
-.logo {
-  width: 60%;
-  padding-left: 2%;
+  background-size: 14vw;
 }
 
 .nome-user {
@@ -50,15 +37,13 @@
   font-family: 'Amatic SC', cursive;
   font-size: 2.3em;
   font-weight: bold;
-  margin: 0 auto;
-  padding-right: 15%;
+  margin: auto;
 }
 
 .botao-sair {
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
   font-weight: bold;
-  padding-right: 3%;
   height: 7vh;
 }
 
@@ -72,88 +57,43 @@
   background-color: white;
 }
 
-.main {
-  height: 50vh;
-  width: 80vw;
-  padding-top: 5vh;
+.botoes{
+  padding-top: 3vh;
+}
+
+.botoes input{
+  color: white;
+  background-color: #81b4db;
+  width: 50%;
+  border-radius: 7px;
+  margin-bottom: 1vh;
+  height:5vh;
+}
+
+.cuidado{
+  margin-left: 203px;
+  overflow-y: auto;
 }
 
 .tabelaPrescricao {
   border-collapse: collapse;
   width: 55vw;
   font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  margin-bottom: 1vh;
+}
 
+.prescricao{
+  text-align: center;
 }
 
 .tabelaPrescricao td, .tabelaPrescricao th {
   border: 1px solid;
   height: 4vh;
   text-align: center;
-
 }
-
-.accordion {
-  background-color: #81b4db;
-  color: #444;
-  cursor: pointer;
-  padding: 10px 18px 10px 18px;
-  width: 100%;
-  border: none;
-  font-size: 1.03em;
-  text-align: left;
-}
-
 .input {
   padding-left: 1vw;
-}
-
-.active, .accordion:hover {
-  background-color: #81b4db;
-}
-
-.add {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.acao-botao {
-  width: 100%;
-  margin-top: 50px;
-  margin-left: -10px;
-  text-align: right;
-}
-
-.botao-historico {
-  margin-left: 0.5vw;
-  margin-top: 2vh;
-}
-
-.panel {
-  width:100%;
-  display: none;
-  background-color: #e7de8b;
-  overflow: hidden;
-  text-align: justify;
-  border: 3px solid;
-  border-color: #81b4db;
-}
-
-.teste {
-  width:100%;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.teste th, .teste tr td {
-  border: 1px solid;
-  border-color: #9b9b9b;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-.w-auto {
-  width: auto;
 }
 
 label {
@@ -161,7 +101,6 @@ label {
   font-size: 25px;
 }
 
-.botaoPrescricao {
-  margin-top: 5vh;
-  margin-left: 33vh;
+.medicamento{
+ padding-left: 25%;
 }
