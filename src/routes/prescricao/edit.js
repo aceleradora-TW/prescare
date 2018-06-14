@@ -6,7 +6,6 @@ module.exports = (Prescricao, Dieta) => (req, res) => {
     include:[Dieta]
       })
   .then(prescricao => {
-    console.log(prescricao)
     res.render('pages/editarPrescricao', { 
       prescricao, 
       dietas: prescricao.dieta,

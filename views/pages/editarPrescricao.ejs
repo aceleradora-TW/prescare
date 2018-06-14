@@ -18,13 +18,7 @@
         <th>Observações</th>
       </table>
     </form>
-    <form>
-      <label for="dieta">Dieta</label>
-      <table class="tabelaPrescricao">
-        <th>Tipo</th>
-        <th>Intervalo</th>
-      </table>
-    </form>
+    <%- include tabelaDieta.ejs %>
 
     <form action="<%= updateUrl %>" method="POST">
       <label for="data">Data</label>
