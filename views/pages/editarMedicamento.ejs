@@ -36,8 +36,11 @@
 
 			<div class="botoes">
 
-				<input type="submit" value="Salvar">
-				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit" method="GET">
+				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
+				<form action="/acolhido/<%=acolhido_id%>/prescricao/<%=prescricao_id%>/edit/medicamento/:medicamento_id/edit/excluir" method="POST">
+					<input type="submit" value="Excluir">
+				  </form>
+				<form action="/acolhido/<%=acolhido_id%>/prescricao/<%=prescricao_id%>/edit" method="GET">
 					<input type="submit" value="Voltar">
 				</form>
 			</div>

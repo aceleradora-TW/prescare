@@ -5,6 +5,7 @@ const applicationRoutes = require('./application')
 const cuidadoRoutes = require('./cuidado')
 const medicamentoRoutes = require('./medicamento')
 const dietaRoutes = require('./dieta')
+const prescricaoRoutes = require('./prescricao')
 
 module.exports = models => {
   applicationRoutes(router),

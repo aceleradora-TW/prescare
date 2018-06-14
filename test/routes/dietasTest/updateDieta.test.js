@@ -24,7 +24,7 @@ describe('Quando acesso dieta', () => {
     dietaRoute(Dieta)(req, res)
       .then(() => expect(Dieta.findOne).toBeCalledWith({ 'where': { 'id': req.params.dieta_id } }))
       .then(() => expect(dieta.update).toBeCalledWith(req.body))
-      .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl))
+      .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))
       .then(done)
       .catch(done)
   })

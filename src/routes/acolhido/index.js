@@ -7,10 +7,10 @@ const update = require('./update')
 const list = require('./listaAcolhidos')
 
 module.exports = (Acolhido, router) => {
-  router.get('/listaAcolhidos', list(Acolhido))
-  router.get('/acolhido/:acolhidoId', get(Acolhido))
-  router.get('/acolhido/:acolhidoId/edit', edit(Acolhido))
-  router.post('/acolhido/:acolhidoId/edit', update(Acolhido))
+  router.get('/lista-acolhidos', list(Acolhido))
+  router.get('/acolhido/:acolhido_id', get(Acolhido))
+  router.get('/acolhido/:acolhido_id/edit', edit(Acolhido))
+  router.post('/acolhido/:acolhido_id/edit', update(Acolhido))
 
   return router;
 }

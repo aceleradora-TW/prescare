@@ -4,12 +4,8 @@ module.exports = Dieta => (req, res) => {
       id: req.params.dieta_id
     }
   }).then(dieta => {
-    dieta.update({
-      tipo: req.body.tipo,
-      intervalo: req.body.intervalo
-
-    }).then(() => {
-      res.redirect(req.originalUrl)
+    dieta.update(req.body).then(() => {
+      res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     })
   })
 }

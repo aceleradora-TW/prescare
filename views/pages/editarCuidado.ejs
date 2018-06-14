@@ -17,12 +17,12 @@
     </div>
 
     <div class="botoes">
-      <input type="submit" value="Adicionar">
+      <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
 
-      <form action="<%= updateUrl %>/excluir" method="POST">
+      <form action="/cuidado/<%= cuidado.id %>/excluir" method="POST">
         <input type="submit" value="Excluir">
       </form>
-      <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit" method="GET">
+      <form action="/acolhido/<%=acolhido_id%>/prescricao/<%=prescricao_id%>/edit" method="GET">
         <input type="submit" value="Voltar">
       </form>
     </div>

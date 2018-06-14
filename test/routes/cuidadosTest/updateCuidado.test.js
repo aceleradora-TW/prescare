@@ -5,9 +5,9 @@ describe('Quando acesso cuidado', () => {
         const Cuidado = { findOne: jest.fn() }
         const req = { 
             params: { 
-                cuidadoId: 1,
-                acolhidoId: 1,
-                prescricaoId: 1
+                cuidado_id: 1,
+                acolhido_id: 1,
+                prescricao_id: 1
             },
             body: {
                 descricao: 'cuidado',
@@ -23,9 +23,9 @@ describe('Quando acesso cuidado', () => {
         cuidado.update.mockResolvedValue(req.body) 
 
         cuidadoRoute(Cuidado)(req, res)
-        .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidadoId }}))
+        .then(() => expect(Cuidado.findOne).toBeCalledWith({'where': {'id': req.params.cuidado_id }}))
         .then(() => expect(cuidado.update).toBeCalledWith(req.body))
-        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhidoId + '/prescricao/' + req.params.prescricaoId + '/edit'))
+        .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))
         .then(done)
         .catch(done)
     })
