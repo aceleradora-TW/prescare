@@ -6,6 +6,5 @@ module.exports = Cuidado => (req, res) => {
     .then(cuidado => {
       if(!cuidado) res.send('Essa página não existe')
       res.render('pages/editarCuidado', { cuidado })
-    })
-    .catch(err => console.log(err))
+    }).catch(err => console.log(err))
 }
