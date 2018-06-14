@@ -5,7 +5,6 @@ module.exports = Cuidado => (req, res) => {
                 id: req.params.cuidado_id
             }
         }).then(cuidado => {
-            if (!cuidado) res.send('Essa página não existe')
             res.render('pages/editarCuidado', {
                 acolhidoId: req.params.acolhido_id,
                 prescricaoId: req.params.prescricao_id,
@@ -14,4 +13,3 @@ module.exports = Cuidado => (req, res) => {
             })
         })
 }
-  
