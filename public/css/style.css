@@ -56,12 +56,133 @@
   margin: auto;
   margin-bottom: 1vh;
   text-align: center;
-  width: 68vw;
+  width: 100%;
+}
+.input {
+  padding-left: 1vw;
+}
+
+.medicamento{
+ padding-left: 25%;
+}
+.botaoPrescricao {
+  margin-top: 5vh;
+  margin-left: 33vh;
+}
+
+.botao-voltar {
+  margin-top: 5vh;
+  margin-left: 33vh;
+}
+
+.tabela-prescricao td, .tabela-prescricao th {
+  border: 1px solid;
+  height: 4vh;
+}
+
+label {
+  font-size: 25px;
+}
+
+.titulo-lista-acolhidos {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0 0 5vh 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lista-acolhidos {
+  background-color: #81b4db;
+  height: 65vh;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow-y: scroll;
+  width: 60%;
+}
+
+.lista-acolhidos li {
+  padding: 1%;
+}
+
+.lista-acolhidos li a {
+  text-decoration: none;
+  color:black;
+  display: block;
+}
+
+.lista-acolhidos li:nth-child(even) {
+  background-color: #a9d1fb;
+}
+
+.lista-acolhidos li:hover {
+  background-color: #bdc3c7;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #9dd1f7;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.box-acolhido {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 6px -6px #777;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  min-width: fit-content;
+  width: 37vw;
+  padding: 1%;
+}
+
+.img-acolhido {
+  background-color: #81b4db;
+  border-radius: 12px;
+  flex-grow: 2;
+  margin: 2px;
+}
+
+.texto-acolhido {
+  align-items: stretch;
+  flex-grow: 1;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+}
+
+.tiracor {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.nome-acolhido {
+  margin: 0px 0 2vh 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4em;
 }
 
 .botoes {
-  margin: 0 1.5vw;
-  text-align: center;
+  margin: auto;
   display: inline;
   font-size: 15px;
 }

@@ -11,6 +11,9 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
       res.render('pages/editarPrescricao', {
         prescricao,
         acolhidoId: req.params.acolhido_id,
+        acolhido: prescricao.acolhido,
+        dietas: prescricao.dieta,
+        cuidados: prescricao.cuidados,
         updateUrl: req.originalUrl,
       })
     })
