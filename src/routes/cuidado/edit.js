@@ -9,6 +9,7 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                   include: [{ model: Acolhido, where: { id: req.params.acolhido_id } }] }
               ]
         }).then(cuidado => {
+            if (!cuidado) res.send('Essa página não existe')
             res.render('pages/editarCuidado', {
                 acolhido_id: req.params.acolhido_id,
                 prescricao_id: req.params.prescricao_id,
