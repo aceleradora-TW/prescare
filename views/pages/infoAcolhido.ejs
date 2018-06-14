@@ -46,8 +46,8 @@
         </div>
     </div>
     <div class="botoes medicamento">
-        <form action="<%= acolhido.id %>/prescricao" method="POST">
-            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+        <form action="<%= acolhido.id %>/farmaceutica/<%= prescricaos.id %>/edit" method="GET">
+            <input class="botaoPrescricao" type="submit" value="Abrir">
         </form>
 
         <form action="/lista-acolhidos" method="GET">
