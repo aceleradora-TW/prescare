@@ -3,20 +3,20 @@
     <tr>
         <th>Tipo</th>
         <th>Intervalo</th>
+        <th>Observações</th>
     </tr>
     <%for (dieta of prescricao.dieta){%>
         <tr>
-            <td>
-                <%= dieta.tipo %>
-            </td>
-            <td>
-                <%= dieta.intervalo %>
-            </td>
-            <td>
-                <div class="botoes">
-                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit">Editar</a>
-                </div>
-            </td>
+            <%for (dietas of dietas){%>
+                <td>
+                    <%= dietas.tipo %>
+                </td>
+                <td>
+                    <%= dietas.intervalo %>
+                </td>
+                <td>
+                     <%= dietas.observacoes %>
+                </td>
         </tr>
         <%}%>
 </table>
