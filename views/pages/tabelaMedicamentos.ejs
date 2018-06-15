@@ -1,6 +1,6 @@
 <form>
     <label for="medicamento">Medicamentos</label>
-    <table class="tabelaPrescricao">
+    <table class="tabela-prescricao">
         <tr>
             <th>Nome</th>
             <th>Intervalo</th>
@@ -28,13 +28,12 @@
                 </td>
                 <td>
                     <div class="botoes">
-                        <form action= "/acolhido/<%= prescricao.acolhido_id %>/prescricao/<%= prescricao.id %>/edit/medicamento/<%= medicamentos.acolhido_id %>/edit/excluir" method="POST">
-                            <input type="submit" value="Excluir">
+                        <form action="" method="GET">
+                            <input type="submit" value="Editar">
                         </form>
                     </div>
                 </td>
         </tr>
-</form>
-<%}%>
+        <%}%>
     </table>
-    </form>
+</form>

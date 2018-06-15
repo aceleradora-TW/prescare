@@ -1,20 +1,21 @@
 <%- contentFor('body') %>
-  <div>
-    <p class="nome-acolhido"> Nome:
-      <%= acolhido.nome %>
-    </p>
 
+  <p class="nome-acolhido"> Nome:
+    <%= acolhido.nome %>
+  </p>
+
+  <div>
     <%- include tabelaMedicamentos.ejs %>
 
-    <%- include tabelaDieta.ejs %>
-    
-    <%- include tabelaCuidados.ejs %>
+      <%- include tabelaDieta.ejs %>
 
-        <form action="<%= updateUrl %>" method="POST">
-          <label for="validade">Validade</label>
-          <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-          <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-        </form>
+        <%- include tabelaCuidados.ejs %>
+
+          <form action="<%= updateUrl %>" method="POST">
+            <label for="validade">Validade</label>
+            <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+            <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
+          </form>
   </div>
 
   <div class="botoes">
