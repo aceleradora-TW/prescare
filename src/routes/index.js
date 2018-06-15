@@ -1,11 +1,13 @@
 const router = require('express').Router()
 
+
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
 const cuidadoRoutes = require('./cuidado')
 const medicamentoRoutes = require('./medicamento')
 const dietaRoutes = require('./dieta')
 const prescricaoRoutes = require('./prescricao')
+const loginRoutes = require('./login')
 
 module.exports = models => {
   applicationRoutes(router),
@@ -14,5 +16,7 @@ module.exports = models => {
   dietaRoutes(models.Dieta, models.Prescricao, models.Acolhido, router),
   cuidadoRoutes(models.Cuidado, models.Prescricao, models.Acolhido, router),
   medicamentoRoutes(models.Medicamento, models.Prescricao, models.Acolhido, router)
+  loginRoutes(passport, router)
+  
   return router;
 }
