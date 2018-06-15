@@ -6,8 +6,7 @@
 .body {
   background: #aedbfdb0;
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  margin: 0 auto;
+  margin:  auto;
 }
 
 .logout {
@@ -79,13 +78,6 @@
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
   height: 4vh;
-}
-
-.tabelaPrescricao {
-  border-collapse: collapse;
-  font-family: 'Open Sans', sans-serif;
-  margin: auto;
-  margin-bottom: 1vh;
 }
 
 label {

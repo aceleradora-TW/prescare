@@ -11,8 +11,8 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
         }).then(cuidado => {
             if (!cuidado) res.send('Essa página não existe')
             res.render('pages/editarCuidado', {
-                acolhidoId: req.params.acolhido_id,
-                prescricaoId: req.params.prescricao_id,
+                acolhido_id: req.params.acolhido_id,
+                prescricao_id: req.params.prescricao_id,
                 cuidado,
                 updateUrl: req.originalUrl,
                 acolhido: cuidado.prescricao.acolhido
