@@ -179,6 +179,11 @@ label {
   text-decoration: none;
 }
 
+.tiracorDieta{
+  color: white;
+  text-decoration: none;
+}
+
 .nome-acolhido {
   margin: 0px 0 2vh 0;
   text-align: center;
@@ -192,7 +197,7 @@ label {
   font-size: 15px;
 }
 
-.botoes input {
+.botoes input{
   background-color: #81b4db;
   border-radius: 7px;
   color: white;
@@ -202,6 +207,18 @@ label {
   min-width: fit-content;
   min-height: fit-content;
   width: 12vw;  
+}
+
+.botoes button{
+  background-color: #81b4db;
+  border-radius: 7px;
+  text-decoration-color: white;
+  height: 35px;
+  margin: 1vh;
+  max-width: 150px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 12vw; 
 }
 
 .centraliza {

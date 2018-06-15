@@ -4,7 +4,7 @@
   "description": "PresCare",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "npx jest test/",
     "test:watch": "npx jest --watchAll test/",
     "dev": "npx nodemon app.js",
