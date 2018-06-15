@@ -85,6 +85,10 @@ label {
   font-size: 25px;
 }
 
+.sub-titulo{
+ font-size: 20px;
+}
+
 .titulo-lista-acolhidos {
   font-size: 1.8em;
   font-weight: bold;
@@ -187,6 +191,7 @@ label {
 .botoes {
   margin: auto;
   display: inline;
+  font-size: 15px;
 }
 
 .botoes input {
@@ -199,6 +204,7 @@ label {
   min-width: fit-content;
   min-height: fit-content;
   width: 12vw;
+  
 }
 
 .centraliza {

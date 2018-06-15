@@ -4,19 +4,13 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
       where: {
         id: req.params.dieta_id
       },
-
-      include: [{
-        model: Prescricao, where: {
-          id: req.params.prescricao_id
-        }, include: [{
-          model: Acolhido, where: {
-            id: req.params.acolhido_id
-          }
-        }]
-      }]
+      include: [
+        { model: Prescricao, where: { id: req.params.prescricao_id }, 
+          include: [{ model: Acolhido, where: { id: req.params.acolhido_id } }] }
+      ]
     }).then(dieta => {
+      console.log(dieta)
       res.render('pages/editarDieta', {
-        acolhido: dieta.prescricao.acolhido,
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,
         dieta,
