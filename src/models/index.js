@@ -23,5 +23,5 @@ module.exports = db => {
   Prescricao.hasMany(Dieta)
   Prescricao.hasMany(Cuidado)
 
-  return { Acolhido, Medicamento, Prescricao, Cuidado, Dieta }
+  return { Acolhido, Medicamento, Prescricao, Cuidado, Dieta, Usuario }
 }

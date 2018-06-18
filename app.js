@@ -16,13 +16,17 @@ const database = require('./database')
 const {PORT} = require('./settings')
 
 const app = express()
-const login = require('./src/routes/index')(app, passport)
+
+const authConfig = require('./auth');
+const login = require('./src/routes/login/index')
 
 const databaseConnection = database.connect()
 
 const models = modelsInitializer(databaseConnection)
 const routes = routesInitializer(models)
 const startApplication = () => {
+  authConfig(models.Usuario, passport)
+
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
@@ -37,24 +41,12 @@ const startApplication = () => {
     .use(passport.session()) // persistent login sessions
     .use(flash()) // use connect-flash for flash messages stored in session
     .use('/', routes)
+    .use('/login', login(passport))
     .set('view engine', 'ejs')
     .set('views/pages', 'tabela-abas')
-    .get('/', function(req,res){
-      res.render('pages/login', { message: req.flash('loginMessage')})
-    })
     .listen(settings.PORT, () =>
     console.log('Servidor iniciado em http://localhost:' + settings.PORT)
    );
-
-    function isLoggedIn(req, res, next) {
-
-      // if user is authenticated in the session, carry on 
-      if (req.isAuthenticated())
-          return next();
-  
-      // if they aren't redirect them to the home page
-      res.redirect('/');
-  }
 }
 
 databaseConnection
