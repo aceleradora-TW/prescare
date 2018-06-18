@@ -1,5 +1,4 @@
 module.exports = Medicamento => (req, res) => {
-  console.log(req.params);
   return Medicamento
     .findOne({
       where: {

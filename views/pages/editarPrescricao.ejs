@@ -8,25 +8,17 @@
   <div>
     <%- include tabelaMedicamentos.ejs %>
 
-      <%- include tabelaDieta.ejs %>
+    <%- include tabelaDieta.ejs %>
 
-        <%- include tabelaCuidados.ejs %>
-
-          <form action="<%= updateUrl %>" method="POST">
-            <label for="validade" class="sub-titulo">Data de Criação da Prescrição</label>
-            <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-            <div class="botoes">
-              <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-            </div>
-          </form>
-          <form action="<%= updateUrl %>" method="POST">
-            <label for="validade" class="sub-titulo">Validade da Prescrição</label>
-            <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-            <div class="botoes">
-              <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-            </div>
-          </form>
-
+    <%- include tabelaCuidados.ejs %>
+          
+    <form action="<%= updateUrl %>" method="POST">
+      <label for="validade" class="sub-titulo">Validade da Prescrição</label>
+      <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+      <div class="botoes">
+        <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
+      </div>
+    </form>
   </div>
 
   <div class="botoes">
@@ -44,5 +36,5 @@
 
     <form action="/acolhido/ <%=prescricao.acolhido_id %>" method="GET">
       <input type="submit" value="Voltar">
-
+    </form>
   </div>

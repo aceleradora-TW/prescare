@@ -11,8 +11,8 @@ module.exports = models => {
   applicationRoutes(router),
     acolhidoRoutes(models.Acolhido, router),
     prescricaoRoutes(models.Prescricao, models.Cuidado, models.Dieta, models.Medicamento, models.Acolhido, router),
-    dietaRoutes(models.Dieta, router),
-    cuidadoRoutes(models.Cuidado, router),
-    medicamentoRoutes(models.Medicamento, router)
+    dietaRoutes(models.Dieta, models.Prescricao, models.Acolhido, router),
+    cuidadoRoutes(models.Cuidado, models.Prescricao, models.Acolhido, router),
+    medicamentoRoutes(models.Medicamento, models.Prescricao, models.Acolhido, router)
   return router;
 }

@@ -9,7 +9,6 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
           include: [{ model: Acolhido, where: { id: req.params.acolhido_id } }] }
       ]
     }).then(dieta => {
-      console.log(dieta)
       res.render('pages/editarDieta', {
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,
