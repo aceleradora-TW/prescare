@@ -14,13 +14,13 @@ const createAcolhido = () => models.Acolhido.create({
   viaAlimentacao: 'Oral'
 })
 
-const createPrescricao = (acolhido) => models.Prescricao.create({
+const createPrescricao = acolhido => models.Prescricao.create({
   data: Date.now(),
   validade: Date.now(),
   acolhido_id: acolhido.id
 })
 
-const createMedicamento = (prescricao) => models.Medicamento.create({
+const createMedicamento = prescricao => models.Medicamento.create({
   nome: 'Dorflex',
   intervalo: '8h-8h',
   via: 'Oral',
@@ -32,14 +32,14 @@ const createMedicamento = (prescricao) => models.Medicamento.create({
 })
 .then(() => prescricao)
 
-const createCuidado = (prescricao) => models.Cuidado.create({
+const createCuidado = prescricao => models.Cuidado.create({
   descricao: 'Dar banho',
   intervalo: '12h-12h',
   observacoes: 'Com Jhonsons Baby',
   prescricao_id: prescricao.id
 })
 
-const letItCrash = (error) => {
+const letItCrash = error => {
   console.trace('Erro durante o seed:', error.message)
   process.exit(1)
 }
