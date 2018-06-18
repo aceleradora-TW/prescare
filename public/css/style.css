@@ -25,6 +25,7 @@
   text-decoration: none;
   background-size: 14vw;
   margin-bottom: 3vh;
+  min-height: 6vh;
 }
 
 .nome-user {

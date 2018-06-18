@@ -5,7 +5,7 @@ module.exports = Usuario => {
     passport.use(new LocalStrategy({usernameField: "nome", passwordField: "senha"},
         (username, password, callback) => {
             Usuario.findOne({ where: { nome: username } }).then(user => {
-                if (!user || user.senha != password) return callback(null, false)
+                if (!user || user.senha != password) return callback(null, false, {message: 'Usuário ou senha inválidos'})
                 return callback(null, user)
             })
         }

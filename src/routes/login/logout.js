@@ -1,3 +1,4 @@
 module.exports = () => (req, res) => {
-  return res.render('pages/home')
+  req.logout()
+  res.redirect('/')
 }

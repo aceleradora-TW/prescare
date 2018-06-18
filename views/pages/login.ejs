@@ -1,23 +1,12 @@
-<html>
-<head>
-    <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-
-</head>
-<body>
-<div class="container">
-
+<%- contentFor('body') %>
 <div class="col-sm-6 col-sm-offset-3">
 
     <h1><span class="fa fa-sign-in"></span> Login</h1>
 
-    <!-- show any messages that come back with authentication -->
     <% if (message.length > 0) { %>
         <div class="alert alert-danger"><%= message %></div>
     <% } %>
 
-    <!-- LOGIN FORM -->
     <form action="/login" method="post">
         <div class="form-group">
             <label>Nome</label>
@@ -33,7 +22,3 @@
 
     <hr>
 </div>
-
-</div>
-</body>
-</html>
