@@ -3,7 +3,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
    where: {
      id: req.params.acolhido_id
     },
-    include: [{ model: Prescricao,  where: {acolhido_id: req.params.acolhido_id }}]
+    include: [{ model: Prescricao, required: false,  where: {acolhido_id: req.params.acolhido_id }}]
    
  }).then(acolhido => {
    res.render('pages/infoAcolhido', { 
