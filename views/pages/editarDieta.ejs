@@ -21,13 +21,13 @@
 		</div>
 
 		<div class="botoes">
-	</form>
-	<input type="submit" value="Salvar" onclick="alert('Dieta adicionado')">
-
-	<form class="botoes" action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/destroy" method="POST">
-		<input type="submit" value="Excluir">
+			<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
+		</div>
 	</form>
 
-	<input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
-
+	<div class="botoes">
+		<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/edit/excluir" method="POST">
+			<input type="submit" value="Excluir">
+		</form>
+		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 	</div>

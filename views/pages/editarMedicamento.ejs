@@ -38,14 +38,15 @@
 				<input type="text" name="tipo" id="tipo" value="<%= medicamento.tipo %>">
 			</div>
 
-
 			<div class="botoes">
-
 				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
-				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/:medicamento_id/edit/excluir/" method="POST">
-					<input type="submit" value="Excluir">
-				</form>
-				<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 			</div>
 		</form>
+
+		<div class="botoes">
+			<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/edit/excluir" method="POST">
+				<input type="submit" value="Excluir" onclick="">
+			</form>
+			<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+		</div>
 	</div>

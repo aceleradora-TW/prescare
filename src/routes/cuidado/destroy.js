@@ -1,5 +1,6 @@
 module.exports = Cuidado => (req, res) => {
-    return Cuidado.destroy({
+    return Cuidado
+    .destroy({
         where: {
             id: req.params.cuidado_id
         }
