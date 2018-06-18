@@ -1,55 +1,57 @@
-const express = require('express')
 const bodyParser = require('body-parser')
 const expressLayouts = require('express-ejs-layouts')
-const ejs = require('ejs')
-
-const passport = require('passport')
+const express = require('express')
 const flash = require('connect-flash')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
-const morgan = require('morgan')
-
 const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
+const passportInitializer = require('./auth')
+const settings = require('./settings')
 const database = require('./database')
-const {PORT} = require('./settings')
-
+const { PORT } = require('./settings')
 const app = express()
+const ejs = require('ejs')
 
-const authConfig = require('./auth');
-const login = require('./src/routes/login/index')
-
-const databaseConnection = database.connect()
+const databaseConnection = new Sequelize(settings.DATABASE_URL, {
+  dialect: 'postgres',
+  define: {
+    underscored: true,
+    timestamps: false,
+  }
+})
 
 const models = modelsInitializer(databaseConnection)
-const routes = routesInitializer(models)
+const passport = passportInitializer(models.Usuario)
+const routes = routesInitializer(models, passport)
+
 const startApplication = () => {
-  authConfig(models.Usuario, passport)
+  const app = express()
 
   app
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
-    .use(bodyParser.urlencoded({
-      extended: false
-    }))
-    .use(morgan('dev'))
     .use(cookieParser())
-    .use(bodyParser())
-    .use(session({ secret: 'ilovescotchscotchyscotchscotch' })) // session secret
+    .use(bodyParser.urlencoded({ extended: false }))
+    .use(session({
+      secret: 'me',
+      saveUninitialized: false,
+      resave: false
+    }))
     .use(passport.initialize())
-    .use(passport.session()) // persistent login sessions
-    .use(flash()) // use connect-flash for flash messages stored in session
+    .use(passport.session())
+    .use(flash())
     .use('/', routes)
-    .use('/login', login(passport))
     .set('view engine', 'ejs')
-    .set('views/pages', 'tabela-abas')
-    .listen(settings.PORT, () =>
-    console.log('Servidor iniciado em http://localhost:' + settings.PORT)
-   );
+    .set('views/pages', 'layout')
+    .listen(PORT, () => console.log(`Servidor iniciado em http://localhost:${PORT}`))
 }
 
 databaseConnection
   .sync()
   .then(startApplication)
-  .catch(console.log)
+  .catch((error) => {
+    console.trace('Erro ao iniciar a aplicacao: ', error.message)
+    process.exit(1)
+  })
