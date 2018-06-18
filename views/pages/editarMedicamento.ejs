@@ -1,6 +1,6 @@
 <%- contentFor('body') %>
 
-<p class="nome-acolhido"> Nome:
+	<p class="nome-acolhido"> Nome:
 		<%= medicamento.prescricao.acolhido.nome %>
 	</p>
 
@@ -45,7 +45,7 @@
 				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/:medicamento_id/edit/excluir/" method="POST">
 					<input type="submit" value="Excluir">
 				</form>
-				<input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
+				<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 			</div>
 		</form>
 	</div>

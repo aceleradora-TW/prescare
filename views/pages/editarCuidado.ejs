@@ -26,12 +26,10 @@
       <form action="<%= updateUrl %>/Adicionar" method="POST">
         <input type="submit" value="Adicionar" onclick="alert('Cuidado adicionado')">
       </form>
-      <form action="/cuidado/<%= cuidado.id %>/excluir" method="DELETE">
+      <form action="/cuidado/<%= cuidado.id %>/excluir" method="POST">
         <input type="submit" value="Excluir">
       </form>
-      <form action="<%= updateUrl %>" method="POST">
-        <input type="submit" value="Voltar" onclick="alert('Cuidado não adicionado')">
-      </form>
+      <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
     </div>
   </form>
 </div>

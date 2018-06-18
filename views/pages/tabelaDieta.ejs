@@ -4,7 +4,7 @@
         <th>Tipo</th>
         <th>Intervalo</th>
     </tr>
-    <%for (dieta of dietas){%>
+    <%for (dieta of prescricao.dieta){%>
         <tr>
             <td>
                 <%= dieta.tipo %>
@@ -18,5 +18,5 @@
                 </div>
             </td>
         </tr>
-    <%}%>
+        <%}%>
 </table>

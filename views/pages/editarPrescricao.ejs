@@ -8,9 +8,9 @@
   <div>
     <%- include tabelaMedicamentos.ejs %>
 
-    <%- include tabelaDieta.ejs %>
-
     <%- include tabelaCuidados.ejs %>
+
+    <%- include tabelaDieta.ejs %>
           
     <form action="<%= updateUrl %>" method="POST">
       <label for="validade" class="sub-titulo">Validade da Prescrição</label>
@@ -34,7 +34,6 @@
       <input type="submit" value="Adicionar dieta">
     </form>
 
-    <form action="/acolhido/ <%=prescricao.acolhido_id %>" method="GET">
-      <input type="submit" value="Voltar">
-    </form>
+    <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
+
   </div>

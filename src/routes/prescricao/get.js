@@ -5,6 +5,7 @@ module.exports = Prescricao => (req, res) => {
       id: req.params.id
     }
   }).then(prescricao => {
-  res.render('pages/prescricao', { prescricao })
+    if (!prescricao) res.send('Essa página não existe.')
+    res.render('pages/prescricao', { prescricao })
   }).catch(err => console.log(err))  
 }
