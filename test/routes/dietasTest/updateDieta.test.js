@@ -17,8 +17,6 @@ describe('Quando acesso dieta', () => {
       }
     }
     const res = { redirect: jest.fn() }
-
-
     const dieta = { id: 1, update: jest.fn()}
 
     Dieta.findOne.mockResolvedValue(dieta)
