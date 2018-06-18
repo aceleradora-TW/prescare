@@ -1,4 +1,9 @@
 <%- contentFor('body') %>
+
+	<p class="nome-acolhido"> Nome:
+		<%= medicamento.prescricao.acolhido.nome %>
+	</p>
+
 	<div class="medicamento">
 		<h1>Medicamento</h1>
 
@@ -39,8 +44,8 @@
 				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
 				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/:medicamento_id/edit/excluir/" method="POST">
 					<input type="submit" value="Excluir">
-				  </form>
-					<input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
+				</form>
+				<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 			</div>
 		</form>
 	</div>

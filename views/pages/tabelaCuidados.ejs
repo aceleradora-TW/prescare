@@ -1,0 +1,26 @@
+<label for="cuidado">Cuidados</label>
+<table class="tabela-prescricao">
+    <tr>
+        <th>Descrição</th>
+        <th>Intervalo</th>
+        <th>Observações</th>
+    </tr>
+    <tr>
+        <%for (cuidado of prescricao.cuidados){%>
+            <td>
+                <%= cuidado.descricao %>
+            </td>
+            <td>
+                <%= cuidado.intervalo %>
+            </td>
+            <td>
+                <%= cuidado.observacoes %>
+            </td>
+            <td>
+                <div class="botoes">
+                    <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit">Editar</a>
+                </div>
+            </td>
+    </tr>
+    <%}%>
+</table>

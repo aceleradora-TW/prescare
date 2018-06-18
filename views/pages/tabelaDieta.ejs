@@ -1,19 +1,22 @@
-<form>
-    <label for="dieta">Dieta</label>
-    <table class="tabela-prescricao">
+<label for="dieta">Dieta</label>
+<table class="tabela-prescricao">
+    <tr>
+        <th>Tipo</th>
+        <th>Intervalo</th>
+    </tr>
+    <%for (dieta of prescricao.dieta){%>
         <tr>
-            <th>Tipo</th>
-            <th>Intervalo</th>
-        </tr>
-        <tr>
-            <%for (dietas of dietas){%>
-                <td>
-                    <%= dietas.tipo %>
-                </td>
-                <td>
-                    <%= dietas.intervalo %>
-                </td>
+            <td>
+                <%= dieta.tipo %>
+            </td>
+            <td>
+                <%= dieta.intervalo %>
+            </td>
+            <td>
+                <div class="botoes">
+                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit">Editar</a>
+                </div>
+            </td>
         </tr>
         <%}%>
-    </table>
-</form>
+</table>

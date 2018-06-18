@@ -1,20 +1,17 @@
-module.exports = (Prescricao, Dieta, Acolhido) => (req, res) => {
-  console.log(req.params);
-  
+module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, res) => {
   return Prescricao.findOne({
     where: {
       id: req.params.prescricao_id
     },
-    include:[Dieta, Acolhido]
-      })
-  .then(prescricao => {
-    console.log(prescricao);
-    
-    res.render('pages/editarPrescricao', { 
-      prescricao, 
-      acolhido: prescricao.acolhido,
-      dietas: prescricao.dieta,
-      updateUrl: req.originalUrl,
-     })
+    include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
+    .then(prescricao => {
+      if (!prescricao) res.send('Essa página não existe.')
+
+      res.render('pages/editarPrescricao', {
+        prescricao,
+        acolhidoId: req.params.acolhido_id,
+        updateUrl: req.originalUrl,
+      })
+    })
 }

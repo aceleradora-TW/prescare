@@ -58,6 +58,7 @@
   text-align: center;
   width: 100%;
 }
+
 .input {
   padding-left: 1vw;
 }
@@ -82,6 +83,10 @@
 
 label {
   font-size: 25px;
+}
+
+.sub-titulo {
+  font-size: 20px;
 }
 
 .titulo-lista-acolhidos {
@@ -181,11 +186,10 @@ label {
   font-size: 1.4em;
 }
 
-
-
 .botoes {
   margin: auto;
   display: inline;
+  font-size: 15px;
 }
 
 .botoes input {
@@ -197,7 +201,7 @@ label {
   max-width: 150px;
   min-width: fit-content;
   min-height: fit-content;
-  width: 12vw;
+  width: 12vw;  
 }
 
 .centraliza {
