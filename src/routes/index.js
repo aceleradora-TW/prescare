@@ -12,7 +12,7 @@ module.exports = (models, passport) => {
   const router = Router()
 
   router.use(loginMiddleware())
-
+  
   applicationRoutes(router)
   acolhidoRoutes(models.Acolhido, models.Prescricao, router)
   prescricaoRoutes(models.Prescricao, models.Cuidado, models.Dieta, models.Medicamento, models.Acolhido, router)
