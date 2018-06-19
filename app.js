@@ -39,8 +39,6 @@ const startApplication = () => {
       saveUninitialized: false,
       resave: false
     }))
-    .use(passport.initialize())
-    .use(passport.session())
     .use(flash())
     .use('/', routes)
     .set('view engine', 'ejs')
