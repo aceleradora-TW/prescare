@@ -7,15 +7,14 @@
     </tr>
     <%for (dieta of prescricao.dieta){%>
         <tr>
-            <%for (dietas of dietas){%>
                 <td>
-                    <%= dietas.tipo %>
+                    <%= dieta.tipo %>
                 </td>
                 <td>
-                    <%= dietas.intervalo %>
+                    <%= dieta.intervalo %>
                 </td>
                 <td>
-                     <%= dietas.observacoes %>
+                    <%= dieta.observacoes %>
                 </td>
         </tr>
         <%}%>
