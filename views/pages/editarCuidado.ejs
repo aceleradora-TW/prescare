@@ -1,35 +1,40 @@
-<div class="medicamento">
+<%- contentFor('body') %>
 
-    <p class="nome-acolhido"> Nome:
-        <%= cuidado.prescricao.acolhido.nome %>
-      </p>
+  <div class="right botao-voltar">
+    <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+  </div>
 
-  <form action="<%= updateUrl %>" method="POST">
+  <p class="nome-acolhido"> Nome:
+    <%= cuidado.prescricao.acolhido.nome %>
+  </p>
+
+  <div class="medicamento">
     <h1>Cuidado</h1>
-    <div>
-      <label for="descricao">Descricao:</label>
-      <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
-    </div>
 
-    <div>
-      <label for="intervalo">Intervalo:</label>
-      <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
-    </div>
+    <form action="<%= updateUrl %>" method="POST">
+      <div>
+        <label for="descricao">Descricao:</label>
+        <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
+      </div>
 
-    <div>
-      <label for="observacoes">Observações:</label>
-      <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
-    </div>
+      <div>
+        <label for="intervalo">Intervalo:</label>
+        <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
+      </div>
 
+      <div>
+        <label for="observacoes">Observações:</label>
+        <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
+      </div>
 
-    <div class='botoes'>
-      <form action="<%= updateUrl %>/Adicionar" method="POST">
-        <input type="submit" value="Adicionar" onclick="alert('Cuidado adicionado')">
+      <div class="botoes float">
+        <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
+      </div>
+    </form>
+
+    <div class="botoes">
+      <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/cuidado/<%=cuidado.id%>/edit/excluir" method="POST">
+        <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
       </form>
-      <form action="/cuidado/<%= cuidado.id %>/excluir" method="POST">
-        <input type="submit" value="Excluir">
-      </form>
-      <input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
     </div>
-  </form>
-</div>
+  </div>

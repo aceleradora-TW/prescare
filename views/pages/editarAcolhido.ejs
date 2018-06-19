@@ -1,5 +1,9 @@
 <%- contentFor('body') %>
 
+  <div class="right botao-voltar">
+    <a href="/acolhido/<%=acolhido.id%>">Voltar</a>
+  </div>
+
   <div class="editar-acolhido">
     <p class="nome-acolhido"> Nome:
       <%= acolhido.nome %>
@@ -22,7 +26,6 @@
         <input type="text" name="viaAlimentacao" id="viaAlimentacao" value="<%= acolhido.viaAlimentacao %>" class="form-control form-control-lg col-sm-7">
       </div>
       <div class="botoes">
-        <input type="button" onclick="location.href='/acolhido/<%= acolhido.id%>'" value="Voltar">
         <input type="submit" value="Salvar">
       </div>
     </form>

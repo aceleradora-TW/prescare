@@ -4,6 +4,7 @@
         <th>Tipo</th>
         <th>Intervalo</th>
         <th>Observações</th>
+        <th width="100px">Edição</th>
     </tr>
     <%for (dieta of prescricao.dieta){%>
         <tr>
@@ -18,7 +19,10 @@
             </td>
             <td>
                 <div class="botoes">
-                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit">Editar</a>
+                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit" class="tiracor">
+                        <i class="fa fa-edit edit"></i>
+                        Editar
+                    </a>
                 </div>
             </td>
         </tr>

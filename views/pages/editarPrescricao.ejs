@@ -1,38 +1,46 @@
 <%- contentFor('body') %>
 
+
   <p class="nome-acolhido"> Nome:
     <%= prescricao.acolhido.nome %>
   </p>
+  <form action="<%= updateUrl %>" method="POST">
+    <label for="validade" class="sub-titulo">Validade da Prescrição</label>
+    <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+    <div class="botoes">
+      <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
+    </div>
+    <div class="right botao-voltar">
+      <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
+    </div>
+  </form>
 
   <div>
     <%- include tabelaMedicamentos.ejs %>
 
+      <div class="botoes">
+        <form action="<%= updateUrl %>/medicamento" method="POST">
+          <input type="submit" value="Adicionar medicamento">
+        </form>
+      </div>
+
       <%- include tabelaCuidados.ejs %>
+
+        <div class="botoes">
+          <form action="<%= updateUrl %>/cuidado" method="POST">
+            <input type="submit" value="Adicionar cuidados">
+          </form>
+        </div>
 
         <%- include tabelaDieta.ejs %>
 
-          <form action="<%= updateUrl %>" method="POST">
-            <label for="validade" class="sub-titulo">Validade da Prescrição</label>
-            <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-            <div class="botoes">
-              <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-            </div>
-          </form>
+          <div class="botoes">
+            <form action="<%= updateUrl %>/dieta" method="POST">
+              <input type="submit" value="Adicionar dieta">
+            </form>
+          </div>
   </div>
 
-  <div class="botoes">
-    <form action="<%= updateUrl %>/medicamento" method="POST">
-      <input type="submit" value="Adicionar medicamento">
-    </form>
-
-    <form action="<%= updateUrl %>/cuidado" method="POST">
-      <input type="submit" value="Adicionar cuidados">
-    </form>
-
-    <form action="<%= updateUrl %>/dieta" method="POST">
-      <input type="submit" value="Adicionar dieta">
-    </form>
-
+  <div class="right botao-voltar">
     <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
-
   </div>

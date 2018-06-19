@@ -2,8 +2,8 @@
     <tr>
         <th>Data</th>
         <th>Validade</th>
-        <th>Abrir</th>
-        <th>Excluir</th>
+        <th width="180px">Abrir</th>
+        <th width="180px">Excluir</th>
     </tr>
 
     <%for (prescricao of prescricaos){%>
@@ -14,13 +14,11 @@
             <td>
                 <%= prescricao.validade %>
             </td>
-
             <td>
-                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="get" class="botoes">
-                    <input type="submit" value="Abrir">
-                </form>
+                <div class="centraliza botao-voltar">
+                    <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
+                </div>
             </td>
-
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                     <input type="submit" value="Excluir">
