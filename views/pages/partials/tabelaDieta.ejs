@@ -7,24 +7,25 @@
         <th>Edição</th>
     </tr>
     <%for (dieta of prescricao.dieta){%>
-    <tr>
-        <td>
-            <%= dieta.tipo %>
-        </td>
-        <td>
-            <%= dieta.intervalo %>
-        </td>
-        <td class="td-observacao"> 
-            <%= dieta.observacoes %>
-        </td>
-        <td>
-            <div class="botoes">
-                <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit" class="tiracor">
-                    <i class="fa fa-edit edit"></i>
-                    Editar
-                </a>
-            </div>
-        </td>
+        <tr>
+            <td>
+                <%= dieta.tipo %>
+            </td>
+            <td>
+                <%= dieta.intervalo %>
+            </td>
+            <td>
+                <%= dieta.observacoes %>
+            </td>
+            <td class="td-botao">
+                <div>
+                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit" class="fas fa-edit edit btn btn-outline-primary btn-sm"></a>
+                    <form action="<%= updateUrl %>/dieta/<%= dieta.id %>/edit/excluir" method="POST">
+                        <button type="submit" onclick="window.location.reload()" class="far fa-trash-alt btn btn-outline-danger btn-sm">
+                        </button>
+                    </form>
+                </div>
+            </td>
 
     </tr>
     <%}%>
