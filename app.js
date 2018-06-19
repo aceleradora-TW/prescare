@@ -23,8 +23,8 @@ const databaseConnection = new Sequelize(settings.DATABASE_URL, {
 })
 
 const models = modelsInitializer(databaseConnection)
-const passport = passportInitializer(models.Usuario)
-const routes = routesInitializer(models, passport)
+const Passport = passport(models.Usuario)
+const routes = routesInitializer(models, Passport)
 
 const startApplication = () => {
   const app = express()
@@ -43,6 +43,7 @@ const startApplication = () => {
     .use(passport.session())
     .use(flash())
     .use('/', routes)
+    .use('/login', login(passport))
     .set('view engine', 'ejs')
     .set('views/pages', 'layout')
     .listen(PORT, () => console.log(`Servidor iniciado em http://localhost:${PORT}`))
