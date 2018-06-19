@@ -7,35 +7,35 @@
         <div>
             <span class="bold"> Nome: </span>
             <span>
-                <%= acolhido.nome %>
+                <%= prescricao.acolhido.nome %>
             </span>
         </div>
         <div>
             <span class="bold"> Idade: </span>
             <span>
-                <%= acolhido.idade %>
+                <%= prescricao.acolhido.idade %>
             </span>
         </div>
         <div>
             <span class="bold"> Peso: </span>
             <span>
-                <%= acolhido.peso %> kg
+                <%= prescricao.acolhido.peso %> kg
             </span>
         </div>
         <div>
             <span class="bold"> Alergias: </span>
             <span>
-                <%= acolhido.alergias %>
+                <%= prescricao.acolhido.alergias %>
             </span>
         </div>
         <div>
             <span class="bold"> Via de alimentação: </span>
             <span>
-                <%= acolhido.viaAlimentacao %>
+                <%= prescricao.acolhido.viaAlimentacao %>
             </span>
         </div>
 
-        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+        <a href="/acolhido/<%= prescricao.acolhido.id %>/edit" class="tiracor">
             <i class="fa fa-edit edit"></i>
             Editar informações
         </a>
