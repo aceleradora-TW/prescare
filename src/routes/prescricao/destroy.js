@@ -3,5 +3,7 @@ module.exports = Prescricao => (req, res) => {
     where: {
       id: req.params.prescricao_id
     }
-  }).then(() => { console.log('Prescrição deletada.') })
+  }).then(() => { 
+    res.redirect('../..')
+  })
 }

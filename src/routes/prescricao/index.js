@@ -9,6 +9,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido, router) => 
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id', get(Prescricao))
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', edit(Prescricao, Cuidado, Dieta, Medicamento, Acolhido))
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit', update(Prescricao))
-  router.delete('/acolhido/:acolhido_id/prescricao/:prescricao_id/destroy', destroy(Prescricao))
+  router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/destroy', destroy(Prescricao))
   return router;
 }
