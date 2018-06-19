@@ -17,12 +17,15 @@
 
             <h1>
                 <span class="fa fa-sign-in"></span> Login</h1>
+
+            <!-- show any messages that come back with authentication -->
             <% if (message.length > 0) { %>
                 <div class="alert alert-danger">
                     <%= message %>
                 </div>
                 <% } %>
 
+                    <!-- LOGIN FORM -->
                     <form action="/login" method="post">
                         <div class="form-group">
                             <label>Nome</label>
@@ -33,7 +36,13 @@
                             <input type="password" class="form-control" name="senha">
                         </div>
 
+                        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+                    </form>
+
+                    <hr>
         </div>
+
+    </div>
 </body>
 
 </html>
