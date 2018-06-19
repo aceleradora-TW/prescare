@@ -11,7 +11,9 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(medicamento => {
-      if (!medicamento) res.send('Essa página não existe')
+      if(!medicamento) {
+        return res.send('Essa página não existe')
+      }
       res.render('pages/editarMedicamento', {
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,
