@@ -4,6 +4,6 @@ module.exports = Prescricao => (req, res) => {
       id: req.params.prescricao_id
     }
   }).then(() => { 
-    res.redirect('../..')
+    res.redirect('/acolhido/' + req.params.acolhido_id)
   })
 }
