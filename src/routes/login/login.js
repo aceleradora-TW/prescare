@@ -7,7 +7,7 @@ module.exports = passport =>
     });
 =======
     failureFlash: true,
-    successRedirect: "/",
+    successRedirect: "/lista-acolhidos",
     failureRedirect: "/login"
   });
 >>>>>>> :rocket: <@natymoraes, @ilizakoski> Implementar login

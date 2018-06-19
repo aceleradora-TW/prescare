@@ -6,10 +6,10 @@
                 <a href="/lista-acolhidos">Voltar</a>
             </div>
     </div>
-    <div class="botoes medicamento">
-        <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
-            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
-        </form>
-    </div>
-
     <%- include partials/tabelaPrescricaoAcolhido.ejs%>
+
+        <div class="botoes medicamento">
+            <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
+                <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+            </form>
+        </div>
