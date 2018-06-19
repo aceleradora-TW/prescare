@@ -7,15 +7,20 @@
     </tr>
     <%for (dieta of prescricao.dieta){%>
         <tr>
-                <td>
-                    <%= dieta.tipo %>
-                </td>
-                <td>
-                    <%= dieta.intervalo %>
-                </td>
-                <td>
-                    <%= dieta.observacoes %>
-                </td>
+            <td>
+                <%= dieta.tipo %>
+            </td>
+            <td>
+                <%= dieta.intervalo %>
+            </td>
+            <td>
+                <%= dieta.observacoes %>
+            </td>
+            <td>
+                <div class="botoes">
+                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit">Editar</a>
+                </div>
+            </td>
         </tr>
         <%}%>
 </table>
