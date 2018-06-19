@@ -1,5 +1,9 @@
 <%- contentFor('body') %>
 
+<div class="right botao-voltar">
+	<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+</div>
+
 	<p class="nome-acolhido"> Nome:
 		<%= medicamento.prescricao.acolhido.nome %>
 	</p>
@@ -38,7 +42,7 @@
 				<input type="text" name="tipo" id="tipo" value="<%= medicamento.tipo %>">
 			</div>
 
-			<div class="botoes">
+			<div class="botoes float">
 				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
 			</div>
 		</form>
@@ -47,6 +51,5 @@
 			<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/edit/excluir" method="POST">
 				<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
 			</form>
-			<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 		</div>
 	</div>

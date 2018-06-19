@@ -1,16 +1,19 @@
 <%- contentFor('body') %>
 
 
-<p class="nome-acolhido"> Nome:
-  <%= prescricao.acolhido.nome %>
-</p>
-      <form action="<%= updateUrl %>" method="POST">
-        <label for="validade" class="sub-titulo">Validade da Prescrição</label>
-        <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-        <div class="botoes">
-          <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
-        </div>
-      </form>
+  <p class="nome-acolhido"> Nome:
+    <%= prescricao.acolhido.nome %>
+  </p>
+  <form action="<%= updateUrl %>" method="POST">
+    <label for="validade" class="sub-titulo">Validade da Prescrição</label>
+    <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
+    <div class="botoes">
+      <input type="submit" value="Salvar" onclick="alert('Prescrição adicionada')">
+    </div>
+    <div class="right botao-voltar">
+      <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
+    </div>
+  </form>
 
   <div>
     <%- include tabelaMedicamentos.ejs %>
@@ -38,7 +41,6 @@
           </div>
   </div>
 
-  <div class="botao-voltar">
+  <div class="right botao-voltar">
     <a href="/acolhido/<%=acolhidoId%>">Voltar</a>
-  </div>
   </div>

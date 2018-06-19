@@ -72,8 +72,27 @@
 }
 
 .botao-voltar {
-  margin-top: 5vh;
-  margin-left: 33vh;
+  background-color:  #81b4db;
+  border-radius: 7px;
+  border: 2px solid #66a4d4;
+  height: 35px;
+  margin: 1vh;
+  max-width: 150px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 5vw;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.botao-voltar a {
+  color: white;
+  font-size: 15px;
+}
+
+.botao-voltar a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
@@ -206,7 +225,8 @@ label {
   max-width: 150px;
   min-width: fit-content;
   min-height: fit-content;
-  width: 12vw;  
+  width: 12vw;
+  cursor: pointer;
 }
 
 .botoes button{
@@ -231,4 +251,12 @@ label {
   width: 70%;
   margin: 0 auto;
   text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.float {
+  float: left;
 }
