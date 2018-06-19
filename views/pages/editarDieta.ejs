@@ -1,11 +1,9 @@
 <%- contentFor('body') %>
-
 	<p class="nome-acolhido"> Nome:
 		<%= dieta.prescricao.acolhido.nome %>
 	</p>
 
 	<h1>Dieta</h1>
-
 	<form action="<%= updateUrl %>" method="POST">
 		<div>
 			<label for="tipo">Tipo:</label>
@@ -17,11 +15,19 @@
 			<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>">
 		</div>
 
-		<div class="botoes">
-			<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
-			<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/:medicamento_id/edit/excluir/" method="POST">
-				<input type="submit" value="Excluir">
-			</form>
-			<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+		<div>
+			<label for="observacoes">Observação:</label>
+			<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>">
 		</div>
+
+		<div class="botoes">
 	</form>
+	<input type="submit" value="Salvar" onclick="alert('Dieta adicionado')">
+
+	<form class="botoes" action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/destroy" method="POST">
+		<input type="submit" value="Excluir">
+	</form>
+
+	<input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
+
+	</div>

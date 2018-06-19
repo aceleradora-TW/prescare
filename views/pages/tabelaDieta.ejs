@@ -3,6 +3,7 @@
     <tr>
         <th>Tipo</th>
         <th>Intervalo</th>
+        <th>Observações</th>
     </tr>
     <%for (dieta of prescricao.dieta){%>
         <tr>
@@ -11,6 +12,9 @@
             </td>
             <td>
                 <%= dieta.intervalo %>
+            </td>
+            <td>
+                <%= dieta.observacoes %>
             </td>
             <td>
                 <div class="botoes">

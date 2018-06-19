@@ -29,7 +29,7 @@
       <form action="/cuidado/<%= cuidado.id %>/excluir" method="POST">
         <input type="submit" value="Excluir">
       </form>
-      <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+      <input type="button" onclick="location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'" value="Voltar">
     </div>
   </form>
 </div>

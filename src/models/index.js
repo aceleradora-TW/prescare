@@ -17,11 +17,11 @@ module.exports = db => {
   Prescricao.hasMany(Medicamento)
   Acolhido.hasMany(Prescricao)
   Medicamento.belongsTo(Prescricao)
-  Cuidado.belongsTo(Prescricao)
   Dieta.belongsTo(Prescricao)
+  Cuidado.belongsTo(Prescricao)
   Prescricao.belongsToMany(Usuario,{through:'usuario_prescricao'})
-  Prescricao.hasMany(Cuidado)
   Prescricao.hasMany(Dieta)
+  Prescricao.hasMany(Cuidado)
 
   return { Acolhido, Medicamento, Prescricao, Cuidado, Dieta }
 }
