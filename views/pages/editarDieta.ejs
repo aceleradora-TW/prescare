@@ -19,13 +19,9 @@
 					<label for="intervalo">Intervalo:</label>
 					<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>">
 				</div>
-				<div>
-					<label for="observacoes">Observação:</label>
-					<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>">
-				</div>
 
 				<div>
-					<label for="observacoes">Observação:</label>
+					<label for="observacoes">Observações:</label>
 					<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>">
 				</div>
 
@@ -33,11 +29,6 @@
 					<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
 				</div>
 			</form>
-
-			<div>
-				<label for="observacoes">Observações:</label>
-				<input type="text" name="observacoes" id="observacoes" value="<%dieta.observacoes %>">
-			</div>
 
 			<div class="botoes">
 				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/edit/excluir" method="POST">

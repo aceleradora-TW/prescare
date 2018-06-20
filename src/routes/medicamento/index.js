@@ -3,7 +3,6 @@ const edit = require('./edit')
 const get = require('./get')
 const destroy = require('./destroy')
 const update = require('./update')
-const destroy = require('./destroy')
 
 module.exports = (Medicamento, Prescricao, Acolhido, router) => {
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento', create(Medicamento))

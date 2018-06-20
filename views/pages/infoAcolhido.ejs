@@ -1,12 +1,15 @@
 <%- contentFor('body') %>
+
+    <div class="right botao-voltar">
+        <a href="/lista-acolhidos">Voltar</a>
+    </div>
+
     <%- include partials/cabecalhoAcolhido.ejs %>
-        <div class="right botao-voltar">
-            <a href="/lista-acolhidos">Voltar</a>
-        </div>
 
         <div class="botoes medicamento">
             <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
                 <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
             </form>
         </div>
+
         <%- include tabelaPrescricaoAcolhido.ejs%>
