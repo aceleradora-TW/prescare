@@ -1,3 +1,4 @@
+
 const cuidadoRoute = require('../../../src/routes/cuidado/destroy')
 
 describe('Quando deleto cuidado', () => {

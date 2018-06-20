@@ -1,0 +1,43 @@
+<div class="box-acolhido">
+    <div class="img-acolhido">
+    </div>
+    <div class="texto-acolhido">
+
+
+        <div>
+            <span class="bold"> Nome: </span>
+            <span>
+                <%= prescricao.acolhido.nome %>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Idade: </span>
+            <span>
+                <%= prescricao.acolhido.idade %>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Peso: </span>
+            <span>
+                <%= prescricao.acolhido.peso %> kg
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Alergias: </span>
+            <span>
+                <%= prescricao.acolhido.alergias %>
+            </span>
+        </div>
+        <div>
+            <span class="bold"> Via de alimentação: </span>
+            <span>
+                <%= prescricao.acolhido.viaAlimentacao %>
+            </span>
+        </div>
+
+        <a href="/acolhido/<%= prescricao.acolhido.id %>/edit" class="tiracor">
+            <i class="fa fa-edit edit"></i>
+            Editar informações
+        </a>
+    </div>
+</div>

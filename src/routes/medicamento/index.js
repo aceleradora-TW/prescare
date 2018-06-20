@@ -1,8 +1,8 @@
 const create = require('./create')
 const edit = require('./edit')
 const get = require('./get')
-const update = require('./update')
 const destroy = require('./destroy')
+const update = require('./update')
 
 module.exports = (Medicamento, Prescricao, Acolhido, router) => {
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento', create(Medicamento))

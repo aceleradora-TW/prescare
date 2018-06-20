@@ -1,50 +1,52 @@
 <%- contentFor('body') %>
-
 <div class="right botao-voltar">
-	<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
-</div>
+    <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+  </div>
+	<%- include partials/cabecalhoAcolhido.ejs %>
 
-	<p class="nome-acolhido"> Nome:
-		<%= medicamento.prescricao.acolhido.nome %>
-	</p>
+		<div class="medicamento">
+			<h1>Medicamento</h1>
 
-	<div class="medicamento">
-		<h1>Medicamento</h1>
+			<form action="<%= updateUrl %>" method="POST">
+				<div>
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" value="<%= medicamento.nome %>">
+				</div>
 
-		<form action="<%= updateUrl %>" method="POST">
-			<div>
-				<label for="nome">Nome:</label>
-				<input type="text" name="nome" id="nome" value="<%= medicamento.nome %>">
-			</div>
+				<div>
+					<label for="via">Via:</label>
+					<input type="text" name="via" id="via" value="<%= medicamento.via %>">
+				</div>
 
-			<div>
-				<label for="via">Via:</label>
-				<input type="text" name="via" id="via" value="<%= medicamento.via %>">
-			</div>
+				<div>
+					<label for="formaFarmaceutica">Forma Farmaceutica:</label>
+					<input type="text" name="formaFarmaceutica" id="formaFarmaceutica" value="<%= medicamento.formaFarmaceutica %>">
+				</div>
 
-			<div>
-				<label for="formaFarmaceutica">Forma Farmaceutica:</label>
-				<input type="text" name="formaFarmaceutica" id="formaFarmaceutica" value="<%= medicamento.formaFarmaceutica %>">
-			</div>
+				<div>
+					<label for="intervalo">Intervalo:</label>
+					<input type="text" name="intervalo" id="intervalo" value="<%= medicamento.intervalo %>">
+				</div>
 
-			<div>
-				<label for="intervalo">Intervalo:</label>
-				<input type="text" name="intervalo" id="intervalo" value="<%= medicamento.intervalo %>">
-			</div>
+				<div>
+					<label for="dosagem">Dosagem:</label>
+					<input type="text" name="dosagem" id="dosagem" value="<%= medicamento.dosagem %>">
+				</div>
 
-			<div>
-				<label for="dosagem">Dosagem:</label>
-				<input type="text" name="dosagem" id="dosagem" value="<%= medicamento.dosagem %>">
-			</div>
+				<div>
+					<label for="tipo">Tipo:</label>
+					<input type="text" name="tipo" id="tipo" value="<%= medicamento.tipo %>">
+				</div>
 
-			<div>
-				<label for="tipo">Tipo:</label>
-				<input type="text" name="tipo" id="tipo" value="<%= medicamento.tipo %>">
-			</div>
+				<div>
+					<label for="tipo">Observações:</label>
+					<input type="text" name="observacoes" id="observacoes" value="<%= medicamento.observacoes %>">
+				</div>
 
-			<div class="botoes float">
-				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
-			</div>
+				<div class="botoes float">
+					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
+				</div>
+		</div>
 		</form>
 
 		<div class="botoes">
@@ -52,4 +54,4 @@
 				<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
 			</form>
 		</div>
-	</div>
+		</div>

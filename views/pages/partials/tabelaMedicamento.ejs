@@ -8,6 +8,7 @@
             <th>Intervalo</th>
             <th>Dosagem</th>
             <th>Tipo</th>
+            <th>Observações</th>
             <th width="100px">Edição</th>
         </tr>
         <tr>
@@ -31,6 +32,11 @@
                 <td>
                     <%= medicamento.tipo %>
                 </td>
+
+                <td>
+                    <%= medicamento.observacoes %>
+                </td>
+
                 <td>
                     <div class="botoes">
                         <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="tiracor">

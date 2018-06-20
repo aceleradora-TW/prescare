@@ -1,10 +1,12 @@
 module.exports = Cuidado => (req, res) => {
   return Cuidado
     .findOne({
-      where: {
-        id: req.params.cuidado_id 
+      where: { id: req.params.cuidado_id }
+    })
+    .then(cuidado => {
+      if(!cuidado) {
+        return res.send('Essa página não existe')
       }
-    }).then(cuidado => {
       res.render('pages/editarCuidado', { cuidado })
     }).catch(err => console.log(err))
 }
