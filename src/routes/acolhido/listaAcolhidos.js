@@ -4,7 +4,7 @@ module.exports = Acolhido => (req, res) => {
       order: ['nome']
     })
     .then(acolhidos => {
-      res.render('pages/listaAcolhidos', { acolhidos })
+      res.render('pages/listaAcolhidos', { acolhidos})
     })
     .catch(console.log) 
 }

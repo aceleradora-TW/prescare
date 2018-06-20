@@ -1,15 +1,19 @@
 <%- contentFor('body') %>
-    <div class="cabecalho-telas">
+    <% if(loggedUser) { %>
+        <div class="nome-user">
+            <i class="fas fa-user"></i>
+            <%= loggedUser.tipo %>
+        </div>
+        <% } %>
 
-        <%- include partials/cabecalhoTelas.ejs %>
-            <div class="botao-voltar">
+            <div class="right botao-voltar">
                 <a href="/lista-acolhidos">Voltar</a>
             </div>
-    </div>
-    <%- include partials/tabelaPrescricaoAcolhido.ejs%>
+            </div>
+            <%- include partials/tabelaPrescricaoAcolhido.ejs%>
 
-        <div class="botoes medicamento">
-            <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
-                <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
-            </form>
-        </div>
+                <div class="botoes medicamento">
+                    <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
+                        <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+                    </form>
+                </div>

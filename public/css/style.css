@@ -26,8 +26,16 @@
   background-size: 14vw;
   margin-bottom: 5vh;
 }
+.nome-user{
+  color:#407caa;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.3em;
+  font-weight: bold;
+  margin: auto;
+  text-align: right;
 
-.nome-user {
+}
+.nome-prescare {
   color:white;
   font-family: 'Amatic SC', cursive;
   font-size: 2.3em;
