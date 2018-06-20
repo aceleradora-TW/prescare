@@ -6,17 +6,22 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
     include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
     .then(prescricao => {
-      if(!prescricao) {
-        return res.send('Essa página não existe')
-      }
+      if (req.user) {
+        if (!prescricao) res.send('Essa página não existe.')
 
-      res.render('pages/editarPrescricao', {
-        prescricao,
-        dietas: prescricao.dieta,
-        cuidados: prescricao.cuidados,
-        medicamentos: prescricao.medicamentos,
-        updateUrl: req.originalUrl,
-        acolhido: prescricao.acolhido
-      })
+        res.render('pages/editarPrescricao', {
+          prescricao,
+          dietas: prescricao.dieta,
+          cuidados: prescricao.cuidados,
+          medicamentos: prescricao.medicamentos,
+          updateUrl: req.originalUrl,
+          acolhido: prescricao.acolhido,
+          acolhidoId: req.params.acolhido_id,
+
+        })
+      } else {
+        res.redirect('/login')
+      }
     })
 }
+

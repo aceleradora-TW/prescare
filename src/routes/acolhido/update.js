@@ -5,11 +5,12 @@ module.exports = Acolhido => (req, res) => {
         id: req.params.acolhido_id
       }
     }).then(acolhido => {
-      if(!acolhido) {
-        return res.send('Essa página não existe')
+      if (req.user) {
+        acolhido.update(req.body).then(() => {
+          res.redirect('/acolhido/' + req.params.acolhido_id )
+        })
+      } else {
+        res.redirect('/login')
       }
-      acolhido.update(req.body).then(() => {
-        res.redirect('/acolhido/' + req.params.acolhido_id )
-      })
     })
 }

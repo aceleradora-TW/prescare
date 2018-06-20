@@ -18,7 +18,7 @@
     </script>
 </head>
 
-<body class="body" onload="javascript:window.history.forward(1)">
+<body class="body">
   <header>
     <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
 
@@ -26,9 +26,11 @@
         <i class="fas fa-user"></i> Prescare
       </div>
       <div class="botao-sair">
-        <a href="/logout">Sair
-          <i class="fas fa-sign-out-alt"></i>
-        </a>
+        <% if(loggedUser) { %>
+          <a href="/logout">Sair
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
+        <% } %>
       </div>
     </div>
   </header>

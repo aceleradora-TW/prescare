@@ -4,6 +4,10 @@ module.exports = Prescricao => (req, res) => {
       id: req.params.prescricao_id
     }
   }).then(() => { 
-    res.redirect('/acolhido/' + req.params.acolhido_id)
+    if (req.user) {
+      res.redirect('/acolhido/' + req.params.acolhido_id)
+    } else {
+      res.redirect('/login')
+    }
   })
 }

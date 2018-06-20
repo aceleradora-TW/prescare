@@ -6,12 +6,16 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
     include: [{ model: Prescricao, required: false,  where: {acolhido_id: req.params.acolhido_id }}]
    
  }).then(acolhido => {
-   res.render('pages/infoAcolhido', { 
-     prescricaoId: req.params.prescricao_id,
-     acolhido, 
-     prescricaos: acolhido.prescricaos, 
-     updateUrl : req.urlOriginal 
-   })
+  if (req.user) {
+    res.render('pages/infoAcolhido', { 
+      prescricaoId: req.params.prescricao_id,
+      acolhido, 
+      prescricaos: acolhido.prescricaos, 
+      updateUrl : req.urlOriginal 
+    })
+  } else {
+    res.redirect('/login')
+  }
  }).catch(err => console.log(err))  
 
 }
