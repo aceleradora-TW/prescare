@@ -3,29 +3,28 @@
     <tr>
         <th>Descrição</th>
         <th>Intervalo</th>
-        <th>Observações</th>
-        
-        <th width="100px">Edição</th>
+        <th>Observações</th>        
+        <th>Edição</th>
     </tr>
     <tr>
         <%for (cuidado of prescricao.cuidados){%>
-            <td>
-                <%= cuidado.descricao %>
-            </td>
-            <td>
-                <%= cuidado.intervalo %>
-            </td>
-            <td>
-                <%= cuidado.observacoes %>
-            </td>
-            <td>
-                <div class="botoes">
-                    <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit" class="tiracor">
-                        <i class="fa fa-edit edit"></i>
-                        Editar
-                    </a>
-                </div>
-            </td>
+        <td>
+            <%= cuidado.descricao %>
+        </td>
+        <td>
+            <%= cuidado.intervalo %>
+        </td>
+        <td class="td-observacao"> 
+            <%= cuidado.observacoes %>
+        </td>
+        <td>
+            <div class="botoes">
+                <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit" class="tiracor">
+                    <i class="fa fa-edit edit"></i>
+                    Editar
+                </a>
+            </div>
+        </td>
     </tr>
     <%}%>
 </table>

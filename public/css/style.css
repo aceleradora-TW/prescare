@@ -66,10 +66,6 @@
 .medicamento{
  padding-left: 5%;
 }
-.botaoPrescricao {
-  margin-top: 5vh;
-  margin-left: 33vh;
-}
 
 .botao-voltar {
   background-color:  #81b4db;
@@ -98,6 +94,14 @@
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
   height: 4vh;
+}
+
+.tabela-prescricao td {
+  text-transform: uppercase;
+}
+
+.tabela-prescricao tbody tr .td-observacao {
+  text-transform: none;
 }
 
 label {
@@ -198,11 +202,6 @@ label {
   text-decoration: none;
 }
 
-.tiracorDieta{
-  color: white;
-  text-decoration: none;
-}
-
 .nome-acolhido {
   margin: 0px 0 2vh 0;
   text-align: center;
@@ -227,9 +226,10 @@ label {
   min-height: fit-content;
   width: 12vw;
   cursor: pointer;
+  border: none;
 }
 
-.botoes button{
+.botoes button {
   background-color: #81b4db;
   border-radius: 7px;
   text-decoration-color: white;
@@ -239,6 +239,10 @@ label {
   min-width: fit-content;
   min-height: fit-content;
   width: 12vw; 
+}
+
+.botoes .tiracor {
+  text-transform: none;
 }
 
 .centraliza {
