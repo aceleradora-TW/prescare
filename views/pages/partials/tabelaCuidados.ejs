@@ -21,7 +21,8 @@
                 <div>
                 <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
                 <form action="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit/excluir" method="POST">
-                    <button type="submit" onclick="window.location.reload()" class="fa fa-trash-alt btn btn-outline-danger btn-sm">
+                    <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" 
+                    onclick="return confirm('Tem certeza que deseja excluir?');">
                     </button>
                 </form>
             </div>

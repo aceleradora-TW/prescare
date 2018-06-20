@@ -18,14 +18,15 @@
                 <%= dieta.observacoes %>
             </td>
             <td class="td-botao">
-                <div>
-                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit" class="fas fa-edit edit btn btn-outline-primary btn-sm"></a>
+                    <div>
+                    <a href="<%= updateUrl %>/dieta/<%= dieta.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
                     <form action="<%= updateUrl %>/dieta/<%= dieta.id %>/edit/excluir" method="POST">
-                        <button type="submit" onclick="window.location.reload()" class="far fa-trash-alt btn btn-outline-danger btn-sm">
+                        <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm"
+                        onclick="return confirm('Tem certeza que deseja excluir?');">
                         </button>
                     </form>
                 </div>
-            </td>
+                </td>
 
     </tr>
     <%}%>
