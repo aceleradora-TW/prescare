@@ -64,7 +64,7 @@
 }
 
 .medicamento{
- padding-left: 25%;
+ padding-left: 5%;
 }
 .botaoPrescricao {
   margin-top: 5vh;
@@ -87,6 +87,7 @@
 .botao-voltar a {
   color: white;
   font-size: 15px;
+  display:block;
 }
 
 .botao-voltar a:hover {

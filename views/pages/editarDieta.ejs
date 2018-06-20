@@ -10,19 +10,19 @@
 			<h1>Dieta</h1>
 
 			<form action="<%= updateUrl %>" method="POST">
-				<div>
-					<label for="tipo">Tipo:</label>
-					<input type="text" name="tipo" id="tipo" value="<%= dieta.tipo %>">
+				<div class="form-group row">
+					<label for="tipo" class="col-sm-2 col-form-label col-form-label-lg">Tipo:</label>
+					<input type="text" name="tipo" id="tipo" value="<%= acolhido.tipo %>" class="form-control form-control-lg col-sm-8">
 				</div>
 
-				<div>
-					<label for="intervalo">Intervalo:</label>
-					<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>">
+				<div class="form-group row">
+					<label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
+					<input type="text" name="intervalo" id="intervalo" value="<%= acolhido.intervalo %>" class="form-control form-control-lg col-sm-8">
 				</div>
 
-				<div>
-					<label for="observacoes">Observações:</label>
-					<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>">
+				<div class="form-group row">
+					<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
+					<input type="text" name="observacoes" id="observacoes" value="<%= acolhido.observacoes %>" class="form-control form-control-lg col-sm-8">
 				</div>
 
 				<div class="botoes float">
