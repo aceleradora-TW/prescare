@@ -1,22 +1,15 @@
 <%- contentFor('body') %>
-    <% if(loggedUser) { %>
-        <div class="nome-user">
-            <i class="fas fa-user"></i>
-            <%= loggedUser.tipo %>
-        </div>
-        <% } %>
+    <div class="cabecalho-telas">
 
-            <div class="cabecalho-telas">
-
-                <%- include partials/cabecalhoTelas.ejs %>
-                    <div class="botao-voltar">
-                        <a href="/lista-acolhidos">Voltar</a>
-                    </div>
+        <%- include partials/cabecalhoTelas.ejs %>
+            <div class="botao-voltar">
+                <a href="/lista-acolhidos">Voltar</a>
             </div>
-            <div class="botoes medicamento">
-                <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
-                    <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
-                </form>
-            </div>
+    </div>
+    <div class="botoes medicamento">
+        <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
+            <input class="botaoPrescricao" type="submit" value="Nova Prescrição">
+        </form>
+    </div>
 
-            <%- include partials/tabelaPrescricaoAcolhido.ejs%>
+    <%- include partials/tabelaPrescricaoAcolhido.ejs%>
