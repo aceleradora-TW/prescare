@@ -9,19 +9,19 @@
     <div class="medicamento">
       <h1>Cuidado</h1>
       <form action="<%= updateUrl %>" method="POST">
-        <div>
-          <label for="descricao">Descricao:</label>
-          <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>">
+        <div class="form-group row">
+          <label for="descricao" class="col-sm-2 col-form-label col-form-label-lg">Descrição:</label>
+          <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>" class="form-control form-control-lg col-sm-8">
         </div>
 
-        <div>
-          <label for="intervalo">Intervalo:</label>
-          <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>">
+        <div class="form-group row">
+          <label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
+          <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>" class="form-control form-control-lg col-sm-8">
         </div>
 
-        <div>
-          <label for="observacoes">Observações:</label>
-          <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>">
+        <div class="form-group row">
+          <label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
+          <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>" class="form-control form-control-lg col-sm-8">
         </div>
 
         <div class="botoes float">
