@@ -24,7 +24,7 @@
   background-position: left;
   text-decoration: none;
   background-size: 14vw;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 
 .nome-user {
@@ -63,7 +63,7 @@
   padding-left: 1vw;
 }
 
-.medicamento{
+.medicamento {
  padding-left: 5%;
 }
 
@@ -166,18 +166,10 @@ label {
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
-  margin-top: 5%;
   margin-bottom: 2%;
   min-width: fit-content;
   width: 37vw;
   padding: 1%;
-}
-
-.img-acolhido {
-  background-color: #81b4db;
-  border-radius: 12px;
-  flex-grow: 2;
-  margin: 2px;
 }
 
 .texto-acolhido {
@@ -185,6 +177,10 @@ label {
   flex-grow: 1;
   padding-left: 5px;
   text-align: left;
+}
+
+.cabecalho-telas {
+  display: flex;
 }
 
 .bold {
@@ -249,16 +245,13 @@ label {
   margin: 0 auto;
   text-align: center;
   width: 38vw;
+  text-transform: none;
 }
 
 .editar-acolhido {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-}
-
-.right {
-  float: right;
 }
 
 .center {
