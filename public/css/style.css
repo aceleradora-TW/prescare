@@ -129,6 +129,19 @@
   text-decoration: none;
   color: white;
 }
+ 
+.prescricao{
+padding-top:3%;
+}
+
+
+.tabela-prescricao {
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 8vh;
+  text-align: center;
+  width: 100%;
+}
 
 .box-acolhido {
   background: white;
