@@ -14,4 +14,5 @@ module.exports = calculaIdade => (dobString) => {
         document.form.idade.value = (calculaIdade(junta));
     }
     return idade;
+    
 }
