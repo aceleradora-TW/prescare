@@ -1,4 +1,6 @@
 <div class="box-acolhido">
+    <div class="img-acolhido">
+    </div>
     <div class="texto-acolhido">
         <div>
             <span class="bold"> Nome: </span>
@@ -9,13 +11,13 @@
         <div>
             <span class="bold"> Data de Nascimento: </span>
             <span id="data">
-                <%= prescricao.acolhido.nascimento %>
+                <%= acolhido.nascimento %>
             </span>
         </div>
         <div>
             <span class="bold"> Idade: </span>
             <span id="idade"></span>
-            <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
+            <script>calcularIdade('<%= acolhido.nascimento %>')</script>
         </div>
         <div>
             <span class="bold"> Peso: </span>
@@ -35,6 +37,7 @@
                 <%= acolhido.viaAlimentacao %>
             </span>
         </div>
+
         <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
             <i class="fa fa-edit edit"></i>
             Editar informações
