@@ -9,7 +9,7 @@
             <th>Dosagem</th>
             <th>Tipo</th>
             <th>Observações</th>
-            <th width="100px">Edição</th>
+            <th>Edição</th>
         </tr>
         <tr>
             <%for (medicamento of prescricao.medicamentos){%>
@@ -32,11 +32,9 @@
                 <td>
                     <%= medicamento.tipo %>
                 </td>
-
-                <td>
-                    <%= medicamento.observacoes %>
+                <td class="td-observacao">                
+                    <%= medicamento.observacoes %>                    
                 </td>
-
                 <td>
                     <div class="botoes">
                         <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="tiracor">

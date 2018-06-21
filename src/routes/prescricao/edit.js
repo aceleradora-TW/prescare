@@ -16,6 +16,7 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         cuidados: prescricao.cuidados,
         medicamentos: prescricao.medicamentos,
         updateUrl: req.originalUrl,
+        acolhido: prescricao.acolhido
       })
     })
 }

@@ -1,37 +1,39 @@
 <%- contentFor('body') %>
 
-	<div class="right botao-voltar">
-		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
-	</div>
+<div class="cabecalho-telas">
+    <%- include partials/cabecalhoTelas.ejs %>
+    <div class="botao-voltar">
+			<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+    </div>
+  </div>
+	
+	<div class="medicamento">
+		<h1>Dieta</h1>
 
-	<%- include partials/cabecalhoAcolhido.ejs %>
-
-		<div class="medicamento">
-			<h1>Dieta</h1>
-
-			<form action="<%= updateUrl %>" method="POST">
-				<div class="form-group row">
-					<label for="tipo" class="col-sm-2 col-form-label col-form-label-lg">Tipo:</label>
-					<input type="text" name="tipo" id="tipo" value="<%= acolhido.tipo %>" class="form-control form-control-lg col-sm-8">
-				</div>
-
-				<div class="form-group row">
-					<label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
-					<input type="text" name="intervalo" id="intervalo" value="<%= acolhido.intervalo %>" class="form-control form-control-lg col-sm-8">
-				</div>
-
-				<div class="form-group row">
-					<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
-					<input type="text" name="observacoes" id="observacoes" value="<%= acolhido.observacoes %>" class="form-control form-control-lg col-sm-8">
-				</div>
-
-				<div class="botoes float">
-					<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
-				</div>
-			</form>
-
-			<div class="botoes">
-				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/edit/excluir" method="POST">
-					<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-				</form>
+		<form action="<%= updateUrl %>" method="POST">
+			<div class="form-group row">
+				<label for="tipo" class="col-sm-2 col-form-label col-form-label-lg">Tipo:</label>
+				<input type="text" name="tipo" id="tipo" value="<%= dieta.tipo %>" class="form-control form-control-lg col-sm-8">
 			</div>
+
+			<div class="form-group row">
+				<label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
+				<input type="text" name="intervalo" id="intervalo" value="<%= dieta.intervalo %>" class="form-control form-control-lg col-sm-8">
+			</div>
+
+			<div class="form-group row">
+				<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
+				<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>" class="form-control form-control-lg col-sm-8">
+			</div>
+
+			<div class="botoes float">
+				<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
+			</div>
+		</form>
+
+		<div class="botoes">
+			<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/dieta/<%=dieta.id%>/edit/excluir" method="POST">
+				<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+			</form>
+		</div>
+	</div>

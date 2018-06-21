@@ -1,10 +1,11 @@
 <%- contentFor('body') %>
 
-  <div class="right botao-voltar">
-    <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+  <div class="cabecalho-telas">
+    <%- include partials/cabecalhoTelas.ejs %>
+    <div class="botao-voltar">
+      <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+    </div>
   </div>
-
-  <%- include partials/cabecalhoAcolhido.ejs %>
 
     <div class="medicamento">
       <h1>Cuidado</h1>
