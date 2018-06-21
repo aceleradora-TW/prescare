@@ -1,20 +1,20 @@
 <%- contentFor('body') %>
 
-  <div class="botao-voltar">
-    <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
-  </div>
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
+      <div class="botao-voltar">
+        <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
+      </div>
   </div>
 
   <p class="nome-acolhido"> Nome:
     <%= prescricao.acolhido.nome %>
   </p>
   <form action="<%= updateUrl %>" method="POST">
-    <label for="validade" class="sub-titulo">Revisar em</label>
+    <label for="validade" class="sub-titulo">Validade da Prescrição</label>
     <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
     <div class="botoes">
-      <input type="submit" value="Salvar" onclick="alert('Validade salva.')">
+      <input type="submit" value="Salvar" onclick="getDates()">
     </div>
   </form>
   <div class="prescricao">
