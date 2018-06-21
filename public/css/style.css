@@ -290,6 +290,13 @@ label {
   padding-left: 5px;
   text-align: left;
 }
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
 
 .tiracor {
   color: royalblue;
