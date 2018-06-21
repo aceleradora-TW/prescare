@@ -7,10 +7,15 @@
             </span>
         </div>
         <div>
-            <span class="bold"> Data de Nascimento: <%= acolhido.idade %> </span>
+            <span class="bold"> Data de Nascimento: </span>
+            <span id="data">
+                <%= prescricao.acolhido.nascimento %>
+            </span>
         </div>
         <div>
-            <span class="bold"> Idade: <%= calculaIdade.idade %> </span>
+            <span class="bold"> Idade: </span>
+            <span id="idade"></span>
+            <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
         </div>
 
         <div>
