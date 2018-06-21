@@ -261,3 +261,17 @@ label {
 .float {
   float: left;
 }
+
+.td-botao {
+  width: 8%;
+}
+
+.td-botao div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.td-botao .fa {
+  min-height: 32px;
+}
