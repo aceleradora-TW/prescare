@@ -1,15 +1,20 @@
 <%- contentFor('body') %>
-<section class="section">
-    <main class="main">
-        <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
-        <ul class="lista-acolhidos">
-            <%for (acolhido of acolhidos){%>
-                <li>
-                    <a href="/acolhido/<%= acolhido.id %>">
-                        <%= acolhido.nome %>
-                    </a>
-                </li>
-            <%}%>
-        </ul>
-    </main>
-</section>
+    <section class="section">
+        <main class="main">
+            <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
+            <ul class="lista-acolhidos">
+                <% for(var i=0; i< acolhidos.length; i++) { %>
+                    <li>
+                        <a href="/acolhido/<%= acolhidos[i].id %>">
+                            <span>
+                                <%= acolhidos[i].nome %>
+                            </span>
+                            <span class="right">
+                                <%= typeof acolhidos[i].prescricaos[0]!='undefined' ? acolhidos[i].prescricaos[0].validade : '' %>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </main>
+    </section>

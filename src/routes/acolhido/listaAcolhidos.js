@@ -1,10 +1,8 @@
-module.exports = Acolhido => (req, res) => {
-  return Acolhido
-    .findAll({
-      order: ['nome']
-    })
-    .then(acolhidos => {
-      res.render('pages/listaAcolhidos', { acolhidos })
-    })
-    .catch(console.log) 
+module.exports = (Acolhido, Prescricao) => (req, res) => {  
+  return Acolhido.findAll({
+    order: [['nome', 'ASC'], [{ model: Prescricao }, 'validade', 'DESC']],
+    include: [{ model: Prescricao, required: false, attributes: ['validade']}]
+  }).then(acolhidos => {   
+    res.render('pages/listaAcolhidos', { acolhidos, prescricaos: acolhidos.prescricaos })
+  }).catch(err => console.log(err))  
 }
