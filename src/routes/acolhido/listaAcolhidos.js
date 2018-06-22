@@ -4,12 +4,7 @@ module.exports = Acolhido => (req, res) => {
       order: ['nome']
     })
     .then(acolhidos => {
-      if (req.user) {
-        res.render('pages/listaAcolhidos', { acolhidos})
-      } else {
-        console.log('sdsadasd')
-        res.redirect('/login')
-      }
+      res.render('pages/listaAcolhidos', { acolhidos })
     })
-    .catch(console.log) 
+    .catch(console.log)
 }

@@ -1,21 +1,17 @@
-module.exports = (Acolhido, Prescricao) => (req, res) => {  
+module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
-   where: {
-     id: req.params.acolhido_id
+    where: {
+      id: req.params.acolhido_id
     },
-    include: [{ model: Prescricao, required: false,  where: {acolhido_id: req.params.acolhido_id }}]
-   
- }).then(acolhido => {
-  if (req.user) {
-    res.render('pages/infoAcolhido', { 
+    include: [{ model: Prescricao, required: false, where: { acolhido_id: req.params.acolhido_id } }]
+
+  }).then(acolhido => {
+    res.render('pages/infoAcolhido', {
       prescricaoId: req.params.prescricao_id,
-      acolhido, 
-      prescricaos: acolhido.prescricaos, 
-      updateUrl : req.urlOriginal 
+      acolhido,
+      prescricaos: acolhido.prescricaos,
+      updateUrl: req.urlOriginal
     })
-  } else {
-    res.redirect('/login')
-  }
- }).catch(err => console.log(err))  
+  }).catch(err => console.log(err))
 
 }
