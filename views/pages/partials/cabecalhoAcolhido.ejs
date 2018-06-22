@@ -1,4 +1,6 @@
 <div class="box-acolhido">
+    <div class="img-acolhido">
+    </div>
     <div class="texto-acolhido">
         <div>
             <span class="bold"> Nome: </span>
@@ -12,7 +14,6 @@
                 <%= acolhido.nascimento %>
             </span>
         </div>
-
         <div>
             <span class="bold"> Idade: </span>
             <span id="idade"></span>
@@ -36,6 +37,7 @@
                 <%= acolhido.viaAlimentacao %>
             </span>
         </div>
+
         <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
             <i class="fa fa-edit edit"></i>
             Editar informações

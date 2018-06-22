@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const expressLayouts = require('express-ejs-layouts')
 const ejs = require('ejs')
 const Sequelize = require('sequelize')
-
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
 const database = require('./database')
