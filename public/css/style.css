@@ -245,6 +245,20 @@ label {
   font-size: 15px;
 }
 
+.botoes a{
+  background-color: #81b4db;
+  border-radius: 7px;
+  color: white;
+  height: 35px;
+  margin: 1vh;
+  max-width: 185px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 14vw;
+  cursor: pointer;
+
+}
+
 .botoes input {
   background-color: #81b4db;
   border-radius: 7px;
@@ -271,13 +285,6 @@ label {
 }
 
 .botoes .tiracor {
-  text-transform: none;
-}
-
-.centraliza {
-  margin: 0 auto;
-  text-align: center;
-  width: 38vw;
   text-transform: none;
 }
 
