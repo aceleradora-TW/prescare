@@ -3,212 +3,8 @@
   margin: 0;
 }
 
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
-}
-
-.logout {
-  color: #fff;
-}
-
-.logout:hover{
-  color: #407caa;
-}
-
-.navbar {
-  background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  text-decoration: none;
-  background-size: 14vw;
-  margin-bottom: 5vh;
-}
-
-.nome-user {
-  color:white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
-  font-weight: bold;
-  margin: auto;
-}
-
-.botao-sair {
-  font-family: 'Amatic SC', cursive;
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-.botao-sair a {
-  color: white;
-  text-decoration: none;
-}
-
-.botao-sair a:hover {
-  color: #81b4db;
-  background-color: white;
-}
-
-.input {
-  padding-left: 1vw;
-}
-
-.medicamento {
-  padding-left: 5%;
-  padding-bottom: 10vh;
-}
-
-.botao-voltar {
-  background-color:  #81b4db;
-  border-radius: 7px;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 5vw;
-  text-align: center;
-  padding-top: 3px;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display:block;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
-}
- 
-.prescricao{
-padding-top:3%;
-}
-
-
-.tabela-prescricao {
-  border-collapse: collapse;
-  margin: auto;
-  margin-bottom: 8vh;
-  text-align: center;
-  width: 100%;
-}
-
-.tabela-prescricao td, .tabela-prescricao th {
-  border: 1px solid;
-  height: 4vh;
-}
-
-.tabela-prescricao td {
-  text-transform: uppercase;
-}
-
-.tabela-prescricao tbody tr .td-observacao {
-  text-transform: none;
-}
-
-label {
-  font-size: 25px;
-}
-
-.sub-titulo {
-  font-size: 20px;
-}
-
-.titulo-lista-acolhidos {
-  font-size: 1.8em;
-  font-weight: bold;
-  margin: 0 0 5vh 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.lista-acolhidos {
-  background-color: #81b4db;
-  height: 65vh;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  overflow-y: scroll;
-  width: 60%;
-}
-
-.lista-acolhidos li {
-  padding: 1%;
-}
-
-.lista-acolhidos li a {
-  text-decoration: none;
-  color:black;
-  display: block;
-}
-
-.lista-acolhidos li:nth-child(even) {
-  background-color: #a9d1fb;
-}
-
-.lista-acolhidos li:hover {
-  background-color: #bdc3c7;
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-  background-color: #9dd1f7;
-}
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.box-acolhido {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 6px -6px #777;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 auto;
-  margin-bottom: 2%;
-  min-width: fit-content;
-  width: 37vw;
-  padding: 1%;
-}
-
-.texto-acolhido {
-  align-items: stretch;
-  flex-grow: 1;
-  padding-left: 5px;
-  text-align: left;
-}
-
-.cabecalho-telas {
-  display: flex;
-}
-
 .bold {
   font-weight: bold;
-}
-
-.effect1 {
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-     -moz-box-shadow: 0 10px 6px -6px #777;
-          box-shadow: 0 10px 6px -6px #777;
-}
-
-.tiracor {
-  color: royalblue;
-  text-decoration: none;
-}
-
-.nome-acolhido {
-  margin: 0px 0 2vh 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.4em;
 }
 
 .botao-voltar {
@@ -243,6 +39,8 @@ label {
   margin: auto;
   display: inline;
   font-size: 15px;
+  padding-bottom: 5vh;
+  display: inline-flex;
 }
 
 .botoes a{
@@ -256,7 +54,6 @@ label {
   min-height: fit-content;
   width: 14vw;
   cursor: pointer;
-
 }
 
 .botoes input {
@@ -288,10 +85,207 @@ label {
   text-transform: none;
 }
 
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
+}
+
+.botao-sair {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.botao-sair a {
+  color: white;
+  text-decoration: none;
+}
+
+.botao-sair a:hover {
+  color: #81b4db;
+  background-color: white;
+}
+
+.botao-voltar {
+  background-color:  #81b4db;
+  border-radius: 7px;
+  height: 35px;
+  margin: 1vh;
+  max-width: 150px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 5vw;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.botao-voltar a {
+  color: white;
+  font-size: 15px;
+  display:block;
+}
+
+.botao-voltar a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.box-acolhido {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 6px -6px #777;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  min-width: fit-content;
+  width: 37vw;
+  padding: 1%;
+}
+
+.cabecalho-telas {
+  display: flex;
+}
+
+
 .editar-acolhido {
   width: 70%;
   margin: 0 auto;
   text-align: center;
+}
+
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.input {
+  padding-left: 1vw;
+}
+
+label {
+  font-size: 25px;
+}
+
+.lista-acolhidos {
+  background-color: #81b4db;
+  height: 65vh;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow-y: scroll;
+  width: 60%;
+}
+
+.lista-acolhidos li {
+  padding: 1%;
+}
+
+.lista-acolhidos li a {
+  text-decoration: none;
+  color:black;
+  display: block;
+}
+
+.lista-acolhidos li:nth-child(even) {
+  background-color: #a9d1fb;
+}
+
+.lista-acolhidos li:hover {
+  background-color: #bdc3c7;
+}
+
+.logout {
+  color: #fff;
+}
+
+.logout:hover{
+  color: #407caa;
+}
+
+.medicamento {
+  padding-left: 5%;
+  padding-bottom: 5vh;
+}
+
+.navbar {
+  background-color: #81b4db;
+  background-image: url("../img/logoSemFundo.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  text-decoration: none;
+  background-size: 14vw;
+  margin-bottom: 5vh;
+}
+
+.nome-acolhido {
+  margin: 0px 0 2vh 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
+.nome-user {
+  color:white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.3em;
+  font-weight: bold;
+  margin: auto;
+}
+ 
+.prescricao{
+ padding-top:3%;
+}
+
+.right{
+  float: right;
+}
+
+.sub-titulo {
+  font-size: 20px;
+}
+
+.tabela-prescricao {
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 8vh;
+  text-align: center;
+  width: 100%;
+}
+
+.tabela-prescricao td, .tabela-prescricao th {
+  border: 1px solid;
+  height: 4vh;
+}
+
+.tabela-prescricao td {
+  text-transform: uppercase;
+}
+
+.tabela-prescricao tbody tr .td-observacao {
+  text-transform: none;
+}
+
+.titulo-lista-acolhidos {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0 0 5vh 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.texto-acolhido {
+  align-items: stretch;
+  flex-grow: 1;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.tiracor {
+  color: royalblue;
+  text-decoration: none;
 }
 
 .td-botao {
@@ -307,6 +301,16 @@ label {
 .td-botao .fa {
   min-height: 32px;
 }
-.right{
-  float: right;
+
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #9dd1f7;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }

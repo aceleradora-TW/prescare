@@ -7,28 +7,35 @@
     <%- include partials/cabecalhoTelas.ejs %>
   </div>
 
-    <div class="medicamento">
-      <h1>Cuidado</h1>
-      <form action="<%= updateUrl %>" method="POST">
-        <div class="form-group row">
-          <label for="descricao" class="col-sm-2 col-form-label col-form-label-lg">Descrição:</label>
-          <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>" class="form-control form-control-lg col-sm-8">
-        </div>
-
-        <div class="form-group row">
-          <label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
-          <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>" class="form-control form-control-lg col-sm-8">
-        </div>
-
-        <div class="form-group row">
-          <label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
-          <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>" class="form-control form-control-lg col-sm-8">
-        </div>
-             
-      <div class="botoes">
-        <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/cuidado/<%=cuidado.id%>/edit/excluir" method="POST">
-          <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-          <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
-        </form>
+  <div class="medicamento">
+    <h1>Cuidado</h1>
+    <form action="<%= updateUrl %>" method="POST">
+      <div class="form-group row">
+        <label for="descricao" class="col-sm-2 col-form-label col-form-label-lg">Descrição:</label>
+        <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>" class="form-control form-control-lg col-sm-8">
       </div>
+
+      <div class="form-group row">
+        <label for="intervalo" class="col-sm-2 col-form-label col-form-label-lg">Intervalo:</label>
+        <input type="text" name="intervalo" id="intervalo" value="<%= cuidado.intervalo %>" class="form-control form-control-lg col-sm-8">
+      </div>
+
+      <div class="form-group row">
+        <label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
+        <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>" class="form-control form-control-lg col-sm-8">
+      </div>
+
+
+      <div>
+        <div class="botoes">
+          <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
+        </div>
+    </form>
+
+    <div class="botoes">
+      <form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/cuidado/<%=cuidado.id%>/edit/excluir" method="POST">
+        <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+      </form>
     </div>
+    </div>
+  </div>
