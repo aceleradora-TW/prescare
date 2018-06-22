@@ -11,7 +11,7 @@
     "db:start": "docker run --rm --name prescare-database -p 5432:5432 -e POSTGRES_PASSWORD=prescare -d postgres",
     "db:create": "docker exec -it prescare-database psql -U postgres -c 'CREATE DATABASE prescare' ",
     "db:console": "docker exec -it prescare-database psql -U postgres -d prescare",
-    "db:reset": "npm run db:stop; sleep 1; npm run db:start; sleep 2; npm run db:create",
+    "db:reset": "npm run db:stop; sleep 3; npm run db:start; sleep 3; npm run db:create",
     "db:stop": "docker stop prescare-database",
     "db:seed": "npm run db:reset && node seed.js"
   },

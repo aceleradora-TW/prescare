@@ -12,7 +12,7 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
             ]
         }).then(cuidado => {
             if(!cuidado) {
-                return res.send('Essa página não existe')
+                return res.render('pages/error')
               }
             res.render('pages/editarCuidado', {
                 acolhidoId: req.params.acolhido_id,
