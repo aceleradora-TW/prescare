@@ -37,11 +37,10 @@
 
 .botoes {
   margin: auto;
-  display: inline;
   font-size: 15px;
-  padding-bottom: 5vh;
+  padding: 2vh 0;
   display: inline-flex;
-}
+ }
 
 .botoes a{
   background-color: #81b4db;
