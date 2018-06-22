@@ -1,10 +1,9 @@
 function calcularIdade(dataAcolhido) {
-  var dataNascimento = dataAcolhido;
-  var data = new Date(dataNascimento);
-  var dataHoje = new Date();
-  var ano = dataHoje.getFullYear();
-  var aniversario = new Date(ano, data.getMonth(), data.getDate());
-  var idade = ano - data.getFullYear();
+  let data = new Date(dataAcolhido);
+  let dataHoje = new Date();
+  let ano = dataHoje.getFullYear();
+  let aniversario = new Date(ano, data.getMonth(), data.getDate());
+  let idade = ano - data.getFullYear();
   if (aniversario > dataHoje) {
       idade--
   }
