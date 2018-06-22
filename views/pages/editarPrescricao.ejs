@@ -1,10 +1,10 @@
 <%- contentFor('body') %>
-  
+
+  <div class="botao-voltar">
+    <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
+  </div>
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
-    <div class="botao-voltar">
-      <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
-    </div>
   </div>
 
   <form action="<%= updateUrl %>" method="POST">
@@ -15,31 +15,27 @@
     </div>
   </form>
   <div class="prescricao">
+
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/medicamento" method="POST">
+        <input type="submit" value="Adicionar medicamento">
+      </form>
+    </div>
     <%- include partials/tabelaMedicamento.ejs %>
 
-      <div class="botoes">
-        <form action="<%= updateUrl %>/medicamento" method="POST">
-          <input type="submit" value="Adicionar medicamento">
+
+      <div class="botoes right">
+        <form action="<%= updateUrl %>/cuidado" method="POST">
+          <input type="submit" value="Adicionar cuidados">
         </form>
       </div>
-
       <%- include partials/tabelaCuidados.ejs %>
 
-        <div class="botoes">
-          <form action="<%= updateUrl %>/cuidado" method="POST">
-            <input type="submit" value="Adicionar cuidados">
+
+        <div class="botoes right">
+          <form action="<%= updateUrl %>/dieta" method="POST">
+            <input type="submit" value="Adicionar dieta">
           </form>
         </div>
-
         <%- include partials/tabelaDieta.ejs %>
-
-          <div class="botoes">
-            <form action="<%= updateUrl %>/dieta" method="POST">
-              <input type="submit" value="Adicionar dieta">
-            </form>
-          </div>
-  </div>
-
-  <div class="botao-voltar">
-    <a href="/acolhido/<%=prescricao.acolhido.id%>">Voltar</a>
   </div>

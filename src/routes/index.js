@@ -14,5 +14,5 @@ module.exports = models => {
   dietaRoutes(models.Dieta, models.Prescricao, models.Acolhido, router),
   cuidadoRoutes(models.Cuidado, models.Prescricao, models.Acolhido, router),
   medicamentoRoutes(models.Medicamento, models.Prescricao, models.Acolhido, router)
-  return router;
+  return router
 }

@@ -1,10 +1,10 @@
 <%- contentFor('body') %>
+<div class="botao-voltar">
+		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+</div>
 
 <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
-    <div class="botao-voltar">
-			<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
-    </div>
   </div>
 	
 	<div class="medicamento">
@@ -25,8 +25,8 @@
 				<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
 				<input type="text" name="observacoes" id="observacoes" value="<%= dieta.observacoes %>" class="form-control form-control-lg col-sm-8">
 			</div>
-
-			<div class="botoes float">
+<div>
+			<div class="botoes">
 				<input type="submit" value="Salvar" onclick="alert('Dieta adicionada')">
 			</div>
 		</form>
@@ -37,3 +37,4 @@
 			</form>
 		</div>
 	</div>
+</div>

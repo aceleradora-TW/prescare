@@ -15,9 +15,9 @@
                 <%= prescricao.validade %>
             </td>
             <td>
-                <div class="centraliza botao-voltar">
-                    <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
-                </div>
+                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                    <input type="submit" value="Abrir">
+                </form>
             </td>
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
