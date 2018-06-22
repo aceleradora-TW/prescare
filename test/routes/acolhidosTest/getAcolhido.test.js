@@ -15,7 +15,7 @@ describe('Quando acesso acolhido', () => {
         const acolhido = { 
             nome: 'Leo', 
             id: '1', 
-            idade: 'Luna' , 
+            nascimento: 'Luna' , 
             peso: 'Luna' , 
             alergias: 'Luna' , 
             viaAlimentacao: 'Luna', 

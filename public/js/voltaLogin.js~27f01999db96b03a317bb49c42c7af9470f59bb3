@@ -1,13 +1,7 @@
-// window.onbeforeunload = function (event) {
-//     window.location.replace(document.referrer);
-// };
-
 (function (window) {
     'use strict';
 
     var noback = {
-
-        //globals 
         version: '0.0.1',
         history_api: typeof history.pushState !== 'undefined',
 
@@ -18,8 +12,7 @@
 
         hasChanged: function () {
             if (window.location.hash == '#no-back') {
-                window.location.hash = '#BLOQUEIO';
-                //mostra mensagem que não pode usar o btn volta do browser
+                window.location.hash = '';
             }
         },
 
@@ -36,9 +29,9 @@
         configure: function () {
             if (window.location.hash == '#no-back') {
                 if (this.history_api) {
-                    history.pushState(null, '', '#BLOQUEIO');
+                    history.pushState(null, '', '');
                 } else {
-                    window.location.hash = '#BLOQUEIO';
+                    window.location.hash = '';
                 }
             }
             noback.checkCompat();

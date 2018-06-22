@@ -1,7 +1,13 @@
+// window.onbeforeunload = function (event) {
+//     window.location.replace(document.referrer);
+// };
+
 (function (window) {
     'use strict';
 
     var noback = {
+
+        //globals 
         version: '0.0.1',
         history_api: typeof history.pushState !== 'undefined',
 
@@ -13,6 +19,7 @@
         hasChanged: function () {
             if (window.location.hash == '#no-back') {
                 window.location.hash = '';
+                //mostra mensagem que não pode usar o btn volta do browser
             }
         },
 
