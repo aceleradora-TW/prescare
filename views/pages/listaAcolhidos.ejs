@@ -3,14 +3,15 @@
         <main class="main">
             <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
             <ul class="lista-acolhidos">
-                <% for(var i=0; i< acolhidos.length; i++) { %>
+                <%for (acolhidos of acolhidos){%>
                     <li>
-                        <a href="/acolhido/<%= acolhidos[i].id %>">
+                        <a href="/acolhido/<%= acolhidos.id %>">
                             <span>
-                                <%= acolhidos[i].nome %>
+                                <%= acolhidos.nome %>
                             </span>
                             <span class="right">
-                                <%= typeof acolhidos[i].prescricaos[0]!='undefined' ? acolhidos[i].prescricaos[0].validade : '' %>
+                                <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %>
+                                
                             </span>
                         </a>
                     </li>
