@@ -11,9 +11,6 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                 }
             ]
         }).then(cuidado => {
-            if(!cuidado) {
-                return res.render('pages/error')
-              }
             res.render('pages/editarCuidado', {
                 acolhidoId: req.params.acolhido_id,
                 prescricaoId: req.params.prescricao_id,

@@ -11,9 +11,7 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(dieta => {
-      if(!dieta) {
-        return res.render('pages/error')
-      }
+      if(!dieta) return res.redirect('/404')
       res.render('pages/editarDieta', {
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,

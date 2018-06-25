@@ -27,7 +27,7 @@
                 </div>
             </td>
             <td>
-                <form action="/prescricao/<%= prescricao.id %>/excluir" method="POST">
+                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                     <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
                 </form>
             </td>
@@ -38,4 +38,5 @@
             </td>
         </tr>
         <%}%>
+
 </table>

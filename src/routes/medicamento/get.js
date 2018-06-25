@@ -5,9 +5,7 @@ module.exports = Medicamento => (req, res) => {
         id: req.params.medicamento_id
       }
     }).then(medicamento => {
-      if(!medicamento) {
-        return res.render('pages/error')
-      }
+      if (!medicamento) return res.redirect('/404')
       res.render('pages/editarMedicamento', { medicamento })
     }).catch(err => console.log(err))
 }
