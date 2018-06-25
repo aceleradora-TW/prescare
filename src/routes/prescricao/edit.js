@@ -6,8 +6,7 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
     include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
     .then(prescricao => {
-      if (!prescricao) res.send('Essa página não existe.')
-
+      if (!prescricao) return res.redirect('/404')
       res.render('pages/editarPrescricao', {
         prescricao,
         dietas: prescricao.dieta,

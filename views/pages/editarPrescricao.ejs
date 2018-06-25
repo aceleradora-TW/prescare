@@ -1,10 +1,10 @@
 <%- contentFor('body') %>
 
+  <div class="botao-voltar">
+    <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
+  </div>
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
-      <div class="botao-voltar">
-        <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
-      </div>
   </div>
 
   <p class="nome-acolhido"> Nome:
@@ -17,8 +17,9 @@
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
   </form>
-  <div class="prescricao">
 
+  </form>
+  <div class="prescricao">
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
@@ -27,18 +28,26 @@
     <%- include partials/tabelaMedicamento.ejs %>
 
 
-      <div class="botoes right">
-        <form action="<%= updateUrl %>/cuidado" method="POST">
-          <input type="submit" value="Adicionar cuidados">
-        </form>
-      </div>
-      <%- include partials/tabelaCuidados.ejs %>
+    
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/cuidado" method="POST">
+        <input type="submit" value="Adicionar cuidados">
+      </form>
+    </div>
+    <%- include partials/tabelaCuidados.ejs %>
 
-
-        <div class="botoes right">
-          <form action="<%= updateUrl %>/dieta" method="POST">
-            <input type="submit" value="Adicionar dieta">
-          </form>
-        </div>
-        <%- include partials/tabelaDieta.ejs %>
+    
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/dieta" method="POST">
+        <input type="submit" value="Adicionar dieta">
+      </form>
+    </div>
+    <%- include partials/tabelaDieta.ejs %>
   </div>
+  
+
+  <script>
+    window.$(function () {
+      window.$("#validade").datepicker();
+    });
+  </script>
