@@ -1,10 +1,10 @@
 <%- contentFor('body') %>
 
+  <div class="botao-voltar">
+    <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
+  </div>
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
-      <div class="botao-voltar">
-        <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
-      </div>
   </div>
 
   <p class="nome-acolhido"> Nome:
@@ -28,8 +28,6 @@
     </div>
     <%- include partials/tabelaMedicamento.ejs %>
 
-
-
       <div class="botoes right">
         <form action="<%= updateUrl %>/cuidado" method="POST">
           <input type="submit" value="Adicionar cuidados">
@@ -37,16 +35,15 @@
       </div>
       <%- include partials/tabelaCuidados.ejs %>
 
-
-        <div class="botoes right">
-          <form action="<%= updateUrl %>/dieta" method="POST">
-            <input type="submit" value="Adicionar dieta">
-          </form>
-        </div>
-        <%- include partials/tabelaDieta.ejs %>
+    
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/dieta" method="POST">
+        <input type="submit" value="Adicionar dieta">
+      </form>
+    </div>
+    <%- include partials/tabelaDieta.ejs %>
   </div>
-
-
+  
   <script>
     window.$(function () {
       window.$("#validade").datepicker();
