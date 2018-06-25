@@ -7,5 +7,5 @@ module.exports = router => {
   router.get('/about', about())
   router.get('/404', error())
 
-  return router;
+  return router
 }

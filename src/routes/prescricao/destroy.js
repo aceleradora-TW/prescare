@@ -3,7 +3,7 @@ module.exports = Prescricao => (req, res) => {
     where: {
       id: req.params.prescricao_id
     }
-  }).then(() => { 
+  }).then(() => {
     res.redirect('/acolhido/' + req.params.acolhido_id)
   })
 }

@@ -4,9 +4,6 @@ module.exports = Prescricao => (req, res) => {
       id: req.params.prescricao_id
     },
   }).then(prescricao => {
-    if(!prescricao) {
-      return res.send('Essa página não existe')
-    }
     prescricao.update({
       data: new Date().getTime(),
       validade: req.body.validade

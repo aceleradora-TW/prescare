@@ -6,9 +6,7 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
     include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
     .then(prescricao => {
-      if(!prescricao) {
-        return res.send('Essa página não existe')
-      }
+      if (!prescricao) res.send('Essa página não existe.')
 
       res.render('pages/editarPrescricao', {
         prescricao,
@@ -16,7 +14,10 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         cuidados: prescricao.cuidados,
         medicamentos: prescricao.medicamentos,
         updateUrl: req.originalUrl,
-        acolhido: prescricao.acolhido
+        acolhido: prescricao.acolhido,
+        acolhidoId: req.params.acolhido_id,
+
       })
     })
 }
+

@@ -1,4 +1,3 @@
-const router = require('express').Router()
 const get = require('./get')
 const list = require('./listaAcolhidos')
 const edit = require('./edit')

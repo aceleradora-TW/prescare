@@ -10,7 +10,7 @@ describe('Quando acesso Acolhido', () => {
         acolhido_id: 1,
       },
       body: {
-        idade: '20',
+        nascimento: '20',
         peso: '150',
         alergias: "código",
         viaAlimentacao: "boca",

@@ -1,3 +1,3 @@
-const home = () => (req, res) => res.render('pages/home')
-
-module.exports = home
+module.exports = () => (req, res) => {
+    return res.render('pages/home')
+  }

@@ -11,15 +11,16 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(medicamento => {
-      if(!medicamento) {
-        return res.send('Essa página não existe')
+      if (req.user) {
+        res.render('pages/editarMedicamento', {
+          acolhidoId: req.params.acolhido_id,
+          prescricaoId: req.params.prescricao_id,
+          medicamento,
+          updateUrl: req.originalUrl,
+          acolhido: medicamento.prescricao.acolhido
+        })
+      } else {
+        res.redirect('/login')
       }
-      res.render('pages/editarMedicamento', {
-        acolhidoId: req.params.acolhido_id,
-        prescricaoId: req.params.prescricao_id,
-        medicamento,
-        updateUrl: req.originalUrl,
-        acolhido: medicamento.prescricao.acolhido
-      })
     })
 }
