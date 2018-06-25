@@ -6,10 +6,8 @@ module.exports = {
     return new Sequelize(DATABASE_URL, {
       dialect: 'postgres',
       define: {
-        underscored: true,
-        timestamps: false,
+        underscored: true        
       }
     })
   }
 }
-

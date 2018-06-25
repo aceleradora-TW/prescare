@@ -7,12 +7,12 @@
                 <%for (acolhidos of acolhidos){%>
                     <li>
                         <a href="/acolhido/<%= acolhidos.id %>">
-                            <span>
+                            <p>
                                 <%= acolhidos.nome %>
-                            </span>
-                            <span class="right">
-                                <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %>
-                                
+                            </p>
+                            <span>
+                              <p> Revisar:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %> </p>
+                               <p> Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %> </p>
                             </span>
                         </a>
                     </li>
