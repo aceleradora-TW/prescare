@@ -18,7 +18,7 @@ module.exports = Prescricao => (req, res) => {
         })
         .catch((error) => {
           console.log(error.message);
-          res.send("Morreu")
+          res.redirect('/404')
         })
     })
 }
