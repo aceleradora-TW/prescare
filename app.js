@@ -8,19 +8,12 @@ const Sequelize = require('sequelize')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
 const passportInitializer = require('./auth')
-const settings = require('./settings')
+const { PORT, SECRET } = require('./settings')
 const database = require('./database')
-const { PORT } = require('./settings')
 const app = express()
 const ejs = require('ejs')
 
-const databaseConnection = new Sequelize(settings.DATABASE_URL, {
-  dialect: 'postgres',
-  define: {
-    underscored: true,
-    timestamps: false,
-  }
-})
+const databaseConnection = database.connect()
 
 const models = modelsInitializer(databaseConnection)
 const passport = passportInitializer(models.Usuario)
@@ -30,12 +23,14 @@ const startApplication = () => {
   const app = express()
 
   app
+    .set('view engine', 'ejs')
+    .set('views/pages', 'layout')
     .use(expressLayouts)
     .use(express.static(__dirname + '/public/'))
     .use(cookieParser())
     .use(bodyParser.urlencoded({ extended: false }))
     .use(session({
-      secret: 'me',
+      secret: SECRET,
       saveUninitialized: false,
       resave: false
     }))
@@ -43,8 +38,6 @@ const startApplication = () => {
     .use(passport.session())
     .use(flash())
     .use('/', routes)
-    .set('view engine', 'ejs')
-    .set('views/pages', 'layout')
     .listen(PORT, () => console.log(`Servidor iniciado em http://localhost:${PORT}`))
 }
 

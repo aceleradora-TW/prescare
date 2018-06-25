@@ -1,4 +1,4 @@
-const Router = require('express').Router
+const router = require('express').Router()
 const acolhidoRoutes = require('./acolhido')
 const applicationRoutes = require('./application')
 const cuidadoRoutes = require('./cuidado')
@@ -6,12 +6,11 @@ const medicamentoRoutes = require('./medicamento')
 const dietaRoutes = require('./dieta')
 const prescricaoRoutes = require('./prescricao')
 const loginRoutes = require('./login')
-const loginMiddleware = require('./application/loginMiddleware')
+const authEnforcer = require('./authEnforcer')
 
 module.exports = (models, passport) => {
-  const router = Router()
 
-  router.use(loginMiddleware())
+  router.use(authEnforcer())
 
   applicationRoutes(router)
   acolhidoRoutes(models.Acolhido, models.Prescricao, router)

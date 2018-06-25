@@ -34,21 +34,8 @@
   text-decoration: none;
   color: white;
 }
-.nome-user{
 
-  color:#154a72;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2em;
-  font-weight: bold;
-  margin: auto;
-  text-align: right;
-
-}
-.nome-prescare {
-  color:white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
-  font-weight: bold;
+.botoes {
   margin: auto;
   font-size: 15px;
   padding: 2vh 0;
@@ -209,40 +196,8 @@ label {
   background-color: #bdc3c7;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-  background-color: #9dd1f7;
-}
-::-webkit-scrollbar-track {
-  -webkit-box-shadow
-: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.box-acolhido {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 6px -6px #777;
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 auto;
-  margin-bottom: 2%;
-  min-width: fit-content;
-  width: 37vw;
-  padding: 1%;
-}
-
-.texto-acolhido {
-  align-items: stretch;
-  flex-grow: 1;
-  padding-left: 5px;
-  text-align: left;
-}
-
-.cabecalho-telas {
-  display: flex;
+.logout {
+  color: #fff;
 }
 
 .logout:hover{
@@ -278,19 +233,9 @@ label {
   font-weight: bold;
   margin: auto;
 }
-
-.botoes input{
-  background-color: #81b4db;
-  border-radius: 7px;
-  color: white;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 12vw;
-  cursor: pointer;
-  border: none;
+ 
+.prescricao{
+ padding-top:3%;
 }
 
 .right{

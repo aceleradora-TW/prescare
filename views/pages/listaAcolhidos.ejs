@@ -1,15 +1,15 @@
 <%- contentFor('body') %>
-        <section class="section">
-            <main class="main">
-                <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
-                <ul class="lista-acolhidos">
-                    <%for (acolhido of acolhidos){%>
-                        <li>
-                            <a href="/acolhido/<%= acolhido.id %>">
-                                <%= acolhido.nome %>
-                            </a>
-                        </li>
-                        <%}%>
-                </ul>
-            </main>
-        </section>
+    <section class="section">
+        <main class="main">
+            <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
+            <ul class="lista-acolhidos">
+                <%for (acolhido of acolhidos){%>
+                    <li>
+                        <a href="/acolhido/<%= acolhido.id %>">
+                            <%= acolhido.nome %>
+                        </a>
+                    </li>
+                    <%}%>
+            </ul>
+        </main>
+    </section>

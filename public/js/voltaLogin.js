@@ -46,14 +46,7 @@
         }
 
     };
-    if (typeof define === 'function' && define.amd) {
-        define(function () { return noback; });
-    }
-    else if (typeof module === 'object' && module.exports) {
-        module.exports = noback;
-    }
-    else {
-        window.noback = noback;
-    }
+    window.noback = noback;
+
     noback.init();
 }(window)); 
