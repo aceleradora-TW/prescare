@@ -1,5 +1,4 @@
 <%- contentFor('body') %>
-
 	<div class="botao-voltar">
 		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 	</div>
@@ -46,10 +45,10 @@
 				<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
 				<input type="text" name="observacoes" id="observacoes" value="<%= medicamento.observacoes %>" class="form-control form-control-lg col-sm-8">
 			</div>
-<div>
-			<div class="botoes">
-				<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
-			</div>
+			<div>
+				<div class="botoes">
+					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
+				</div>
 		</form>
 
 		<div class="botoes">
@@ -58,5 +57,5 @@
 			</form>
 		</div>
 
+		</div>
 	</div>
-</div>
