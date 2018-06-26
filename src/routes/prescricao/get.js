@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize')
-module.exports = Prescricao => (req, res) => {
+
+module.exports = (Prescricao, Usuario) => (req, res) => {
   return Prescricao.findOne({
     where: {
       id: req.params.id
