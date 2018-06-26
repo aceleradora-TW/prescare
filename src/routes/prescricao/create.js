@@ -4,7 +4,6 @@ module.exports = (Acolhido) => (req, res) => {
       where: { id: req.params.acolhido_id }
     })
     .then(acolhido => {
-      console.log(acolhido);
       res
       .render('pages/novaPrescricao', { acolhido })
     })
