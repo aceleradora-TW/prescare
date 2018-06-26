@@ -6,9 +6,13 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
     include: [{ model: Prescricao, required: false, where: { acolhido_id: req.params.acolhido_id } }]
 
   }).then(acolhido => {
+    if (!acolhido) {
+      return res.render('pages/error')
+    }
+
     let usuario = req.user.tipo
 
-    if (usuario == 'medica') {
+    if (usuario === 'medica') {
       res.render('pages/infoAcolhido', {
         prescricaoId: req.params.prescricao_id,
         acolhido,

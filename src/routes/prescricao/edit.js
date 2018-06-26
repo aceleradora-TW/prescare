@@ -6,7 +6,9 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
     include: [Cuidado, Dieta, Medicamento, Acolhido]
   })
     .then(prescricao => {
-      if(!prescricao) return res.render('pages/error')
+      if (!prescricao) {
+        return res.render('pages/error')
+      }
       res.render('pages/editarPrescricao', {
         prescricao,
         dietas: prescricao.dieta,
@@ -15,7 +17,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         updateUrl: req.originalUrl,
         acolhido: prescricao.acolhido,
         acolhidoId: req.params.acolhido_id,
-
       })
     })
 }
