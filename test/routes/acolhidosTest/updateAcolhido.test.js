@@ -13,7 +13,7 @@ describe('Quando acesso Acolhido', () => {
         nascimento: '20',
         peso: '150',
         alergias: "código",
-        viaAlimentacao: "boca",
+        via_alimentacao: "boca",
       }
     }
     

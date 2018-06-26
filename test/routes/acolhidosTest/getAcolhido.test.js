@@ -18,7 +18,7 @@ describe('Quando acesso acolhido', () => {
             nascimento: 'Luna' , 
             peso: 'Luna' , 
             alergias: 'Luna' , 
-            viaAlimentacao: 'Luna', 
+            via_alimentacao: 'Luna', 
             prescricaos: [{ 
                 id: 1, 
                 data: '2018-06-15', 

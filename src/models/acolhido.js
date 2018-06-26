@@ -5,5 +5,5 @@ module.exports = db => db.define('acolhido', {
   nascimento: sequelize.STRING,
   peso: sequelize.FLOAT,
   alergias: sequelize.TEXT,
-  viaAlimentacao: sequelize.STRING
+  via_alimentacao: sequelize.STRING
 })

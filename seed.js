@@ -7,11 +7,11 @@ const models = modelsInitializer(databaseConnection)
 
 const createAcolhido = () => models.Acolhido.create({
   nome: 'Josicleiso Dores',
-  idade: 12,
+  nascimento: '12/10/2006',
   rg: '123456',
   peso: 12.5,
   alergias: 'Paracetamol',
-  viaAlimentacao: 'Oral'
+  via_alimentacao: 'Oral'
 })
 
 const createPrescricao = acolhido => models.Prescricao.create({
