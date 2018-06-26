@@ -5,7 +5,7 @@ module.exports = Medicamento => (req, res) => {
         id: req.params.medicamento_id
       }
     }).then(medicamento => {
-      if (!medicamento) return res.redirect('/404')
+      if(!medicamento) return res.send('Essa página não existe')
       medicamento.update(req.body)
         .then(() => {
           res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
