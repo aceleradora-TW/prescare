@@ -1,13 +1,14 @@
-module.exports = (Acolhido, Prescricao, Usuario) => (req, res) => {
+module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
       id: req.params.acolhido_id
     },
-    include: [{ model: Prescricao, required: false, where: { acolhido_id: req.params.acolhido_id } },
-    { model: Usuario }]
+    include: [{ model: Prescricao, required: false, where: { acolhido_id: req.params.acolhido_id } }]
 
   }).then(acolhido => {
-    if (usuario.tipo == 'medica') {
+    let usuario = req.user.tipo
+
+    if (usuario == 'medica') {
       res.render('pages/infoAcolhido', {
         prescricaoId: req.params.prescricao_id,
         acolhido,
@@ -15,6 +16,10 @@ module.exports = (Acolhido, Prescricao, Usuario) => (req, res) => {
         updateUrl: req.urlOriginal
       })
     }
-  }).catch(err => console.log(err))
+    
+    if (usuario == 'farmaceutica') {
+      res.render('pages/error')
+    }
 
+  }).catch(err => console.log(err))
 }
