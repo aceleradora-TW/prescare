@@ -9,14 +9,14 @@ module.exports = Acolhido => (req, res) => {
       return res.render('pages/error')
     }
 
-    let usuario = req.user.tipo
+    let usuario = req.user
 
-    if (usuario === 'medica') {
-      res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
+    if (usuario.tipo === 'medica') {
+      return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
     
-    if (usuario == 'farmaceutica') {
-      res.render('pages/error')
+    if (usuario.tipo == 'farmaceutica') {
+      return res.render('pages/error')
     }
     
   })
