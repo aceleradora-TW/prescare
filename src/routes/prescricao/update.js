@@ -9,7 +9,7 @@ module.exports = Prescricao => (req, res) => {
     },
   })
     .then(prescricao => {
-      if (!prescricao) return res.redirect('/404')
+     // if (!prescricao) return res.redirect('/404')
       prescricao.update({
         data: new Date().getTime(),
         validade: moment(req.body.validade, FORMATO_DATA).toDate()
