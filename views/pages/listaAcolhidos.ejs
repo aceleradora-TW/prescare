@@ -7,13 +7,11 @@
                 <%for (acolhidos of acolhidos){%>
                     <li>
                         <a href="/acolhido/<%= acolhidos.id %>">
-                            <p>
-                                <%= acolhidos.nome %>
-                            </p>
-                            <span>
-                              <p> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %> </p>
-                               <p> Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %> </p>
-                            </span>
+                            <%= acolhidos.nome %>
+                            <div>
+                              <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %> |
+                             Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %> </span>
+                              </div>
                         </a>
                     </li>
                 <% } %>

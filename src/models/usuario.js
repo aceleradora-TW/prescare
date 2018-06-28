@@ -7,5 +7,5 @@ module.exports = db => db.define('usuario', {
 },
 {
   timestamps : false,
-  createdAt: false,
+  created_at: false,
 })
