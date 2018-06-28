@@ -4,8 +4,4 @@ module.exports = db => db.define('usuario', {
   tipo: sequelize.STRING,
   nome: sequelize.STRING,
   senha: sequelize.STRING,
-},
-{
-  timestamps : false,
-  created_at: false,
 })

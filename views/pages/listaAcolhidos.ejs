@@ -9,8 +9,8 @@
                         <a href="/acolhido/<%= acolhidos.id %>">
                             <%= acolhidos.nome %>
                             <div>
-                              <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade : '' %> |
-                             Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %> </span>
+                              <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
+                             Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %> </span>
                               </div>
                         </a>
                     </li>
