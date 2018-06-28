@@ -28,8 +28,3 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
       }
     })
 }
-
-
-
-
-
