@@ -252,6 +252,7 @@ label {
   margin-bottom: 8vh;
   text-align: center;
   width: 100%;
+  
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
@@ -265,6 +266,14 @@ label {
 
 .tabela-prescricao tbody tr .td-observacao {
   text-transform: none;
+}
+
+.tabela-prescricao tbody tr .td-posologia {
+  white-space: pre-line;
+}
+
+.tabela-prescricao tbody tr .td-posologia:first-line { 
+  line-height: 0; 
 }
 
 .titulo-lista-acolhidos {
