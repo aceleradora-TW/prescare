@@ -6,23 +6,14 @@
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
   </div>
-
-  <form action="<%= updateUrl %>" method="POST">
-    <label for="validade" class="sub-titulo">Revisar em</label>
-    <input type="date" name="validade" id="validade" value="<%= prescricao.validade %>">
-    <div class="botoes">
-      <input type="submit" value="Salvar" onclick="alert('Validade salva.')">
-    </div>
-  </form>
+  
   <div class="prescricao">
-
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
       </form>
     </div>
     <%- include partials/tabelaMedicamento.ejs %>
-
 
       <div class="botoes right">
         <form action="<%= updateUrl %>/cuidado" method="POST">
@@ -31,11 +22,27 @@
       </div>
       <%- include partials/tabelaCuidados.ejs %>
 
-
-        <div class="botoes right">
-          <form action="<%= updateUrl %>/dieta" method="POST">
-            <input type="submit" value="Adicionar dieta">
-          </form>
-        </div>
-        <%- include partials/tabelaDieta.ejs %>
+    
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/dieta" method="POST">
+        <input type="submit" value="Adicionar dieta">
+      </form>
+    </div>
+    <%- include partials/tabelaDieta.ejs %>
   </div>
+  
+  <form action="<%= updateUrl %>" method="POST">
+    <label for="validade" class="sub-titulo">Validade da Prescrição</label>
+    <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">
+    <div class="botoes">
+      <input type="submit" value="Salvar" onclick="alert('Validade definida')">
+    </div>
+  </form>
+  
+  <script>
+    window.$(function () {
+      window.$("#validade").datepicker({
+        dateFormat: "dd/mm/yy"
+      });
+    });
+  </script>

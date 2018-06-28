@@ -9,15 +9,21 @@
     <%for (prescricao of prescricaos){%>
         <tr>
             <td>
-                <%= prescricao.data %>
+                <%= prescricao.data 
+                    ? prescricao.data.split("-").reverse().join("/")
+                    : "-" %>
             </td>
             <td>
-                <%= prescricao.validade %>
+
+                <%= prescricao.validade 
+                    ? prescricao.validade.split("-").reverse().join("/")
+                    : "-" %>
+
             </td>
             <td>
-                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                    <input type="submit" value="Abrir">
-                </form>
+                <div class="botoes">
+                    <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
+                </div>
             </td>
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">

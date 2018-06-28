@@ -1,14 +1,25 @@
+const moment = require('moment')
+
+const FORMATO_DATA = 'DD/MM/YYYY'
+
 module.exports = Prescricao => (req, res) => {
-  Prescricao.findOne({
+  return Prescricao.findOne({
     where: {
       id: req.params.prescricao_id
     },
-  }).then(prescricao => {
-    prescricao.update({
-      data: new Date().getTime(),
-      validade: req.body.validade
-    }).then(() => {
-      res.redirect(req.originalUrl)
-    })
   })
+    .then(prescricao => {
+     // if (!prescricao) return res.redirect('/404')
+      prescricao.update({
+        data: new Date().getTime(),
+        validade: moment(req.body.validade, FORMATO_DATA).toDate()
+      })
+        .then(() => {
+          res.redirect(req.originalUrl)
+        })
+        .catch((error) => {
+          console.log(error.message);
+          res.redirect('/404')
+        })
+    })
 }
