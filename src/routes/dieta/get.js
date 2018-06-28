@@ -5,7 +5,7 @@ module.exports = Dieta => (req, res) => {
         id: req.params.dieta_id
       }
     }).then(dieta => {
-      if(!dieta) return res.send('Essa página não existe')
+      if (!dieta) return res.render('pages/error')
       res.render('pages/editarDieta', { dieta })
     }).catch(err => console.log(err))
 }

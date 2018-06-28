@@ -11,6 +11,7 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(medicamento => {
+      if(!medicamento) return res.render('pages/error')
       if (req.user) {
         res.render('pages/editarMedicamento', {
           acolhidoId: req.params.acolhido_id,
