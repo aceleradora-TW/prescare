@@ -5,6 +5,7 @@ module.exports = Prescricao => (req, res) => {
       id: req.params.id
     }
   }).then(prescricao => {
-    if(!prescricao) return res.redirect('/404')
+    if(!prescricao) return res.render('pages/error')
+    res.render('pages/prescricao', { prescricao })
   }).catch(err => console.log(err))
 }

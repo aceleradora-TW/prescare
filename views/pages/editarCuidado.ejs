@@ -6,6 +6,7 @@
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
   </div>
+</div>
 
   <div class="medicamento">
     <h1>Cuidado</h1>
@@ -25,11 +26,9 @@
         <input type="text" name="observacoes" id="observacoes" value="<%= cuidado.observacoes %>" class="form-control form-control-lg col-sm-8">
       </div>
 
-
-      <div>
-        <div class="botoes">
-          <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
-        </div>
+      <div class="botoes">
+        <input type="submit" value="Salvar" onclick="alert('Cuidado adicionado')">
+      </div>
     </form>
 
       <div class="botoes">

@@ -4,7 +4,6 @@ module.exports = Acolhido => (req, res) => {
       id: req.params.acolhido_id
     }
   }).then(acolhido => {
-    if(!acolhido) return res.redirect('/404')
     res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
   })
 }
