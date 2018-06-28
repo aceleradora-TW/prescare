@@ -6,7 +6,7 @@ describe('Quando acesso dieta', () => {
             findOne: jest.fn()
         }
        
-        const req = { params: { dietaId: 1 } }
+        const req = { params: { dietaId: 1 },user: { tipo:  'medica' } }
         const res = { render: jest.fn() }
         const dieta = { 
             id: 1,

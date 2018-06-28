@@ -9,7 +9,7 @@ describe('Quando acesso acolhido', () => {
         const model = {
             include: jest.fn()
         }
-        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: ''}
+        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: '', user: { tipo:  'medica' }}
         const res = { render: jest.fn() }
                
         const acolhido = { 
