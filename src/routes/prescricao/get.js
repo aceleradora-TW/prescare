@@ -9,13 +9,18 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
     if (!prescricao) {
       return res.render('pages/error')
     }
-    let usuario = req.user.tipo
-    if (usuario === 'medica') {
+    let tipoDoUsuario = req.user.tipo
+    if (tipoDoUsuario === 'medica') {
       res.render('pages/prescricao', { prescricao })
     }
 
+<<<<<<< 93bff96755f4e3e24264803b90055787357c2225
     if (usuario == 'farmaceutica') {
       res.render('pages/error')
+=======
+    if (tipoDoUsuario === 'farmaceutica') {
+      res.render('pages/editarPrescricaoFarmaceutica')
+>>>>>>> :art: <@EngelFlores,@lindicell> Refatora branch
     }
   }).catch(err => console.log(err))
 }

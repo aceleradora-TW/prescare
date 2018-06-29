@@ -10,8 +10,8 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         return res.render('pages/error')
       }
 
-      let usuario = req.user.tipo
-      if (usuario === 'medica') {
+      let tipoDoUsuario = req.user.tipo
+      if (tipoDoUsuario === 'medica') {
         res.render('pages/editarPrescricao', {
           prescricao,
           dietas: prescricao.dieta,
