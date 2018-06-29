@@ -16,7 +16,7 @@
                     : "-" %>
             </td>
             <td>
-                    <%= prescricaos ? moment(prescricaos.updated_at).format('DD/MM/YYYY HH:mm:ss') : '---' %>
+                <%= prescricao.updated_at ? moment(prescricao.updated_at).format('DD/MM/YYYY HH:mm:ss') : '---' %>
             </td>
             <td>
                 <%= prescricao.validade 
