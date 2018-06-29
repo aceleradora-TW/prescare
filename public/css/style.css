@@ -40,6 +40,7 @@
   font-size: 15px;
   padding: 2vh 0;
   display: inline-flex;
+  text-align: center;
  }
 
 .botoes a{
@@ -289,6 +290,13 @@ label {
   flex-grow: 1;
   padding-left: 5px;
   text-align: left;
+}
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
 }
 
 .tiracor {
