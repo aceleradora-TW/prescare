@@ -25,11 +25,7 @@
             </td>
 
             <td>
-                <span id="searchDateTime"></span>
-                <script>
-                    let formato_data_horario = moment("<%= prescricao.updated_at ? prescricao.updated_at : '' %>").format("DD/MM/YYYY HH:mm:ss");
-                    document.getElementById("searchDateTime").innerHTML = formato_data_horario;
-                </script>
+                    <%= prescricaos ? moment(prescricaos.updated_at).format('DD/MM/YYYY HH:mm:ss') : '---' %>
             </td>
             <td>
                 <%= prescricao.validade 

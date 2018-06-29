@@ -11,15 +11,13 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
     if (!acolhido) {
       return res.render('pages/error')
     }
-
-
-    res.render('pages/infoAcolhido', {
-      prescricaoId: req.params.prescricao_id,
-      acolhido,
-      prescricaos: acolhido.prescricaos,
-      updateUrl: req.urlOriginal,
-      moment: moment
-    })
-
+      res.render('pages/infoAcolhido', {
+        prescricaoId: req.params.prescricao_id,
+        acolhido,
+        prescricaos: acolhido.prescricaos,
+        updateUrl: req.urlOriginal,
+        tipoDoUsuario: req.user.tipo,
+        moment: moment
+      })
   }).catch(err => console.log(err))
 }
