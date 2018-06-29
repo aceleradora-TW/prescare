@@ -16,16 +16,16 @@
                     : "-" %>
             </td>
             <td>
-                <%= prescricao.updated_at
-                    ? prescricao.updated_at
-                    : "-" %>
+                <span id="searchDateTime"></span>
+                <script>
+                    let formato_data_horario = moment("<%= prescricao.updated_at ? prescricao.updated_at : '' %>").format("DD/MM/YYYY HH:mm:ss");
+                    document.getElementById("searchDateTime").innerHTML = formato_data_horario;
+                </script>
             </td>
             <td>
-
                 <%= prescricao.validade 
                     ? prescricao.validade.split("-").reverse().join("/")
                     : "-" %>
-
             </td>
             <td>
                 <div class="botoes">
@@ -44,5 +44,4 @@
             </td>
         </tr>
         <%}%>
-
 </table>
