@@ -7,9 +7,19 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
     if (!prescricao) {
       return res.render('pages/error')
     }
-    res.render('pages/prescricao', {
-      prescricao,
-      tipoDoUsuario: req.user.tipo
-     })
+
+    let tipoDoUsuario = req.user.tipo
+    
+    if (tipoDoUsuario === 'clinica') {
+      res.render('pages/prescricao', { prescricao })
+    }
+
+    if (tipoDoUsuario === 'neurologista') {
+      res.render('pages/prescricao', { prescricao })
+    }
+
+    if (tipoDoUsuario == 'farmaceutica') {
+      res.render('pages/farmaceutica/editarPrescricaoFarmaceutica')
+    }
   }).catch(err => console.log(err))
 }
