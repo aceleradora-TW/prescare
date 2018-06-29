@@ -7,11 +7,11 @@
         <p class="nome-acolhido"> Nome:
           <%= acolhido.nome %>
         </p>
+        <p class="nome-acolhido"> Nascimento:
+          <%= acolhido.nascimento %>
+        </p>
         <form action="<%= updateUrl %>" method="POST">
-          <div class="form-group row">
-            <label for="nascimento" class="col-sm-2 col-form-label col-form-label-lg">Nascimento:</label>
-            <input type="text" name="nascimento" id="nascimento" value="<%= acolhido.nascimento %>" class="form-control form-control-lg col-sm-8">
-          </div>
+         
           <div class="form-group row">
             <label for="peso" class="col-sm-2 col-form-label col-form-label-lg">Peso:</label>
             <input type="text" name="peso" id="peso" value="<%= acolhido.peso %>" class="form-control form-control-lg col-sm-8">
@@ -21,8 +21,8 @@
             <input type="text" name="alergias" id="alergias" value="<%= acolhido.alergias %>" class="form-control form-control-lg col-sm-8">
           </div>
           <div class="form-group row">
-            <label for="via_alimentacao" class="col-sm-3 col-form-label col-form-label-lg">Via Alimentação:</label>
-            <input type="text" name="via_alimentacao" id="via_alimentacao" value="<%= acolhido.via_alimentacao %>" class="form-control form-control-lg col-sm-7">
+            <label for="via_alimentacao" class="col-sm-4 col-form-label col-form-label-lg">Via Alimentação:</label>
+            <input type="text" name="via_alimentacao" id="via_alimentacao" value="<%= acolhido.via_alimentacao %>" class="form-control form-control-lg col-sm-6">
           </div>
           <div class="botoes">
             <input type="submit" value="Salvar">

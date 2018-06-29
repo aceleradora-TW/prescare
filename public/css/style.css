@@ -152,7 +152,7 @@
 .editar-acolhido {
   width: 70%;
   margin: 0 auto;
-  text-align: center;
+  text-transform: uppercase;
 }
 
 .effect1 {
@@ -222,7 +222,7 @@ label {
 
 .nome-acolhido {
   margin: 0px 0 2vh 0;
-  text-align: center;
+
   text-transform: uppercase;
   font-size: 1.4em;
 }
