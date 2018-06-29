@@ -148,6 +148,9 @@
   display: flex;
 }
 
+.center {
+  text-align: center;
+}
 
 .editar-acolhido {
   width: 70%;
@@ -247,6 +250,11 @@ label {
   font-size: 20px;
 }
 
+.sub-titulo form{
+  margin:auto;
+
+}
+
 .tabela-prescricao {
   border-collapse: collapse;
   margin: auto;
@@ -290,13 +298,6 @@ label {
   flex-grow: 1;
   padding-left: 5px;
   text-align: left;
-}
-.right {
-  float: right;
-}
-
-.center {
-  text-align: center;
 }
 
 .tiracor {
