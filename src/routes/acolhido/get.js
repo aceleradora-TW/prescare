@@ -15,6 +15,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
         prescricaos: acolhido.prescricaos,
         updateUrl: req.urlOriginal,
         tipoDoUsuario: req.user.tipo
+        moment: moment
       })
   }).catch(err => console.log(err))
 }
