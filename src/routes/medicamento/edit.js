@@ -24,7 +24,8 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
           prescricaoId: req.params.prescricao_id,
           medicamento,
           updateUrl: req.originalUrl,
-          acolhido: medicamento.prescricao.acolhido
+          acolhido: medicamento.prescricao.acolhido,
+          tipoUsuario: req.user.tipo
         })
       }
       if (tipoDoUsuario === 'farmaceutica') {

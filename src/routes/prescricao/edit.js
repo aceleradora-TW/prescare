@@ -9,9 +9,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
       if (!prescricao) {
         return res.render('pages/error')
       }
-
-      let tipoDoUsuario = req.user.tipo
-      if (tipoDoUsuario === 'medica') {
         res.render('pages/editarPrescricao', {
           prescricao,
           dietas: prescricao.dieta,
@@ -20,19 +17,7 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
           updateUrl: req.originalUrl,
           acolhido: prescricao.acolhido,
           acolhidoId: req.params.acolhido_id,
+          tipoUsuario: req.user.tipo
         })
-      }
-
-      if (tipoDoUsuario === 'farmaceutica') {
-        res.render('pages/farmaceutica/editarPrescricaoFarmaceutica', {
-          prescricao,
-          dietas: prescricao.dieta,
-          cuidados: prescricao.cuidados,
-          medicamentos: prescricao.medicamentos,
-          updateUrl: req.originalUrl,
-          acolhido: prescricao.acolhido,
-          acolhidoId: req.params.acolhido_id,
-        })
-      }
     })
 }
