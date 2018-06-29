@@ -7,6 +7,15 @@ module.exports = Cuidado => (req, res) => {
       if (!cuidado) {
         return res.render('pages/error')
       }
-      res.render('pages/editarCuidado', { cuidado })
+      let tipoDoUsuario = req.user.tipo
+      if (tipoDoUsuario === 'medica') {
+        res.render('pages/editarCuidado', { cuidado })
+      }
+      if (tipoDoUsuario === 'neurologista') {
+        res.render('pages/editarCuidado', { cuidado })
+      }
+      if (tipoDoUsuario === 'farmaceutica') {
+        res.render('pages/error')
+      }
     }).catch(err => console.log(err))
 }

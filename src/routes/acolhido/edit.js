@@ -10,15 +10,19 @@ module.exports = Acolhido => (req, res) => {
     }
     return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
 
-    let usuario = req.user
+    let tipoDoUsuario = req.user.tipo
 
-    if (usuario.tipo == 'medica') {
+    if (tipoDoUsuario === 'clinica') {
       return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
-    
-    if (usuario.tipo == 'farmaceutica') {
-      return res.render('pages/error')
+
+    if (tipoDoUsuario === 'neurologista') {
+      return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
-    
+
+    if (tipoDoUsuario == 'farmaceutica') {
+      return res.render('pages/editarAcolhido')
+    }
+
   })
 }
