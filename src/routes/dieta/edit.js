@@ -14,12 +14,29 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
       if (!dieta) {
         return res.render('pages/error')
       }
-      res.render('pages/editarDieta', {
-        acolhidoId: req.params.acolhido_id,
-        prescricaoId: req.params.prescricao_id,
-        dieta,
-        updateUrl: req.originalUrl,
-        acolhido: dieta.prescricao.acolhido
-      })
+
+      let tipoDoUsuario = req.user.tipo
+
+      if (tipoDoUsuario === 'clinica') {
+        res.render('pages/editarDieta', {
+          acolhidoId: req.params.acolhido_id,
+          prescricaoId: req.params.prescricao_id,
+          dieta,
+          updateUrl: req.originalUrl,
+          acolhido: dieta.prescricao.acolhido
+        })
+      }
+      if (tipoDoUsuario === 'neurologista') {
+        res.render('pages/editarDieta', {
+          acolhidoId: req.params.acolhido_id,
+          prescricaoId: req.params.prescricao_id,
+          dieta,
+          updateUrl: req.originalUrl,
+          acolhido: dieta.prescricao.acolhido
+        })
+      }
+      if (tipoDoUsuario == 'farmaceutica') {
+        res.render('pages/error')
+      }
     })
 }
