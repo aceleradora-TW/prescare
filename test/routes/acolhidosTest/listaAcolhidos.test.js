@@ -1,4 +1,5 @@
 const listaAcolhidos = require("../../../src/routes/acolhido/listaAcolhidos")
+const moment = require('moment')
 
 describe('Quando acesso listaAcolhidos', () => {
     it('Deve mostrar uma lista de nomes', (done) => {
@@ -33,7 +34,7 @@ describe('Quando acesso listaAcolhidos', () => {
             order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
             include: [{ model, required: false, attributes: ['validade', 'updated_at']}]
         }))
-        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos }))
+        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos, moment }))
         .then(done)
         .catch(done)
     })})
