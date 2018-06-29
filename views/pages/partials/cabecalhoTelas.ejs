@@ -36,9 +36,12 @@
                 <%= acolhido.via_alimentacao %>
             </span>
         </div>
-        <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
-            <i class="fa fa-edit edit"></i>
-            Editar informações
-        </a>
+
+        <%if (tipoUsuario === "medica") { %>
+            <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+                <i class="fa fa-edit edit"></i>
+                Editar informações
+            </a>
+        <% } %>
     </div>
 </div>
