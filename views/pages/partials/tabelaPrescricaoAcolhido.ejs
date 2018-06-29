@@ -2,6 +2,7 @@
     <tr>
         <th>Usuário</th>
         <th>Data</th>
+        <th>Ultima Atualização</th>
         <th>Validade</th>
         <th>Atualizada em</th>
         <%if (user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "farmaceutica") { %>
@@ -23,6 +24,11 @@
                     : "-" %>
             </td>
 
+            <td>
+                <%= prescricao.updated_at
+                    ? prescricao.updated_at
+                    : "-" %>
+            </td>
             <td>
 
                 <%= prescricao.validade 
