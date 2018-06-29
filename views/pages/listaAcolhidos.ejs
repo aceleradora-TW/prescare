@@ -9,9 +9,13 @@
                         <a href="/acolhido/<%= acolhidos.id %>">
                             <%= acolhidos.nome %>
                             <div>
-                              <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
-                             Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %> </span>
-                              </div>
+                                <span> 
+                                    Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
+                                    Atualizado em: <span id="searchDateTime"></span>
+                                    <script>momentDateTime("<%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %>")</script>
+                                    <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '' %>
+                                </span>
+                            </div>
                         </a>
                     </li>
                 <% } %>

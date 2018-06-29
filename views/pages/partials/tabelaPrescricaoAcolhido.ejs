@@ -1,6 +1,7 @@
 <table class="tabela-prescricao">
     <tr>
         <th>Data</th>
+        <th>Ultima Atualização</th>
         <th>Validade</th>
         <th>Abrir</th>
         <th>Excluir</th>
@@ -12,6 +13,11 @@
             <td>
                 <%= prescricao.data 
                     ? prescricao.data.split("-").reverse().join("/")
+                    : "-" %>
+            </td>
+            <td>
+                <%= prescricao.updated_at
+                    ? prescricao.updated_at
                     : "-" %>
             </td>
             <td>
@@ -33,7 +39,7 @@
             </td>
             <td>
                 <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
-                    <input type="submit" value="Enviar" >
+                    <input type="submit" value="Enviar">
                 </form>
             </td>
         </tr>
