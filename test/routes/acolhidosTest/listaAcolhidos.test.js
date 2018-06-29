@@ -26,18 +26,15 @@ describe('Quando acesso listaAcolhidos', () => {
 
         Acolhido.findAll.mockResolvedValue(acolhidos)
         model.include.mockResolvedValue(prescricaos)
-
-        listaAcolhidos(Acolhido, model)(req, res)
-            .then(() => expect(Acolhido.findAll).toBeCalledWith({
-                order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
-                include: [{ model, required: false, attributes: ['validade', 'updated_at'] }]
-            }))
-            .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', {
-                acolhidos, prescricaos, moment
-            }))
-            .then(done)
-            .catch(done)
-    })
-})
+        
+        listaAcolhidos(Acolhido, model)(req,res)
+        .then(() => expect(Acolhido.findAll).toBeCalledWith({
+            order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
+            include: [{ model, required: false, attributes: ['validade', 'updated_at']}]
+        }))
+        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos, moment }))
+        .then(done)
+        .catch(done)
+    })})
 
 
