@@ -8,6 +8,7 @@ const prescricaoRoutes = require('./prescricao')
 const loginRoutes = require('./login')
 const authEnforcer = require('./authEnforcer')
 
+
 module.exports = (models, passport) => {
 
   router.use(authEnforcer())

@@ -11,7 +11,7 @@ module.exports = Acolhido => (req, res) => {
 
     let usuario = req.user
 
-    if (usuario.tipo === 'medica') {
+    if (usuario.tipo == 'medica') {
       return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
     

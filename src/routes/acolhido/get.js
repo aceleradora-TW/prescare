@@ -1,4 +1,3 @@
-
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
