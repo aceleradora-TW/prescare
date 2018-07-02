@@ -1,0 +1,43 @@
+<label for="medicamento">Medicamentos</label>
+<table class="tabela-prescricao">
+    <tr>
+        <th>Nome</th>
+        <th>Dosagem</th>
+        <th>Forma Farmacêutica</th>
+        <th>Via</th>
+        <th>Posologia</th>
+        <th>Observações</th>
+        <th>Validade</th>
+        <th>Edição</th>
+    </tr>
+    <tr>
+        <%for (medicamento of prescricao.medicamentos){%>
+            <td>
+                <%= medicamento.nome %>
+            </td>
+            <td>
+                <%= medicamento.dosagem %>
+            </td>
+            <td>
+                <%= medicamento.formaFarmaceutica %>
+            </td>
+            <td>
+                <%= medicamento.via %>
+            </td>
+            <td>
+                <%= medicamento.posologia %>
+            </td>
+            <td class="td-observacao">
+                <%= medicamento.observacoes %>
+            </td>
+            <td>
+                <%= medicamento.validadeMed %>
+            </td>
+            <td class="td-botao">
+                <div>
+                    <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
+                </div>
+            </td>
+    </tr>
+    <%}%>
+</table>

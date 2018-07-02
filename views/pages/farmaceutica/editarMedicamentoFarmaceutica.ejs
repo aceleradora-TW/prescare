@@ -1,0 +1,56 @@
+
+<%- contentFor('body') %>
+<div class="botao-voltar">
+    <a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+</div>
+
+<div class="cabecalho-telas">
+    <%- include ../partials/cabecalhoTelas.ejs %>
+</div>
+
+<div class="medicamento">
+    <h1>Medicamento</h1>
+
+    <form action="<%= updateUrl %>" method="POST">
+        <div class="form-group row">
+            <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
+            <input type="text" name="nome" id="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" disabled="disabled">
+        </div>
+
+        <div class="form-group row">
+            <label for="dosagem" class="col-sm-2 col-form-label col-form-label-lg">Dosagem:</label>
+            <input type="text" name="dosagem" id="dosagem" value="<%= medicamento.dosagem %>" class="form-control form-control-lg col-sm-8">
+        </div>
+
+        <div class="form-group row">
+            <label for="formaFarmaceutica" class="col-sm-2 col-form-label col-form-label-lg">Forma Farmacêutica:</label>
+            <input type="text" name="formaFarmaceutica" id="formaFarmaceutica" value="<%= medicamento.formaFarmaceutica %>" class="form-control form-control-lg col-sm-8">
+        </div>
+
+        <div class="form-group row">
+            <label for="via" class="col-sm-2 col-form-label col-form-label-lg">Via:</label>
+            <input type="text" name="via" id="via" value="<%= medicamento.via %>" class="form-control form-control-lg col-sm-8" disabled="disabled">
+        </div>
+
+
+        <div class="form-group row">
+            <label for="posologia" class="col-sm-2 col-form-label col-form-label-lg">Posologia:</label>
+            <input type="text" name="posologia" id="posologia" value="<%= medicamento.posologia %>" class="form-control form-control-lg col-sm-8">
+        </div>
+
+        <div class="form-group row">
+            <label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
+            <input type="text" name="observacoes" id="observacoes" value="<%= medicamento.observacoes %>" class="form-control form-control-lg col-sm-8" disabled="disabled">
+        </div>
+
+        <div class="form-group row">
+            <label for="validadeMed" class="col-sm-2 col-form-label col-form-label-lg">Validade:</label>
+            <input type="text" name="validadeMed" id="validadeMed" value="<%= medicamento.validadeMed %>" class="form-control form-control-lg col-sm-8" disabled="disabled">
+        </div>
+
+        <div>
+            <div class="botoes">
+                <input type="submit" value="Salvar" onclick="alert('Modificações salvas!')">
+            </div>
+    </form>
+</div>

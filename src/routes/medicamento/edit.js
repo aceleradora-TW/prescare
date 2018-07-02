@@ -11,8 +11,14 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(medicamento => {
-      if(!medicamento) return res.render('pages/error')
-      if (req.user) {
+
+      if (!medicamento) {
+        return res.render('pages/error')
+      }
+
+      let tipoDoUsuario = req.user.tipo
+
+      if (tipoDoUsuario === 'medica') {
         res.render('pages/editarMedicamento', {
           acolhidoId: req.params.acolhido_id,
           prescricaoId: req.params.prescricao_id,
@@ -20,5 +26,16 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
           updateUrl: req.originalUrl,
           acolhido: medicamento.prescricao.acolhido
         })
-    }})
+      }
+      if (tipoDoUsuario === 'farmaceutica') {
+        res.render('pages/farmaceutica/editarMedicamentoFarmaceutica', {
+          acolhidoId: req.params.acolhido_id,
+          prescricaoId: req.params.prescricao_id,
+          medicamento,
+          updateUrl: req.originalUrl,
+          acolhido: medicamento.prescricao.acolhido
+        })
+      }
+
+    })
 }

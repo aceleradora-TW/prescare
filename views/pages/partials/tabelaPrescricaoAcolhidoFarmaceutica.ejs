@@ -1,0 +1,26 @@
+<table class="tabela-prescricao">
+    <tr>
+        <th>Data</th>
+        <th>Validade</th>
+        <th>Abrir</th>
+
+    </tr>
+
+    <%for (prescricao of prescricaos){%>
+        <tr>
+            <td>
+                <%= prescricao.data %>
+            </td>
+            <td>
+                <%= prescricao.validade %>
+            </td>
+            <td>
+                <div class="botoes">
+                    <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
+                </div>
+            </td>
+
+        </tr>
+        <%}%>
+
+</table>
