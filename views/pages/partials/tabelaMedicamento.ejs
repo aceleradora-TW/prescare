@@ -1,17 +1,21 @@
 <label for="medicamento">Medicamentos</label>
 <table class="tabela-prescricao">
-    <tr>
-        <th>Nome</th>
-        <th>Dosagem</th>
-        <th>Forma Farmacêutica</th>
-        <th>Via</th>
-        <th>Posologia</th>
-        <th>Observações</th>
-        <th>Validade</th>
-        <th>Edição</th>
-    </tr>
-    <tr>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Dosagem</th>
+            <th>Forma Farmacêutica</th>
+            <th>Via</th>
+            <th>Posologia (horário - dosagem)</th>
+            <th>Observações</th>
+            <th>Validade</th>
+            <th>Edição</th>
+        </tr>
+    </thead>
+
+    <tbody>
         <%for (medicamento of prescricao.medicamentos){%>
+        <tr>
             <td>
                 <%= medicamento.nome %>
             </td>
@@ -24,7 +28,7 @@
             <td>
                 <%= medicamento.via %>
             </td>
-            
+
             <td class="td-posologia">
                 <%= medicamento.posologia %>
             </td>
@@ -43,6 +47,7 @@
                     </form>
                 </div>
             </td>
-    </tr>
-    <%}%>
+        </tr>
+        <%}%>
+    </tbody>
 </table>

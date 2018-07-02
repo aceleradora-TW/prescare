@@ -1,32 +1,36 @@
 <label for="cuidado">Cuidados</label>
 <table class="tabela-prescricao">
-    <tr>
-        <th>Descrição</th>
-        <th>Intervalo</th>
-        <th>Observações</th>        
-        <th>Edição</th>
-    </tr>
-    <tr>
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Intervalo</th>
+            <th>Observações</th>
+            <th>Edição</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
         <%for (cuidado of prescricao.cuidados){%>
-        <td>
-            <%= cuidado.descricao %>
-        </td>
-        <td>
-            <%= cuidado.intervalo %>
-        </td>
-        <td class="td-observacao">
-            <%= cuidado.observacoes %>
-        </td>
-        <td class="td-botao">
-            <div>
-                <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
-                <form action="<%= updateUrl %>/cuidado/<%= cuidado.id %>/excluir" method="POST">
-                    <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" 
-                    onclick="return confirm('Tem certeza que deseja excluir?');">
-                    </button>
-                </form>
-            </div>
-        </td>
+            <td>
+                <%= cuidado.descricao %>
+            </td>
+            <td>
+                <%= cuidado.intervalo %>
+            </td>
+            <td class="td-observacao">
+                <%= cuidado.observacoes %>
+            </td>
+            <td class="td-botao">
+                <div>
+                    <a href="<%= updateUrl %>/cuidado/<%= cuidado.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
+                    <form action="<%= updateUrl %>/cuidado/<%= cuidado.id %>/excluir" method="POST">
+                        <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
+                        </button>
+                    </form>
+                </div>
+            </td>
     </tr>
-    <%}%>
+        <%}%>
+    </tbody>
 </table>
