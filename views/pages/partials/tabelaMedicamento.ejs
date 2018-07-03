@@ -9,7 +9,6 @@
             <th>Posologia (horário - dosagem)</th>
             <th>Observações</th>
             <th>Validade</th>
-            <th>Edição</th>
         </tr>
     </thead>
 
@@ -38,16 +37,20 @@
             <td>
                 <%= medicamento.validadeMed %>
             </td>
+
+        
             <td class="td-botao">
                 <div>
                     <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
-                    <form action="<%= updateUrl %>/medicamento/<%= medicamento.id %>/excluir" method="POST">
-                        <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
-                        </button>
-                    </form>
+                    <%if (tipoUsuario === "medica") { %>
+                        <form action="<%= updateUrl %>/medicamento/<%= medicamento.id %>/excluir" method="POST">
+                            <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
+                            </button>
+                        </form>
+                    <% } %>
                 </div>
             </td>
-        </tr>
-        <%}%>
+    </tr>
+    <%}%>
     </tbody>
 </table>
