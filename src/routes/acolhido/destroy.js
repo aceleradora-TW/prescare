@@ -1,5 +1,5 @@
 module.exports = Acolhido => (req, res) => {
-  Acolhido.destroy({
+  return Acolhido.destroy({
     where: {
       id: req.params.acolhido_id
     }
