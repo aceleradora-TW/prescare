@@ -5,9 +5,6 @@
 
 	<div class="cabecalho-telas">
 		<%- include partials/cabecalhoTelas.ejs %>
-			<div class="botao-voltar">
-				<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
-			</div>
 	</div>
 
 	<div class="medicamento">
@@ -38,7 +35,7 @@
 
 
 			<div class="form-group row">
-				<label for="posologia" class="col-sm-2 col-form-label col-form-label-lg">Posologia:</label>
+				<label for="posologia" class="col-sm-2 col-form-label col-form-label-lg">Posologia: (hora-dose)</label>
 				<textarea type="text" name="posologia" class="form-control form-control-lg col-sm-8"><%= medicamento.posologia %></textarea>
 			</div>
 
@@ -53,15 +50,18 @@
 				<input type="text" name="validadeMed" value="<%= medicamento.validadeMed %>" class="form-control form-control-lg col-sm-8"
 				<%if (tipoDoUsuario === "farmaceutica") { %> disabled <% } %> >
 			</div>
-
+			
 			<div>
 				<div class="botoes">
 					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
 				</div>
-		</form>
-		<div class="botoes">
-			<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
-				<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?'); ">
 			</form>
+
+			<%if (tipoDoUsuario === "medica") {  %> 
+			<div class="botoes">
+				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
+					<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">					
+			</form>
+			<% } %>
 		</div>
-		</div>
+	</div>

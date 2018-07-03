@@ -6,7 +6,6 @@
 
         <%if (tipoDoUsuario === "medica") { %>
         <th>Excluir</th>
-        <th>Enviar para a farmácia</th>
         <% } %>
 
     </tr>
@@ -34,11 +33,6 @@
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                     <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-                </form>
-            </td>
-            <td>
-                <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
-                    <input type="submit" value="Enviar" >
                 </form>
             </td>
             <% } %>
