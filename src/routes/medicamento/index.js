@@ -10,5 +10,6 @@ module.exports = (Medicamento, Prescricao, Acolhido, router) => {
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/edit', edit(Medicamento, Prescricao, Acolhido))
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/edit', update(Medicamento))
   router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/excluir', destroy(Medicamento))
-  return router;
+  
+  return router
 }
