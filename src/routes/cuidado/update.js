@@ -8,15 +8,11 @@ module.exports = Cuidado => (req, res) => {
       if (!cuidado) {
         return res.render('pages/error')
       }
-      let usuario = req.user.tipo
-      if (usuario === 'medica') {
-        cuidado.update(req.body)
-          .then(() => {
-            res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
-          })
-      }
-      if (usuario === 'farmaceutica') {
-        res.render('pages/error')
-      }
+      
+      cuidado.update(req.body)
+        .then(() => {
+          res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
+        })
+
     })
 }

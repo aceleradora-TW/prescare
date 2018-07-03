@@ -1,5 +1,3 @@
-const Sequelize = require('sequelize')
-
 module.exports = (Prescricao, Usuario) => (req, res) => {
   return Prescricao.findOne({
     where: {
@@ -9,13 +7,9 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
     if (!prescricao) {
       return res.render('pages/error')
     }
-    let usuario = req.user.tipo
-    if (usuario === 'medica') {
-      res.render('pages/prescricao', { prescricao })
-    }
-
-    if (usuario == 'farmaceutica') {
-      res.render('pages/error')
-    }
+    res.render('pages/prescricao', {
+      prescricao,
+      tipoDoUsuario: req.user.tipo
+     })
   }).catch(err => console.log(err))
 }

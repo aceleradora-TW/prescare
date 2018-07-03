@@ -11,20 +11,22 @@ describe('Quando acesso medicamento', () => {
         const medicamento = { 
             id: 1,
             nome: 'Paracetonal',
-            via: 'oral',
-            formaFarmaceutica: 'comprimido',
-            intervalo: '8h-8h',
             dosagem: '500ml',
-            validade: 's2/06/2018',
-            lote: '659dfrty6',
-            tipo: 'continuo'
+            formaFarmaceutica: 'comprimido',
+            via: 'oral',
+            posologia: '2 cp 8h-16h',
+            observacoes: 'nada',
+            validade: '22/06/2018',
         }
+
+        const tipoDoUsuario = req.user.tipo
+
 
         Medicamento.findOne.mockResolvedValue(medicamento);
 
         return medicamentoRoute(Medicamento)(req, res)
         .then(() => expect(Medicamento.findOne).toBeCalledWith( {'where': {'id': req.params.medicamento_id }}))
-        .then(() => expect(res.render).toBeCalledWith('pages/editarMedicamento', { medicamento }))
+        .then(() => expect(res.render).toBeCalledWith('pages/editarMedicamento', { medicamento, tipoDoUsuario }))
         .then(done)
         .catch(done)
     })

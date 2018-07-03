@@ -8,16 +8,7 @@ module.exports = Acolhido => (req, res) => {
     if (!acolhido) {
       return res.render('pages/error')
     }
+    return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
 
-    let usuario = req.user
-
-    if (usuario.tipo === 'medica') {
-      return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
-    }
-    
-    if (usuario.tipo == 'farmaceutica') {
-      return res.render('pages/error')
-    }
-    
   })
 }

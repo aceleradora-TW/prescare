@@ -12,7 +12,6 @@ const { PORT, SECRET } = require('./settings')
 const database = require('./database')
 const app = express()
 const ejs = require('ejs')
-
 const databaseConnection = database.connect()
 
 const models = modelsInitializer(databaseConnection)

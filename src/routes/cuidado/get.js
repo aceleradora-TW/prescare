@@ -7,12 +7,6 @@ module.exports = Cuidado => (req, res) => {
       if (!cuidado) {
         return res.render('pages/error')
       }
-      let usuario = req.user.tipo
-      if (usuario === 'medica') {
-        res.render('pages/editarCuidado', { cuidado })
-      }
-      if (usuario === 'farmaceutica') {
-        res.render('pages/error')
-      }
+      res.render('pages/editarCuidado', { cuidado })
     }).catch(err => console.log(err))
 }

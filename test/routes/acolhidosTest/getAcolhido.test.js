@@ -24,19 +24,20 @@ describe('Quando acesso acolhido', () => {
                 data: '2018-06-15', 
                 validade: '2018-06-08', 
                 acolhido_id: '1'
-            }]
+            }],
         }
         
         const updateUrl = req.urlOriginal
         const prescricaoId = req.params.prescricao_id
         const prescricaos = acolhido.prescricaos
+        const tipoDoUsuario = req.user.tipo
         
         Acolhido.findOne.mockResolvedValue(acolhido);
         model.include.mockResolvedValue(prescricaos);
 
          acolhidoRoutes(Acolhido, model)(req, res)
         .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }, 'include' :[{model, 'required' : false, 'where': {'acolhido_id' :req.params.acolhido_id}}]}))
-        .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl }))
+        .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl, tipoDoUsuario }))
         .then(done)
         .catch(done)
     })

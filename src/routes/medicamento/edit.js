@@ -11,14 +11,19 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         }
       ]
     }).then(medicamento => {
-      if(!medicamento) return res.render('pages/error')
-      if (req.user) {
-        res.render('pages/editarMedicamento', {
-          acolhidoId: req.params.acolhido_id,
-          prescricaoId: req.params.prescricao_id,
-          medicamento,
-          updateUrl: req.originalUrl,
-          acolhido: medicamento.prescricao.acolhido
-        })
-    }})
+
+      if (!medicamento) {
+        return res.render('pages/error')
+      }
+      res.render('pages/editarMedicamento', {
+        acolhidoId: req.params.acolhido_id,
+        prescricaoId: req.params.prescricao_id,
+        medicamento,
+        updateUrl: req.originalUrl,
+        acolhido: medicamento.prescricao.acolhido,
+        tipoDoUsuario: req.user.tipo
+      })
+
+
+    })
 }
