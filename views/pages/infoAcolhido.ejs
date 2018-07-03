@@ -7,7 +7,7 @@
         <%- include partials/cabecalhoTelas.ejs %>
     </div>
 
-    <%if (tipoUsuario === "medica") { %>
+    <%if (tipoDoUsuario === "medica") { %>
         <div class="botoes medicamento">
             <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
                 <input type="submit" value="Nova Prescrição">

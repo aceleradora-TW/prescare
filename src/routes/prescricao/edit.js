@@ -17,7 +17,7 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
           updateUrl: req.originalUrl,
           acolhido: prescricao.acolhido,
           acolhidoId: req.params.acolhido_id,
-          tipoUsuario: req.user.tipo
+          tipoDoUsuario: req.user.tipo
         })
     })
 }

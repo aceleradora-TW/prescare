@@ -8,13 +8,6 @@ module.exports = Dieta => (req, res) => {
       if (!dieta) {
         return res.render('pages/error')
       }
-      let usuario = req.user.tipo
-      if (usuario === 'medica') {
-        res.render('pages/editarDieta', { dieta })
-      }
-
-      if (usuario == 'farmaceutica') {
-        res.render('pages/error')
-      }
+      res.render('pages/editarDieta', { dieta })
     }).catch(err => console.log(err))
 }

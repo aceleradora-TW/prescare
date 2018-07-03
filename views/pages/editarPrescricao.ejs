@@ -8,7 +8,7 @@
   </div>
 
     <div class="prescricao">
-      <%if (tipoUsuario === "medica") { %>
+      <%if (tipoDoUsuario === "medica") { %>
         <div class="botoes right">
           <form action="<%= updateUrl %>/medicamento" method="POST">
             <input type="submit" value="Adicionar medicamento">
@@ -18,7 +18,7 @@
 
       <%- include partials/tabelaMedicamento.ejs %>
 
-      <%if (tipoUsuario === "medica") { %>
+      <%if (tipoDoUsuario === "medica") { %>
         <div class="botoes right">
           <form action="<%= updateUrl %>/cuidado" method="POST">
             <input type="submit" value="Adicionar cuidados">
@@ -37,7 +37,7 @@
       <% } %>
     </div>
 
-    <%if (tipoUsuario === "medica") { %>
+    <%if (tipoDoUsuario === "medica") { %>
       <form action="<%= updateUrl %>" method="POST">
         <label for="validade" class="sub-titulo">Validade da Prescrição</label>
         <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">
@@ -47,7 +47,7 @@
       </form>
     <% } %>  
     
-    <%if (tipoUsuario === "farmaceutica") { %>
+    <%if (tipoDoUsuario === "farmaceutica") { %>
       <div>
         Validade da prescrição: <%= prescricao.validade.split("-").reverse().join("/") %>
       </div>
