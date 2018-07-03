@@ -21,5 +21,5 @@ module.exports = (models, passport) => {
   medicamentoRoutes(models.Medicamento, models.Prescricao, models.Acolhido, router)
   loginRoutes(passport, router)
 
-  return router
+  return router;
 }
