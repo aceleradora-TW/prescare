@@ -2,14 +2,17 @@ const moment = require('moment')
 
 const FORMATO_DATA = 'DD/MM/YYYY'
 
-module.exports = Prescricao => (req, res) => {
-  return Prescricao.findOne({
-    where: {
-      id: req.params.prescricao_id
-    },
-  })
+module.exports = (Prescricao, Medicamento) => (req, res) => {
+  return Prescricao.
+    findOne({
+      where: { id: req.params.prescricao_id },
+      include: [Medicamento]
+    })
     .then(prescricao => {
-      prescricao.update(req.body)
+      prescricao.update({
+        validade: moment(req.body.validade, FORMATO_DATA)
+      })
+      prescricao.medicamentos.create(req.body)
         .then(() => {
           res.redirect(req.originalUrl)
         })
