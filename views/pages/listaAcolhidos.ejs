@@ -7,7 +7,7 @@
                 <%for (acolhidos of acolhidos){%>
                     <li>
                         <a href="/acolhido/<%= acolhidos.id %>">
-                            <%= acolhidos.nome %>
+                           <span class="bold"> <%= acolhidos.nome %> </span>
                             <div>
                               <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
                              Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %> </span>
