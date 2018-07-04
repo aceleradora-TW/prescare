@@ -16,7 +16,7 @@ module.exports = Acolhido => (req, res) => {
       return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
 
-    if (tipoDoUsuario === 'neurologista') {
+    if (tipoDoUsuario === 'neuro') {
       return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
     }
 

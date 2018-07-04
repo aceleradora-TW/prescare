@@ -8,10 +8,10 @@ module.exports = Cuidado => (req, res) => {
         return res.render('pages/error')
       }
       let tipoDoUsuario = req.user.tipo
-      if (tipoDoUsuario === 'medica') {
+      if (tipoDoUsuario === 'clinica') {
         res.render('pages/editarCuidado', { cuidado })
       }
-      if (tipoDoUsuario === 'neurologista') {
+      if (tipoDoUsuario === 'neuro') {
         res.render('pages/editarCuidado', { cuidado })
       }
       if (tipoDoUsuario === 'farmaceutica') {

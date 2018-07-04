@@ -25,7 +25,7 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                     acolhido: cuidado.prescricao.acolhido
                 })
             }
-            if (tipoDoUsuario === 'neurologista') {
+            if (tipoDoUsuario === 'neuro') {
                 res.render('pages/editarCuidado', {
                     acolhidoId: req.params.acolhido_id,
                     prescricaoId: req.params.prescricao_id,
