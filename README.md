@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/aceleradora-TW/prescare.svg?style=svg)](https://circleci.com/gh/aceleradora-TW/prescare)
 
 
-Pré-requisitos minimos para contribuir
+Pré-requisitos mínimos para contribuir
 Ubuntu 12.04;
 Node.js 4;
 Docker CE;
@@ -18,7 +18,6 @@ Instalando o Node.js:
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get update
 sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
 
 Instalando e iniciando Docker
 
@@ -39,33 +38,20 @@ npm run db:create
 npm start
 **
 
-Inserindo URL nas variáveis de ambiente
-Para logar no banco, é necessário que insira a URL como variável de ambiente:
-
-echo 'export DATABASELOGIN="localhost:27017/conhecimento-livre-dev"' >> ~/.bashrc
-Após exportar a variável de ambiente, faça logoff para que o sistema atualize as variáveis.
 
 Populando o banco local
-É necessário adicionar o primeiro curso ao projeto. No diretório /conhecimento-livre digite:
 
-mongoimport --db conhecimento-livre-dev --collection authors --drop --file authors.json
-mongoimport --db conhecimento-livre-dev --collection admins --drop --file admins.json
-Você pode gerenciar seus cursos no painel de admin. Login padrão: Usuario:admin Senha:password
+node seed.js
 
 Iniciando o servidor
-Para iniciar o servidor, execute o seguinte comando, dentro do diretório /conhecimento-livre:
+Para iniciar o servidor, execute o seguinte comando, dentro do diretório /prescare:
 
 npm start
 
-
-Acessando a pagina
+Acessando a página
 Acessar localmente o projeto:
 
 http://localhost:3000
-
-Nossa URL:
-
-
 
 URL Staging:
 
