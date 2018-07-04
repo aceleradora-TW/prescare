@@ -1,7 +1,13 @@
 module.exports = Acolhido => (req, res) => {
   return Acolhido
-  .create()
+  .create({
+    nome: req.body.nome || '-',
+    nascimento: req.body.nascimento || '-',
+    peso: req.body.peso || 0,
+    alergias: req.body.alergias || '-',
+    via_alimentacao: req.body.via_alimentacao || '-',
+  })
   .then(acolhido => {
-    res.render('pages/novoAcolhido', { acolhido, updateUrl: '/acolhido/' + acolhido.id + '/edit' })
+    res.redirect('/acolhido/' + acolhido.id)
   })
 }
