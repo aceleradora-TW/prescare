@@ -22,7 +22,7 @@ module.exports = Cuidado => (req, res) => {
           })
       }
 
-      if (tipoDoUsuario === 'farmaceutica') {
+      if (tipoDoUsuario === 'farmacia') {
         res.render('pages/error')
       }
     })

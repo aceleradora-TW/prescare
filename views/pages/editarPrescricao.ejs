@@ -58,8 +58,13 @@
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
   <% } %>
+<<<<<<< 507a0548cab1ba72ad025523c847804153f42b8e
 
     <%if (tipoDoUsuario === "farmaceutica") { %>
+=======
+     
+    <%if (tipoDoUsuario === "farmacia") { %>
+>>>>>>> :bug: <@marcos012, @laurascclaro> renderiza paginas farmaceutica
       <div>
         Validade da prescrição:
         <%= prescricao.validade.split("-").reverse().join("/") %>

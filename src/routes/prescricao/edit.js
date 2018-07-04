@@ -37,8 +37,17 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         })
       }
 
-      if (tipoDoUsuario === 'farmaceutica') {
-        res.render('pages/farmaceutica/editarPrescricaoFarmaceutica')
+      if (tipoDoUsuario === 'farmacia') {
+        res.render('pages/farmacia/editarPrescricaoFarmaceutica', {
+          prescricao,
+          dietas: prescricao.dieta,
+          cuidados: prescricao.cuidados,
+          medicamentos: prescricao.medicamentos,
+          updateUrl: req.originalUrl,
+          acolhido: prescricao.acolhido,
+          acolhidoId: req.params.acolhido_id,
+          tipoDoUsuario: req.user.tipo
+        })
       }
     })
 }
