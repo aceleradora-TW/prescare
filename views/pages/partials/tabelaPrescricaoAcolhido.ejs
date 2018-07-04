@@ -5,8 +5,13 @@
         <th>Validade</th>
         <th>Abrir</th>
 
+<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
         <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
+=======
+        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+>>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
         <th>Excluir</th>
+        <th>Enviar para farmacia</th>
         <% } %>
 
     </tr>
@@ -33,7 +38,11 @@
                     <input type="submit" value="Abrir">
                 </form>
             </td>
+<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
             <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+=======
+            <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+>>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                     <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">

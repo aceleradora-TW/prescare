@@ -6,7 +6,11 @@
 </div>
 
 <div class="prescricao">
+<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
   <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
+=======
+  <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+>>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
@@ -16,7 +20,11 @@
 
   <%- include partials/tabelaMedicamento.ejs %>
 
+<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
         <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
+=======
+        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+>>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
           <div class="botoes right">
             <form action="<%= updateUrl %>/cuidado" method="POST">
               <input type="submit" value="Adicionar cuidados">
@@ -38,7 +46,11 @@
   </form>
 </div>
 
+<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
 <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
+=======
+<%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+>>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
     <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">

@@ -13,7 +13,7 @@ module.exports = Dieta => (req, res) => {
       if (tipoDoUsuario === 'clinica') {
         res.render('pages/editarDieta', { dieta })
       }
-      if (tipoDoUsuario === 'neurologista') {
+      if (tipoDoUsuario === 'neuro') {
         res.render('pages/editarDieta', { dieta })
       }
 
