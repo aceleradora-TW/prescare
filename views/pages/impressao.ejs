@@ -1,0 +1,190 @@
+<div class="box-acolhido">
+  <div class="texto-acolhido">
+      <div>
+          <span class="bold"> Nome: </span>
+          <span>
+              <%= acolhido.nome %>
+          </span>
+      </div>
+      <div>
+          <span class="bold"> Data de Nascimento: </span>
+          <span id="data">
+              <%= acolhido.nascimento %>
+          </span>
+      </div>
+
+      <div>
+          <span class="bold"> Idade: </span>
+          <span id="idade"></span>
+          <script>calcularIdade('<%= acolhido.nascimento %>')</script>
+      </div>
+      <div>
+          <span class="bold"> Peso: </span>
+          <span>
+              <%= acolhido.peso %> kg
+          </span>
+      </div>
+      <div>
+          <span class="bold"> Alergias: </span>
+          <span>
+              <%= acolhido.alergias %>
+          </span>
+      </div>
+      <div>
+          <span class="bold"> Via de alimentação: </span>
+          <span>
+              <%= acolhido.via_alimentacao %>
+          </span>
+      </div>
+
+  </div>
+</div>
+
+<table class="tabela-campos">
+  <thead>
+    <tr>
+      <th>Tecnico Dia</th>
+      <th>Tecnico Noite</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>
+        </td>
+        <td>
+        </td>
+       
+      </tr>
+  </tbody>
+</table>
+
+
+
+    <label for="dieta">Dieta</label>
+    <table class="tabela-prescricao">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Intervalo</th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%for (dieta of prescricao.dieta){%>
+          <tr>
+            <td>
+              <%= dieta.tipo %>
+            </td>
+            <td>
+              <%= dieta.intervalo %>
+            </td>
+            <td class="td-observacao">
+              <%= dieta.observacoes %>
+            </td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+
+
+
+
+
+
+    <label for="cuidado">Cuidados</label>
+    <table class="tabela-prescricao">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Intervalo</th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <%for (cuidado of prescricao.cuidados){%>
+            <td>
+              <%= cuidado.descricao %>
+            </td>
+            <td>
+              <%= cuidado.intervalo %>
+            </td>
+            <td class="td-observacao">
+              <%= cuidado.observacoes %>
+            </td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+
+    <label for="medicamento">Medicamentos</label>
+    <table class="tabela-prescricao">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Dosagem</th>
+          <th>Forma Farmacêutica</th>
+          <th>Via</th>
+          <th>Posologia</th>
+          <th>Observações</th>
+          <th>Validade</th>
+          <th>Check</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%for (medicamento of prescricao.medicamentos){%>
+          <tr>
+            <td>
+              <%= medicamento.nome %>
+            </td>
+            <td>
+              <%= medicamento.dosagem %>
+            </td>
+            <td>
+              <%= medicamento.formaFarmaceutica %>
+            </td>
+            <td>
+              <%= medicamento.via %>
+            </td>
+
+            <td class="td-posologia">
+              <%= medicamento.posologia %>
+            </td>
+            <td class="td-observacao">
+              <%= medicamento.observacoes %>
+            </td>
+            <td>
+              <%= medicamento.validadeMed %>
+            </td>
+            <td>
+                
+            </td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+
+
+
+    <table class="tabela-campos">
+      <thead>
+        <tr>
+          <th>Medico:</th>
+          <th>CRM:</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+          <tr>
+            <td >
+            </td>
+            <td>
+            </td>
+           
+          </tr>
+      </tbody>
+    </table>

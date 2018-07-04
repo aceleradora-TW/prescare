@@ -4,7 +4,7 @@
         <th>Validade</th>
         <th>Abrir</th>
 
-        <%if (tipoDoUsuario === "medica") { %>
+        <%if (tipoDoUsuario === "clinica") { %>
         <th>Excluir</th>
         <% } %>
 
@@ -29,13 +29,14 @@
                     <input type="submit" value="Abrir">
                 </form>
             </td>
-            <%if (tipoDoUsuario === "medica") { %>
+            <%if (tipoDoUsuario === "clinica") { %>
             <td>
                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                     <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
                 </form>
             </td>
             <% } %>
+            
         </tr>
         <%}%>
 

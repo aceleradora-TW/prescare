@@ -285,6 +285,22 @@ label {
   line-height: 0; 
 }
 
+
+.tabela-campos {
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 5vh;
+  text-align: center;
+  width: 75%;
+}
+
+.tabela-campos td, .tabela-campos th {
+  border: 1px solid;
+  height: 4vh;
+ 
+}
+
+
 .titulo-lista-acolhidos {
   font-size: 1.8em;
   font-weight: bold;
