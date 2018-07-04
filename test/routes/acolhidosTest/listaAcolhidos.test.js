@@ -11,7 +11,7 @@ describe('Quando acesso listaAcolhidos', () => {
             include: jest.fn()
         }
 
-        const req = {}
+        const req = { user: { tipo: 'medica' }}
         const res = {render : jest.fn()}
         const acolhidos = [{
             id: '1', 
@@ -19,7 +19,7 @@ describe('Quando acesso listaAcolhidos', () => {
             prescricaos: [{ 
                 validade: '2018-06-08', 
                 updated_at: '2018-06-15',
-                acolhido_id: '1' 
+                acolhido_id: '1', 
             }] 
         }]
 
@@ -33,7 +33,8 @@ describe('Quando acesso listaAcolhidos', () => {
             order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
             include: [{ model, required: false, attributes: ['validade', 'updated_at']}]
         }))
-        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos }))
+        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos, 
+            tipoDoUsuario: req.user.tipo }))
         .then(done)
         .catch(done)
     })})
