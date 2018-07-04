@@ -31,9 +31,10 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       })
     }
 
-    if (tipoDoUsuario == 'farmaceutica') {
-      return res.render('pages/farmaceutica/infoAcolhidoFarmaceutica', {
+    if (tipoDoUsuario === 'farmacia') {
+      return res.render('pages/farmacia/infoAcolhidoFarmaceutica', {
         prescricaoId: req.params.prescricao_id,
+        tipoDoUsuario: req.user.tipo,
         acolhido,
         prescricaos: acolhido.prescricaos,
         updateUrl: req.urlOriginal

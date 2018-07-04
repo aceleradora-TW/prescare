@@ -35,7 +35,7 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
           acolhido: dieta.prescricao.acolhido
         })
       }
-      if (tipoDoUsuario == 'farmaceutica') {
+      if (tipoDoUsuario == 'farmacia') {
         res.render('pages/error')
       }
     })

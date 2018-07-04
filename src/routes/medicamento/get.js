@@ -9,12 +9,12 @@ module.exports = Medicamento => (req, res) => {
         return res.render('pages/error')
       }
       let tipoDoUsuario = req.user.tipo
-      if (tipoDoUsuario != 'farmaceutica') {
+      if (tipoDoUsuario != 'farmacia') {
         res.render('pages/editarMedicamento', { medicamento })
       }
 
-      if (tipoDoUsuario === 'farmaceutica') {
-        res.render('pages/farmaceutica/editarMedicamentoFarmaceutica')
+      if (tipoDoUsuario === 'farmacia') {
+        res.render('pages/farmacia/editarMedicamentoFarmaceutica')
       }
     }).catch(err => console.log(err))
 }
