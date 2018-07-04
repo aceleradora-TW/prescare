@@ -25,9 +25,9 @@
 
             </td>
             <td>
-                <div class="botoes">
-                    <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
-                </div>
+                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                    <input type="submit" value="Abrir">
+                </form>
             </td>
             <%if (tipoDoUsuario === "medica") { %>
             <td>

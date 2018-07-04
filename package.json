@@ -36,6 +36,7 @@
     "express-session": "~1.14.1",
     "html-to-pdf": "^0.1.11",
     "method-override": "~2.3.6",
+    "moment": "^2.22.2",
     "morgan": "~1.7.0",
     "passport-facebook": "~2.1.1",
     "passport-google-oauth": "~1.0.0",
