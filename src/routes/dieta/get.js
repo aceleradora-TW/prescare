@@ -17,7 +17,7 @@ module.exports = Dieta => (req, res) => {
         res.render('pages/editarDieta', { dieta })
       }
 
-      if (tipoDoUsuario == 'farmaceutica') {
+      if (tipoDoUsuario == 'farmacia') {
         res.render('pages/error')
       }
     }).catch(err => console.log(err))
