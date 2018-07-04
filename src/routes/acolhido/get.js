@@ -21,14 +21,13 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
         updateUrl: req.urlOriginal
       })
     }
-    if (tipoDoUsuario === 'neurologista') {
+    if (tipoDoUsuario === 'neuro') {
       return res.render('pages/infoAcolhido', {
         prescricaoId: req.params.prescricao_id,
         acolhido,
         tipoDoUsuario: req.user.tipo,
         prescricaos: acolhido.prescricaos,
-        updateUrl: req.urlOriginal,
-        tipoDoUsuario: req.user.tipo
+        updateUrl: req.urlOriginal
       })
     }
 

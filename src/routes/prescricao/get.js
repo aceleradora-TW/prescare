@@ -14,7 +14,7 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
       res.render('pages/prescricao', { prescricao })
     }
 
-    if (tipoDoUsuario === 'neurologista') {
+    if (tipoDoUsuario === 'neuro') {
       res.render('pages/prescricao', { prescricao })
     }
 

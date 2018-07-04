@@ -15,7 +15,7 @@ module.exports = Cuidado => (req, res) => {
             res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
           })
       }
-      if (tipoDoUsuario === 'neurologista') {
+      if (tipoDoUsuario === 'neuro') {
         cuidado.update(req.body)
           .then(() => {
             res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
