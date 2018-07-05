@@ -62,9 +62,9 @@ http://localhost:3000
 
 https://prescare-staging.herokuapp.com/
 
+
 ## Padrão de commits do projeto
 
-# Padrão de commits
 - emoji do tipo de alteração feita
 - nome de usuário pessoas que trabalharam no código (entre <>, iniciadas por @, separadas por vírgula)
 - mensagem do commit (máximo 50 caracteres, início no imperativo)
