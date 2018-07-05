@@ -41,7 +41,6 @@ cd prescare/
 npm install
 npm run db:start
 npm run db:create
-npm start
 ```
 
 ## Populando o banco local
