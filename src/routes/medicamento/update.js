@@ -1,4 +1,4 @@
-module.exports = Medicamento => (req, res) => {
+module.exports = Medicamento => (req, res, next) => {
   return Medicamento
     .findOne({
       where: {
@@ -11,6 +11,7 @@ module.exports = Medicamento => (req, res) => {
       medicamento.update(req.body)
         .then(() => {
           res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
+          next()
         })
     })
 }

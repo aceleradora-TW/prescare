@@ -5,40 +5,39 @@ describe('Quando acesso listaAcolhidos', () => {
     it('Deve mostrar uma lista de nomes', (done) => {
 
         const Acolhido = {
-            findAll : jest.fn()
+            findAll: jest.fn()
         }
 
         const model = {
             include: jest.fn()
         }
 
-        const req = { user: { tipo: 'medica' }}
-        const res = {render : jest.fn()}
+        const req = { user: { tipo: 'medica' } }
+        const res = { render: jest.fn() }
         const acolhidos = [{
-            id: '1', 
+            id: '1',
             nome: 'Leo',
-            prescricaos: [{ 
-                validade: '2018-06-08', 
+            prescricaos: [{
+                validade: '2018-06-08',
                 updated_at: '2018-06-15',
-                acolhido_id: '1', 
-            }] 
+                acolhido_id: '1',
+            }]
         }]
 
         const prescricaos = acolhidos.prescricaos
 
         Acolhido.findAll.mockResolvedValue(acolhidos)
         model.include.mockResolvedValue(prescricaos)
-        
-        listaAcolhidos(Acolhido, model)(req,res)
-        .then(() => expect(Acolhido.findAll).toBeCalledWith({
-            order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
-            include: [{ model, required: false, attributes: ['validade', 'updated_at']}]
-        }))
-        .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos , prescricaos, 
-            tipoDoUsuario: req.user.tipo, moment }))
-        .then(done)
-        .catch(done)
-    })})
+
+        listaAcolhidos(Acolhido, model)(req, res)
+            .then(() => expect(Acolhido.findAll).toBeCalledWith({
+                order: [['nome', 'ASC'], [{ model }, 'validade', 'DESC']],
+                include: [{ model, required: false, attributes: ['validade', 'updated_at'] }]
+            }))
+            .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos, prescricaos, moment, tipoDoUsuario: req.user.tipo }))
+            .then(done)
+            .catch(done)
+    })
+})
 
 
-    

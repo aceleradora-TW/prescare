@@ -1,4 +1,4 @@
-module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
+module.exports = (Medicamento, Prescricao, Acolhido) => (req, res, next) => {
   return Medicamento
     .findOne({
       where: {
@@ -23,7 +23,6 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         acolhido: medicamento.prescricao.acolhido,
         tipoDoUsuario: req.user.tipo
       })
-
-
+      next()
     })
 }

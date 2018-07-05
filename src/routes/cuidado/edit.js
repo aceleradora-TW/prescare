@@ -1,4 +1,4 @@
-module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
+module.exports = (Cuidado, Prescricao, Acolhido) => (req, res, next) => {
     return Cuidado
         .findOne({
             where: {
@@ -23,5 +23,6 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                 updateUrl: req.originalUrl,
                 acolhido: cuidado.prescricao.acolhido
             })
+            next()
         })
 }

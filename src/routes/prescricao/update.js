@@ -9,7 +9,9 @@ module.exports = Prescricao => (req, res) => {
     },
   })
     .then(prescricao => {
-      prescricao.update(req.body)
+      prescricao.update({
+        validade: moment(req.body.validade, FORMATO_DATA)
+      })
         .then(() => {
           res.redirect(req.originalUrl)
         })
