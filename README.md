@@ -4,10 +4,10 @@
 
 
 ## Pré-requisitos mínimos para contribuir
-Ubuntu 12.04;
-Node.js 4;
-Docker CE;
-NPM
+- Ubuntu 12.04;
+- Node.js 8;
+- Docker CE;
+- NPM
 
 Certifique-se de possuir o Git instalado no seu Ubuntu. Caso não possua, insira os comandos a seguir no terminal:
 ```
@@ -23,13 +23,16 @@ sudo apt-get install -y nodejs
 
 ## Instalando e iniciando Docker
 
-https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1
+Siga o passo-a-passo:
+
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce
 
 
+## Clonando o repositório 
 Abra o terminal e cole o seguinte comando para obter uma cópia do repositório:
-
+```
 git clone https://github.com/aceleradora-TW/prescare.git
-
+```
 
 ## Instalando as dependências:
 ```
