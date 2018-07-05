@@ -5,11 +5,9 @@
         <th>Validade</th>
         <th>Abrir</th>
 
-        <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
-        <th>Excluir</th>
-        <th>Enviar para farmacia</th>
-        <% } %>
-
+        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+            <th>Excluir</th>
+            <% } %>
     </tr>
 
     <%for (prescricao of prescricaos){%>
@@ -29,24 +27,45 @@
                     : "-" %>
 
             </td>
-            <td>
-                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                    <input type="submit" value="Abrir">
-                </form>
-            </td>
-            <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
-            <td>
-                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                    <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-                </form>
-            </td>
-            <td>
-                <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
-                    <input type="submit" value="Enviar">
-                </form>
-            </td>
-            <% } %>
-            
+            <%if (tipoDoUsuario === "farmaceutica") { %>
+                <td>
+                    <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                        <input type="submit" value="Abrir">
+                    </form>
+                </td>
+                <% } %>
+
+                    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+
+                        <%if (prescricao.usuario != tipoDoUsuario) { %>
+                            <td>
+                                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                                    <input type="submit" disabled value="Abrir">
+                                </form>
+                            </td>
+
+                            <td>
+                                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                                    <input type="submit" value="Excluir" disabled onclick="return confirm('Tem certeza que deseja excluir?');">
+                                </form>
+                            </td>
+
+                            <% } %>
+                                <%if (prescricao.usuario === tipoDoUsuario) { %>
+                                    <td>
+                                        <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                                            <input type="submit" value="Abrir">
+                                        </form>
+                                    </td>
+
+                                    <td>
+                                        <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                                        </form>
+                                    </td>
+                                    <% } %>
+
+                                        <% } %>
         </tr>
         <%}%>
 

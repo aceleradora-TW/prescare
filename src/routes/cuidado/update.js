@@ -8,22 +8,9 @@ module.exports = Cuidado => (req, res) => {
       if (!cuidado) {
         return res.render('pages/error')
       }
-      let tipoDoUsuario = req.user.tipo
-      if (tipoDoUsuario === 'clinica') {
-        cuidado.update(req.body)
-          .then(() => {
-            res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
-          })
-      }
-      if (tipoDoUsuario === 'neuro') {
-        cuidado.update(req.body)
-          .then(() => {
-            res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
-          })
-      }
-
-      if (tipoDoUsuario === 'farmaceutica') {
-        res.render('pages/error')
-      }
+      cuidado.update(req.body)
+        .then(() => {
+          res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
+        })
     })
 }
