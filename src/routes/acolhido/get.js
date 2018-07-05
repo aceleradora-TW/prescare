@@ -1,3 +1,5 @@
+const moment = require('moment')
+
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
