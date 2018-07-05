@@ -11,10 +11,10 @@
 
     </tr>
 
-    <%for (prescricao of prescricaos){%>
+    <% for (prescricao of prescricaos) { %>
         <tr>
             <td>
-                <%= prescricao.data 
+                <%= prescricao.data
                     ? prescricao.data.split("-").reverse().join("/")
                     : "-" %>
             </td>
@@ -22,7 +22,7 @@
                 <%= prescricao.updated_at %>
             </td>
             <td>
-                <%= prescricao.validade 
+                <%= prescricao.validade
                     ? prescricao.validade.split("-").reverse().join("/")
                     : "-" %>
             </td>
@@ -32,16 +32,17 @@
                 </form>
             </td>
             <%if (tipoDoUsuario === "medica") { %>
-            <td>
-                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                    <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-                </form>
-            </td>
-            <td>
-                <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
-                    <input type="submit" value="Enviar">
-                </form>
-            </td>
+              <td>
+                  <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                      <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                  </form>
+              </td>
+              <td>
+                  <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
+                      <input type="submit" value="Enviar">
+                  </form>
+              </td>
         </tr>
-        <%}%>
+            <%}%>
+    <% } %>
 </table>
