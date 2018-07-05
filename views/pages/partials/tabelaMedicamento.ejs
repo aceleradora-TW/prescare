@@ -15,31 +15,30 @@
 
     <tbody>
         <%for (medicamento of prescricao.medicamentos){%>
-        <tr>
-            <td>
-                <%= medicamento.nome %>
-            </td>
-            <td>
-                <%= medicamento.dosagem %>
-            </td>
-            <td>
-                <%= medicamento.formaFarmaceutica %>
-            </td>
-            <td>
-                <%= medicamento.via %>
-            </td>
+            <tr>
+                <td>
+                    <%= medicamento.nome %>
+                </td>
+                <td>
+                    <%= medicamento.dosagem %>
+                </td>
+                <td>
+                    <%= medicamento.formaFarmaceutica %>
+                </td>
+                <td>
+                    <%= medicamento.via %>
+                </td>
 
-            <td class="td-posologia">
-                <%= medicamento.posologia %>
-            </td>
-            <td class="td-observacao">
-                <%= medicamento.observacoes %>
-            </td>
-            <td>
-                <%= medicamento.validadeMed %>
-            </td>
-
-        
+                <td class="td-posologia">
+                    <%= medicamento.posologia %>
+                </td>
+                <td class="td-observacao">
+                    <%= medicamento.observacoes %>
+                </td>
+                <td>
+                    <%= medicamento.validadeMed %>
+                </td>
+                        
             <td class="td-botao">
                 <div>
                     <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>

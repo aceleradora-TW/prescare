@@ -21,7 +21,6 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         medicamento,
         updateUrl: req.originalUrl,
         acolhido: medicamento.prescricao.acolhido,
-        tipoDoUsuario: req.user.tipo
       })
 
 

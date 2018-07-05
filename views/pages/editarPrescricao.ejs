@@ -52,9 +52,6 @@
         <%= prescricao.validade.split("-").reverse().join("/") %>
       </div>
       <% } %>
-
-
-
   <script>
     var hoje = new Date();
     window.$(function () {
@@ -62,10 +59,7 @@
         dateFormat: "dd/mm/yy",
         minDate: hoje
       });
-    });
-
-  
-     
+    });    
 
     function validaValidade(data) {
       if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {

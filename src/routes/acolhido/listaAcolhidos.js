@@ -9,6 +9,6 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       attributes: ['validade', 'updated_at']
     }]
   }).then(acolhidos => {
-    res.render('pages/listaAcolhidos', { acolhidos, prescricaos: acolhidos.prescricaos, tipoDoUsuario: req.user.tipo, moment:moment })
+    res.render('pages/listaAcolhidos', { acolhidos, prescricaos: acolhidos.prescricaos, moment: moment })
   }).catch(err => console.log(err))
 }

@@ -5,7 +5,7 @@
         <th>Validade</th>
         <th>Abrir</th>
 
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
             <th>Excluir</th>
             <% } %>
     </tr>
@@ -27,7 +27,7 @@
                     : "-" %>
 
             </td>
-            <%if (tipoDoUsuario === "farmaceutica") { %>
+            <%if (user.tipo === "farmaceutica") { %>
                 <td>
                     <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                         <input type="submit" value="Abrir">
@@ -35,9 +35,9 @@
                 </td>
                 <% } %>
 
-                    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+                    <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
 
-                        <%if (prescricao.usuario != tipoDoUsuario) { %>
+                        <%if (prescricao.usuario != user.tipo) { %>
                             <td>
                                 <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                                     <input type="submit" disabled value="Abrir">
@@ -51,7 +51,7 @@
                             </td>
 
                             <% } %>
-                                <%if (prescricao.usuario === tipoDoUsuario) { %>
+                                <%if (prescricao.usuario === user.tipo) { %>
                                     <td>
                                         <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                                             <input type="submit" value="Abrir">
