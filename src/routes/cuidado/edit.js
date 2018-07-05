@@ -15,28 +15,13 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                 return res.render('pages/error')
             }
 
-            let tipoDoUsuario = req.user.tipo
-            if (tipoDoUsuario === 'clinica') {
-                res.render('pages/editarCuidado', {
-                    acolhidoId: req.params.acolhido_id,
-                    prescricaoId: req.params.prescricao_id,
-                    cuidado,
-                    updateUrl: req.originalUrl,
-                    acolhido: cuidado.prescricao.acolhido
-                })
-            }
-            if (tipoDoUsuario === 'neuro') {
-                res.render('pages/editarCuidado', {
-                    acolhidoId: req.params.acolhido_id,
-                    prescricaoId: req.params.prescricao_id,
-                    cuidado,
-                    updateUrl: req.originalUrl,
-                    acolhido: cuidado.prescricao.acolhido
-                })
-            }
-
-            if (tipoDoUsuario === 'farmaceutica') {
-                res.render('pages/error')
-            }
+            res.render('pages/editarCuidado', {
+                acolhidoId: req.params.acolhido_id,
+                prescricaoId: req.params.prescricao_id,
+                cuidado,
+                tipoDoUsuario: req.user.tipo,
+                updateUrl: req.originalUrl,
+                acolhido: cuidado.prescricao.acolhido
+            })
         })
 }
