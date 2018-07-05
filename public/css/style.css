@@ -107,30 +107,6 @@
   background-color: white;
 }
 
-.botao-voltar {
-  background-color:  #81b4db;
-  border-radius: 7px;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 5vw;
-  text-align: center;
-  padding-top: 3px;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display:block;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
-}
-
 .box-acolhido {
   background: white;
   border-radius: 12px;
@@ -167,6 +143,7 @@
 .input {
   padding-left: 1vw;
 }
+
 
 label {
   font-size: 25px;
@@ -266,7 +243,7 @@ label {
 
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
-  height: 4vh;
+  height: 3vh;
 }
 
 .tabela-prescricao td {
@@ -275,6 +252,7 @@ label {
 
 .tabela-prescricao tbody tr .td-observacao {
   text-transform: none;
+  width: 20%;
 }
 
 .tabela-prescricao tbody tr .td-posologia {
@@ -284,22 +262,6 @@ label {
 .tabela-prescricao tbody tr .td-posologia:first-line { 
   line-height: 0; 
 }
-
-
-.tabela-campos {
-  border-collapse: collapse;
-  margin: auto;
-  margin-bottom: 5vh;
-  text-align: center;
-  width: 75%;
-}
-
-.tabela-campos td, .tabela-campos th {
-  border: 1px solid;
-  height: 4vh;
- 
-}
-
 
 .titulo-lista-acolhidos {
   font-size: 1.8em;
@@ -346,4 +308,52 @@ label {
 
 ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+/* PAGINA IMPRESSAO */
+
+.cabecalho-impressao {
+  text-align: center;
+  padding: 2vh 0;
+}
+
+.fm-impressao {
+  width: 10%;
+}
+
+.tabela-campos-medico {
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 5vh;
+  text-align: center;
+  width: 70%;
+}
+
+.tabela-campos {
+  margin-bottom: 2vh;
+}
+
+.tabela-campos-medico td, .tabela-campos-medico th {
+  border: 1px solid;
+  height: 2vh;
+}
+
+.nome-crm {
+  margin: 3vw 64vw;
+}
+
+.nome-tecnico{
+  height: 4vh;
+  width: 15% ;
+}
+
+.info-impressao {
+  padding-top: 1vh;
+  padding-left: 5vw;
+  border-collapse: collapse;
+  margin: auto;
+  margin-bottom: 8vh;
+  text-align: center;
+  width: 100%;
 }
