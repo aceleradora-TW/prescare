@@ -8,18 +8,29 @@
     <%- include partials/cabecalhoTelas.ejs %>
   </div>
 
-  <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
+  <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST" onsubmit="return validaValidade(this)";>
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
     <input type="text" name="validade" id="validade">
     <div class="botoes">
-      <input type="submit" value="Salvar" onclick="alert('Validade definida')">
+      <input type="submit" value="Salvar">
     </div>
   </form>
 
   <script>
     window.$(function () {
+      var hoje = new Date();
       window.$("#validade").datepicker({
-        dateFormat: "dd/mm/yy"
+        dateFormat: "dd/mm/yy",
+        minDate: hoje
       });
     });
+
+    function validaValidade(data) {
+      if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
+        alert("Por favor, informe a validade.");
+        data.validade.focus();
+        return false;
+      }
+      return alert('Validade definida');
+    }
   </script>
