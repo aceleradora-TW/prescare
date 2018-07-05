@@ -43,6 +43,7 @@
   margin:auto;
 }
 
+
 .botao-voltar a {
   color: white;
   font-size: 15px;
@@ -63,6 +64,7 @@
   padding: 2vh 0;
   display: inline-flex;
   text-align: center;
+  
  }
 
 .botoes a{
@@ -77,6 +79,8 @@
   padding-top: 5px;
   width: 14vw;
   cursor: pointer;
+  display: block;
+  text-decoration: none;
 }
 
 .botoes a:hover{
