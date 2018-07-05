@@ -45,7 +45,7 @@ npm run db:create
 
 ## Populando o banco local
 ```
-node seed.js
+npm run db:seed
 ```
 ## Iniciando o servidor
 Para iniciar o servidor, execute o seguinte comando, dentro do diretório /prescare:
