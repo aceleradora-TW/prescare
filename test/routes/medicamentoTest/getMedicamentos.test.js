@@ -19,13 +19,12 @@ describe('Quando acesso medicamento', () => {
             validade: '22/06/2018',
         }
 
-        const tipoDoUsuario = req.user.tipo
 
         Medicamento.findOne.mockResolvedValue(medicamento);
 
         return medicamentoRoute(Medicamento)(req, res)
             .then(() => expect(Medicamento.findOne).toBeCalledWith({ 'where': { 'id': req.params.medicamento_id } }))
-            .then(() => expect(res.render).toBeCalledWith('pages/editarMedicamento', { medicamento, tipoDoUsuario }))
+            .then(() => expect(res.render).toBeCalledWith('pages/editarMedicamento', { medicamento }))
             .then(done)
             .catch(done)
     })
