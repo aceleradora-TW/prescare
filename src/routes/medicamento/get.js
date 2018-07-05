@@ -8,6 +8,6 @@ module.exports = Medicamento => (req, res) => {
       if (!medicamento) {
         return res.render('pages/error')
       }
-      res.render('pages/editarMedicamento', { medicamento })
+      res.render('pages/editarMedicamento', { medicamento, tipoDoUsuario: req.user.tipo })
     }).catch(err => console.log(err))
 }
