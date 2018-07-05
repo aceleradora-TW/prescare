@@ -9,7 +9,7 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
     }
     res.render('pages/prescricao', {
       prescricao,
-      tipoUsuario: req.user.tipo
+      tipoDoUsuario: req.user.tipo
      })
   }).catch(err => console.log(err))
 }

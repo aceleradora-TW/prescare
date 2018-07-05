@@ -30,14 +30,14 @@ describe('Quando acesso acolhido', () => {
         const updateUrl = req.urlOriginal
         const prescricaoId = req.params.prescricao_id
         const prescricaos = acolhido.prescricaos
-        const tipoUsuario = req.user.tipo
+        const tipoDoUsuario = req.user.tipo
         
         Acolhido.findOne.mockResolvedValue(acolhido);
         model.include.mockResolvedValue(prescricaos);
 
          acolhidoRoutes(Acolhido, model)(req, res)
         .then(() => expect(Acolhido.findOne).toBeCalledWith( {'where': {'id': req.params.acolhido_id }, 'include' :[{model, 'required' : false, 'where': {'acolhido_id' :req.params.acolhido_id}}]}))
-        .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl, tipoUsuario }))
+        .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl, tipoDoUsuario }))
         .then(done)
         .catch(done)
     })

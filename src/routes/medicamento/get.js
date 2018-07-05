@@ -10,7 +10,7 @@ module.exports = Medicamento => (req, res) => {
       }
       res.render('pages/editarMedicamento', {
         medicamento,
-        tipoUsuario: req.user.tipo
+        tipoDoUsuario: req.user.tipo
       })
     }).catch(err => console.log(err))
 }

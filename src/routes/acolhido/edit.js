@@ -8,6 +8,7 @@ module.exports = Acolhido => (req, res) => {
     if (!acolhido) {
       return res.render('pages/error')
     }
+    return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
 
     let usuario = req.user
 
