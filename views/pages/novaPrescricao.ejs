@@ -1,10 +1,11 @@
 <%- contentFor('body') %>
 
+  <div class="botao-voltar">
+    <a href="/acolhido/<%=acolhido.id %>">Voltar</a>
+  </div>
+
   <div class="cabecalho-telas">
     <%- include partials/cabecalhoTelas.ejs %>
-      <div class="botao-voltar">
-        <a href="/acolhido/<%=acolhido.id %>">Voltar</a>
-      </div>
   </div>
 
   <form action="/acolhido/<%= acolhido.id %>/prescricao" method="POST">
@@ -14,10 +15,6 @@
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
   </form>
-  
-  <div class="botao-voltar">
-    <a href="/acolhido/<%=acolhido.id%>">Voltar</a>
-  </div>
 
   <script>
     window.$(function () {
