@@ -61,3 +61,32 @@ http://localhost:3000
 ### Heroku Staging:
 
 https://prescare-staging.herokuapp.com/
+
+## Padrão de commits do projeto
+
+# Padrão de commits
+- emoji do tipo de alteração feita
+- nome de usuário pessoas que trabalharam no código (entre <>, iniciadas por @, separadas por vírgula)
+- mensagem do commit (máximo 50 caracteres, início no imperativo)
+- número da história de usuário do github
+
+## resumindo
+emoji < @username1, @username2, @username3 > frase do commit (imperativo - até 50 caracteres) #número da história
+
+### Exemplo:
+
+```
+:memo: <@AndreiRupertti, @ClaudiaStrm> cria padrão de commits #0
+``` 
+
+## Tabela de emojis
+Emoji | Código | Tipo de commit
+------------ | ------------- | -------------
+:rocket: | `:rocket:` | funcionalidades
+:memo: | `:memo:` | documentação
+:art: | `:art:` | refatoração
+:bug: | `:bug:` | consertar (bugs)
+:construction: | `:construction:` | trabalho em andamento 
+:see_no_evil: | `:see_no_evil:` | gambiarra
+:fire: | `:fire:` | remover códigos/arquivos  
+:wrench: | `:wrench:` | configuração de ambiente 
