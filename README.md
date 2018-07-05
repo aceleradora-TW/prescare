@@ -2,6 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/aceleradora-TW/prescare.svg?style=svg)](https://circleci.com/gh/aceleradora-TW/prescare)
 
+Prescrição eletrônica para gerenciamento de medicamentos e cuidados feita para a casa Menino Jesus de Praga para atender com excelência os acolhidos que lá residem. 
 
 ## Pré-requisitos mínimos para contribuir
 - Ubuntu 12.04;
@@ -9,7 +10,7 @@
 - Docker CE;
 - NPM
 
-Certifique-se de possuir o Git instalado no seu Ubuntu. Caso não possua, insira os comandos a seguir no terminal:
+### Certifique-se de possuir o Git instalado no seu Ubuntu. Caso não possua, insira os comandos a seguir no terminal:
 ```
 sudo apt-get update
 sudo apt-get install git
@@ -53,10 +54,10 @@ Para iniciar o servidor, execute o seguinte comando, dentro do diretório /presc
 npm start
 ```
 ## Acessando a página
-Acessar localmente o projeto:
+### Acessar localmente o projeto:
 
 http://localhost:3000
 
-URL Staging:
+### Heroku Staging:
 
 https://prescare-staging.herokuapp.com/
