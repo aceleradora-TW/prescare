@@ -9,7 +9,7 @@ describe('Quando acesso acolhido', () => {
         const model = {
             include: jest.fn()
         }
-        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: '', user: { tipo: 'clinica' } }
+        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: '' }
         const res = { render: jest.fn() }
 
         const acolhido = {
@@ -30,14 +30,13 @@ describe('Quando acesso acolhido', () => {
         const updateUrl = req.urlOriginal
         const prescricaoId = req.params.prescricao_id
         const prescricaos = acolhido.prescricaos
-        const tipoDoUsuario = req.user.tipo
 
         Acolhido.findOne.mockResolvedValue(acolhido);
         model.include.mockResolvedValue(prescricaos);
 
         acolhidoRoutes(Acolhido, model)(req, res)
             .then(() => expect(Acolhido.findOne).toBeCalledWith({ 'where': { 'id': req.params.acolhido_id }, 'include': [{ model, 'required': false, 'where': { 'acolhido_id': req.params.acolhido_id } }] }))
-            .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl, tipoDoUsuario }))
+            .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl }))
             .then(done)
             .catch(done)
     })
