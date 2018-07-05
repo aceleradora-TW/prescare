@@ -6,6 +6,7 @@
 </div>
 
 <div class="prescricao">
+<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
 <<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
 <<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
   <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
@@ -15,6 +16,9 @@
 =======
   <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
 >>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
+=======
+  <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+>>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
@@ -24,6 +28,7 @@
 
   <%- include partials/tabelaMedicamento.ejs %>
 
+<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
 <<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
 <<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
         <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
@@ -33,6 +38,9 @@
 =======
         <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
 >>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
+=======
+        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+>>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
           <div class="botoes right">
             <form action="<%= updateUrl %>/cuidado" method="POST">
               <input type="submit" value="Adicionar cuidados">
@@ -54,6 +62,7 @@
   </form>
 </div>
 
+<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
 <<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
 <<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
 <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
@@ -63,6 +72,9 @@
 =======
 <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
 >>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
+=======
+<%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+>>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
     <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">
@@ -88,6 +100,15 @@
       <% } %>
 
 
+<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
+=======
+      <%if (user.tipo === "farmaceutica") { %>
+        <div>
+          Validade da prescrição:
+          <%= prescricao.validade.split("-").reverse().join("/") %>
+        </div>
+        <% } %>
+>>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
 
   <script>
     var hoje = new Date();

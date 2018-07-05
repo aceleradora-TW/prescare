@@ -19,7 +19,6 @@ module.exports = (Cuidado, Prescricao, Acolhido) => (req, res) => {
                 acolhidoId: req.params.acolhido_id,
                 prescricaoId: req.params.prescricao_id,
                 cuidado,
-                tipoDoUsuario: req.user.tipo,
                 updateUrl: req.originalUrl,
                 acolhido: cuidado.prescricao.acolhido
             })
