@@ -6,13 +6,7 @@
     <div class="cabecalho-telas">
         <%- include partials/cabecalhoTelas.ejs %>
     </div>
-
-    <%if (tipoDoUsuario === "medica") { %>
-        <div class="botoes medicamento">
-            <form action="/acolhido/<%= acolhido.id %>/prescricao/create" method="GET">
-                <input type="submit" value="Nova Prescrição">
-            </form>
-        </div>
-        <% } %>
-
-            <%- include partials/tabelaPrescricaoAcolhido.ejs%>
+    <div class="botao-voltar">
+        <a href="/acolhido/<%= acolhido.id %>/prescricao/create"> Nova Prescrição</a>
+    </div>
+    <%- include partials/tabelaPrescricaoAcolhido.ejs%>
