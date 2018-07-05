@@ -12,9 +12,9 @@
                                         <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
                                             Validade da prescrição:
                                             <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
-                                                <% } %>
+                                        <% } %>
 
-                                                    Atualizado em:
+                                            Atualizado em:
                                     </span>
                                 </div>
                         </a>
@@ -28,4 +28,4 @@
 
         <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
 
-        <% } %>
+    <% } %>
