@@ -1,0 +1,32 @@
+<%- contentFor('body') %>
+  <div class="editar-acolhido">
+    <form action="/acolhido/novo" method="POST">
+      <div class="form-group row">
+          <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
+          <input type="text" name="nome" id="nome" class="form-control form-control-lg col-sm-8">
+        </div>
+      <div class="form-group row">
+        <label for="nascimento" class="col-sm-2 col-form-label col-form-label-lg">Nascimento:</label>
+        <input type="text" name="nascimento" id="nascimento" class="form-control form-control-lg col-sm-8">
+      </div>
+      <div class="form-group row">
+        <label for="peso" class="col-sm-2 col-form-label col-form-label-lg">Peso:</label>
+        <input type="text" name="peso" id="peso" class="form-control form-control-lg col-sm-8">
+      </div>
+      <div class="form-group row">
+        <label for="alergias" class="col-sm-2 col-form-label col-form-label-lg">Alergia:</label>
+        <input type="text" name="alergias" id="alergias" class="form-control form-control-lg col-sm-8">
+      </div>
+      <div class="form-group row">
+        <label for="via_alimentacao" class="col-sm-3 col-form-label col-form-label-lg">Via Alimentação:</label>
+        <input type="text" name="via_alimentacao" id="via_alimentacao" class="form-control form-control-lg col-sm-7">
+      </div>
+      <div class="botoes">
+        <input type="submit" value="Salvar">
+      </div>
+    </form>
+
+    <div class="right botao-voltar">
+      <a href="/lista-acolhidos">Cancelar</a>
+    </div>
+  </div>

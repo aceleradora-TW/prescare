@@ -1,20 +1,22 @@
 
 <%- contentFor('body') %>
-    <section class="section">
-        <main class="main">
-            <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
-            <ul class="lista-acolhidos">
-                <%for (acolhidos of acolhidos){%>
-                    <li>
-                        <a href="/acolhido/<%= acolhidos.id %>">
-                           <span class="bold"> <%= acolhidos.nome %> </span>
-                            <div>
-                              <span> Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
-                             Atualizado em:  </span>
-                              </div>
-                        </a>
-                    </li>
-                <% } %>
-            </ul>
-        </main>
-    </section>
+<section class="section">
+    <main class="main">
+        <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
+        <ul class="lista-acolhidos">
+            <%for (acolhidos of acolhidos){%>
+                <li>
+                    <a href="/acolhido/<%= acolhidos.id %>">
+                        <%= acolhidos.nome %>
+                        <div>
+                            <span> 
+                                Revisar em:  <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '---' %> |
+                                Atualizado em: <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at : '---' %>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </main>
+</section>
