@@ -37,8 +37,8 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         })
       }
 
-      if (tipoDoUsuario === 'farmacia') {
-        res.render('pages/farmacia/editarPrescricaoFarmaceutica', {
+      if (tipoDoUsuario === 'farmaceutica') {
+        res.render('pages/farmaceutica/editarPrescricaoFarmaceutica', {
           prescricao,
           dietas: prescricao.dieta,
           cuidados: prescricao.cuidados,

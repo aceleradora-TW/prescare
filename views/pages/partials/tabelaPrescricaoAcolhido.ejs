@@ -9,10 +9,15 @@
         <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
 =======
         <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+<<<<<<< 0284e305452d2e42fa32ecd34ac59a2883581fcd
 >>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
         <th>Excluir</th>
         <th>Enviar para farmacia</th>
         <% } %>
+=======
+            <th>Excluir</th>
+            <% } %>
+>>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
 
     </tr>
 
@@ -33,6 +38,7 @@
                     : "-" %>
 
             </td>
+<<<<<<< 0284e305452d2e42fa32ecd34ac59a2883581fcd
             <td>
                 <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                     <input type="submit" value="Abrir">
@@ -55,6 +61,47 @@
             </td>
             <% } %>
             
+=======
+            <%if (tipoDoUsuario === "farmaceutica") { %>
+                <td>
+                    <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                        <input type="submit" value="Abrir">
+                    </form>
+                </td>
+                <% } %>
+
+                    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+
+                        <%if (prescricao.usuario != tipoDoUsuario) { %>
+                            <td>
+                                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                                    <input type="submit" disabled value="Abrir">
+                                </form>
+                            </td>
+
+                            <td>
+                                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                                    <input type="submit" value="Excluir" disabled onclick="return confirm('Tem certeza que deseja excluir?');">
+                                </form>
+                            </td>
+
+                            <% } %>
+                                <%if (prescricao.usuario === tipoDoUsuario) { %>
+                                    <td>
+                                        <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                                            <input type="submit" value="Abrir">
+                                        </form>
+                                    </td>
+
+                                    <td>
+                                        <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                                        </form>
+                                    </td>
+                                    <% } %>
+
+                                        <% } %>
+>>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
         </tr>
         <%}%>
 
