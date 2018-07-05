@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/aceleradora-TW/prescare.svg?style=svg)](https://circleci.com/gh/aceleradora-TW/prescare)
 
-Prescrição eletrônica para gerenciamento de medicamentos e cuidados feita para a casa Menino Jesus de Praga para atender com excelência os acolhidos que lá residem. 
+Prescrição eletrônica para gerenciamento de medicamentos e cuidados feita para a casa Menino Jesus de Praga, com o objetivo de atender com excelência os acolhidos que lá residem. 
 
 ## Pré-requisitos mínimos para contribuir
 - Ubuntu 12.04;
