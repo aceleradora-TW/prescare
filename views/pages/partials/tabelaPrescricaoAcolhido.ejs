@@ -5,7 +5,7 @@
         <th>Validade</th>
         <th>Abrir</th>
 
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
             <th>Excluir</th>
             <% } %>
 
@@ -36,7 +36,7 @@
                 </td>
                 <% } %>
 
-                    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
+                    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
 
                         <%if (prescricao.usuario != tipoDoUsuario) { %>
                             <td>

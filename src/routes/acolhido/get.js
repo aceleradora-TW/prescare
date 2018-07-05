@@ -10,36 +10,14 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       return res.render('pages/error')
     }
 
-    let tipoDoUsuario = req.user.tipo
 
-    if (tipoDoUsuario === 'clinica') {
-      res.render('pages/infoAcolhido', {
-        prescricaoId: req.params.prescricao_id,
-        acolhido,
-        tipoDoUsuario: req.user.tipo,
-        prescricaos: acolhido.prescricaos,
-        updateUrl: req.urlOriginal
-      })
-    }
-    if (tipoDoUsuario === 'neuro') {
-      return res.render('pages/infoAcolhido', {
-        prescricaoId: req.params.prescricao_id,
-        acolhido,
-        tipoDoUsuario: req.user.tipo,
-        prescricaos: acolhido.prescricaos,
-        updateUrl: req.urlOriginal
-      })
-    }
-
-    if (tipoDoUsuario === 'farmaceutica') {
-      return res.render('pages/farmaceutica/infoAcolhidoFarmaceutica', {
-        prescricaoId: req.params.prescricao_id,
-        tipoDoUsuario: req.user.tipo,
-        acolhido,
-        prescricaos: acolhido.prescricaos,
-        updateUrl: req.urlOriginal
-      })
-    }
+    res.render('pages/infoAcolhido', {
+      prescricaoId: req.params.prescricao_id,
+      acolhido,
+      tipoDoUsuario: req.user.tipo,
+      prescricaos: acolhido.prescricaos,
+      updateUrl: req.urlOriginal
+    })
 
   }).catch(err => console.log(err))
 }
