@@ -81,6 +81,7 @@
     <div class="botoes">
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
+<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
   <% } %>
 <<<<<<< 507a0548cab1ba72ad025523c847804153f42b8e
 
@@ -99,6 +100,9 @@
       </div>
       <% } %>
 
+=======
+<% } %>
+>>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao
 
 <<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
 =======
@@ -107,6 +111,7 @@
           Validade da prescrição:
           <%= prescricao.validade.split("-").reverse().join("/") %>
         </div>
+<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
         <% } %>
 >>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
 
@@ -131,3 +136,24 @@
       return alert('Validade definida');
     }
   </script>
+=======
+      <% } %>
+          <script>
+            var hoje = new Date();
+            window.$(function () {
+              window.$("#validade").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: hoje
+              });
+            });
+
+            validaValidade = (data) => {
+              if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
+                alert("Por favor, informe a validade.");
+                data.validade.focus();
+                return false;
+              }
+              return alert('Validade definida');
+            }
+          </script>
+>>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao

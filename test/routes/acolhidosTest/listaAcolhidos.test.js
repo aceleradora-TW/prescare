@@ -1,6 +1,5 @@
 const listaAcolhidos = require("../../../src/routes/acolhido/listaAcolhidos")
 const moment = require('moment')
-
 describe('Quando acesso listaAcolhidos', () => {
     it('Deve mostrar uma lista de nomes', (done) => {
 
