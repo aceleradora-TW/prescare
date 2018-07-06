@@ -32,6 +32,12 @@
               <% } %>
 </div>
 
+<div class="botoes right">
+  <form action="<%= updateUrl %>/print" method="GET">
+    <input type="submit" value="Imprimir">
+  </form>
+</div>
+
 <%if (tipoDoUsuario === "clinica") { %>
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
@@ -41,12 +47,6 @@
     </div>
   <% } %>
 
-  <div class="botoes right">
-    <form action="<%= updateUrl %>/print" method="GET">
-      <input type="submit" value="Imprimir">
-    </form>
-  </div>
-     
     <%if (tipoDoUsuario === "farmaceutica") { %>
       <div>
         Validade da prescrição:
