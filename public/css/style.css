@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
 }
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
+}
 
 .bold {
   font-weight: bold;
@@ -83,12 +88,6 @@
 
 .botoes .tiracor {
   text-transform: none;
-}
-
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
 }
 
 .botao-sair {
@@ -322,21 +321,8 @@ label {
   width: 10%;
 }
 
-.tabela-campos-medico {
-  border-collapse: collapse;
-  margin: auto;
-  margin-bottom: 5vh;
-  text-align: center;
-  width: 70%;
-}
-
 .tabela-campos {
   margin-bottom: 2vh;
-}
-
-.tabela-campos-medico td, .tabela-campos-medico th {
-  border: 1px solid;
-  height: 2vh;
 }
 
 .nome-crm {
@@ -349,11 +335,10 @@ label {
 }
 
 .info-impressao {
-  padding-top: 1vh;
-  padding-left: 5vw;
+  padding:10px 20vw;
   border-collapse: collapse;
-  margin: auto;
-  margin-bottom: 8vh;
-  text-align: center;
   width: 100%;
+}
+.info-impressao td, .info-impressao th{
+  padding: 10px
 }
