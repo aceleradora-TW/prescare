@@ -123,6 +123,26 @@
   display: flex;
 }
 
+.cabecalho-login {
+  text-align: center;
+  background-color: #81b4db;
+  background-image: url("../img/logoSemFundo.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  text-decoration: none;
+  background-size: 14vw;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 10%;
+}
+
+.login {
+  padding-top: 10%;
+}
+
 .center {
   text-align: center;
 }
@@ -214,6 +234,16 @@ label {
   margin: auto;
 }
  
+.nome-user-login{
+  color:white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.3em;
+  font-weight: bold;
+ 
+
+}
+
+
 .prescricao{
  padding-top:3%;
 }
