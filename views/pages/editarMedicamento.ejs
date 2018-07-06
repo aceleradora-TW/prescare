@@ -57,7 +57,7 @@
 				</div>
 			</form>
 
-			<%if (tipoDoUsuario === "clinica") {  %> 
+			<%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") {  %> 
 			<div class="botoes">
 				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
 					<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">					
