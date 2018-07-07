@@ -28,5 +28,9 @@
     <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
 
         <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
-
         <% } %>
+
+            <%if (user.tipo === "administrador") 
+                <a href="/usuario/novo"> Inserir Novo Usuário</a>
+                <a href="listaUsuarios"> Lista de Usuários</a>
+                <% } %>

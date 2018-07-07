@@ -1,0 +1,26 @@
+<div class="botao-voltar">
+    <a href="/listaUsuarios">Voltar</a>
+</div>
+<div class="box-acolhido">
+    <div class="texto-acolhido">
+        <div>
+            <span class="bold"> Nome: </span>
+            <span>
+                <%= usuario.nome %>
+            </span>
+        </div>
+
+        <div>
+            <span class="bold"> Tipo de Usuário: </span>
+            <span>
+                <%= usuario.tipo %>
+            </span>
+        </div>
+
+        <a href="/usuario/<%= usuario.id %>/edit" class="tiracor">
+            <i class="fa fa-edit edit"></i>
+            Editar informações
+        </a>
+
+    </div>
+</div>

@@ -7,11 +7,13 @@ const dietaRoutes = require('./dieta')
 const prescricaoRoutes = require('./prescricao')
 const loginRoutes = require('./login')
 const authEnforcer = require('./authEnforcer')
+const usuarioRoutes = require('./usuario')
 
 module.exports = (models, passport) => {
 
   router.use(authEnforcer())
   applicationRoutes(router)
+  usuarioRoutes(models.Usuario, router)
   acolhidoRoutes(models.Acolhido, models.Prescricao, router)
   prescricaoRoutes(models.Prescricao, models.Cuidado, models.Dieta, models.Medicamento, models.Acolhido, router)
   dietaRoutes(models.Dieta, models.Prescricao, models.Acolhido, router)
