@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 .body {  
   background: #aedbfdb0;
   font-family: 'Open Sans', sans-serif;
@@ -26,8 +27,35 @@
 }
 
 .botao-usuario{
-  margin-left: 11vw!important; 
+  margin-left: 19%!important; 
   line-height: 4vh;
+}
+.botao-voltar {
+  background-color:  #81b4db;
+  border-radius: 7px;
+  height: 35px;
+  margin: 1vh;
+  max-width: 150px;
+  min-width: fit-content;
+  min-height: fit-content;
+  width: 5vw;
+  text-align: center;
+  padding-top: 3px;
+  float: left;
+  margin:auto;
+}
+
+.botao-voltar a {
+  color: white;
+  font-size: 15px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.botao-voltar a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .botoes {
@@ -49,6 +77,11 @@
   min-height: fit-content;
   width: 14vw;
   cursor: pointer;
+}
+
+.botoes a:hover{
+  text-decoration: none;
+  color: white;
 }
 
 .botoes input {
