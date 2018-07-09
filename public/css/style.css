@@ -8,36 +8,12 @@
   margin:  auto;
 }
 
+.adiciona-tipo-usuario{
+  margin-left: 1vw;
+}
+
 .bold {
   font-weight: bold;
-}
-
-.botao-voltar {
-  background-color:  #81b4db;
-  border-radius: 7px;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 5vw;
-  text-align: center;
-  padding-top: 3px;
-  float: left;
-  margin:auto;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
 }
 
 .botoes {
@@ -77,7 +53,7 @@
 .botoes button {
   background-color: #81b4db;
   border-radius: 7px;
-  text-decoration-color: white;
+  color: white;
   height: 35px;
   margin: 1vh;
   max-width: 150px;
@@ -310,6 +286,10 @@ label {
 .tiracor {
   color: royalblue;
   text-decoration: none;
+}
+
+.tipo-usuario{
+  margin-left: 2vw;
 }
 
 .td-botao {
