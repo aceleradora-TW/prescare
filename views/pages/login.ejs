@@ -1,6 +1,8 @@
 <html>
 <style>
-    header { display: none !important; }
+    header {
+        display: none !important;
+    }
 </style>
 
 <head>
@@ -11,18 +13,10 @@
 
 </head>
 
-<div class="cabecalho-login">
-        
-    <div class="nome-user-login">
-        <i class="fas fa-user"></i> Prescare
-    </div>
-
-</div>
-
 
 <div class="login">
     <div class="container">
-    
+
         <div class="col-sm-6 col-sm-offset-3">
 
             <h1>
@@ -32,24 +26,25 @@
                 <div class="alert alert-danger">
                     Informe os dados necessários
                 </div>
-            <% } %>
+                <% } %>
 
-            <form action="/login" method="post">
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" class="form-control" name="nome">
-                </div>
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" name="senha">
-                </div>
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" class="form-control" name="senha">
+                        </div>
 
-                <div class='botoes'>
-                    <button type="submit" class="botoes">Entrar</button>
-                </div>
-            </form>
+                        <div class='botoes'>
+                            <button type="submit" class="botoes">Entrar</button>
+                        </div>
+                    </form>
         </div>
 
     </div>
 </div>
+
 </html>
