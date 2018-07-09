@@ -46,6 +46,8 @@
     "sequelize": "^4.37.7"
   },
   "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-plugin-jest": "^21.17.0",
     "jest": "^23.0.1",
     "nodemon": "^1.17.4",
     "npx": "^10.2.0",
