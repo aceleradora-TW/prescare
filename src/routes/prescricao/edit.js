@@ -10,7 +10,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
         return res.render('pages/error')
       }
 
-
       res.render('pages/editarPrescricao', {
         prescricao,
         dietas: prescricao.dieta,

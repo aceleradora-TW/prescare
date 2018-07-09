@@ -5,8 +5,8 @@ describe('Quando acesso medicamento', () => {
         const Medicamento = {
             findOne: jest.fn()
         }
-       
-        const req = { params: { medicamento_id: 1 },user: { tipo:  'clinica' } }
+
+        const req = { params: { medicamento_id: 1 } }
         const res = { render: jest.fn() }
         const medicamento = {
             id: 1,

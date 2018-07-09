@@ -5,10 +5,10 @@
         <th>Validade</th>
         <th>Atualizada em</th>
         <th>Abrir</th>
-        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
+        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
             <th>Excluir</th>
             <% } %>
-
     </tr>
 
     <% for (prescricao of prescricaos){ %>
@@ -35,39 +35,47 @@
                 : '-' %>
             </td>
 
-            <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-                <% if (prescricao.usuario !== user.tipo) { %>
-                    <td>
-                        <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                            <input type="submit" disabled value="Abrir">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                            <input type="submit" value="Excluir" disabled onclick="return confirm('Tem certeza que deseja excluir?');">
-                        </form>
-                    </td>
-                    <% } %>
-                        <% if (prescricao.usuario === user.tipo) { %>
+            <%if (user.tipo === "farmaceutica") { %>
+                <td>
+                    <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                        <input type="submit" value="Abrir">
+                    </form>
+                </td>
+                <% } %>
+
+                    <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+                        <% if (prescricao.usuario !== user.tipo) { %>
                             <td>
                                 <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                                    <input type="submit" value="Abrir">
+                                    <input type="submit" disabled value="Abrir">
                                 </form>
                             </td>
                             <td>
                                 <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                                    <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                                    <input type="submit" value="Excluir" disabled onclick="return confirm('Tem certeza que deseja excluir?');">
                                 </form>
                             </td>
                             <% } %>
-
-                                <% }  else { %>
+                                <% if (prescricao.usuario === user.tipo) { %>
                                     <td>
                                         <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                                             <input type="submit" value="Abrir">
                                         </form>
                                     </td>
+                                    <td>
+                                        <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
+                                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                                        </form>
+                                    </td>
                                     <% } %>
+
+                                        <% }  else { %>
+                                            <td>
+                                                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                                                    <input type="submit" value="Abrir">
+                                                </form>
+                                            </td>
+                                            <% } %>
         </tr>
         <% } %>
 </table>

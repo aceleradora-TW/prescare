@@ -30,7 +30,7 @@ const createMedicamento = prescricao => models.Medicamento.create({
   observacoes: 'nada',
   prescricao_id: prescricao.id
 })
-.then(() => prescricao)
+  .then(() => prescricao)
 
 const createCuidado = prescricao => models.Cuidado.create({
   descricao: 'Dar banho',
@@ -52,16 +52,17 @@ const createUsuarioClinica = () => models.Usuario.create({
   senha: 'marlene',
 })
 
-const createUsuarioNeuro = () => models.Usuario.create({
+
+const createUsuarioNeurologista = () => models.Usuario.create({
   tipo: 'neurologista',
-  nome: 'Nara',
-  senha: 'nara',
+  nome: 'Karen',
+  senha: 'karen',
 })
 
 const createUsuarioFarmaceutica = () => models.Usuario.create({
-    tipo: 'farmaceutica',
-    nome: 'Fabiana',
-    senha: 'fabi',
+  tipo: 'farmaceutica',
+  nome: 'Fabiana',
+  senha: 'fabi',
 })
 
 const letItCrash = error => {
@@ -79,7 +80,7 @@ databaseConnection
   .then(createCuidado)
   .then(createDieta)
   .then(createUsuarioClinica)
-  .then(createUsuarioNeuro)
+  .then(createUsuarioNeurologista)
   .then(createUsuarioFarmaceutica)
   .then(finishWithSuccess)
   .catch(letItCrash)

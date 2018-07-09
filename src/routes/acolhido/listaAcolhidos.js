@@ -1,5 +1,6 @@
+const moment = require('moment')
+
 module.exports = (Acolhido, Prescricao) => (req, res) => {
-  const moment = require('moment')
   return Acolhido.findAll({
     order: [['nome', 'ASC'], [{ model: Prescricao }, 'validade', 'DESC']],
     include: [{

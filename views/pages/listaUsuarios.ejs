@@ -1,0 +1,21 @@
+
+<%- contentFor('body') %>
+<div class="botoes">
+    <a class=" botao-voltar" href="/lista-acolhidos">Voltar</a>
+</div>
+<section class="section">
+    <main class="main">
+        <h1 class="titulo-lista-acolhidos">Lista de Usuários</h1>
+        <ul class="lista-acolhidos">
+            <%for (usuario of usuarios){%>
+                <li>
+                    <a href="/usuario/<%= usuario.id %>">
+                        Nome:
+                        <%= usuario.nome %> | Tipo de Usuário:
+                            <%= usuario.tipo %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+    </main>
+</section>
