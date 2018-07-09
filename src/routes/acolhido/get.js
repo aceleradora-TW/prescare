@@ -1,3 +1,5 @@
+const moment = require('moment')
+
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
@@ -16,7 +18,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       acolhido,
       prescricaos: acolhido.prescricaos,
       updateUrl: req.urlOriginal,
-      tipoDoUsuario: req.user.tipo
+      moment: moment
     })
 
   }).catch(err => console.log(err))

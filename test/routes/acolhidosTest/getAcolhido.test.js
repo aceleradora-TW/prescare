@@ -1,4 +1,5 @@
 const acolhidoRoutes = require("../../../src/routes/acolhido/get")
+const moment = require('moment')
 
 describe('Quando acesso acolhido', () => {
     it('Deve mostrar pagina com prescrição e suas abas atualizaveis', (done) => {
@@ -9,7 +10,7 @@ describe('Quando acesso acolhido', () => {
         const model = {
             include: jest.fn()
         }
-        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: '' }
+        const req = { params: { acolhido_id: 1, prescricao_id: 1 }, urlOriginal: '', user: { tipo: 'clinica' } }
         const res = { render: jest.fn() }
 
         const acolhido = {
@@ -36,7 +37,7 @@ describe('Quando acesso acolhido', () => {
 
         acolhidoRoutes(Acolhido, model)(req, res)
             .then(() => expect(Acolhido.findOne).toBeCalledWith({ 'where': { 'id': req.params.acolhido_id }, 'include': [{ model, 'required': false, 'where': { 'acolhido_id': req.params.acolhido_id } }] }))
-            .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl }))
+            .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, prescricaoId, prescricaos, updateUrl, moment }))
             .then(done)
             .catch(done)
     })
