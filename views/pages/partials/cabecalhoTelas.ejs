@@ -37,10 +37,13 @@
             </span>
         </div>
 
-              <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+
+        <%if ( user.tipo === "clinica" || user.tipo === "neurologista") { %>
+
+             <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
                 <i class="fa fa-edit edit"></i>
                 Editar informações
             </a>
-             
+        <% } %>
     </div>
 </div>

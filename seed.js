@@ -52,11 +52,10 @@ const createUsuarioClinica = () => models.Usuario.create({
   senha: 'marlene',
 })
 
-
-const createUsuarioNeurologista = () => models.Usuario.create({
+const createUsuarioNeuro = () => models.Usuario.create({
   tipo: 'neurologista',
-  nome: 'Karen',
-  senha: 'karen',
+  nome: 'Nara',
+  senha: 'nara',
 })
 
 const createUsuarioFarmaceutica = () => models.Usuario.create({
@@ -80,7 +79,7 @@ databaseConnection
   .then(createCuidado)
   .then(createDieta)
   .then(createUsuarioClinica)
-  .then(createUsuarioNeurologista)
+  .then(createUsuarioNeuro)
   .then(createUsuarioFarmaceutica)
   .then(finishWithSuccess)
   .catch(letItCrash)
