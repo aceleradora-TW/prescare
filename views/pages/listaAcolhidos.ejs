@@ -9,13 +9,12 @@
                             <%= acolhidos.nome %>
                                 <div>
                                     <span>
-                                        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+                                        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
                                             Validade da prescrição:
-                                            <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
+                                            <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '-' %> |
                                                 <% } %>
-
                                                     Atualizado em:
-                                                    <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %>
+                                                    <%= acolhidos.prescricaos[0] ? moment(acolhidos.prescricaos[0].updated_at).format('DD/MM/YYYY HH:mm:ss') : '---' %>
                                     </span>
                                 </div>
                         </a>
@@ -25,8 +24,10 @@
         </main>
     </section>
 
-    <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
+    <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
 
-        <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+        <div class="botoes">
+            <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+        </div>
 
         <% } %>

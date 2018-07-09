@@ -1,5 +1,5 @@
 <%- contentFor('body') %>
-	<div class="botao-voltar">
+	<div class="botoes voltar">
 		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
 	</div>
 
@@ -10,11 +10,11 @@
 	<div class="medicamento">
 		<h1>Medicamento</h1>
 
-		<form action="<%= updateUrl %>" method="POST">
+			<form action="<%= updateUrl %>" method="POST">
 			<div class="form-group row">
 				<label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
 				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8"
-				<%if (tipoDoUsuario === "farmaceutica") { %> disabled <% } %> >
+				<%if (user.tipo === "farmaceutica") { %> disabled <% } %> >
 			</div>
 
 			<div class="form-group row">
@@ -30,9 +30,8 @@
 			<div class="form-group row">
 				<label for="via" class="col-sm-2 col-form-label col-form-label-lg">Via:</label>
 				<input type="text" name="via" value="<%= medicamento.via %>" class="form-control form-control-lg col-sm-8" 
-				<%if (tipoDoUsuario === "farmaceutica") { %> disabled <% } %> >
+				<%if (user.tipo === "farmaceutica") { %> disabled <% } %> >
 			</div>
-
 
 			<div class="form-group row">
 				<label for="posologia" class="col-sm-2 col-form-label col-form-label-lg">Posologia: (hora-dose)</label>
@@ -42,26 +41,27 @@
 			<div class="form-group row">
 				<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
 				<input type="text" name="observacoes" value="<%= medicamento.observacoes %>" class="form-control form-control-lg col-sm-8"
-				<%if (tipoDoUsuario === "farmaceutica") { %> disabled <% } %> >
+				<%if (user.tipo === "farmaceutica") { %> disabled <% } %> >
 			</div>
 
 			<div class="form-group row">
 				<label for="validadeMed" class="col-sm-2 col-form-label col-form-label-lg">Validade:</label>
 				<input type="text" name="validadeMed" value="<%= medicamento.validadeMed %>" class="form-control form-control-lg col-sm-8"
-				<%if (tipoDoUsuario === "farmaceutica") { %> disabled <% } %> >
+				<%if (user.tipo === "farmaceutica") { %> disabled <% } %> >
 			</div>
 			
-			<div>
+			<div class="conjunto-botoes">
 				<div class="botoes">
 					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
 				</div>
 			</form>
 
-			<%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") {  %> 
+			<%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") {  %> 
 			<div class="botoes">
 				<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
 					<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">					
 			</form>
 			<% } %>
+			</div>
 		</div>
 	</div>

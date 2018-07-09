@@ -1,103 +1,62 @@
 * {
   box-sizing: border-box;
   margin: 0;
-}
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
+  /* border: 1px solid red; */
 }
 
 .bold {
   font-weight: bold;
 }
 
-.botao-voltar {
-  background-color:  #81b4db;
-  border-radius: 7px;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 5vw;
-  text-align: center;
-  padding-top: 3px;
-  float: left;
-  margin:auto;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
-}
-
 .botoes {
   margin: auto;
   font-size: 15px;
-  padding: 2vh 0;
   display: inline-flex;
   text-align: center;
  }
 
-.botoes a{
+.botoes a, .botoes input, .botoes button {
+  align-items: center;
   background-color: #81b4db;
+  border: none;
   border-radius: 7px;
   color: white;
+  cursor: pointer;
+  display: flex;
   height: 35px;
-  margin: 1vh;
+  justify-content: center;
   max-width: 185px;
   min-width: fit-content;
   min-height: fit-content;
   width: 14vw;
-  cursor: pointer;
+  text-transform: none;
 }
 
-.botoes input {
-  background-color: #81b4db;
-  border-radius: 7px;
+.botoes input:hover, .botoes a:hover, .botoes button:hover {
+  background: #628aa7;
   color: white;
-  height: 35px;
-  margin: 1vh;
-  max-width: 185px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 14vw;
-  cursor: pointer;
+  text-decoration: none;
 }
-
-.botoes button {
-  background-color: #81b4db;
-  border-radius: 7px;
-  text-decoration-color: white;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 12vw; 
-}
-
+        
 .botoes .tiracor {
   text-transform: none;
 }
 
-.botao-sair {
-  font-family: 'Amatic SC', cursive;
-  font-size: 1.8em;
-  font-weight: bold;
+.botoes.voltar {
+  width: 6vw;
+}
+
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
 }
 
 .botao-sair a {
   color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -119,28 +78,8 @@
   padding: 1%;
 }
 
-.cabecalho-telas {
+.cabecalho-telas, .conjunto-botoes {
   display: flex;
-}
-
-.cabecalho-login {
-  text-align: center;
-  background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  text-decoration: none;
-  background-size: 14vw;
-  min-height: 60px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-bottom: 10%;
-}
-
-.login {
-  padding-top: 10%;
 }
 
 .center {
@@ -148,7 +87,7 @@
 }
 
 .editar-acolhido {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-transform: uppercase;
 }
@@ -163,6 +102,9 @@
   padding-left: 1vw;
 }
 
+input[type="text"]:disabled {
+  background: #ced4da;
+}
 
 label {
   font-size: 25px;
@@ -196,14 +138,6 @@ label {
   background-color: #bdc3c7;
 }
 
-.logout {
-  color: #fff;
-}
-
-.logout:hover{
-  color: #407caa;
-}
-
 .medicamento {
   padding-left: 5%;
   padding-bottom: 5vh;
@@ -221,7 +155,6 @@ label {
 
 .nome-acolhido {
   margin: 0px 0 2vh 0;
-
   text-transform: uppercase;
   font-size: 1.4em;
 }
@@ -234,16 +167,6 @@ label {
   margin: auto;
 }
  
-.nome-user-login{
-  color:white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
-  font-weight: bold;
- 
-
-}
-
-
 .prescricao{
  padding-top:3%;
 }
@@ -256,9 +179,8 @@ label {
   font-size: 20px;
 }
 
-.sub-titulo form{
-  margin:auto;
-
+.sub-titulo form {
+  margin: auto;
 }
 
 .tabela-prescricao {
@@ -266,22 +188,21 @@ label {
   margin: auto;
   margin-bottom: 8vh;
   text-align: center;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
-  height: 3vh;
+  height: 4vh;
 }
 
 .tabela-prescricao td {
   text-transform: uppercase;
+  padding: 3px 0;
 }
 
 .tabela-prescricao tbody tr .td-observacao {
   text-transform: none;
-  width: 20%;
 }
 
 .tabela-prescricao tbody tr .td-posologia {
@@ -307,11 +228,6 @@ label {
   text-align: left;
 }
 
-.tiracor {
-  color: royalblue;
-  text-decoration: none;
-}
-
 .td-botao {
   width: 8%;
 }
@@ -324,6 +240,11 @@ label {
 
 .td-botao .fa {
   min-height: 32px;
+}
+
+.tiracor {
+  color: royalblue;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
@@ -359,7 +280,7 @@ label {
   margin: 3vw 64vw;
 }
 
-.nome-tecnico{
+.nome-tecnico {
   height: 4vh;
   width: 15% ;
 }
@@ -369,6 +290,7 @@ label {
   border-collapse: collapse;
   width: 100%;
 }
+
 .info-impressao td, .info-impressao th{
   padding: 10px
 }

@@ -9,15 +9,16 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req, re
       if (!prescricao) {
         return res.render('pages/error')
       }
-        res.render('pages/editarPrescricao', {
-          prescricao,
-          dietas: prescricao.dieta,
-          cuidados: prescricao.cuidados,
-          medicamentos: prescricao.medicamentos,
-          updateUrl: req.originalUrl,
-          acolhido: prescricao.acolhido,
-          acolhidoId: req.params.acolhido_id,
-          tipoDoUsuario: req.user.tipo
-        })
+
+
+      res.render('pages/editarPrescricao', {
+        prescricao,
+        dietas: prescricao.dieta,
+        cuidados: prescricao.cuidados,
+        medicamentos: prescricao.medicamentos,
+        updateUrl: req.originalUrl,
+        acolhido: prescricao.acolhido,
+        acolhidoId: req.params.acolhido_id,
+      })
     })
 }

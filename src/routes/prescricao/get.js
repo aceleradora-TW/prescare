@@ -7,9 +7,7 @@ module.exports = (Prescricao, Usuario) => (req, res) => {
     if (!prescricao) {
       return res.render('pages/error')
     }
-    res.render('pages/prescricao', {
-      prescricao,
-      tipoDoUsuario: req.user.tipo
-     })
+
+    res.render('pages/prescricao', { prescricao })
   }).catch(err => console.log(err))
 }

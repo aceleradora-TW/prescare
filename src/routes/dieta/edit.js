@@ -14,12 +14,15 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
       if (!dieta) {
         return res.render('pages/error')
       }
+
       res.render('pages/editarDieta', {
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,
         dieta,
         updateUrl: req.originalUrl,
-        acolhido: dieta.prescricao.acolhido
+        acolhido: dieta.prescricao.acolhido,
+        tipoDoUsuario: req.user.tipo,
+
       })
     })
 }

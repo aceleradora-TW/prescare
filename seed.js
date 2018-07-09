@@ -46,10 +46,16 @@ const createDieta = prescricao => models.Dieta.create({
   prescricao_id: prescricao.id
 })
 
-const createUsuarioMedica = () => models.Usuario.create({
-  tipo: 'medica',
+const createUsuarioClinica = () => models.Usuario.create({
+  tipo: 'clinica',
   nome: 'Marlene',
   senha: 'marlene',
+})
+
+const createUsuarioNeuro = () => models.Usuario.create({
+  tipo: 'neurologista',
+  nome: 'Nara',
+  senha: 'nara',
 })
 
 const createUsuarioFarmaceutica = () => models.Usuario.create({
@@ -72,7 +78,8 @@ databaseConnection
   .then(createMedicamento)
   .then(createCuidado)
   .then(createDieta)
-  .then(createUsuarioMedica)
+  .then(createUsuarioClinica)
+  .then(createUsuarioNeuro)
   .then(createUsuarioFarmaceutica)
   .then(finishWithSuccess)
   .catch(letItCrash)
