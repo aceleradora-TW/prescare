@@ -1,4 +1,4 @@
-<div class="botao-voltar">
+<div class="botoes voltar">
   <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
 </div>
 <div class="cabecalho-telas">
@@ -6,17 +6,20 @@
 </div>
 
 <div class="prescricao">
-  <%if (user.tipo === "clinica"  || user.tipo === "neurologista") { %>
+
+  <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
       </form>
     </div>
-  <% } %>
+    <% } %>
 
-  <%- include partials/tabelaMedicamento.ejs %>
+      <%- include partials/tabelaMedicamento.ejs %>
 
-        <%if (user.tipo === "clinica"  || user.tipo === "neurologista") { %>
+        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
           <div class="botoes right">
             <form action="<%= updateUrl %>/cuidado" method="POST">
               <input type="submit" value="Adicionar cuidados">
@@ -45,28 +48,27 @@
     <div class="botoes">
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
-  <% } %>
-    <%if (user.tipo === "farmaceutica") { %>
-      <div>
-        Validade da prescrição:
-        <%= prescricao.validade.split("-").reverse().join("/") %>
-      </div>
-      <% } %>
-  <script>
-    var hoje = new Date();
-    window.$(function () {
-      window.$("#validade").datepicker({
-        dateFormat: "dd/mm/yy",
-        minDate: hoje
-      });
-    });    
-
-    function validaValidade(data) {
-      if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
-        alert("Por favor, informe a validade.");
-        data.validade.focus();
-        return false;
-      }
-      return alert('Validade definida');
-    }
-  </script>
+    <% } %>
+      <%if (user.tipo === "farmaceutica") { %>
+        <div>
+          Validade da prescrição:
+          <%= prescricao.validade.split("-").reverse().join("/") %>
+        </div>
+        <% } %>
+          <script>
+            let hoje = new Date();
+            window.$(function () {
+              window.$("#validade").datepicker({
+                dateFormat: "dd/mm/yy",
+                minDate: hoje
+              });
+            });
+            validaValidade = (data) => {
+              if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
+                alert("Por favor, informe a validade.");
+                data.validade.focus();
+                return false;
+              }
+              return alert('Validade definida');
+            }
+          </script>

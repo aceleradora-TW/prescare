@@ -1,4 +1,4 @@
-module.exports = (Acolhido) => (req, res) => {  
+module.exports = (Acolhido) => (req, res) => {
   Acolhido
     .findOne({
       where: { id: req.params.acolhido_id }

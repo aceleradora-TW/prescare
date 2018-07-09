@@ -1,6 +1,8 @@
 <html>
 <style>
-    header { display: none !important; }
+    header {
+        display: none !important;
+    }
 </style>
 
 <head>
@@ -11,18 +13,10 @@
 
 </head>
 
-<div class="cabecalho-login">
-        
-    <div class="nome-user-login">
-        <i class="fas fa-user"></i> Prescare
-    </div>
-
-</div>
-
 
 <div class="login">
-<div class="container">
-    
+    <div class="container">
+
         <div class="col-sm-6 col-sm-offset-3">
 
             <h1>
@@ -30,7 +24,7 @@
 
             <% if (message.length > 0) { %>
                 <div class="alert alert-danger">
-                    <%= message %>
+                    Informe os dados necessários
                 </div>
                 <% } %>
 
@@ -45,11 +39,12 @@
                         </div>
 
                         <div class='botoes'>
-                            <button type="submit" class="btn btn-warning btn-lg">Entrar</button>
+                            <button type="submit" class="botoes">Entrar</button>
                         </div>
                     </form>
         </div>
 
     </div>
 </div>
+
 </html>

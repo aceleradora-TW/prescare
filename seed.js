@@ -30,7 +30,7 @@ const createMedicamento = prescricao => models.Medicamento.create({
   observacoes: 'nada',
   prescricao_id: prescricao.id
 })
-.then(() => prescricao)
+  .then(() => prescricao)
 
 const createCuidado = prescricao => models.Cuidado.create({
   descricao: 'Dar banho',
@@ -60,9 +60,9 @@ const createUsuarioNeurologista = () => models.Usuario.create({
 })
 
 const createUsuarioFarmaceutica = () => models.Usuario.create({
-    tipo: 'farmaceutica',
-    nome: 'Fabiana',
-    senha: 'fabi',
+  tipo: 'farmaceutica',
+  nome: 'Fabiana',
+  senha: 'fabi',
 })
 
 const letItCrash = error => {
