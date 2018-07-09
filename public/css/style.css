@@ -3,11 +3,6 @@
   margin: 0;
   /* border: 1px solid red; */
 }
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
-}
 
 .bold {
   font-weight: bold;
@@ -20,7 +15,7 @@
   text-align: center;
  }
 
-.botoes a, .botoes input {
+.botoes a, .botoes input, .botoes button {
   align-items: center;
   background-color: #81b4db;
   border: none;
@@ -37,7 +32,7 @@
   text-transform: none;
 }
 
-.botoes input:hover, .botoes a:hover {
+.botoes input:hover, .botoes a:hover, .botoes button:hover {
   background: #628aa7;
   color: white;
   text-decoration: none;
@@ -51,7 +46,13 @@
   width: 6vw;
 }
 
-.botao-sair {
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
+}
+
+.botao-sair a {
   color: white;
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
@@ -81,32 +82,12 @@
   display: flex;
 }
 
-.cabecalho-login {
-  text-align: center;
-  background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  text-decoration: none;
-  background-size: 14vw;
-  min-height: 60px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-bottom: 10%;
-}
-
-.login {
-  padding-top: 10%;
-}
-
 .center {
   text-align: center;
 }
 
 .editar-acolhido {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-transform: uppercase;
 }
@@ -121,6 +102,9 @@
   padding-left: 1vw;
 }
 
+input[type="text"]:disabled {
+  background: #ced4da;
+}
 
 label {
   font-size: 25px;
@@ -183,16 +167,6 @@ label {
   margin: auto;
 }
  
-.nome-user-login{
-  color:white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
-  font-weight: bold;
- 
-
-}
-
-
 .prescricao{
  padding-top:3%;
 }
@@ -219,7 +193,7 @@ label {
 
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
-  height: 3vh;
+  height: 4vh;
 }
 
 .tabela-prescricao td {
@@ -229,7 +203,6 @@ label {
 
 .tabela-prescricao tbody tr .td-observacao {
   text-transform: none;
-  width: 20%;
 }
 
 .tabela-prescricao tbody tr .td-posologia {
@@ -307,7 +280,7 @@ label {
   margin: 3vw 64vw;
 }
 
-.nome-tecnico{
+.nome-tecnico {
   height: 4vh;
   width: 15% ;
 }
@@ -317,6 +290,7 @@ label {
   border-collapse: collapse;
   width: 100%;
 }
+
 .info-impressao td, .info-impressao th{
   padding: 10px
 }

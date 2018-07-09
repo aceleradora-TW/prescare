@@ -14,7 +14,8 @@
                                             <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
                                         <% } %>
 
-                                            Atualizado em:
+                                        Atualizado em:
+                                        <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %>
                                     </span>
                                 </div>
                         </a>
@@ -26,6 +27,8 @@
 
     <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
 
+        <div class="botoes">
         <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+        </div>
 
     <% } %>
