@@ -6,9 +6,9 @@ const update = require('./update')
 const create = require ('./create')
 const print = require('./print')
 
-module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido, router) => {
-  router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/print', print(Prescricao, Cuidado, Dieta, Medicamento, Acolhido))
 
+module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido, router) => {
+  router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/print', print(Prescricao, Cuidado, Dieta, Medicamento, Acolhido))
   router.post('/acolhido/:acolhido_id/prescricao', save(Prescricao))
   router.get('/acolhido/:acolhido_id/prescricao/create', create(Acolhido))  
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id', get(Prescricao))

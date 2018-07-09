@@ -5,7 +5,7 @@ describe('Quando acesso cuidado', () => {
         const Cuidado = {
             findOne: jest.fn()
         }
-        const req = { params: { cuidado_id: 1 },user: { tipo:  'medica' }}
+        const req = { params: { cuidado_id: 1 },user: { tipo:  'clinica' }}
         const res = { render: jest.fn() }
         const cuidado = {
             id: 1,

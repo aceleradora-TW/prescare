@@ -15,7 +15,7 @@ describe('Quando acesso cuidado', () => {
                 observacoes: 'nada',
             },
             user: {
-                tipo: 'medica'
+                tipo: 'clinica'
             }
         }
         const res = { redirect: jest.fn() }

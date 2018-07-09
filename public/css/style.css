@@ -2,6 +2,11 @@
   box-sizing: border-box;
   margin: 0;
 }
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
+}
 
 .bold {
   font-weight: bold;
@@ -85,12 +90,6 @@
   text-transform: none;
 }
 
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
-}
-
 .botao-sair {
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
@@ -105,30 +104,6 @@
 .botao-sair a:hover {
   color: #81b4db;
   background-color: white;
-}
-
-.botao-voltar {
-  background-color:  #81b4db;
-  border-radius: 7px;
-  height: 35px;
-  margin: 1vh;
-  max-width: 150px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 5vw;
-  text-align: center;
-  padding-top: 3px;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display:block;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
 }
 
 .box-acolhido {
@@ -146,6 +121,26 @@
 
 .cabecalho-telas {
   display: flex;
+}
+
+.cabecalho-login {
+  text-align: center;
+  background-color: #81b4db;
+  background-image: url("../img/logoSemFundo.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  text-decoration: none;
+  background-size: 14vw;
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 10%;
+}
+
+.login {
+  padding-top: 10%;
 }
 
 .center {
@@ -167,6 +162,7 @@
 .input {
   padding-left: 1vw;
 }
+
 
 label {
   font-size: 25px;
@@ -238,6 +234,16 @@ label {
   margin: auto;
 }
  
+.nome-user-login{
+  color:white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.3em;
+  font-weight: bold;
+ 
+
+}
+
+
 .prescricao{
  padding-top:3%;
 }
@@ -266,7 +272,7 @@ label {
 
 .tabela-prescricao td, .tabela-prescricao th {
   border: 1px solid;
-  height: 4vh;
+  height: 3vh;
 }
 
 .tabela-prescricao td {
@@ -275,6 +281,7 @@ label {
 
 .tabela-prescricao tbody tr .td-observacao {
   text-transform: none;
+  width: 20%;
 }
 
 .tabela-prescricao tbody tr .td-posologia {
@@ -330,4 +337,38 @@ label {
 
 ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+/* PAGINA IMPRESSAO */
+
+.cabecalho-impressao {
+  text-align: center;
+  padding: 2vh 0;
+}
+
+.fm-impressao {
+  width: 10%;
+}
+
+.tabela-campos {
+  margin-bottom: 2vh;
+}
+
+.nome-crm {
+  margin: 3vw 64vw;
+}
+
+.nome-tecnico{
+  height: 4vh;
+  width: 15% ;
+}
+
+.info-impressao {
+  padding:10px 20vw;
+  border-collapse: collapse;
+  width: 100%;
+}
+.info-impressao td, .info-impressao th{
+  padding: 10px
 }

@@ -1,0 +1,166 @@
+<div class="cabecalho-impressao bold">
+  <h2>Casa do Menino Jesus de Praga </h2>
+  <h6>Nelson Zang, 420 - Porto Alegre/RS - Fone:(51) 3315.0011 </h6>
+  <h6> www.casadomenino.org.br</h6>
+</div>
+
+
+<div class="center label">
+  <h5 class="bold">
+    <%= acolhido.nome %>
+  </h5>
+</div>
+
+
+<div class="info-impressao">
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <span> Data de Nascimento: </span>
+          <span id="data">
+            <%= acolhido.nascimento %>
+          </span>
+        </td>
+        <td>
+          <span> Idade: </span>
+          <span id="idade"></span>
+          <script>calcularIdade('<%= acolhido.nascimento %>')</script>
+        </td>
+        <td>
+          <span> Peso: </span>
+          <span>
+            <%= acolhido.peso %> kg
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span> Via de alimentação: </span>
+          <span>
+            <%= acolhido.via_alimentacao %>
+          </span>
+        </td>
+        <td>
+          <span> Alergias:</span>
+          <span>
+            <%= acolhido.alergias %>
+          </span>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+<label for="dieta">Dieta</label>
+<table class="tabela-prescricao tabela-campos">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Intervalo</th>
+      <th>Observações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%for (dieta of prescricao.dieta){%>
+      <tr>
+        <td class="td-observacao">
+          <%= dieta.tipo %>
+        </td>
+        <td class="td-observacao">
+          <%= dieta.intervalo %>
+        </td>
+        <td class="td-observacao">
+          <%= dieta.observacoes %>
+        </td>
+      </tr>
+      <%}%>
+  </tbody>
+</table>
+
+
+<label for="cuidado">Cuidados</label>
+<table class="tabela-prescricao tabela-campos">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Intervalo</th>
+      <th>Observações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <%for (cuidado of prescricao.cuidados){%>
+        <td class="td-observacao">
+          <%= cuidado.descricao %>
+        </td>
+        <td class="td-observacao">
+          <%= cuidado.intervalo %>
+        </td>
+        <td class="td-observacao">
+          <%= cuidado.observacoes %>
+        </td>
+    </tr>
+    <%}%>
+  </tbody>
+</table>
+
+<label for="medicamento">Medicamentos</label>
+<table class="tabela-prescricao tabela-campos">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Dosagem</th>
+      <th class="fm-impressao">Forma Farmacêutica</th>
+      <th>Via</th>
+      <th>Posologia</th>
+      <th>Observações</th>
+      <th>Validade</th>
+      <th>Técnico</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%for (medicamento of prescricao.medicamentos){%>
+      <tr>
+        <td>
+          <%= medicamento.nome %>
+        </td>
+        <td>
+          <%= medicamento.dosagem %>
+        </td>
+        <td>
+          <%= medicamento.formaFarmaceutica %>
+        </td>
+        <td>
+          <%= medicamento.via %>
+        </td>
+
+        <td class="td-posologia">
+          <%= medicamento.posologia %>
+        </td>
+        <td class="td-observacao">
+          <%= medicamento.observacoes %>
+        </td>
+        <td>
+          <%= medicamento.validadeMed %>
+        </td>
+        <td class="nome-tecnico">
+
+        </td>
+      </tr>
+      <%}%>
+  </tbody>
+</table>
+
+
+<div class="nome-crm">
+  <p>
+    <h6>________________________________</h6>
+    <h6>Dr(a):</h6>
+    <h6>CRM:</h6>
+  </p>
+</div>

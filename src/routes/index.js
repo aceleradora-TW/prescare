@@ -8,11 +8,9 @@ const prescricaoRoutes = require('./prescricao')
 const loginRoutes = require('./login')
 const authEnforcer = require('./authEnforcer')
 
-
 module.exports = (models, passport) => {
 
   router.use(authEnforcer())
-
   applicationRoutes(router)
   acolhidoRoutes(models.Acolhido, models.Prescricao, router)
   prescricaoRoutes(models.Prescricao, models.Cuidado, models.Dieta, models.Medicamento, models.Acolhido, router)
@@ -20,6 +18,5 @@ module.exports = (models, passport) => {
   cuidadoRoutes(models.Cuidado, models.Prescricao, models.Acolhido, router)
   medicamentoRoutes(models.Medicamento, models.Prescricao, models.Acolhido, router)
   loginRoutes(passport, router)
-
   return router;
 }

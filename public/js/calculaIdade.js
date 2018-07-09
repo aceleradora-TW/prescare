@@ -9,5 +9,5 @@ function calcularIdade(dataAcolhido) {
   if (aniversario > dataHoje) {
       idade--
   }
-  document.getElementById("idade").innerHTML = idade;
+  document.getElementById("idade").innerHTML = idade + ' anos';
 }
