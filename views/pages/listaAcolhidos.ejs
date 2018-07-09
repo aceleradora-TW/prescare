@@ -5,21 +5,21 @@
             <ul class="lista-acolhidos">
                 <%for (acolhidos of acolhidos){%>
                     <li>
-                    <a href="/acolhido/<%= acolhidos.id %>">
-                        <%= acolhidos.nome %>
-                        <div>
-                            <span>
-                                <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-                                    Validade da prescrição:
-                                <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
-                                <% } %>
-                                    Atualizado em:
-                                <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].updated_at.split("-").reverse().join("/") : '' %>
-                            </span>
-                        </div>
-                    </a>
+                        <a href="/acolhido/<%= acolhidos.id %>">
+                            <%= acolhidos.nome %>
+                                <div>
+                                    <span>
+                                        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+                                            Validade da prescrição:
+                                            <%= acolhidos.prescricaos[0] ? acolhidos.prescricaos[0].validade.split("-").reverse().join("/") : '' %> |
+                                                <% } %>
+                                                    Atualizado em:
+                                                    <%= acolhidos.prescricaos[0] ? moment(acolhidos.prescricaos[0].updated_at).format('DD/MM/YYYY HH:mm:ss') : '---' %>
+                                    </span>
+                                </div>
+                        </a>
                     </li>
-                <% } %>
+                    <% } %>
             </ul>
         </main>
     </section>
@@ -27,10 +27,10 @@
     <div class="botoes botao-usuario add-tipo">
         <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
             <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
-        <% } %>
+            <% } %>
 
-        <%if (user.tipo === "administrador") { %>
-            <a href="/usuario/novo"> Inserir Novo Usuário</a>
-            <a href="listaUsuarios"> Lista de Usuários</a>
-        <% } %>
+                <%if (user.tipo === "administrador") { %>
+                    <a href="/usuario/novo"> Inserir Novo Usuário</a>
+                    <a href="listaUsuarios"> Lista de Usuários</a>
+                    <% } %>
     </div>
