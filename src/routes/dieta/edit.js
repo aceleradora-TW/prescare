@@ -14,6 +14,7 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
       if (!dieta) {
         return res.render('pages/error')
       }
+
       res.render('pages/editarDieta', {
         acolhidoId: req.params.acolhido_id,
         prescricaoId: req.params.prescricao_id,
