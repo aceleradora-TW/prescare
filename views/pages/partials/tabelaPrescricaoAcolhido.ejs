@@ -4,34 +4,9 @@
         <th>Data</th>
         <th>Validade</th>
         <th>Abrir</th>
-
-<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-<<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
-<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
-        <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
-=======
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
-<<<<<<< 0284e305452d2e42fa32ecd34ac59a2883581fcd
->>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
-        <th>Excluir</th>
-        <th>Enviar para farmacia</th>
-        <% } %>
-=======
-=======
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
-        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
-            <th>Excluir</th>
-            <% } %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
-        <% if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
             <th>Excluir</th>
         <% } %>
->>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao
 
     </tr>
 
@@ -52,75 +27,40 @@
                     : "-" %>
 
             </td>
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-<<<<<<< 0284e305452d2e42fa32ecd34ac59a2883581fcd
-            <td>
-                <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                    <input type="submit" value="Abrir">
-                </form>
-            </td>
-<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
-            <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
-=======
-            <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
->>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
-            <td>
-                <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                    <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
-                </form>
-            </td>
-            <td>
-                <form action="/acolhido/<%= acolhido.id%>" method="get" class="botoes">
-                    <input type="submit" value="Enviar">
-                </form>
-            </td>
-            <% } %>
             
-=======
-            <%if (tipoDoUsuario === "farmaceutica") { %>
-=======
-            <%if (user.tipo === "farmaceutica") { %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
-                <td>
-                    <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
-                        <input type="submit" value="Abrir">
-                    </form>
-                </td>
-            <% } %>
             <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-                <% if (prescricao.usuario != user.tipo) { %>
+                <% if (prescricao.usuario !== user.tipo) { %>
                     <td>
                         <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                             <input type="submit" disabled value="Abrir">
-                        </form>
-                    </td>
-
+                        </form> 
+                   </td>
                     <td>
                         <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                             <input type="submit" value="Excluir" disabled onclick="return confirm('Tem certeza que deseja excluir?');">
                         </form>
                     </td>
                 <% } %>
-                <%if (prescricao.usuario === user.tipo) { %>
+                <% if (prescricao.usuario === user.tipo) { %>
                     <td>
                         <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
                             <input type="submit" value="Abrir">
-                        </form>
-                    </td>
-
-<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
-                                        <% } %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
+                        </form> 
+                   </td>
                     <td>
                         <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
                             <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
                         </form>
                     </td>
                 <% } %>
+                
+            <% }  else { %>
+                <td>
+                    <form action="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" method="post" class="botoes">
+                        <input type="submit" value="Abrir">
+                    </form> 
+               </td>
             <% } %>
->>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao
         </tr>
     <% } %>
-
 </table>

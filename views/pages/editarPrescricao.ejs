@@ -6,41 +6,19 @@
 </div>
 
 <div class="prescricao">
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-<<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
-<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
-  <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
-=======
-  <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
->>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
-=======
-  <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
-  <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
+  <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
     <div class="botoes right">
       <form action="<%= updateUrl %>/medicamento" method="POST">
         <input type="submit" value="Adicionar medicamento">
       </form>
     </div>
-  <% } %>
+    <% } %>
 
-  <%- include partials/tabelaMedicamento.ejs %>
+      <%- include partials/tabelaMedicamento.ejs %>
 
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-<<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
-<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
-        <%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
-=======
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
->>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
-=======
-        <%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
-        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
+        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
           <div class="botoes right">
             <form action="<%= updateUrl %>/cuidado" method="POST">
               <input type="submit" value="Adicionar cuidados">
@@ -53,7 +31,7 @@
               </form>
             </div>
             <%- include partials/tabelaDieta.ejs %>
-              <% } %>
+  <% } %>
 </div>
 
 <div class="botoes right">
@@ -62,98 +40,38 @@
   </form>
 </div>
 
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-<<<<<<< e3804f7e38ae9ed7afcf41008b7edd38fe37dd5e
-<<<<<<< e1cbd10baf527956d6d3b891e914dda744b517b6
-<%if (tipoDoUsuario === "clinica"  || tipoDoUsuario === "neurologista") { %>
-=======
-<%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neuro") { %>
->>>>>>> :bug: corrige bugs <@marcos012, @laurascclaro>
-=======
-<%if (tipoDoUsuario === "clinica" || tipoDoUsuario === "neurologista") { %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-=======
-<%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
+<%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
     <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">
     <div class="botoes">
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
-<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
-  <% } %>
-<<<<<<< 507a0548cab1ba72ad025523c847804153f42b8e
-
-    <%if (tipoDoUsuario === "farmaceutica") { %>
-=======
-     
-<<<<<<< 0284e305452d2e42fa32ecd34ac59a2883581fcd
-    <%if (tipoDoUsuario === "farmacia") { %>
->>>>>>> :bug: <@marcos012, @laurascclaro> renderiza paginas farmaceutica
-=======
-    <%if (tipoDoUsuario === "farmaceutica") { %>
->>>>>>> :rocket: <@EngelFlores,@marcos012> Impede tipo de usuario abrir prescricao do outro
-      <div>
-        Validade da prescrição:
-        <%= prescricao.validade.split("-").reverse().join("/") %>
-      </div>
-      <% } %>
-
-=======
 <% } %>
->>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao
 
-<<<<<<< 93fe5fc76cc2b9900d0dca39e72b7ad93008869f
-=======
-      <%if (user.tipo === "farmaceutica") { %>
-        <div>
-          Validade da prescrição:
-          <%= prescricao.validade.split("-").reverse().join("/") %>
-        </div>
-<<<<<<< 16a279b5db3a74c3358e09d8ae85928d3ec0832b
-        <% } %>
->>>>>>> :art: <@EngelFlores> Refatora suporte multiplas prescricoes
 
+<%if (user.tipo ==="farmaceutica") { %>
+
+  <div>
+    Validade da prescrição:
+    <%= prescricao.validade.split("-").reverse().join("/") %>
+  </div>
+<% } %>
   <script>
-    var hoje = new Date();
-    window.$(function () {
-      window.$("#validade").datepicker({
-        dateFormat: "dd/mm/yy",
-        minDate: hoje
+    let hoje = new Date();
+      window.$(function () {
+        window.$("#validade").datepicker({
+          dateFormat: "dd/mm/yy",
+          minDate: hoje
+        });
       });
-    });
-
-  
-     
-
-    function validaValidade(data) {
-      if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
-        alert("Por favor, informe a validade.");
-        data.validade.focus();
-        return false;
-      }
-      return alert('Validade definida');
-    }
-  </script>
-=======
-      <% } %>
-          <script>
-            var hoje = new Date();
-            window.$(function () {
-              window.$("#validade").datepicker({
-                dateFormat: "dd/mm/yy",
-                minDate: hoje
-              });
-            });
-
-            validaValidade = (data) => {
-              if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
-                alert("Por favor, informe a validade.");
-                data.validade.focus();
-                return false;
-              }
-              return alert('Validade definida');
+      validaValidade = (data) => {
+        if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
+            alert("Por favor, informe a validade.");
+            data.validade.focus();
+            return false;
             }
-          </script>
->>>>>>> :art: <@marcos012, @murilobauerc> arruma indentacao
+          return alert('Validade definida');
+        }
+  </script>
+     
