@@ -12,8 +12,22 @@
   margin-left: 1vw;
 }
 
+.add-tipo{
+  margin-left: 8vw;
+  text-decoration: none;
+}
+.add-tipo a:hover{
+  text-decoration: none;
+  color: white;
+}
+
 .bold {
   font-weight: bold;
+}
+
+.botao-usuario{
+  margin-left: 11vw!important; 
+  line-height: 4vh;
 }
 
 .botoes {
@@ -292,6 +306,9 @@ label {
   margin-left: 2vw;
 }
 
+.tipo-usuario input{
+  margin-left: 2vw;
+}
 .td-botao {
   width: 8%;
 }

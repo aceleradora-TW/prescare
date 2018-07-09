@@ -1,29 +1,31 @@
 <%- contentFor('body') %>
     <div class="editar-acolhido">
         <form action="/usuario/novo" method="POST">
-                <div class="form-group row">
-                    <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
-                    <input type="text" name="nome" id="nome" class="form-control form-control-lg col-sm-8">
-                </div>
-                <div class="form-group row">
-                    <label for="senha" class="col-sm-2 col-form-label col-form-label-lg">Senha:</label>
-                    <input type="password" name="senha" id="senha" class="form-control form-control-lg col-sm-8">
-                </div>
-                <div class="form-group row ">
-                    <div class="adiciona-tipo-usuario">Tipo de Usuário:</div>
-                    
-                    <input class="tipo-usuario" type="radio" name="tipo" value="clinica"> Clínica
-
-                    <input class="tipo-usuario" type="radio" name="tipo" value="neurologista"> Neurologista
-
-                    <input class="tipo-usuario" type="radio" name="tipo" value="farmaceutica"> Farmacêutica
-                </div>
-            <div class="botoes">
-                <input type="submit" value="Salvar">
+            <div class="form-group row">
+                <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
+                <input type="text" name="nome" id="nome" class="form-control form-control-lg col-sm-8">
             </div>
-            </form>
-                <div class=" right botao-voltar">
-                    <a href="/listaUsuarios">Cancelar</a>
+            <div class="form-group row">
+                <label for="senha" class="col-sm-2 col-form-label col-form-label-lg">Senha:</label>
+                <input type="password" name="senha" id="senha" class="form-control form-control-lg col-sm-8">
+            </div>
+            <div class="form-group row tipo-usuario">
+                <div class="adiciona-tipo-usuario">Tipo de Usuário:</div>
+                <div class="tipo-usuario">
+                    <input type="radio" name="tipo" value="clinica"> Clínica
+
+                    <input type="radio" name="tipo" value="neurologista"> Neurologista
+
+                    <input type="radio" name="tipo" value="farmaceutica"> Farmacêutica
                 </div>
-            
+            </div>
+
     </div>
+            <div class="add-tipo">
+                <div class="botoes">
+                    <input type="submit" value="Salvar">
+
+</form>
+                    <a class=" botao-voltar" href="/listaUsuarios">Cancelar</a>
+                </div>
+            </div>
