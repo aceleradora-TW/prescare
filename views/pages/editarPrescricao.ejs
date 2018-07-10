@@ -5,7 +5,7 @@
   <%- include partials/cabecalhoTelas.ejs %>
 </div>
 
-<div class="prescricao bold">
+<div class="prescricao">
 
   <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
 
@@ -20,58 +20,58 @@
 
         <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
 
+          <div class="botoes right">
+            <form action="<%= updateUrl %>/cuidado" method="POST">
+              <input type="submit" value="Adicionar cuidados">
+            </form>
+          </div>
+          <%- include partials/tabelaCuidados.ejs %>
             <div class="botoes right">
-              <form action="<%= updateUrl %>/cuidado" method="POST">
-                <input type="submit" value="Adicionar cuidados">
+              <form action="<%= updateUrl %>/dieta" method="POST">
+                <input type="submit" value="Adicionar dieta">
               </form>
             </div>
-            <%- include partials/tabelaCuidados.ejs %>
-              <div class="botoes right">
-                <form action="<%= updateUrl %>/dieta" method="POST">
-                  <input type="submit" value="Adicionar dieta">
-                </form>
-              </div>
-              <%- include partials/tabelaDieta.ejs %>
-    <% } %>
-  </div>
-  
-  <div class="botoes right">
-    <form action="<%= updateUrl %>/print" method="GET">
-      <input type="submit" value="Imprimir">
-    </form>
-  </div>
-  
-  <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
-      <form action="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%= prescricao.id %>/update" method="POST">
-        <label for="validade" class="sub-titulo">Validade da Prescrição</label>
-        <input type="text" name="validade" id="validade" value="<%= moment(prescricao.validade).format('DD/MM/YYYY') %>">
-        <div class="botoes">
-          <input type="submit" value="Salvar" onclick="alert('Validade definida')">
-        </div>
-      </form>
-  <% } %>
-  
-  
-  <%if (user.tipo ==="farmaceutica") { %>
-    <div>
-      Validade da prescrição:
-      <%= prescricao.validade.split("-").reverse().join("/") %>
+            <%- include partials/tabelaDieta.ejs %>
+              <% } %>
+</div>
+
+<div class="botoes right">
+  <form action="<%= updateUrl %>/print" method="GET">
+    <input type="submit" value="Imprimir">
+  </form>
+</div>
+
+<%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+  <form action="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%= prescricao.id %>/update" method="POST">
+    <label for="validade" class="sub-titulo">Validade da Prescrição</label>
+    <input type="text" name="validade" id="validade" value="<%= moment(prescricao.validade).format('DD/MM/YYYY') %>">
+    <div class="botoes">
+      <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
+  </form>
   <% } %>
-    <script>
-      let hoje = new Date();
-        window.$(function () {
-          window.$("#validade").datepicker({
-            dateFormat: "dd/mm/yy",
-            minDate: hoje
+
+
+    <%if (user.tipo ==="farmaceutica") { %>
+      <div>
+        Validade da prescrição:
+        <%= prescricao.validade.split("-").reverse().join("/") %>
+      </div>
+      <% } %>
+        <script>
+          let hoje = new Date();
+          window.$(function () {
+            window.$("#validade").datepicker({
+              dateFormat: "dd/mm/yy",
+              minDate: hoje
+            });
           });
-        });
-        validaValidade = (data) => {
-          if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
+          validaValidade = (data) => {
+            if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
               alert("Por favor, informe a validade.");
               data.validade.focus();
               return false;
-              }
+            }
             return alert('Validade definida');
           }
-    </script>
+        </script>
