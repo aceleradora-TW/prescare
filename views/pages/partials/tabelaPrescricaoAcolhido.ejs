@@ -4,11 +4,12 @@
         <th>Data</th>
         <th>Validade</th>
         <th>Atualizada em</th>
-        <th>Abrir</th>
-
-        <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-            <th>Excluir</th>
+        <%if (user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "farmaceutica") { %>
+            <th>Abrir</th>
             <% } %>
+                <%if (user.tipo === "clinica" || user.tipo === "neurologista"){ %>
+                    <th>Excluir</th>
+                    <% } %>
     </tr>
 
     <% for (prescricao of prescricaos){ %>

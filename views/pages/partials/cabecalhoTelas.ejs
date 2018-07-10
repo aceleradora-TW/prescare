@@ -38,12 +38,12 @@
         </div>
 
 
-        <%if ( user.tipo === "clinica" || user.tipo === "neurologista") { %>
+        <%if ( user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "administrador") { %>
 
-             <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
+            <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
                 <i class="fa fa-edit edit"></i>
                 Editar informações
             </a>
-        <% } %>
+            <% } %>
     </div>
 </div>
