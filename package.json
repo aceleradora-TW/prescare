@@ -36,7 +36,6 @@
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
     "express-session": "~1.14.1",
-    "html-to-pdf": "^0.1.11",
     "method-override": "~2.3.6",
     "moment": "^2.22.2",
     "morgan": "~1.7.0",
