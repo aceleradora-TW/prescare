@@ -1,22 +1,25 @@
-<div class="botoes voltar">
-    <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
-  </div>
-  <div class="cabecalho-telas">
-    <%- include partials/cabecalhoTelas.ejs %>
-  </div>
-  
-  <div class="prescricao">
-    <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
-      <div class="botoes right">
-        <form action="<%= updateUrl %>/medicamento" method="POST">
-          <input type="submit" value="Adicionar medicamento">
-        </form>
-      </div>
-      <% } %>
-  
-        <%- include partials/tabelaMedicamento.ejs %>
-  
-          <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+<div class="botao-voltar">
+  <a href="/acolhido/<%=prescricao.acolhido.id %>">Voltar</a>
+</div>
+<div class="cabecalho-telas">
+  <%- include partials/cabecalhoTelas.ejs %>
+</div>
+
+<div class="prescricao bold">
+
+  <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
+    <div class="botoes right">
+      <form action="<%= updateUrl %>/medicamento" method="POST">
+        <input type="submit" value="Adicionar medicamento">
+      </form>
+    </div>
+    <% } %>
+
+      <%- include partials/tabelaMedicamento.ejs %>
+
+        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+
             <div class="botoes right">
               <form action="<%= updateUrl %>/cuidado" method="POST">
                 <input type="submit" value="Adicionar cuidados">
