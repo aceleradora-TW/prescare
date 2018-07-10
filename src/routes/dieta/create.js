@@ -10,9 +10,5 @@ module.exports = (Dieta, Prescricao) => (req, res) => {
     Prescricao.update(
       { updated_at: sequelize.NOW },
       { where: {id: req.params.prescricao_id }}
-    ).then(result => {
-    })
-    .catch((error) => {
-      console.log(error.message);
-    })
+    )
 }
