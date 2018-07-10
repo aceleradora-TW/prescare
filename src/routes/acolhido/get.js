@@ -14,9 +14,9 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       res.render('pages/infoAcolhido', {
         prescricaoId: req.params.prescricao_id,
         acolhido,
+        tipoDoUsuario: req.user.tipo,
         prescricaos: acolhido.prescricaos,
         updateUrl: req.urlOriginal,
-        tipoDoUsuario: req.user.tipo,
         moment: moment
       })
   }).catch(err => console.log(err))

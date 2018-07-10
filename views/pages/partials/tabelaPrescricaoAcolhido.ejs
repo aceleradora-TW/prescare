@@ -11,6 +11,13 @@
                 <%if (user.tipo === "clinica" || user.tipo === "neurologista"){ %>
                     <th>Excluir</th>
                     <% } %>
+
+        <th>Abrir</th>
+
+        <%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+            <th>Excluir</th>
+        <% } %>
+
     </tr>
 
     <% for (prescricao of prescricaos){ %>
@@ -25,7 +32,9 @@
             </td>
 
             <td>
-                <%= prescricao.updated_at %>
+                <%= prescricao.updated_at 
+                ? moment(prescricao.updated_at).format('DD/MM/YYYY HH:mm:ss') 
+                : '---' %>
             </td>
             <td>
                 <%= prescricao.validade 
