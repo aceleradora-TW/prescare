@@ -9,25 +9,6 @@
   margin:  auto;
 }
 
-.adiciona-tipo-usuario{
-  margin-left: 1vw;
-}
-
-.add-tipo{
-  margin-left: 8vw;
-  text-decoration: none;
-}
-.add-tipo a:hover{
-  text-decoration: none;
-  color: white;
-}
-
-.body {  
-  background: #aedbfdb0;
-  font-family: 'Open Sans', sans-serif;
-  margin:  auto;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -39,14 +20,11 @@
   background-color:  #81b4db;
   border-radius: 7px;
   height: 35px;
-  margin: 1vh;
   max-width: 150px;
   min-width: fit-content;
   min-height: fit-content;
   width: 5vw!important;
   text-align: center;
-  float: left;
-  margin:auto;
 }
 
 .botao-voltar a {
@@ -82,11 +60,13 @@
   max-width: 185px;
   min-width: fit-content;
   min-height: fit-content;
-  padding-top: 5px;
   width: 14vw;
   cursor: pointer;
   display: block;
-  text-decoration: none;
+  padding-top: 5px;
+}
+
+.botoes a:hover{
   text-transform: none;
 }
 
@@ -193,14 +173,10 @@
   box-shadow: 0 10px 6px -6px #777;
 }
 
-.input {
-  padding-left: 1vw;
-}
 
 
-label {
-  font-size: 25px;
-}
+
+
 
 .lista-acolhidos {
   background-color: #81b4db;
@@ -306,7 +282,6 @@ label {
 
 }
 
-
 .prescricao{
  padding-top:3%;
 }
@@ -330,7 +305,6 @@ label {
   margin-bottom: 8vh;
   text-align: center;
   width: 100%;
-  
 }
 
 .tabela-prescricao td, .tabela-prescricao th {
@@ -375,12 +349,10 @@ label {
   text-decoration: none;
 }
 
-.tipo-usuario{
-  margin-left: 2vw;
-}
 
 .tipo-usuario input{
   margin-left: 2vw;
+
 }
 .td-botao {
   width: 8%;
