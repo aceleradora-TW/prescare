@@ -1,3 +1,4 @@
+const sequelize = require('sequelize')
 const cuidadoRoute = require('../../../src/routes/cuidado/create')
 
 describe('Quando acesso cuidado', () => {
@@ -10,8 +11,17 @@ describe('Quando acesso cuidado', () => {
         const novoCuidado = { id: 2 }
                 
         Cuidado.create.mockResolvedValue(novoCuidado)
+
+        const Prescricao = {
+            update: jest.fn()
+        }
+        const updatePrescricao = (
+            {updated_at: sequelize.NOW},
+            {where: {id: req.params.prescricao_id }}
+        )
+        Prescricao.update.mockResolvedValue(updatePrescricao)
         
-        cuidadoRoute(Cuidado)(req, res)
+        cuidadoRoute(Cuidado, Prescricao)(req, res)
         .then(() => expect(Cuidado.create).toBeCalledWith(req.params))
         .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl + '/2/edit'))
         .then(done)

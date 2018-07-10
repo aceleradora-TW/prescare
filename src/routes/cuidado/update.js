@@ -1,4 +1,6 @@
-module.exports = Cuidado => (req, res) => {
+const sequelize = require('sequelize')
+
+module.exports = (Cuidado, Prescricao) => (req, res) => {
   return Cuidado
     .findOne({
       where: {
@@ -12,5 +14,13 @@ module.exports = Cuidado => (req, res) => {
         .then(() => {
           res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
         })
+    }),
+    Prescricao.update(
+      { updated_at: sequelize.NOW },
+      { where: {id: req.params.prescricao_id }}
+    ).then(result => {
+    })
+    .catch((error) => {
+      console.log(error.message);
     })
 }

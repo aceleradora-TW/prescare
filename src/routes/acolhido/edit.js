@@ -7,6 +7,6 @@ module.exports = Acolhido => (req, res) => {
     if (!acolhido) {
       return res.render('pages/error')
     }
-    return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl })
+    return res.render('pages/editarAcolhido', { acolhido, updateUrl: req.originalUrl,tipoDoUsuario: req.user.tipo })
   })
 }

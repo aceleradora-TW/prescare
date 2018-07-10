@@ -1,3 +1,4 @@
+const sequelize = require('sequelize')
 const dietaRoute = require('../../../src/routes/dieta/update')
 
 describe('Quando acesso dieta', () => {
@@ -22,7 +23,16 @@ describe('Quando acesso dieta', () => {
     Dieta.findOne.mockResolvedValue(dieta)
     dieta.update.mockResolvedValue(req.body)
 
-    dietaRoute(Dieta)(req, res)
+    const Prescricao = {
+      update: jest.fn()
+    }
+    const updatePrescricao = (
+        {updated_at: sequelize.NOW},
+        {where: {id: req.params.prescricao_id }}
+    )
+    Prescricao.update.mockResolvedValue(updatePrescricao)
+
+    dietaRoute(Dieta, Prescricao)(req, res)
       .then(() => expect(Dieta.findOne).toBeCalledWith({ 'where': { 'id': req.params.dieta_id } }))
       .then(() => expect(dieta.update).toBeCalledWith(req.body))
       .then(() => expect(res.redirect).toBeCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))

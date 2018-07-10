@@ -1,5 +1,5 @@
+const sequelize = require('sequelize')
 const medicamentoRoute = require("../../../src/routes/medicamento/create")
-
 
 describe('Quando crio medicamento', () => {
     it('Deve mostrar medicamento na tela', (done) => {
@@ -13,7 +13,16 @@ describe('Quando crio medicamento', () => {
 
         Medicamento.create.mockResolvedValue(novoMedicamento)
 
-        return medicamentoRoute(Medicamento)(req, res)
+        const Prescricao = {
+            update: jest.fn()
+        }
+        const updatePrescricao = (
+            {updated_at: sequelize.NOW},
+            {where: {id: req.params.prescricao_id }}
+        )
+        Prescricao.update.mockResolvedValue(updatePrescricao)
+
+        return medicamentoRoute(Medicamento, Prescricao)(req, res)
         .then(() => expect(Medicamento.create).toBeCalledWith(req.params))
         .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl + '/2/edit'))
         .then(done)
