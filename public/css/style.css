@@ -68,33 +68,7 @@
 
 .botoes a:hover{
   text-transform: none;
-}
-
-.botoes input, .botoes a {
-  height: 35px;
-  max-width: 185px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 14vw;
-  cursor: pointer;
-  margin: 7px;
-}
-
-.botoes button {
-  align-items: center;
-  background-color: #81b4db;
-  border: none;
-  border-radius: 7px;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  height: 35px;
-  justify-content: center;
-  max-width: 185px;
-  min-width: fit-content;
-  min-height: fit-content;
-  width: 14vw;
-  text-transform: none;
+  text-decoration:none;
 }
 
 .botoes .tiracor {
@@ -315,7 +289,6 @@
 }
 
 .tabela-prescricao tbody tr .td-observacao {
-  text-transform: none;
   width: 20%;
 }
 
