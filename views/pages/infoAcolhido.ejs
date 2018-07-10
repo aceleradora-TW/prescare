@@ -7,10 +7,10 @@
         <%- include partials/cabecalhoTelas.ejs %>
     </div>
 <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-    <div class="botao-voltar">
-        <a href="/acolhido/<%= acolhido.id %>/prescricao/create"> Nova Prescrição</a>
+    <div class="botoes">
+        <a href="/acolhido/<%= acolhido.id %>/prescricao/create"> Nova Prescrição </a>
     </div>
-    <% } %>
+<% } %>
 
     <%- include partials/tabelaPrescricaoAcolhido.ejs%>
 

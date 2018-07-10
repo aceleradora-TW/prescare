@@ -22,6 +22,12 @@
   color: white;
 }
 
+.body {  
+  background: #aedbfdb0;
+  font-family: 'Open Sans', sans-serif;
+  margin:  auto;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -42,7 +48,6 @@
   float: left;
   margin:auto;
 }
-
 
 .botao-voltar a {
   color: white;
@@ -67,7 +72,8 @@
   
  }
 
-.botoes a{
+.botoes a, .botoes input, .botoes button {
+  /* align-items: center; */
   background-color: #81b4db;
   border-radius: 7px;
   color: white;
@@ -81,24 +87,17 @@
   cursor: pointer;
   display: block;
   text-decoration: none;
+  text-transform: none;
 }
 
-.botoes a:hover{
-  text-decoration: none;
-  color: white;
-}
-
-.botoes input {
-  background-color: #81b4db;
-  border-radius: 7px;
-  color: white;
+.botoes input, .botoes a {
   height: 35px;
-  margin: 1vh;
   max-width: 185px;
   min-width: fit-content;
   min-height: fit-content;
   width: 14vw;
   cursor: pointer;
+  margin: 7px;
 }
 
 .botoes button {
@@ -126,6 +125,9 @@
   font-family: 'Amatic SC', cursive;
   font-size: 1.8em;
   font-weight: bold;
+}
+.botoes a {
+  padding-top: 5px;
 }
 
 .botao-sair a {
@@ -251,6 +253,26 @@ label {
   margin-bottom: 5vh;
 }
 
+.cabecalho-login {
+  text-align: center;
+  background-color: #81b4db;
+  background-image: url("../img/logoSemFundo.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  text-decoration: none;
+  background-size: 14vw;
+  min-height: 71px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 10%;
+}
+
+.login {
+  padding-top: 10%;
+}
+
 .nome-acolhido {
   margin: 0px 0 2vh 0;
 
@@ -264,6 +286,15 @@ label {
   font-size: 2.3em;
   font-weight: bold;
   margin: auto;
+}
+
+.nome-user-login{
+  color:white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.6em;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-left: -69px;
 }
  
 .nome-user-login{

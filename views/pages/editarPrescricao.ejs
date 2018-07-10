@@ -41,18 +41,13 @@
   </form>
 </div>
 
-<<<<<<< fecca7b7fb6d48d9a64c75c7c8fc54b682c82203
 <%if (user.tipo === "clinica"  || user.tipo === "neurologista") { %>
-=======
-<%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
->>>>>>> :art: <@laurascclaro, @ilizakoski> atualiza com a master
   <form action="<%= updateUrl %>" method="POST">
     <label for="validade" class="sub-titulo">Validade da Prescrição</label>
-    <input type="text" name="validade" id="validade" value="<%= moment(prescricao.validade).format('DD/MM/YYYY') %>">
+    <input type="text" name="validade" id="validade" value="<%= prescricao.validade %>">
     <div class="botoes">
       <input type="submit" value="Salvar" onclick="alert('Validade definida')">
     </div>
-<<<<<<< fecca7b7fb6d48d9a64c75c7c8fc54b682c82203
     <% } %>
       <%if (user.tipo === "farmaceutica") { %>
         <div>
@@ -75,31 +70,6 @@
                 return false;
               }
               return alert('Validade definida');
-=======
-<% } %>
-
-
-<%if (user.tipo ==="farmaceutica") { %>
-
-  <div>
-    Validade da prescrição:
-    <%= prescricao.validade.split("-").reverse().join("/") %>
-  </div>
-<% } %>
-  <script>
-    let hoje = new Date();
-      window.$(function () {
-        window.$("#validade").datepicker({
-          dateFormat: "dd/mm/yy",
-          minDate: hoje
-        });
-      });
-      validaValidade = (data) => {
-        if (data.validade.value == "" || data.validade.value == null || data.validade.value.length < 6) {
-            alert("Por favor, informe a validade.");
-            data.validade.focus();
-            return false;
->>>>>>> :art: <@laurascclaro, @ilizakoski> atualiza com a master
             }
           return alert('Validade definida');
   </script>
