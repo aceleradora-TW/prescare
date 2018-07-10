@@ -13,7 +13,8 @@
     "db:console": "docker exec -it prescare-database psql -U postgres -d prescare",
     "db:reset": "npm run db:stop; sleep 3; npm run db:start; sleep 3; npm run db:create",
     "db:stop": "docker stop prescare-database",
-    "db:seed": "npm run db:reset && node seed.js"
+    "db:seed": "npm run db:reset && node seed.js",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "body-parser": "^1.18.3",
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.4.3",
+    "cypress": "^3.0.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-ejs-layouts": "^2.4.0",
