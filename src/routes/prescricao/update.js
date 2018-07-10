@@ -12,13 +12,11 @@ module.exports = (Prescricao, Medicamento) => (req, res) => {
       prescricao.update({
         validade: moment(req.body.validade, FORMATO_DATA)
       })
-      prescricao.medicamentos.create(req.body)
-        .then(() => {
-          res.redirect(req.originalUrl)
-        })
-        .catch((error) => {
-          console.log(error.message);
-          res.redirect('/404')
-        })
+      res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     })
+    .catch((error) => {
+      console.log(error.message);
+      res.redirect('/404')
+    })
+    
 }
