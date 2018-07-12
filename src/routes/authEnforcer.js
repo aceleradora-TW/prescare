@@ -1,5 +1,4 @@
 module.exports = () => (req, res, next) => {
-
   if (req.url === '/login') {
     return next()
   }
@@ -8,6 +7,6 @@ module.exports = () => (req, res, next) => {
     return res.redirect('/login')
   }
 
-  res.locals.user = req.user
+  res.locals.user = req.user.dataValues
   next()
 }
