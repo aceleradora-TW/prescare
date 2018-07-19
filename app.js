@@ -4,11 +4,13 @@ const express = require('express')
 const flash = require('connect-flash')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
+const { logger, loggerMiddleware } = require('./logger')
 const routesInitializer = require('./src/routes')
 const modelsInitializer = require('./src/models')
 const passportInitializer = require('./auth')
 const { PORT, SECRET } = require('./settings')
 const database = require('./database')
+
 const databaseConnection = database.connect()
 
 const models = modelsInitializer(databaseConnection)
@@ -33,14 +35,15 @@ const startApplication = () => {
     .use(passport.initialize())
     .use(passport.session())
     .use(flash())
+    .use(loggerMiddleware())
     .use('/', routes)
-    .listen(PORT, () => console.log(`Servidor iniciado em http://localhost:${PORT}`))
-}
+    .listen(PORT, () => logger.info(`Servidor iniciado em http://localhost:${PORT}`));
+};
 
 databaseConnection
   .sync()
   .then(startApplication)
   .catch((error) => {
-    console.trace('Erro ao iniciar a aplicacao: ', error.message)
-    process.exit(1)
-  })
+    logger.error('Erro ao iniciar a aplicacao: ', error.message);
+    process.exit(1);
+  });
