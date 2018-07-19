@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize')
 const {DATABASE_URL} = require('./settings.js')
+const { logger } = require('./logger');
 
 module.exports = {
   connect() {
@@ -7,8 +8,9 @@ module.exports = {
       dialect: 'postgres',
       define: {
         underscored: true,
-        timestamps: false, 
-      }
-    })
+        timestamps: false,
+      },
+      logging: logger.debug
+    });
   }
-}
+};
