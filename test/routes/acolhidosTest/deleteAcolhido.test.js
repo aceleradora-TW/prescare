@@ -10,9 +10,9 @@ describe('Quando deleto acolhido', () => {
     const res = { redirect: jest.fn() }
 
     acolhidoRoute(Acolhido)(req, res)
-    .then(() => expect(Acolhido.destroy).toBeCalledWith({'where': { 'id': req.params.acolhido_id }}))
-    .then(() => expect(res.redirect).toBeCalledWith('/lista-acolhidos'))
-    .then(done)
-    .catch(done)
+      .then(() => expect(Acolhido.destroy).toBeCalledWith({'where': { 'id': req.params.acolhido_id }}))
+      .then(() => expect(res.redirect).toBeCalledWith('/lista-acolhidos'))
+      .then(done)
+      .catch(done)
   })
 })

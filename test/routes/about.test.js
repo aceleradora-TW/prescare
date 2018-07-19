@@ -1,13 +1,13 @@
-const about = require("../../src/routes/application/about")
+const about = require('../../src/routes/application/about')
 
 describe('Quando acesso about', () => {
-    it('Deve mostrar pagina com informacoes', () => {
-        const req = {}
-        const res = {render : jest.fn()}
-        const usuario = [{ nome: 'Leo' ,  email: 'Luna@bol.com', avatar: 'img' } ]
+  it('Deve mostrar pagina com informacoes', () => {
+    const req = {}
+    const res = {render : jest.fn()}
+    const usuario = [{ nome: 'Leo' ,  email: 'Luna@bol.com', avatar: 'img' } ]
         
-        about(usuario)(req,res)
+    about(usuario)(req,res)
         
-        expect(res.render).toBeCalledWith('pages/about', { usuario } )
-    })
+    expect(res.render).toBeCalledWith('pages/about', { usuario } )
+  })
 })

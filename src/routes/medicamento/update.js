@@ -15,12 +15,8 @@ module.exports = (Medicamento, Prescricao) => (req, res) => {
           res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
         })
     }),
-    Prescricao.update(
-      { updated_at: sequelize.NOW },
-      { where: {id: req.params.prescricao_id }}
-    ).then(result => {
-    })
-    .catch((error) => {
-      console.log(error.message);
-    })
+  Prescricao.update(
+    { updated_at: sequelize.NOW },
+    { where: {id: req.params.prescricao_id }}
+  ).then(() => {})
 }

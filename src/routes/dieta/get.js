@@ -9,5 +9,5 @@ module.exports = Dieta => (req, res) => {
         return res.render('pages/error')
       }
       res.render('pages/editarDieta', { dieta })
-    }).catch(err => console.log(err))
+    })
 }
