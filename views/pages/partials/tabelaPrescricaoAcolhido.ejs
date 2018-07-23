@@ -22,19 +22,19 @@
             </td>
             <td>
                 <%= prescricao.data 
-                    ? prescricao.data.split("-").reverse().join("/")
+                    ? formatarData(prescricao.data)
                     : "-" %>
             </td>
 
             <td>
                 <%= prescricao.updated_at 
-                    ? moment(prescricao.updated_at).format('DD/MM/YYYY HH:mm:ss') 
+                    ? formatarData(prescricao.updated_at, 'DD/MM/YYYY HH:mm:ss')
                     : '---' %>
             </td>
             <td>
 
                 <%= prescricao.validade 
-                    ? prescricao.validade.split("-").reverse().join("/")
+                    ? formatarData(prescricao.data)
                     : "-" %>
 
             </td>

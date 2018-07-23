@@ -1,5 +1,5 @@
 const acolhidoRoutes = require('../../../src/routes/acolhido/get')
-const moment = require('moment')
+const { formatarData } = require('./../../../src/helpers/data-helper') 
 
 describe('Quando acesso acolhido', () => {
   it('Deve mostrar pagina com prescrição e suas abas atualizaveis', (done) => {
@@ -38,7 +38,7 @@ describe('Quando acesso acolhido', () => {
 
     acolhidoRoutes(Acolhido, model)(req, res)
       .then(() => expect(Acolhido.findOne).toBeCalledWith({ 'where': { 'id': req.params.acolhido_id }, 'include': [{ model, 'required': false, 'where': { 'acolhido_id': req.params.acolhido_id } }] }))
-      .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, tipoDoUsuario, prescricaoId, prescricaos, updateUrl, moment}))
+      .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', { acolhido, tipoDoUsuario, prescricaoId, prescricaos, updateUrl, formatarData}))
       .then(done)
       .catch(done)
   })

@@ -1,4 +1,4 @@
-const moment = require('moment')
+const { formatarData } = require('./../../helpers/data-helper')
 
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findAll({
@@ -9,9 +9,11 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       attributes: ['validade', 'updated_at']
     }]
   }).then(acolhidos => {   
-    res.render('pages/listaAcolhidos', { acolhidos, 
+    res.render('pages/listaAcolhidos', { 
+      acolhidos,
+      formatarData, 
       prescricaos: acolhidos.prescricaos,
-      moment: moment, 
-      tipoDoUsuario: req.user.tipo })
-  })
+      tipoDoUsuario: req.user.tipo 
+    })
+  }) 
 }
