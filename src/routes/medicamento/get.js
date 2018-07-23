@@ -9,5 +9,5 @@ module.exports = Medicamento => (req, res) => {
         return res.render('pages/error')
       }
       res.render('pages/editarMedicamento', { medicamento })
-    }).catch(err => console.log(err))
+    })
 }

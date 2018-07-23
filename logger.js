@@ -1,5 +1,5 @@
-const winston = require('winston');
-const expressWinston = require('express-winston');
+const winston = require('winston')
+const expressWinston = require('express-winston')
 
 const loggerOptions = {
   transports: [
@@ -9,12 +9,12 @@ const loggerOptions = {
   ],
   expressFormat: true,
   colorize: true
-};
+}
 
-const logger = new winston.Logger(loggerOptions);
-const loggerMiddleware = () => expressWinston.logger(loggerOptions);
+const logger = new winston.Logger(loggerOptions)
+const loggerMiddleware = () => expressWinston.logger(loggerOptions)
 
 module.exports = {
   logger,
   loggerMiddleware
-};
+}

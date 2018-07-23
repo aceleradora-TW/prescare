@@ -13,16 +13,16 @@ describe('Quando acesso novo acolhido', () => {
         alergias: 'pólen',
         via_alimentacao: 'oral'
       }
-     }
+    }
     const res = { redirect: jest.fn() }
     const acolhido = { id: 3 }
     Acolhido.create.mockResolvedValue(acolhido)
 
     acolhidoRoute(Acolhido)(req, res)
-    .then(() => expect(Acolhido.create))
-    .then(() => expect(res.redirect).toBeCalledWith('/acolhido/3'))
-    .then(done)
-    .catch(done)
+      .then(() => expect(Acolhido.create))
+      .then(() => expect(res.redirect).toBeCalledWith('/acolhido/3'))
+      .then(done)
+      .catch(done)
   })
 })
 

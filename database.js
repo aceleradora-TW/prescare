@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const {DATABASE_URL} = require('./settings.js')
-const { logger } = require('./logger');
+const { logger } = require('./logger')
 
 module.exports = {
   connect() {
@@ -11,6 +11,6 @@ module.exports = {
         timestamps: false,
       },
       logging: logger.debug
-    });
+    })
   }
-};
+}

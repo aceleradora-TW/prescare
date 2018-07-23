@@ -6,6 +6,6 @@ module.exports = db => db.define('prescricao', {
   validade: sequelize.DATEONLY,
   updated_at: sequelize.DataTypes.DATE,
 },
-  {
-    timestamps: true,
-  })
+{
+  timestamps: true,
+})

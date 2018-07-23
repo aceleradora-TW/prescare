@@ -27,8 +27,8 @@ describe('Quando acesso dieta', () => {
       update: jest.fn()
     }
     const updatePrescricao = (
-        {updated_at: sequelize.NOW},
-        {where: {id: req.params.prescricao_id }}
+      {updated_at: sequelize.NOW},
+      {where: {id: req.params.prescricao_id }}
     )
     Prescricao.update.mockResolvedValue(updatePrescricao)
 
