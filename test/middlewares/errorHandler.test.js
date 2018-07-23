@@ -27,4 +27,19 @@ describe('Error handler', () => {
       expect(res.render).toBeCalledWith('pages/internalError', {error})
     })
   })
+
+  describe('quando nao houver um erro na execucao da aplicacao, mas ainda assim o handler atender ao request', () => {
+
+    const req = {}
+    const res = {}
+    const next = jest.fn()
+
+    beforeEach(() => {
+      errorHandler(undefined, req, res, next)
+    })
+
+    it('entao o request deve ser enviado para o handler de not found', () => {
+      expect(next).toBeCalled()
+    })
+  })
 })
