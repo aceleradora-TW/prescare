@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 const {DATABASE_URL} = require('./settings.js')
 const { logger } = require('./logger')
 
@@ -8,9 +9,18 @@ module.exports = {
       dialect: 'postgres',
       define: {
         underscored: true,
-        timestamps: false,
+        timestamps: false
       },
-      logging: logger.debug
+      logging: logger.debug,
+      operatorsAliases: {
+        $and: Op.and,
+        $or: Op.or,
+        $eq: Op.eq,
+        $gt: Op.gt,
+        $lt: Op.lt,
+        $lte: Op.lte,
+        $like: Op.like
+      }
     })
   }
 }
