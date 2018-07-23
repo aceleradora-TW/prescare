@@ -14,8 +14,7 @@ module.exports = (Prescricao, Medicamento) => (req, res) => {
       })
       res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     })
-    .catch((error) => {
-      console.log(error.message);
+    .catch(() => {
       res.redirect('/404')
     })
     

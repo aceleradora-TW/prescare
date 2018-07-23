@@ -8,5 +8,5 @@ module.exports = Cuidado => (req, res) => {
         return res.render('pages/error')
       }
       res.render('pages/editarCuidado', { cuidado })
-    }).catch(err => console.log(err))
+    })
 }

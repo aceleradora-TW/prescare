@@ -1,5 +1,6 @@
 const database = require('./database')
 const modelsInitializer = require('./src/models')
+const { logger } = require('./logger')
 
 const databaseConnection = database.connect()
 
@@ -66,7 +67,7 @@ const createUsuarioFarmaceutica = () => models.Usuario.create({
 })
 
 const letItCrash = error => {
-  console.trace('Erro durante o seed:', error.message)
+  logger.error('Erro durante o seed:', error.message)
   process.exit(1)
 }
 

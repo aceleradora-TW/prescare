@@ -7,5 +7,5 @@ module.exports = (passport, router) => {
   router.post('/login', login(passport))
   router.get('/logout', logout())
 
-  return router;
+  return router
 }

@@ -13,5 +13,5 @@ module.exports = Usuario => (req, res) => {
       updateUrl: req.urlOriginal
     })
 
-  }).catch(err => console.log(err))
+  })
 }

@@ -37,13 +37,13 @@ const startApplication = () => {
     .use(flash())
     .use(loggerMiddleware())
     .use('/', routes)
-    .listen(PORT, () => logger.info(`Servidor iniciado em http://localhost:${PORT}`));
-};
+    .listen(PORT, () => logger.info(`Servidor iniciado em http://localhost:${PORT}`))
+}
 
 databaseConnection
   .sync()
   .then(startApplication)
   .catch((error) => {
-    logger.error('Erro ao iniciar a aplicacao: ', error.message);
-    process.exit(1);
-  });
+    logger.error('Erro ao iniciar a aplicacao: ', error.message)
+    process.exit(1)
+  })
