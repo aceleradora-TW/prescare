@@ -12,7 +12,7 @@ describe('Error handler', () => {
   describe('quando houver um erro na execucao da aplicacao', () => {
 
     const req = {}
-    const res = {render: jest.fn()}
+    const res = {render: jest.fn(), status: jest.fn()}
     const error = new Error('Deu ruim')
 
     beforeEach(() => {
@@ -23,7 +23,8 @@ describe('Error handler', () => {
       expect(logger.error).toBeCalledWith('Deu ruim')
     })
 
-    it('renderiza pagina de erro', () => {
+    it('renderiza pagina de erro com status HTTP 500', () => {
+      expect(res.status).toBeCalledWith(500)
       expect(res.render).toBeCalledWith('pages/internalError', {error})
     })
   })
