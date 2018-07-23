@@ -1,44 +1,30 @@
-const errorHandlerFactory = require('../../src/middlewares/errorHandler');
+const errorHandlerFactory = require('../../src/middlewares/errorHandler')
 
 describe('Error handler', () => {
 
-  const logger = jest.fn();
-  const errorHandler = errorHandlerFactory(logger);
+  const logger = {error: jest.fn()}
+  const errorHandler = errorHandlerFactory(logger)
 
   beforeEach(() => {
-    logger.mockReset();
-  });
+    logger.error.mockReset()
+  })
 
   describe('quando houver um erro na execucao da aplicacao', () => {
 
-    const req = {};
-    const res = {render: jest.fn()};
-    const error = new Error('Deu ruim');
+    const req = {}
+    const res = {render: jest.fn()}
+    const error = new Error('Deu ruim')
 
     beforeEach(() => {
-      errorHandler(error, req, res);
-    });
-
-    it('renderiza pagina de erro', () => {
-      expect(res.render).toBeCalledWith('pages/error');
-    });
+      errorHandler(error, req, res)
+    })
 
     it('loga informacoes do erro', () => {
-      expect(logger).toBeCalledWith('Deu ruim');
-    });
+      expect(logger.error).toBeCalledWith('Deu ruim')
+    })
 
-  });
-
-  describe('quando o request nao for atendido por nenhuma outra rota ou middleware', () => {
-    const req = {};
-    const res = {render: jest.fn()};
-
-    beforeEach(() => {
-      errorHandler(undefined, req, res);
-    });
-
-    it('renderiza pagina de 404', () => {
-      expect(res.render).toBeCalledWith('pages/error');
-    });
-  });
-});
+    it('renderiza pagina de erro', () => {
+      expect(res.render).toBeCalledWith('pages/internalError', {error})
+    })
+  })
+})

@@ -38,7 +38,7 @@ const startApplication = () => {
     .use(flash())
     .use(loggerMiddleware())
     .use('/', routes)
-    .use(errorHandler(console.log.bind(console)))
+    .use(errorHandler(logger))
     .use(notFoundHandler())
     .listen(PORT, () => logger.info(`Servidor iniciado em http://localhost:${PORT}`))
 }

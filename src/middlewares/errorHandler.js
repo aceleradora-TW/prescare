@@ -1,4 +1,4 @@
 module.exports = (logger) => (error, req, res) => {
-  logger(error.message)
+  logger.error(error.message)
   res.render('pages/internalError', {error})
 }
