@@ -10,9 +10,10 @@ const modelsInitializer = require('./src/models')
 const passportInitializer = require('./auth')
 const { PORT, SECRET } = require('./settings')
 const database = require('./database')
+const errorHandler = require('./src/middlewares/errorHandler')
+const notFoundHandler = require('./src/middlewares/notFoundHandler')
 
 const databaseConnection = database.connect()
-
 const models = modelsInitializer(databaseConnection)
 const passport = passportInitializer(models.Usuario)
 const routes = routesInitializer(models, passport)
@@ -37,6 +38,8 @@ const startApplication = () => {
     .use(flash())
     .use(loggerMiddleware())
     .use('/', routes)
+    .use(errorHandler(console.log.bind(console)))
+    .use(notFoundHandler())
     .listen(PORT, () => logger.info(`Servidor iniciado em http://localhost:${PORT}`))
 }
 
