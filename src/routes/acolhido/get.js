@@ -1,13 +1,20 @@
-module.exports = (Acolhido, Prescricao) => (req, res) => {
-  return Acolhido.findOne({
-    where: {
-      id: req.params.acolhido_id
-    },
-    include: [{ model: Prescricao, required: false, where: { acolhido_id: req.params.acolhido_id } }]
-
-  }).then(acolhido => {
+module.exports = (Acolhido, Prescricao) => (req, res, next) => Acolhido.findOne({
+  where: {
+    id: req.params.acolhido_id
+  },
+  include: [
+    {
+      model: Prescricao,
+      required: false,
+      where: {
+        acolhido_id: req.params.acolhido_id
+      }
+    }
+  ]
+})
+  .then(acolhido => {
     if (!acolhido) {
-      return res.render('pages/error')
+      return next()
     }
 
     res.render('pages/infoAcolhido', {
@@ -18,4 +25,4 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       updateUrl: req.urlOriginal
     })
   })
-}
+  .catch(next)
