@@ -1,5 +1,3 @@
-const { formatarData } = require('./../../helpers/data-helper')
-
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
@@ -14,7 +12,6 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
 
     res.render('pages/infoAcolhido', {
       acolhido,
-      formatarData,
       prescricaoId: req.params.prescricao_id,
       tipoDoUsuario: req.user.tipo,
       prescricaos: acolhido.prescricaos,

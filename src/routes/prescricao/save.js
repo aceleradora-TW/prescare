@@ -1,10 +1,8 @@
-const { parseData } = require('./../../helpers/data-helper')
-
 module.exports = Prescricao => (req, res) => {
   return Prescricao.create({
     acolhido_id: req.params.acolhido_id,
     usuario: req.user.tipo,
-    validade: parseData(req.body.validade),
+    validade: req.app.locals.parseData(req.body.validade),
     data: new Date().getTime()
   })
     .then(prescricao => {

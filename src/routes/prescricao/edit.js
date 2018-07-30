@@ -1,5 +1,3 @@
-const { formatarData } = require('./../../helpers/data-helper')
-
 module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req,res) => {
   return Prescricao.findOne({
     where: {
@@ -12,7 +10,6 @@ module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido) => (req,res
     }
     res.render('pages/editarPrescricao', {
       prescricao,
-      formatarData,
       dietas: prescricao.dieta,
       cuidados: prescricao.cuidados,
       medicamentos: prescricao.medicamentos,

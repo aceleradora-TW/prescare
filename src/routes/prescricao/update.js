@@ -1,5 +1,3 @@
-const { parseData } = require('./../../helpers/data-helper')
-
 module.exports = (Prescricao, Medicamento) => (req, res) => {
   return Prescricao.
     findOne({
@@ -8,7 +6,7 @@ module.exports = (Prescricao, Medicamento) => (req, res) => {
     })
     .then(prescricao => {
       prescricao.update({
-        validade: parseData(req.body.validade)
+        validade: req.app.locals.parseData(req.body.validade)
       })
       res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     })

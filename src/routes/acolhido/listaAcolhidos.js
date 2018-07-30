@@ -1,5 +1,3 @@
-const { formatarData } = require('./../../helpers/data-helper')
-
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findAll({
     order: [['nome', 'ASC'], [{ model: Prescricao }, 'validade', 'DESC']],
@@ -11,7 +9,6 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
   }).then(acolhidos => {   
     res.render('pages/listaAcolhidos', { 
       acolhidos,
-      formatarData, 
       prescricaos: acolhidos.prescricaos,
       tipoDoUsuario: req.user.tipo 
     })
