@@ -11,6 +11,7 @@
 
 .bold {
   font-weight: bold;
+  font-size: 19px;
 }
 
 .botao-usuario{
@@ -51,7 +52,6 @@
  }
 
 .botoes a, .botoes input, .botoes button {
-  /* align-items: center; */
   background-color: #81b4db;
   border-radius: 7px;
   color: white;
@@ -128,7 +128,7 @@
 }
 
 .login {
-  padding-top: 10%;
+   padding-top: 3%; 
 }
 
 .center {
@@ -146,10 +146,6 @@
   -moz-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
 }
-
-
-
-
 
 
 .lista-acolhidos {
@@ -201,26 +197,6 @@
   text-decoration: none;
   background-size: 14vw;
   margin-bottom: 5vh;
-}
-
-.cabecalho-login {
-  text-align: center;
-  background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  text-decoration: none;
-  background-size: 14vw;
-  min-height: 71px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-bottom: 10%;
-}
-
-.login {
-  padding-top: 10%;
 }
 
 .nome-acolhido {
@@ -320,7 +296,6 @@
   text-decoration: none;
 }
 
-
 .tipo-usuario input{
   margin-left: 2vw;
 
@@ -360,6 +335,14 @@
   padding: 2vh 0;
 }
 
+.cabecalho-impressao h1{
+  font-size: 32px;
+}
+
+.cabecalho-impressao h2{
+  font-size: 16px;
+}
+
 .fm-impressao {
   width: 10%;
 }
@@ -370,6 +353,11 @@
 
 .nome-crm {
   margin: 3vw 64vw;
+}
+
+.nome-crm p {
+  margin-bottom: 9px;
+  color: black;
 }
 
 .nome-tecnico{
