@@ -51,7 +51,15 @@ npm run db:seed
 Para iniciar o servidor, execute o seguinte comando, dentro do diretório /prescare:
 ```
 npm start
+
 ```
+ou
+
+```
+npm run dev
+
+```
+
 ## Acessando a página
 ### Acessar localmente o projeto:
 
