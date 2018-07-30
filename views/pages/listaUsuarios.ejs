@@ -3,6 +3,7 @@
 <div class="botao-voltar ">
     <a href="/lista-acolhidos">Voltar</a>
 </div>
+
 <section class="section">
     <main class="main">
         <h1 class="titulo-lista-acolhidos">Lista de Usuários</h1>
@@ -10,12 +11,11 @@
             <%for (usuario of usuarios){%>
                 <li>
                     <a href="/usuario/<%= usuario.id %>">
-                        Nome:
-                        <%= usuario.nome %> | Tipo de Usuário:
-                            <%= usuario.tipo %>
+                        Nome: <%= usuario.nome %> | 
+                        Tipo de Usuário: <%= usuario.tipo %>
                     </a>
                 </li>
-                <% } %>
+            <% } %>
         </ul>
     </main>
 </section>
