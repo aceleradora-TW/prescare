@@ -83,7 +83,7 @@ emoji < @username1, @username2, @username3 > frase do commit (imperativo - até 
 ### Exemplo:
 
 ```
-:memo: <@AndreiRupertti, @ClaudiaStrm> cria padrão de commits #0
+:memo: <@marcos012, @ClaudiaStrm> cria padrão de commits #0
 ``` 
 
 ## Tabela de emojis
