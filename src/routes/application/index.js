@@ -1,6 +1,6 @@
 const about = require('./about')
-const home = require('./home')
 const error = require('./error')
+const home = require('./home')
 
 module.exports = router => {
   router.get('/', home())

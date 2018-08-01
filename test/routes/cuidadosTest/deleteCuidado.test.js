@@ -6,6 +6,7 @@ describe('Quando deleto cuidado', () => {
     const Cuidado = {
       destroy: jest.fn().mockResolvedValue()
     }
+    
     const req = { params: { prescricao_id: 1, acolhido_id: 2, cuidado_id: 3 } }
     const res = { redirect: jest.fn() }
         
@@ -16,6 +17,7 @@ describe('Quando deleto cuidado', () => {
       {updated_at: sequelize.NOW},
       {where: {id: req.params.prescricao_id }}
     )
+
     Prescricao.update.mockResolvedValue(updatePrescricao)
         
     cuidadoRoute(Cuidado, Prescricao)(req, res)

@@ -10,7 +10,7 @@ describe('Quando acesso listaAcolhidos', () => {
     const model = {
       include: jest.fn()
     }
-
+    
     const req = { user: { tipo:  'clinica' }}
     const res = { render: jest.fn() }
     const acolhidos = {
@@ -38,7 +38,5 @@ describe('Quando acesso listaAcolhidos', () => {
       .then(() => expect(res.render).toBeCalledWith('pages/listaAcolhidos', { acolhidos, prescricaos, tipoDoUsuario }))
       .then(done)
       .catch(done)
-  })})
-
-
-
+  })
+})

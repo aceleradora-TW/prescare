@@ -30,6 +30,7 @@ describe('Quando acesso dieta', () => {
       {updated_at: sequelize.NOW},
       {where: {id: req.params.prescricao_id }}
     )
+    
     Prescricao.update.mockResolvedValue(updatePrescricao)
 
     dietaRoute(Dieta, Prescricao)(req, res)

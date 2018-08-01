@@ -25,4 +25,3 @@ describe('Quando acesso novo acolhido', () => {
       .catch(done)
   })
 })
-

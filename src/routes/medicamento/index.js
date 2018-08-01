@@ -1,7 +1,7 @@
 const create = require('./create')
 const edit = require('./edit')
-const get = require('./get')
 const destroy = require('./destroy')
+const get = require('./get')
 const update = require('./update')
 
 module.exports = (Medicamento, Prescricao, Acolhido, router) => {

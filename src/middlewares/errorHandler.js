@@ -6,6 +6,5 @@ module.exports = (logger) => (error, req, res, next) => {
     res.status(INTERNAL_SERVER_ERROR)
     return res.render('pages/internalError', {error})
   }
-
   return next()
 }

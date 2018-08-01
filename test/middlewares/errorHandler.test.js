@@ -1,7 +1,6 @@
 const errorHandlerFactory = require('../../src/middlewares/errorHandler')
 
 describe('Error handler', () => {
-
   const logger = {error: jest.fn()}
   const errorHandler = errorHandlerFactory(logger)
 
@@ -10,7 +9,6 @@ describe('Error handler', () => {
   })
 
   describe('quando houver um erro na execucao da aplicacao', () => {
-
     const req = {}
     const res = {render: jest.fn(), status: jest.fn()}
     const error = new Error('Deu ruim')
@@ -30,7 +28,6 @@ describe('Error handler', () => {
   })
 
   describe('quando nao houver um erro na execucao da aplicacao, mas ainda assim o handler atender ao request', () => {
-
     const req = {}
     const res = {}
     const next = jest.fn()

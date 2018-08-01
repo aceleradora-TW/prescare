@@ -16,6 +16,7 @@ describe('Quando deleto medicamento', () => {
       {updated_at: sequelize.NOW},
       {where: {id: req.params.prescricao_id }}
     )
+    
     Prescricao.update.mockResolvedValue(updatePrescricao)
         
     medicamentoRoute(Medicamento, Prescricao)(req, res)

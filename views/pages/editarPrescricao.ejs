@@ -42,7 +42,7 @@
     </form>
 </div>
 
-<%if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
+<% if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
     <form action="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%= prescricao.id %>/update" method="POST">
         <label for="validade" class="sub-titulo">Validade da Prescrição</label>
         <input type="text" name="validade" id="validade" value="<%= formatarData({data: prescricao.validade}) %>">

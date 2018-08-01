@@ -6,6 +6,7 @@ describe('Quando acesso cuidado', () => {
     const Cuidado = {
       create: jest.fn()
     }
+    
     const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado' }
     const res = { redirect: jest.fn() }
     const novoCuidado = { id: 2 }
@@ -19,6 +20,7 @@ describe('Quando acesso cuidado', () => {
       {updated_at: sequelize.NOW},
       {where: {id: req.params.prescricao_id }}
     )
+
     Prescricao.update.mockResolvedValue(updatePrescricao)
         
     cuidadoRoute(Cuidado, Prescricao)(req, res)

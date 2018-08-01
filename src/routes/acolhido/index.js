@@ -2,9 +2,8 @@ const create = require('./create')
 const destroy = require('./destroy')
 const edit = require('./edit')
 const get = require('./get')
-const novo = require('./novoAcolhido')
 const list = require('./listaAcolhidos')
-
+const novo = require('./novoAcolhido')
 const update = require('./update')
 
 module.exports = (Acolhido, Prescricao, router) => {

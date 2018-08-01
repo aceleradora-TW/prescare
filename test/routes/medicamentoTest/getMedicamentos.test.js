@@ -19,7 +19,6 @@ describe('Quando acesso medicamento', () => {
       validade: '22/06/2018',
     }
 
-
     Medicamento.findOne.mockResolvedValue(medicamento)
 
     return medicamentoRoute(Medicamento)(req, res)

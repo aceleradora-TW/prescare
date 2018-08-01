@@ -22,7 +22,5 @@ module.exports = (Medicamento, Prescricao, Acolhido) => (req, res) => {
         updateUrl: req.originalUrl,
         acolhido: medicamento.prescricao.acolhido,
       })
-
-
     })
 }
