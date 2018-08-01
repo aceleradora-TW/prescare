@@ -3,19 +3,19 @@
     <main class="main">
         <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
         <ul class="lista-acolhidos">
-            <%for (acolhidos of acolhidos){%>
+            <%for (acolhido of acolhidos){%>
                 <li>
-                    <a href="/acolhido/<%= acolhidos.id %>">
-                        <%= acolhidos.nome %>
+                    <a href="/acolhido/<%= acolhido.id %>">
+                        <%= acolhido.nome %>
                         <div>
                             <span>
                                 <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
                                     Validade da prescrição:
-                                    <%= formatarData({ data: acolhidos.prescricaos[0].validade, fallback: '' }) %> 
+                                    <%= formatarData({ data: (acolhido.prescricaos.shift() || {}).validade, fallback: '' }) %> 
                                     <span>|</span>
                                 <% } %>
                                 Atualizado em:
-                                <%= formatarData({ data: acolhidos.prescricaos[0].updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                                <%= formatarData({ data: (acolhido.prescricaos.shift() || {}).updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
                             </span>
                         </div>
                     </a>

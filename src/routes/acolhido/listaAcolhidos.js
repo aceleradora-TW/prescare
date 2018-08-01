@@ -6,7 +6,7 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
       required: false,
       attributes: ['validade', 'updated_at']
     }]
-  }).then(acolhidos => {   
+  }).then(acolhidos => {
     res.render('pages/listaAcolhidos', { 
       acolhidos,
       prescricaos: acolhidos.prescricaos,
