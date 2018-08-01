@@ -35,7 +35,7 @@
   </form>
   
     <div class="botoes">
-      <%if (user.tipo === "administrador") { %>
+      <% if (user.tipo === "administrador") { %>
         <form action="/acolhido/<%=acolhido.id%>/excluir" method="POST">
           <input type="submit" value="Excluir acolhido" onclick="return confirm('Tem certeza que deseja excluir esse acolhido?')">
         </form>
