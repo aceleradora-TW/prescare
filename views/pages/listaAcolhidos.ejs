@@ -29,5 +29,9 @@
         <a href="/usuario/novo"> Inserir Novo Usuário</a>
         <a href="listaUsuarios"> Lista de Usuários</a>
         <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
-    <% } %>
+    <% } else { %>
+        <a href="/usuario/<%= user.id %>/edit">
+            alterar senha
+        </a>
+    <% } %> 
 </div>
