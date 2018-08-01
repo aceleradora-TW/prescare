@@ -1,6 +1,4 @@
-const moment = require('moment')
-
-module.exports = (Acolhido, Prescricao) => (req, res, next) => {
+module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findAll({
     order: [['nome', 'ASC'], [{ model: Prescricao }, 'validade', 'DESC']],
     include: [{
@@ -8,12 +6,11 @@ module.exports = (Acolhido, Prescricao) => (req, res, next) => {
       required: false,
       attributes: ['validade', 'updated_at']
     }]
-  }).then(acolhidos => {
-    res.render('pages/listaAcolhidos', {
+  }).then(acolhidos => {   
+    res.render('pages/listaAcolhidos', { 
       acolhidos,
-      moment,
       prescricaos: acolhidos.prescricaos,
-      tipoDoUsuario: req.user.tipo
+      tipoDoUsuario: req.user.tipo 
     })
-  }).catch(next)
+  }) 
 }

@@ -1,5 +1,3 @@
-const moment = require('moment')
-
 module.exports = (Acolhido, Prescricao) => (req, res) => {
   return Acolhido.findOne({
     where: {
@@ -11,13 +9,13 @@ module.exports = (Acolhido, Prescricao) => (req, res) => {
     if (!acolhido) {
       return res.render('pages/error')
     }
+
     res.render('pages/infoAcolhido', {
-      prescricaoId: req.params.prescricao_id,
       acolhido,
+      prescricaoId: req.params.prescricao_id,
       tipoDoUsuario: req.user.tipo,
       prescricaos: acolhido.prescricaos,
-      updateUrl: req.urlOriginal,
-      moment: moment
+      updateUrl: req.urlOriginal
     })
   })
 }

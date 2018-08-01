@@ -13,6 +13,8 @@ const database = require('./database')
 const errorHandler = require('./src/middlewares/errorHandler')
 const notFoundHandler = require('./src/middlewares/notFoundHandler')
 
+const dataHelpers = require('./src/helpers/data-helpers')
+
 const databaseConnection = database.connect()
 const models = modelsInitializer(databaseConnection)
 const passport = passportInitializer(models.Usuario)
@@ -37,6 +39,7 @@ const startApplication = () => {
     .use(passport.session())
     .use(flash())
     .use(loggerMiddleware())
+    .use(dataHelpers(app))
     .use('/', routes)
     .use(errorHandler(logger))
     .use(notFoundHandler())
