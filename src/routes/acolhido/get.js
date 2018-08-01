@@ -1,28 +1,29 @@
-module.exports = (Acolhido, Prescricao) => (req, res, next) => Acolhido.findOne({
+const query = (Acolhido, Prescricao, acolhidoId) => Acolhido.findOne({
   where: {
-    id: req.params.acolhido_id
+    id: acolhidoId
   },
   include: [
     {
       model: Prescricao,
       required: false,
       where: {
-        acolhido_id: req.params.acolhido_id
+        acolhido_id: acolhidoId
       }
     }
   ]
 })
-  .then(acolhido => {
-    if (!acolhido) {
-      return next()
-    }
 
-    res.render('pages/infoAcolhido', {
-      acolhido,
-      prescricaoId: req.params.prescricao_id,
-      tipoDoUsuario: req.user.tipo,
-      prescricaos: acolhido.prescricaos,
-      updateUrl: req.urlOriginal
-    })
+const render = (req, res, notFound) => acolhido => acolhido
+  ? res.render('pages/infoAcolhido', {
+    acolhido,
+    prescricaoId: req.params.prescricao_id,
+    tipoDoUsuario: req.user.tipo,
+    prescricaos: acolhido.prescricaos,
+    updateUrl: req.urlOriginal
   })
-  .catch(next)
+  : notFound()
+
+module.exports = (Acolhido, Prescricao) => (req, res, next) =>
+  query(Acolhido, Prescricao, req.params.acolhido_id)
+    .then(render(req, res, next))
+    .catch(next)
