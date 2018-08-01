@@ -48,7 +48,6 @@
   padding: 2vh 0;
   display: inline-flex;
   text-align: center;
-  
  }
 
 .botoes a, .botoes input, .botoes button {
@@ -68,7 +67,8 @@
 
 .botoes a:hover{
   text-transform: none;
-  text-decoration:none;
+  text-decoration: none;
+  color: #fff;
 }
 
 .botoes .tiracor {
@@ -82,6 +82,7 @@
 }
 .botoes a {
   padding-top: 5px;
+  text-transform: none;
 }
 
 .botao-sair a {
@@ -147,6 +148,10 @@
   box-shadow: 0 10px 6px -6px #777;
 }
 
+.input-data {
+  height: 36px;
+  margin-left: 10px;
+}
 
 .lista-acolhidos {
   background-color: #81b4db;
@@ -353,6 +358,7 @@
 
 .nome-crm {
   margin: 3vw 64vw;
+  padding-top: 80px;
 }
 
 .nome-crm p {
