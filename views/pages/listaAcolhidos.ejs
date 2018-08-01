@@ -11,11 +11,11 @@
                             <span>
                                 <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
                                     Validade da prescrição:
-                                    <%= formatarData({ data: (acolhido.prescricaos.shift() || {}).validade, fallback: '' }) %> 
+                                    <%= formatarData({ data: (acolhido.prescricaos[0] || {}).validade, fallback: '' }) %> 
                                     <span>|</span>
                                 <% } %>
                                 Atualizado em:
-                                <%= formatarData({ data: (acolhido.prescricaos.shift() || {}).updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                                <%= formatarData({ data: (acolhido.prescricaos[0] || {}).updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
                             </span>
                         </div>
                     </a>
