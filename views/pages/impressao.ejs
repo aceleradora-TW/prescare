@@ -5,9 +5,9 @@
 </div>
 
 <div class="center label">
-  <h3 class="bold">
-    <%= acolhido.nome %>
-  </h3>
+    <h3 class="bold">
+        <%= acolhido.nome %>
+    </h3>
 </div>
 
 <div class="info-impressao">
@@ -16,9 +16,7 @@
             <tr>
                 <td>
                     <span> Data de Nascimento: </span>
-                    <span id="data">
-                      <%= acolhido.nascimento %>
-                    </span>
+                    <span id="data"> <%= acolhido.nascimento %> </span>
                 </td>
 
                 <td>
@@ -29,25 +27,19 @@
 
                 <td>
                     <span> Peso: </span>
-                    <span>
-                        <%= acolhido.peso %> kg
-                    </span>
+                    <span> <%= acolhido.peso %> kg </span>
                 </td>
             </tr>
 
             <tr>
                 <td>
                     <span> Via de alimentação: </span>
-                    <span>
-                      <%= acolhido.via_alimentacao %>
-                    </span>
+                    <span> <%= acolhido.via_alimentacao %> </span>
                 </td>
 
                 <td>
                     <span> Alergias:</span>
-                    <span>
-                      <%= acolhido.alergias %>
-                    </span>
+                    <span> <%= acolhido.alergias %> </span>
                 </td>
             </tr>
         </thead>
@@ -95,7 +87,7 @@
 
     <tbody>
         <tr>
-            <%for (cuidado of prescricao.cuidados){%>
+            <% for (cuidado of prescricao.cuidados){ %>
                 <td class="td-observacao">
                     <%= cuidado.descricao %>
                 </td>
@@ -107,7 +99,7 @@
                 <td class="td-observacao">
                     <%= cuidado.observacoes %>
                 </td>
-            <%}%>
+            <% } %>
         </tr>
     </tbody>
 </table>
@@ -128,7 +120,7 @@
     </thead>
 
     <tbody>
-        <%for (medicamento of prescricao.medicamentos){%>
+        <% for (medicamento of prescricao.medicamentos){ %>
             <tr>
                 <td>
                     <%= medicamento.nome %>
@@ -161,7 +153,7 @@
                 <td class="nome-tecnico">
                 </td>
             </tr>
-          <%}%>
+          <% } %>
     </tbody>
 </table>
 

@@ -57,7 +57,7 @@
 
 		</form>
 
-					<%if (user.tipo === "clinica"  || user.tipo === "neurologista") {  %>
+					<% if (user.tipo === "clinica"  || user.tipo === "neurologista") {  %>
 						<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
 							<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
 						</form>

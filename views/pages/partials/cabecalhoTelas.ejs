@@ -6,6 +6,7 @@
                 <%= acolhido.nome %>
             </span>
         </div>
+
         <div>
             <span class="bold"> Data de Nascimento: </span>
             <span id="data">
@@ -18,18 +19,21 @@
             <span id="idade"></span>
             <script>calcularIdade('<%= acolhido.nascimento %>')</script>
         </div>
+
         <div>
             <span class="bold"> Peso: </span>
             <span>
                 <%= acolhido.peso %> kg
             </span>
         </div>
+
         <div>
             <span class="bold"> Alergias: </span>
             <span>
                 <%= acolhido.alergias %>
             </span>
         </div>
+        
         <div>
             <span class="bold"> Via de alimentação: </span>
             <span>
@@ -37,7 +41,7 @@
             </span>
         </div>
 
-        <%if ( user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "administrador") { %>
+        <% if (user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "administrador") { %>
             <a href="/acolhido/<%= acolhido.id %>/edit" class="tiracor">
                 <i class="fa fa-edit edit"></i>
                 Editar informações
