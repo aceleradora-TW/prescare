@@ -2,8 +2,8 @@ const create = require('./create')
 const destroy = require('./destroy')
 const edit = require('./edit')
 const get = require('./get')
-const novo = require('./novoUsuario')
 const list = require('./listaUsuarios')
+const novo = require('./novoUsuario')
 const update = require('./update')
 
 module.exports = (Usuario, router) => {

@@ -52,14 +52,14 @@
 
 			<div class="conjunto-botoes">
 				<div class="botoes">
-					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')">
+					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')" class="form-control">
 				
 
 		</form>
 
 					<% if (user.tipo === "clinica"  || user.tipo === "neurologista") {  %>
 						<form action="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
-							<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+							<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');" class="form-control">
 						</form>
 					<% } %>
 				</div>

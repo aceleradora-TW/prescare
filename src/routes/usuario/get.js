@@ -12,6 +12,5 @@ module.exports = Usuario => (req, res) => {
       usuario,
       updateUrl: req.urlOriginal
     })
-
   })
 }

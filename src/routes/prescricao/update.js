@@ -12,5 +12,5 @@ module.exports = (Prescricao, Medicamento) => (req, res) => {
     })
     .catch(() => {
       res.redirect('/404')
-    })
+    })    
 }

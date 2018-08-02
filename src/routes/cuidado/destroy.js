@@ -10,7 +10,7 @@ module.exports = (Cuidado, Prescricao) => (req, res) => {
       res.redirect('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit')
     }),
   Prescricao.update(
-    { where: {id: req.params.prescricao_id }},
-    { updated_at: sequelize.NOW }
+    { updated_at: sequelize.NOW },
+    { where: {id: req.params.prescricao_id }}
   ).then(() => {})
 }

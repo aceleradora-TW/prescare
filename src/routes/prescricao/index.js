@@ -1,10 +1,11 @@
-const save = require('./save')
+const create = require ('./create')
+const destroy = require('./destroy')
 const edit = require('./edit')
 const get = require('./get')
-const destroy = require('./destroy')
-const update = require('./update')
-const create = require ('./create')
 const print = require('./print')
+const save = require('./save')
+const update = require('./update')
+
 
 
 module.exports = (Prescricao, Cuidado, Dieta, Medicamento, Acolhido, router) => {

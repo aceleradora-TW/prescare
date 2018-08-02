@@ -39,27 +39,29 @@
 
             <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
                 <% if (prescricao.usuario !== user.tipo) { %>
-                    <td>
-                        <div class="botoes">
-                            <input type="submit" disabled value="Abrir">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="botoes">
-                            <input type="submit" value="Excluir" disabled>
-                        </div>
-                    </td>
+                    <fieldset disabled>
+                        <td>
+                            <div class="botoes">
+                                    <button type="submit" class="form-control">Abrir</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="botoes">
+                                <button type="submit" class="form-control">Excluir</button>
+                            </div>
+                        </td>
+                    </fieldset>
                 <% } %>
 
                 <% if (prescricao.usuario === user.tipo) { %>
                     <td>
                         <div class="botoes">
-                            <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
+                            <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit" class="form-control">Abrir</a>
                         </div>
                     </td>
                     <td>
                         <form action="<%= acolhido.id %>/prescricao/<%= prescricao.id %>/destroy" method="post" class="botoes">
-                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');">
+                            <input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');" class="form-control">
                         </form>
                     </td>
                 <% } %>

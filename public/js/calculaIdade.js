@@ -6,6 +6,7 @@ function calcularIdade(dataAcolhido) {
   let ano = dataHoje.getFullYear();
   let aniversario = new Date(ano, data.getMonth(), data.getDate());
   let idade = ano - data.getFullYear();
+  
   if (aniversario > dataHoje) {
       idade--
   }

@@ -21,7 +21,6 @@ module.exports = (Dieta, Prescricao, Acolhido) => (req, res) => {
         dieta,
         updateUrl: req.originalUrl,
         acolhido: dieta.prescricao.acolhido,
-
       })
     })
 }
