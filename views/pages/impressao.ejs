@@ -1,36 +1,45 @@
 <div class="cabecalho-impressao bold">
-  <h1>Casa do Menino Jesus de Praga </h1>
-  <h2>Nelson Zang, 420 - Porto Alegre/RS - Fone:(51) 3315.0011 </h2>
-  <h2> www.casadomenino.org.br</h2>
+    <h1>Casa do Menino Jesus de Praga </h1>
+    <h2>Nelson Zang, 420 - Porto Alegre/RS - Fone:(51) 3315.0011 </h2>
+    <h2> www.casadomenino.org.br</h2>
 </div>
 
 <div class="center label">
     <h3 class="bold">
         <%= prescricao.acolhido.nome %>
     </h3>
+    <span class=" center col-md-6">
+            Validade da prescrição:
+            <%= prescricao.validade.split("-").reverse().join("/") %>
+    </span>
+    
 </div>
 
 <div class="info-impressao">
     <table>
         <thead>
-            <tr>
-                <td>
+            <tr class="row">
+                <td class="col-md-3">
                     <span> Data de Nascimento: </span>
                     <span id="data"> <%= prescricao.acolhido.nascimento %> </span>
                 </td>
-
-                <td>
+                <td class="col-md-2">
                     <span> Idade: </span>
                     <span id="idade"></span>
                     <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
                 </td>
 
-                <td>
+                <td class="col-md-2">
                     <span> Peso: </span>
                     <span> <%= prescricao.acolhido.peso %> kg </span>
                 </td>
+                <td class="col-md-5">
+                    <span> 
+                        Atualizado em:
+                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                    </span>
+                </td>
             </tr>
-
             <tr>
                 <td>
                     <span> Via de alimentação: </span>
@@ -49,9 +58,7 @@
                 </td>
                 <td>
                     <span>
-                        Atualizado em:
-                       
-                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                        <%= acolhido.alergias %>
                     </span>
                 </td>
             </tr>
@@ -84,7 +91,7 @@
                     <%= dieta.observacoes %>
                 </td>
             </tr>
-        <%}%>
+            <%}%>
     </tbody>
 </table>
 
@@ -112,7 +119,7 @@
                 <td class="td-observacao">
                     <%= cuidado.observacoes %>
                 </td>
-            <% } %>
+                <% } %>
         </tr>
     </tbody>
 </table>
@@ -166,7 +173,7 @@
                 <td class="nome-tecnico">
                 </td>
             </tr>
-          <% } %>
+            <% } %>
     </tbody>
 </table>
 
@@ -177,3 +184,8 @@
 </div>
 
 <script type="text/javascript">print()</script>
+<script>
+    let data = new Date;
+    let dataImpressao = data.getDate() + ' / ' + (data.getMonth()+1) + ' / ' + data.getFullYear();
+    document.getElementById("hehe").innerHTML = dataImpressao;
+</script>

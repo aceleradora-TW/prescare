@@ -372,10 +372,10 @@
 }
 
 .info-impressao {
-  padding:10px 20vw;
-  border-collapse: collapse;
-  width: 100%;
+  /* padding:10px 20vw; */
+  /* border-collapse: collapse; */
+  /* width: 100%; */
 }
 .info-impressao td, .info-impressao th{
-  padding: 10px
+  /* padding: 10px */
 }
