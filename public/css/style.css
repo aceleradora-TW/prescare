@@ -17,29 +17,17 @@
 .botao-usuario{
   margin-left: 19%!important;
 }
-.botao-voltar {
+.botao-voltar input{
   background-color:  #81b4db;
+  color: white;
   border-radius: 7px;
   height: 35px;
-  max-width: 150px;
+  max-width: 250px;
   min-width: fit-content;
   min-height: fit-content;
-  width: 5vw!important;
+  width: 5vw;
   text-align: center;
-}
-
-.botao-voltar a {
-  color: white;
-  font-size: 15px;
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding-top: 5px;
-}
-
-.botao-voltar a:hover {
-  text-decoration: none;
-  color: white;
+  margin-bottom: 20px;
 }
 
 .botoes {

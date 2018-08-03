@@ -32,7 +32,7 @@
             <%if (user.tipo === "farmaceutica") { %>
                 <td>
                     <div class="botoes">
-                        <a href="<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit">Abrir</a>
+                        <input type="submit" value="Abrir"  class="form-control" onclick="window.location.href='<%= acolhido.id%>/prescricao/<%= prescricao.id%>/edit'">
                     </div>
                 </td>
             <% } %>
