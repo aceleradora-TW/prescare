@@ -1,4 +1,4 @@
-const acolhidoRoutes = require('../../../src/routes/acolhido/get')
+const getAcolhido = require('../../../src/routes/acolhido/get')
 
 describe('Quando acesso acolhido', () => {
 
@@ -11,9 +11,9 @@ describe('Quando acesso acolhido', () => {
   const req = {
     params: {
       acolhido_id: 1,
-      prescricao_id: 1
+      prescricao_id: 25
     },
-    urlOriginal: '',
+    urlOriginal: '/limbo',
     user: {
       tipo: 'clinica'
     }
@@ -29,41 +29,65 @@ describe('Quando acesso acolhido', () => {
     next.mockReset()
   })
 
-  it('Deve mostrar pagina com prescrição e suas abas atualizaveis', (done) => {
+  describe('Quando o acolhido nao existir', () => {
+    it('Deve redirecionar para a pagina de not found atraves dos middlewares', (done) => {
 
-    const acolhido = {
-      nome: 'Leo',
-      prescricaos: [{
-        id: 1,
-        data: '2018-06-15',
-        validade: '2018-06-08',
-        acolhido_id: '1'
-      }]
-    }
+      Acolhido.findOne.mockResolvedValue(undefined)
 
-    Acolhido.findOne.mockResolvedValue(acolhido)
+      getAcolhido(Acolhido, Prescricao)(req, res, next)
+        .then(() => expect(next).toBeCalled())
+        .then(done)
+        .catch(done)
+    })
+  })
 
-    acolhidoRoutes(Acolhido, Prescricao)(req, res, next)
-      .then(() => expect(Acolhido.findOne).toBeCalledWith({
-        where: {
-          id: req.params.acolhido_id
-        },
-        include: [{
-          model: Prescricao,
-          required: false,
-          where: {
-            acolhido_id: req.params.acolhido_id
-          }
+  describe('Quando houver um erro ao acessar o banco de dados', () => {
+    it('Deve repassar o erro para o proximo middleware', (done) => {
+
+      Acolhido.findOne.mockRejectedValue(new Error('Deu ruim'))
+
+      getAcolhido(Acolhido, Prescricao)(req, res, next)
+        .then(() => expect(next).toBeCalledWith(new Error('Deu ruim')))
+        .then(done)
+        .catch(done)
+    })
+  })
+
+  describe('Quando o acolhido for encontrado com sucesso', () => {
+    it('Deve mostrar pagina de detalhes do acolhido contendo as informacoes do acolhido encontrado', (done) => {
+
+      const acolhido = {
+        nome: 'Leo',
+        prescricaos: [{
+          id: 25,
+          whatever: 'whatever'
         }]
-      }))
-      .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', {
-        acolhido,
-        tipoDoUsuario: req.user.tipo,
-        prescricaoId: req.params.prescricao_id,
-        prescricaos: acolhido.prescricaos,
-        updateUrl: req.urlOriginal
-      }))
-      .then(done)
-      .catch(done)
+      }
+
+      Acolhido.findOne.mockResolvedValue(acolhido)
+
+      getAcolhido(Acolhido, Prescricao)(req, res, next)
+        .then(() => expect(Acolhido.findOne).toBeCalledWith({
+          where: {
+            id: req.params.acolhido_id
+          },
+          include: [{
+            model: Prescricao,
+            required: false,
+            where: {
+              acolhido_id: req.params.acolhido_id
+            }
+          }]
+        }))
+        .then(() => expect(res.render).toBeCalledWith('pages/infoAcolhido', {
+          acolhido,
+          tipoDoUsuario: 'clinica',
+          prescricaoId: 25,
+          prescricaos: acolhido.prescricaos,
+          updateUrl: '/limbo'
+        }))
+        .then(done)
+        .catch(done)
+    })
   })
 })
