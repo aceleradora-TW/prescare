@@ -27,12 +27,10 @@
 
 <div class="botoes botao-usuario ">
     <%if (user.tipo === "administrador") { %>
-        <a href="/usuario/novo"> Inserir Novo Usuário</a>
-        <a href="listaUsuarios"> Lista de Usuários</a>
-        <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+        <input type="submit" value="Inserir Novo Usuário"  class="form-control" onclick="window.location.href='/usuario/novo'">
+        <input type="submit" value="Lista de Usuários"  class="form-control" onclick="window.location.href='listaUsuarios'">
+        <input type="submit" value="Inserir Novo Acolhido"  class="form-control" onclick="window.location.href='/acolhido/novo'">
     <% } else { %>
-        <a href="/usuario/<%= user.id %>/edit">
-            Alterar senha
-        </a>
+        <input type="submit" value="Alterar senha"  class="form-control" onclick="window.location.href='/usuario/<%= user.id %>/edit'">
     <% } %> 
 </div>

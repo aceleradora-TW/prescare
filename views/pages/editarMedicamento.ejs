@@ -1,6 +1,6 @@
 <%- contentFor('body') %>
 	<div class="botao-voltar">
-		<a href="/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit">Voltar</a>
+		<input type="submit" value="Voltar"  class="form-control" onclick="window.location.href='/acolhido/<%=acolhidoId%>/prescricao/<%=prescricaoId%>/edit'">
 	</div>
 	
 	<div class="cabecalho-telas">
@@ -13,8 +13,8 @@
 		<form action="<%= updateUrl %>" method="POST">
 			<div class="form-group row">
 				<label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
-				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" 
-				<%if (user.tipo==="farmaceutica") { %> disabled <% } %> >
+				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" required 
+				<% if (user.tipo === "farmaceutica") { %> disabled <% } %> >
 			</div>
 
 			<div class="form-group row">
@@ -52,9 +52,8 @@
 
 			<div class="conjunto-botoes">
 				<div class="botoes">
-					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')" class="form-control">
-				
-
+					<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado!')" class="form-control">	
+					
 		</form>
 
 					<% if (user.tipo === "clinica"  || user.tipo === "neurologista") {  %>
