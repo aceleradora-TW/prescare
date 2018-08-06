@@ -23,25 +23,22 @@
                     <span> Data de Nascimento: </span>
                     <span id="data"> <%= prescricao.acolhido.nascimento %> </span>
                 </td>
-                <td class="col-md-2">
+                <td class= "col-md-2">
                     <span> Idade: </span>
                     <span id="idade"></span>
                     <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
                 </td>
-
-                <td class="col-md-2">
+                <td class= "col-md-2">
                     <span> Peso: </span>
                     <span> <%= prescricao.acolhido.peso %> kg </span>
                 </td>
-                <td class="col-md-5">
-                    <span> 
-                        Atualizado em:
-                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                <td class= "col-md-2">
+                    <span> Alergias:</span>
+                    <span>
+                        <%= acolhido.alergias %>
                     </span>
                 </td>
-            </tr>
-            <tr>
-                <td>
+                <td class= "col-md-3">
                     <span> Via de alimentação: </span>
                     <span> <%= prescricao.acolhido.via_alimentacao %> </span>
                 </td>
@@ -57,14 +54,30 @@
                     </span>
                 </td>
                 <td>
+            </tr>
+            <tr class = "row">
+                <td class= "col-md-5">
                     <span>
-                        <%= acolhido.alergias %>
+                        Atualizado em:
+                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                    </span>
+                </td>
+                <td class= "col-md-4">
+                    <span>
+                        Data de impressão:
+                        <div id="print"></div>
+                    </span>
+                </td>
+                <td class= "col-md-3">
+                    <span>
+                        Validade da prescrição:
+                        <%= prescricao.validade.split("-").reverse().join("/") %>
                     </span>
                 </td>
             </tr>
-        </thead>
-    </table>
-</div>
+        </tbody>
+    </div>    
+</table>
 
 <label for="dieta">Dieta</label>
 <table class="tabela-prescricao tabela-campos">
@@ -75,7 +88,6 @@
             <th>Observações</th>
         </tr>
     </thead>
-
     <tbody>
         <%for (dieta of prescricao.dieta){%>
             <tr>
@@ -119,7 +131,7 @@
                 <td class="td-observacao">
                     <%= cuidado.observacoes %>
                 </td>
-                <% } %>
+            <% } %>
         </tr>
     </tbody>
 </table>
@@ -186,6 +198,6 @@
 <script type="text/javascript">print()</script>
 <script>
     let data = new Date;
-    let dataImpressao = data.getDate() + ' / ' + (data.getMonth()+1) + ' / ' + data.getFullYear();
-    document.getElementById("hehe").innerHTML = dataImpressao;
+    let dataImpressao = data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear();
+    document.getElementById("print").innerHTML = dataImpressao;
 </script>
