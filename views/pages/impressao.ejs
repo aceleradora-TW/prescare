@@ -6,7 +6,7 @@
 
 <div class="center label">
     <h3 class="bold">
-        <%= acolhido.nome %>
+        <%= prescricao.acolhido.nome %>
     </h3>
 </div>
 
@@ -16,30 +16,30 @@
             <tr>
                 <td>
                     <span> Data de Nascimento: </span>
-                    <span id="data"> <%= acolhido.nascimento %> </span>
+                    <span id="data"> <%= prescricao.acolhido.nascimento %> </span>
                 </td>
 
                 <td>
                     <span> Idade: </span>
                     <span id="idade"></span>
-                    <script>calcularIdade('<%= acolhido.nascimento %>')</script>
+                    <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
                 </td>
 
                 <td>
                     <span> Peso: </span>
-                    <span> <%= acolhido.peso %> kg </span>
+                    <span> <%= prescricao.acolhido.peso %> kg </span>
                 </td>
             </tr>
 
             <tr>
                 <td>
                     <span> Via de alimentação: </span>
-                    <span> <%= acolhido.via_alimentacao %> </span>
+                    <span> <%= prescricao.acolhido.via_alimentacao %> </span>
                 </td>
 
                 <td>
                     <span> Alergias:</span>
-                    <span> <%= acolhido.alergias %> </span>
+                    <span> <%= prescricao.acolhido.alergias %> </span>
                 </td>
             </tr>
         </thead>
