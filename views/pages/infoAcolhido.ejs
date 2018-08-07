@@ -1,17 +1,16 @@
 <%- contentFor('body') %>
-    <div class="botao-voltar">
-        <a href="/lista-acolhidos">Voltar</a>
-    </div>
+<div class="botao-voltar">
+  <a href="/lista-acolhidos">Voltar</a>
+</div>
 
-    <div class="cabecalho-telas">
-        <%- include partials/cabecalhoTelas.ejs %>
-    </div>
+<div class="cabecalho-telas">
+  <%- include partials/cabecalhoTelas.ejs %>
+</div>
 
-    <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-        <div class="botoes">
-            <a href="/acolhido/<%= acolhido.id %>/prescricao/create"> Nova Prescrição </a>
-        </div>
-    <% } %>
+<%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
+  <div class="botoes">
+    <a href="/acolhido/<%= acolhido.id %>/prescricao/create"> Nova Prescrição </a>
+  </div>
+<% } %>
 
-    <%- include partials/tabelaPrescricaoAcolhido.ejs%>
-
+<%- include partials/tabelaPrescricaoAcolhido.ejs%>
