@@ -20,7 +20,7 @@
                 <%= prescricao.usuario %>
             </td>
             <td>
-                <%= formatarData({ data: prescricao.data, fallback: '-'}) %>
+                <%= formatarData({ data: prescricao.created_at, formato: 'DD/MM/YYYY', fallback: '-'}) %>
             </td>
             <td>
                 <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
