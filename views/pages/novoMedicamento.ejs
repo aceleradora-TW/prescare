@@ -10,10 +10,10 @@
 	<div class="medicamento">
 		<h1>Medicamento</h1>
 
-		<form action="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/medicamento" method="POST">
+		<form action="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/medicamento" method="POST"  onsubmit="alert('Medicamento adicionado')">
 			<div class="form-group row">
 				<label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
-				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" <%if (user.tipo==="farmaceutica"
+				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" required<%if (user.tipo==="farmaceutica"
 				 ) { %> disabled
 				<% } %> >
 			</div>
@@ -54,18 +54,8 @@
 				<% } %> >
 			</div>
 
-			<div class="conjunto-botoes">
-				<div class="botoes">
-					<form action="/acolhido/<%=acolhido.id%>/prescricao/<%=prescricao.id%>/medicamento" method="POST">
-						<input type="submit" value="Salvar" onclick="alert('Medicamento adicionado')" class="form-control">
-					</form>
+			<div class="botoes">
+				<input type="submit" class="form-control" value="Salvar">
+			</div>
 		</form>
-
-		<% if (user.tipo === "clinica"  || user.tipo === "neurologista") {  %>
-			<form action="/acolhido/<%=acolhido.id%>/prescricao/<%=prescricao.id%>/edit/medicamento/<%=medicamento.id%>/excluir" method="POST">
-				<input type="submit" value="Excluir" onclick="return confirm('Tem certeza que deseja excluir?');" class="form-control">
-			</form>
-			<% } %>
-				</div>
-				</div>
 	</div>
