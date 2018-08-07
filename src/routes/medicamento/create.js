@@ -1,4 +1,3 @@
-
 module.exports = (Prescricao) => (req, res) => {
   Prescricao
     .findOne({

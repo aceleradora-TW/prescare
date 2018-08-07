@@ -9,12 +9,10 @@
 <div class="prescricao">
     <% if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
         <div class="botoes right">
-          <form action="<%= updateUrl %>/medicamento/create" method="POST">
-              <input type="submit" value="Aaaaaa" class="form-control">
-          </form>
-
-        </div>
-    <% } %>
+                <a href="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/medicamento/create"> Adicionar medicamento </a>
+            </div>
+        <% } %>
+        
 
     <%- include partials/tabelaMedicamento.ejs %>
 
