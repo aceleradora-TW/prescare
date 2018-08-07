@@ -7,7 +7,13 @@ describe('Atualiza prescricao', () => {
   
   const Medicamento = jest.mock()
 
-  const req = { body: { validade: '11' }, params: { prescricao_id: 1, acolhido_id: 2 }, app: { locals: { parseData: jest.fn() } } }
+  const req = { 
+    body: { validade: '11' }, 
+    params: { prescricao_id: 1, acolhido_id: 2 }, 
+    app: { 
+      locals: { parseData: jest.fn() }
+    } 
+  }
   const res = { redirect: jest.fn() }
   const next = jest.fn()
 
@@ -18,10 +24,12 @@ describe('Atualiza prescricao', () => {
       .then(() => expect(res.redirect).toHaveBeenCalledWith('/acolhido/' + req.params.acolhido_id + '/prescricao/' + req.params.prescricao_id + '/edit'))
   })
 
-  it('deve chamar next quando prescricao não é encontrada', () => {
+  it('deve chamar next quando prescricao não é encontrada', done => {
     Prescricao.findOne.mockResolvedValue(null)
 
     updateRoute(Prescricao, Medicamento)(req, res, next)
       .then(() => expect(next).toHaveBeenCalled())
+      .then(done)
+      .catch(done)
   })
 })

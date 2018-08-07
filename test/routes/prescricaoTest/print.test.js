@@ -11,7 +11,12 @@ describe('Imprime prescrição', () => {
 
   it('Deve renderizar a página de impressão com os parametros certos', () => {
     printRoute(Prescricao, Cuidado, Dieta, Medicamento, Acolhido)(req, res)
-      .then(() => expect(Prescricao.findOne).toHaveBeenCalledWith({ where: { id: req.params.prescricao_id }, include: [ Cuidado, Dieta, Medicamento, Acolhido ] }))
+      .then(() => expect(Prescricao.findOne).toHaveBeenCalledWith(
+        { 
+          where: { id: req.params.prescricao_id }, 
+          include: [ Cuidado, Dieta, Medicamento, Acolhido ] 
+        })
+      )
       .then(() => expect(res.render).toHaveBeenCalledWith('pages/impressao', { prescricao }))
   })
 })
