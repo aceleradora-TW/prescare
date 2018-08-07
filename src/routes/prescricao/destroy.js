@@ -1,5 +1,5 @@
 module.exports = Prescricao => (req, res) => {
-  Prescricao.destroy({
+  return Prescricao.destroy({
     where: {
       id: req.params.prescricao_id
     }
