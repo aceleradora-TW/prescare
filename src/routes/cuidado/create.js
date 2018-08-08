@@ -4,7 +4,10 @@ module.exports = (Cuidado) => (req, res) => {
       where: { id: req.params.cuidado_id }
     })
     .then(cuidado => {
+      if(!cuidado) {
+        return next()
+      }
       res.render('pages/novoCuidado', { cuidado: {} })
     })
-    .catch(() => res.redirect('/404'))
+    .catch(() => res.render('/404'))
 }
