@@ -1,7 +1,7 @@
-module.exports = Prescricao => (req, res) => {
-  Prescricao
+module.exports = (Medicamento) => (req, res) => {
+  return Medicamento
     .findOne({
-      where: { id: req.params.prescricao_id }
+      where: { id: req.params.medicamento_id }
     })
     .then(medicamento => {
       res.render('pages/novoMedicamento', { medicamento: {} })
