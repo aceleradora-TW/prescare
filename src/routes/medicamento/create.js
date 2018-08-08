@@ -1,14 +1,10 @@
-const sequelize = require('sequelize')
-
-module.exports = (Medicamento, Prescricao) => (req, res) => {
+module.exports = (Medicamento) => (req, res) => {
   return Medicamento
-    .create({
-      prescricao_id: req.params.prescricao_id
-    }).then(medicamento => {
-      res.redirect(req.originalUrl + '/' + medicamento.id + '/edit')
-    }),
-  Prescricao.update(
-    { updated_at: sequelize.NOW },
-    { where: {id: req.params.prescricao_id }}
-  ).then(() => {})
+    .findOne({
+      where: { id: req.params.medicamento_id }
+    })
+    .then(medicamento => {
+      res.render('pages/novoMedicamento', { medicamento: {} })
+    })
+    .catch(() => res.redirect('/404'))
 }

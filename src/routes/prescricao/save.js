@@ -6,4 +6,5 @@ module.exports = Prescricao => (req, res) => {
   }).then(prescricao => {
     res.redirect(req.originalUrl + '/' + prescricao.id + '/edit')
   })
+    .catch(() => res.redirect('/404'))
 }
