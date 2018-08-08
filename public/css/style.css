@@ -211,6 +211,7 @@
   font-weight: bold;
   font-size: 19px;
   padding-bottom: 15px;
+  text-align: center;
 }
 
 .nome-user {
@@ -358,6 +359,13 @@
   margin-bottom: 2vh;
 }
 
+.tabela-infos{
+  margin-top: 1vh; 
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1vh;
+  background-color: transparent;
+}
 .nome-crm {
   margin: 3vw 64vw;
   padding-top: 80px;
