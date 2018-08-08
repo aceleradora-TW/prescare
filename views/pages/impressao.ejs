@@ -59,19 +59,19 @@
                 <td class= "col-md-5">
                     <span>
                         Atualizado em:
-                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
+                        <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY - HH:mm:ss', fallback: '---'}) %>
                     </span>
                 </td>
                 <td class= "col-md-4">
                     <span>
                         Data de impressão:
-                        <div id="print"></div>
+                        <%= formatarData({ data: Date(), formato: 'DD/MM/YYYY', fallback: '---'})%>
                     </span>
                 </td>
                 <td class= "col-md-3">
                     <span>
                         Validade da prescrição:
-                        <%= prescricao.validade.split("-").reverse().join("/") %>
+                        <%= formatarData({ data: prescricao.validade, fallback: '---'}) %>
                     </span>
                 </td>
             </tr>
@@ -103,7 +103,7 @@
                     <%= dieta.observacoes %>
                 </td>
             </tr>
-            <%}%>
+        <%}%>
     </tbody>
 </table>
 
@@ -185,7 +185,7 @@
                 <td class="nome-tecnico">
                 </td>
             </tr>
-            <% } %>
+        <% } %>
     </tbody>
 </table>
 
@@ -196,8 +196,3 @@
 </div>
 
 <script type="text/javascript">print()</script>
-<script>
-    let data = new Date();
-    let dataImpressao = data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear();
-    document.getElementById("print").innerHTML = dataImpressao;
-</script>
