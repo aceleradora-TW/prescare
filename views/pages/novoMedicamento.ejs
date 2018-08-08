@@ -13,8 +13,8 @@
 		<form action="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/medicamento" method="POST"  onsubmit="alert('Medicamento adicionado')">
 			<div class="form-group row">
 				<label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
-				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" required 
-				<% if (user.tipo === "farmaceutica" ) { disabled } %> >
+				<input type="text" name="nome" value="<%= medicamento.nome %>" class="form-control form-control-lg col-sm-8" required
+				<% if (user.tipo === "farmaceutica" ) { disabled } %> 
 			</div>
 
 			<div class="form-group row">
@@ -29,9 +29,8 @@
 
 			<div class="form-group row">
 				<label for="via" class="col-sm-2 col-form-label col-form-label-lg">Via:</label>
-				<input type="text" name="via" value="<%= medicamento.via %>" class="form-control form-control-lg col-sm-8" <%if (user.tipo==="farmaceutica"
-				 ) { %> disabled
-				<% } %> >
+				<input type="text" name="via" value="<%= medicamento.via %>" class="form-control form-control-lg col-sm-8" 
+				<% if (user.tipo === "farmaceutica") { disabled } %> >
 			</div>
 
 			<div class="form-group row">
@@ -42,15 +41,13 @@
 			<div class="form-group row">
 				<label for="observacoes" class="col-sm-2 col-form-label col-form-label-lg">Observações:</label>
 				<input type="text" name="observacoes" value="<%= medicamento.observacoes %>" class="form-control form-control-lg col-sm-8"
-				 <%if (user.tipo==="farmaceutica" ) { %> disabled
-				<% } %> >
+				<% if (user.tipo === "farmaceutica") { disabled } %> >
 			</div>
 
 			<div class="form-group row">
 				<label for="validadeMed" class="col-sm-2 col-form-label col-form-label-lg">Validade:</label>
 				<input type="text" name="validadeMed" value="<%= medicamento.validadeMed %>" class="form-control form-control-lg col-sm-8"
-				 <%if (user.tipo==="farmaceutica" ) { %> disabled
-				<% } %> >
+				<% if (user.tipo === "farmaceutica") { disabled } %> >
 			</div>
 
 			<div class="botoes">
