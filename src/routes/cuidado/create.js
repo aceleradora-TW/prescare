@@ -1,4 +1,4 @@
-module.exports = (Cuidado) => (req, res) => {
+module.exports = (Cuidado) => (req, res, next) => {
   return Cuidado
     .findOne({
       where: { id: req.params.cuidado_id }

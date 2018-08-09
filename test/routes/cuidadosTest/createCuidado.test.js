@@ -25,7 +25,8 @@ describe('Quando crio cuidado', () => {
     Cuidado.findOne.mockResolvedValue(null)
     
     createRoute(Cuidado)(req, res, next)
-      .then(() => expect(res.render).toHaveBeenCalled())
+      .then(() => expect(next).toHaveBeenCalled())
+      .then(() => expect(res.render).not.toHaveBeenCalled())
       .then(done)
       .catch(done)
   })
