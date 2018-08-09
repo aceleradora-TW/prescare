@@ -1,50 +1,65 @@
 <div class="cabecalho-impressao bold">
-  <h1>Casa do Menino Jesus de Praga </h1>
-  <h2>Nelson Zang, 420 - Porto Alegre/RS - Fone:(51) 3315.0011 </h2>
-  <h2> www.casadomenino.org.br</h2>
+    <h1>Casa do Menino Jesus de Praga </h1>
+    <h2>Nelson Zang, 420 - Porto Alegre/RS - Fone:(51) 3315.0011 </h2>
+    <h2> www.casadomenino.org.br</h2>
 </div>
+<table class="tabela-infos">
+    <thead>
+        <tr>
+            <th>
+                <h3 class="nome-impressao">
+                    <%= acolhido.nome %>
+                </h3>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row espaco-linhas">
+            <td class="col-md-3">
+                <span> Data de Nascimento: </span>
+                <span id="data"> <%= prescricao.acolhido.nascimento %> </span>
+            </td>
+            <td class= "col-md-2">
+                <span> Idade: </span>
+                <span id="idade"></span>
+                <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
+            </td>
+            <td class= "col-md-2">
+                <span> Peso: </span>
+                <span> <%= prescricao.acolhido.peso %> kg </span>
+            </td>
+            <td class= "col-md-2">
+                <span> Alergias:</span>
+                <span> <%= prescricao.acolhido.alergias %> </span>
+            </td>
+            <td class= "col-md-3">
+                <span> Via de alimentação: </span>
+                <span> <%= prescricao.acolhido.via_alimentacao %> </span>
+            </td>
+        </tr>
 
-<div class="center label">
-    <h3 class="bold">
-        <%= prescricao.acolhido.nome %>
-    </h3>
-</div>
-
-<div class="info-impressao">
-    <table>
-        <thead>
-            <tr>
-                <td>
-                    <span> Data de Nascimento: </span>
-                    <span id="data"> <%= prescricao.acolhido.nascimento %> </span>
-                </td>
-
-                <td>
-                    <span> Idade: </span>
-                    <span id="idade"></span>
-                    <script>calcularIdade('<%= prescricao.acolhido.nascimento %>')</script>
-                </td>
-
-                <td>
-                    <span> Peso: </span>
-                    <span> <%= prescricao.acolhido.peso %> kg </span>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <span> Via de alimentação: </span>
-                    <span> <%= prescricao.acolhido.via_alimentacao %> </span>
-                </td>
-
-                <td>
-                    <span> Alergias:</span>
-                    <span> <%= prescricao.acolhido.alergias %> </span>
-                </td>
-            </tr>
-        </thead>
-    </table>
-</div>
+        <tr class = "row">
+            <td class= "col-md-5">
+                <span>
+                    Atualizado em:
+                    <%= formatarData({ data: prescricao.updated_at, formato: 'DD/MM/YYYY - HH:mm:ss', fallback: '---'}) %>
+                </span>
+            </td>
+            <td class= "col-md-4">
+                <span>
+                    Data de impressão:
+                    <%= formatarData({ data: new Date(), formato: 'DD/MM/YYYY', fallback: '---'})%>
+                </span>
+            </td>
+            <td class= "col-md-3">
+                <span>
+                    Validade da prescrição:
+                    <%= formatarData({ data: prescricao.validade, fallback: '---'}) %>
+                </span>
+            </td>
+        </tr>
+    </tbody>  
+</table>
 
 <label for="dieta">Dieta</label>
 <table class="tabela-prescricao tabela-campos">
@@ -55,7 +70,6 @@
             <th>Observações</th>
         </tr>
     </thead>
-
     <tbody>
         <%for (dieta of prescricao.dieta){%>
             <tr>
@@ -153,7 +167,7 @@
                 <td class="nome-tecnico">
                 </td>
             </tr>
-          <% } %>
+        <% } %>
     </tbody>
 </table>
 
