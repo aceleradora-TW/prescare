@@ -1,31 +1,32 @@
-const sequelize = require('sequelize')
-const cuidadoRoute = require('../../../src/routes/cuidado/create')
 
-describe('Quando acesso cuidado', () => {
-  it('Deve criar página com informações dos cuidados', (done) => {
-    const Cuidado = {
-      create: jest.fn()
-    }
+const createRoute = require('../../../src/routes/cuidado/create')
+
+describe('Quando crio cuidado', () => {
+  const cuidado = jest.mock()
+  const Cuidado = { findOne: jest.fn().mockResolvedValue(cuidado)}
+
+  const req = { params: { cuidado_id:1 } }
+  const res = { render: jest.fn() }
+  const next = jest.fn()
+
+  it('Deve mostrar cuidado na tela', () => {
+    createRoute(Cuidado)(req, res, next)
+      .then(() => expect(cuidado.findOne).toHaveBeenCalledWith(
+        {
+          where: { id: req.params.cuidado_id }
+        })
+      )
+      .then(() => expect(res.render).toHaveBeenCalledWith('pages/novoCuidado', { cuidado }))
+    })
+
+  it('deve chamar funcão next quando cuidado não é encontrado e não chamar render', done => {
+    res.render.mockClear()
+
+    Cuidado.findOne.mockResolvedValue(null)
     
-    const req = { params: { prescricao_id: 1 }, originalUrl: '/acolhido/1/prescricao/1/cuidado' }
-    const res = { redirect: jest.fn() }
-    const novoCuidado = { id: 2 }
-                
-    Cuidado.create.mockResolvedValue(novoCuidado)
-
-    const Prescricao = {
-      update: jest.fn()
-    }
-    const updatePrescricao = (
-      {updated_at: sequelize.NOW},
-      {where: {id: req.params.prescricao_id }}
-    )
-
-    Prescricao.update.mockResolvedValue(updatePrescricao)
-        
-    cuidadoRoute(Cuidado, Prescricao)(req, res)
-      .then(() => expect(Cuidado.create).toBeCalledWith(req.params))
-      .then(() => expect(res.redirect).toBeCalledWith(req.originalUrl + '/2/edit'))
+    createRoute(Cuidado)(req, res, next)
+      .then(() => expect(next).toHaveBeenCalled())
+      .then(() => expect(res.render).not.toHaveBeenCalled())
       .then(done)
       .catch(done)
   })

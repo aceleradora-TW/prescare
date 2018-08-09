@@ -9,27 +9,21 @@
 <div class="prescricao">
     <% if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
         <div class="botoes right">
-            <form action="<%= updateUrl %>/medicamento" method="POST">
-                <input type="submit" value="Adicionar medicamento" class="form-control">
-            </form>
+            <a href="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/medicamento/create"> Adicionar medicamento </a>
         </div>
-    <% } %>
+    <% } %>        
 
     <%- include partials/tabelaMedicamento.ejs %>
 
     <% if (user.tipo ==="clinica"  || user.tipo ==="neurologista") { %>
         <div class="botoes right">
-            <form action="<%= updateUrl %>/cuidado" method="POST">
-                <input type="submit" value="Adicionar cuidados" class="form-control">
-            </form>
+            <a href="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/cuidado/create"> Adicionar cuidado </a>
         </div>
 
         <%- include partials/tabelaCuidados.ejs %>
 
         <div class="botoes right">
-            <form action="<%= updateUrl %>/dieta" method="POST">
-                <input type="submit" value="Adicionar dieta" class="form-control">
-            </form>
+            <a href="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/dieta/create"> Adicionar dieta </a>
         </div>
 
         <%- include partials/tabelaDieta.ejs %>
