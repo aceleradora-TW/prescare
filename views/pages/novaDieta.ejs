@@ -1,6 +1,6 @@
 <%- contentFor('body') %>
 <div class="botao-voltar">
-	<a href="/acolhido/<%=acolhido.id%>/prescricao/<%=prescricao.id%>/edit">Voltar</a>
+	<a href="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%=prescricao.id%>/edit">Voltar</a>
 </div>
 
 <div class="cabecalho-telas">
@@ -10,7 +10,7 @@
 <div class="medicamento">
 	<h1>Dieta</h1>
 
-	<form action="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/dieta" method="POST" onsubmit="alert('Dieta adicionada')">
+	<form action="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%= prescricao.id %>/dieta" method="POST" onsubmit="alert('Dieta adicionada')">
 		<div class="form-group row">
 			<label for="tipo" class="col-sm-2 col-form-label col-form-label-lg">Tipo:</label>
 			<input type="text" name="tipo" id="tipo" value="<%= dieta.tipo %>" class="form-control form-control-lg col-sm-8" required>

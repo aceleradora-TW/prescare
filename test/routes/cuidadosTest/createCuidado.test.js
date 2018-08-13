@@ -1,30 +1,33 @@
-
 const createRoute = require('../../../src/routes/cuidado/create')
 
-describe('Quando crio cuidado', () => {
-  const cuidado = jest.mock()
-  const Cuidado = { findOne: jest.fn().mockResolvedValue(cuidado)}
+describe('Página para criar novo cuidado', () => {
+  const prescricao = jest.mock()
+  const Prescricao = { findOne: jest.fn().mockResolvedValue(prescricao) }
+  const Acolhido = jest.mock()
 
-  const req = { params: { cuidado_id:1 } }
+  const req = { params: { acolhido_id: 1, prescricao_id: 1 } }
   const res = { render: jest.fn() }
   const next = jest.fn()
 
-  it('Deve mostrar cuidado na tela', () => {
-    createRoute(Cuidado)(req, res, next)
-      .then(() => expect(cuidado.findOne).toHaveBeenCalledWith(
-        {
-          where: { id: req.params.cuidado_id }
+  it('deve chamar createCuidado com os parametros corretos', () => {
+    createRoute(Prescricao, Acolhido)(req, res, next)
+      .then(() =>
+        expect(Prescricao.findOne).toHaveBeenCalledWith({
+          where: { id: req.params.prescricao_id },
+          include: [{ model: Acolhido, required: true }]
         })
       )
-      .then(() => expect(res.render).toHaveBeenCalledWith('pages/novoCuidado', { cuidado }))
-    })
+      .then(() =>
+        expect(res.render).toHaveBeenCalledWith('pages/novoCuidado', { cuidado: {}, prescricao, acolhido: prescricao.acolhido })
+      )
+  })
 
-  it('deve chamar funcão next quando cuidado não é encontrado e não chamar render', done => {
-    res.render.mockClear()
+  it('deve chamar next quando prescrição não é encontrada', done => {
+    res.render.mockReset()
 
-    Cuidado.findOne.mockResolvedValue(null)
-    
-    createRoute(Cuidado)(req, res, next)
+    Prescricao.findOne.mockResolvedValue(null)
+
+    createRoute(Prescricao, Acolhido)(req, res, next)
       .then(() => expect(next).toHaveBeenCalled())
       .then(() => expect(res.render).not.toHaveBeenCalled())
       .then(done)

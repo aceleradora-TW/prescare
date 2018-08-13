@@ -1,7 +1,7 @@
 <%- contentFor('body') %>
 <div class="cabecalho">
     <div class="botao-voltar">
-        <a href="/acolhido/<%=acolhido.id%>/prescricao/<%=prescricao.id%>/edit">Voltar</a>
+        <a href="/acolhido/<%= prescricao.acolhido.id%>/prescricao/<%=prescricao.id%>/edit">Voltar</a>
     </div>
 
     <div class="cabecalho-telas">
@@ -12,7 +12,7 @@
 <div class="medicamento">
     <h1>Cuidado</h1>
 
-    <form action="/acolhido/<%= acolhido.id %>/prescricao/<%= prescricao.id %>/cuidado" method="POST" onsubmit="alert('Cuidado adicionado')">
+    <form action="/acolhido/<%= prescricao.acolhido.id %>/prescricao/<%= prescricao.id %>/cuidado" method="POST" onsubmit="alert('Cuidado adicionado')">
         <div class="form-group row">
             <label for="descricao" class="col-sm-2 col-form-label col-form-label-lg">Descrição:</label>
             <input type="text" name="descricao" id="descricao" value="<%= cuidado.descricao %>" class="form-control form-control-lg col-sm-8" required>

@@ -71,11 +71,20 @@ const letItCrash = error => {
   process.exit(1)
 }
 
+const createOtherAcolhido = () => models.Acolhido.create({
+  nome: 'Dbelardo Aores',
+  nascimento: '11/10/2006',
+  peso: 13.5,
+  alergias: 'Paracetamol',
+  via_alimentacao: 'Oral'
+})
+
 const finishWithSuccess = () => process.exit(0)
 
 databaseConnection
   .sync()
   .then(createAcolhido)
+  .then(createOtherAcolhido)
   .then(createPrescricao)
   .then(createMedicamento)
   .then(createCuidado)
