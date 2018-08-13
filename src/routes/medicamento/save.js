@@ -1,4 +1,4 @@
-module.exports = (Medicamento, Prescricao) => (req, res) => {
+module.exports = Medicamento => (req, res) => {
   return Medicamento.create({
     prescricao_id: req.params.prescricao_id,
     nome: req.body.nome,

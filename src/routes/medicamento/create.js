@@ -1,10 +1,18 @@
-module.exports = (Medicamento) => (req, res) => {
-  return Medicamento
+module.exports = (Prescricao, Acolhido) => (req, res, next) => {
+  return Prescricao
     .findOne({
-      where: { id: req.params.medicamento_id }
+      where: { id: req.params.prescricao_id },
+      include: [ { model: Acolhido, required: true } ]
     })
-    .then(medicamento => {
-      res.render('pages/novoMedicamento', { medicamento: {} })
+    .then(prescricao => {
+      if (!prescricao) {
+        return next()
+      }
+
+      res.render('pages/novoMedicamento', { 
+        medicamento: {},
+        prescricao,
+        acolhido: prescricao.acolhido
+      })
     })
-    .catch(() => res.redirect('/404'))
 }

@@ -1,13 +1,14 @@
-module.exports = (Cuidado) => (req, res, next) => {
-  return Cuidado
+module.exports = (Prescricao, Acolhido) => (req, res, next) => {
+  return Prescricao
     .findOne({
-      where: { id: req.params.cuidado_id }
+      where: { id: req.params.prescricao_id },
+      include: [ { model: Acolhido, required: true } ]
     })
-    .then(cuidado => {
-      if(!cuidado) {
+    .then(prescricao => {
+      if(!prescricao) {
         return next()
       }
-      res.render('pages/novoCuidado', { cuidado: {} })
+
+      res.render('pages/novoCuidado', { cuidado: {}, prescricao, acolhido: prescricao.acolhido })
     })
-    .catch(() => res.render('/404'))
 }
