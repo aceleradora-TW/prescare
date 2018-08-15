@@ -5,8 +5,10 @@ const get = require('./get')
 const update = require('./update')
 const save = require('./save')
 
+const updatePrescricao = require('./../../middlewares/updatePrescricao')
+
 module.exports = (Medicamento, Prescricao, Acolhido, router) => {
-  router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/medicamento/', save(Medicamento))
+  router.post('/acolhido/:acolhido_id/prescricao/:prescricao_id/medicamento/', save(Medicamento), updatePrescricao(Prescricao))
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/medicamento/create', create(Prescricao, Acolhido))
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/medicamento/:medicamento_id/', get(Medicamento))
   router.get('/acolhido/:acolhido_id/prescricao/:prescricao_id/edit/medicamento/:medicamento_id/edit', edit(Medicamento, Prescricao, Acolhido))
