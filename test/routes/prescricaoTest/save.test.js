@@ -8,7 +8,7 @@ describe('Salvar prescricao', () => {
     params: { acolhido_id: 1 }, 
     user: { tipo: 'foo' }, 
     app: { 
-      locals: { parseData: jest.fn() } 
+      locals: { converterData: jest.fn() } 
     }, 
     body: { validade: '09/07/1996' }, 
     originalUrl: 'fooBarBaz'
@@ -22,7 +22,7 @@ describe('Salvar prescricao', () => {
         expect(Prescricao.create).toHaveBeenCalledWith({
           acolhido_id: req.params.acolhido_id,
           usuario: req.user.tipo,
-          validade: req.app.locals.parseData(req.body.validade)
+          validade: req.app.locals.converterData(req.body.validade)
         })
       )
       .then(() =>

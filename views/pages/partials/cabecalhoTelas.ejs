@@ -1,41 +1,41 @@
 <div class="box-acolhido">
     <div class="texto-acolhido">
         <div>
-            <span class="bold"> Nome: </span>
+            <span> Nome: </span>
             <span>
                 <%= acolhido.nome %>
             </span>
         </div>
 
         <div>
-            <span class="bold"> Data de Nascimento: </span>
+            <span> Data de Nascimento: </span>
             <span id="data">
                 <%= acolhido.nascimento %>
             </span>
         </div>
 
         <div>
-            <span class="bold"> Idade: </span>
+            <span> Idade: </span>
             <span id="idade"></span>
             <script>calcularIdade('<%= acolhido.nascimento %>')</script>
         </div>
 
         <div>
-            <span class="bold"> Peso: </span>
+            <span> Peso: </span>
             <span>
                 <%= acolhido.peso %> kg
             </span>
         </div>
 
         <div>
-            <span class="bold"> Alergias: </span>
+            <span> Alergias: </span>
             <span>
                 <%= acolhido.alergias %>
             </span>
         </div>
         
         <div>
-            <span class="bold"> Via de alimentação: </span>
+            <span> Via de alimentação: </span>
             <span>
                 <%= acolhido.via_alimentacao %>
             </span>

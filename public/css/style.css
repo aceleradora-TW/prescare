@@ -133,12 +133,6 @@
   text-transform: uppercase;
 }
 
-.effect1 {
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
-}
-
 .espaco-linhas {
   padding-bottom: 20px;
 }
@@ -214,7 +208,7 @@
   text-align: center;
 }
 
-.nome-user {
+.nome-usuario {
   color:white;
   font-family: 'Amatic SC', cursive;
   font-size: 2.3em;
@@ -222,7 +216,7 @@
   margin: auto;
 }
 
-.nome-user-login{
+.nome-usuario-login{
   color:white;
   font-family: 'Amatic SC', cursive;
   font-size: 2.6em;
@@ -230,19 +224,12 @@
   padding-top: 10px;
   margin-left: -69px;
 }
- 
-.nome-user-login{
-  color:white;
-  font-family: 'Amatic SC', cursive;
-  font-size: 2.3em;
-  font-weight: bold;
-}
 
 .prescricao{
  padding-top:3%;
 }
 
-.right{
+.posicionar-direita {
   float: right;
 }
 
