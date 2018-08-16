@@ -9,7 +9,9 @@
             <th>Posologia</th>
             <th>Observações</th>
             <th>Validade</th>
-            <th>Edição</th>
+            <% if (user.tipo !== "neutro") { %>
+                <th>Edição</th>
+            <% } %>
         </tr>
     </thead>
 
@@ -39,17 +41,19 @@
                     <%= medicamento.validadeMed %>
                 </td>
 
-                <td class="td-botao">
-                    <div>
-                        <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
-                        <%if (user.tipo === "clinica"  || user.tipo === "neurologista") { %>
-                            <form action="<%= updateUrl %>/medicamento/<%= medicamento.id %>/excluir" method="POST">
-                                <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
-                                </button>
-                            </form>
-                        <% } %>
-                    </div>
-                </td>
+                <% if (user.tipo !== "neutro") { %>
+                    <td class="td-botao">
+                        <div>                            
+                            <a href="<%= updateUrl %>/medicamento/<%= medicamento.id %>/edit" class="fa fa-edit edit btn btn-outline-primary btn-sm"></a>
+                            <%if (user.tipo === "clinica"  || user.tipo === "neurologista") { %>
+                                <form action="<%= updateUrl %>/medicamento/<%= medicamento.id %>/excluir" method="POST">
+                                    <button type="submit" class="fa fa-trash-alt btn btn-outline-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">
+                                    </button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </td>
+                <% } %>
             </tr>
         <%}%>
     </tbody>
