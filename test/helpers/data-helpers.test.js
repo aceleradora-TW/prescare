@@ -28,8 +28,8 @@ describe('Data Helper', () => {
     })
   })
 
-  describe('parseData', () => {
+  describe('converterData', () => {
     const data = '17/05/2012'
-    expect(app.locals.parseData(data)).toEqual(moment(data, 'DD/MM/YYYY'))
+    expect(app.locals.converterData(data)).toEqual(moment(data, 'DD/MM/YYYY'))
   })
 })
