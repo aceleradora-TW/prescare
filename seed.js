@@ -66,13 +66,19 @@ const createUsuarioFarmaceutica = () => models.Usuario.create({
   senha: 'fabi',
 })
 
+const createUsuarioAdmin = () => models.Usuario.create({
+  tipo: 'administrador',
+  nome: 'admin',
+  senha: 'admin',
+})
+
 const letItCrash = error => {
   logger.error('Erro durante o seed:', error.message)
   process.exit(1)
 }
 
 const createOtherAcolhido = () => models.Acolhido.create({
-  nome: 'Dbelardo Aores',
+  nome: 'Abelardo Aores',
   nascimento: '11/10/2006',
   peso: 13.5,
   alergias: 'Paracetamol',
@@ -92,5 +98,6 @@ databaseConnection
   .then(createUsuarioClinica)
   .then(createUsuarioNeurologista)
   .then(createUsuarioFarmaceutica)
+  .then(createUsuarioAdmin)
   .then(finishWithSuccess)
   .catch(letItCrash)
