@@ -3,8 +3,7 @@
   margin: 0;
 }
 
-.body {  
-  /* background: #aedbfdb0; */
+.body {
   font-family: 'Open Sans', sans-serif;
   margin:  auto;
 }
@@ -12,6 +11,7 @@
 .botao-usuario{
   margin-left: 19%!important;
 }
+
 .botao-voltar {
   background-color:  #81b4db;
   border-radius: 7px;
@@ -43,7 +43,7 @@
   padding: 2vh 0;
   display: inline-flex;
   text-align: center;
- }
+}
 
 .botoes a, .botoes input, .botoes button {
   background-color: #81b4db;
@@ -110,7 +110,6 @@
 .cabecalho-login {
   text-align: center;
   background-color: #81b4db;
-  /* background-image: url("../img/logoSemFundo.png"); */
   background-repeat: no-repeat;
   background-position: left;
   text-decoration: none;
@@ -124,7 +123,7 @@
 }
 
 .login {
-   padding-top: 3%; 
+  padding-top: 3%; 
 }
 
 .editar-acolhido {
@@ -220,7 +219,7 @@
 }
 
 .prescricao{
- padding-top:3%;
+  padding-top:3%;
 }
 
 .posicionar-direita {
@@ -303,19 +302,6 @@
   min-height: 32px;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-  background-color: #9dd1f7;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
 
 /* PAGINA IMPRESSAO */
 
@@ -341,7 +327,7 @@
 }
 
 .tabela-infos{
-  margin-top: 1vh; 
+  margin-top: 1vh;
   width: 100%;
   max-width: 100%;
   margin-bottom: 1vh;
