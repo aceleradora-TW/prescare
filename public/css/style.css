@@ -4,7 +4,7 @@
 }
 
 .body {  
-  background: #aedbfdb0;
+  /* background: #aedbfdb0; */
   font-family: 'Open Sans', sans-serif;
   margin:  auto;
 }
@@ -110,7 +110,7 @@
 .cabecalho-login {
   text-align: center;
   background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
+  /* background-image: url("../img/logoSemFundo.png"); */
   background-repeat: no-repeat;
   background-position: left;
   text-decoration: none;
@@ -184,14 +184,8 @@
   padding-bottom: 5vh;
 }
 
-.navbar {
-  background-color: #81b4db;
-  background-image: url("../img/logoSemFundo.png");
-  background-repeat: no-repeat;
-  background-position: left;
-  text-decoration: none;
-  background-size: 14vw;
-  margin-bottom: 5vh;
+.prescare-logo {
+  height: 60px;
 }
 
 .nome-acolhido {

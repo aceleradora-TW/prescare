@@ -1,37 +1,109 @@
 <%- contentFor('body') %>
-<section>
-    <main>
-        <h1 class="titulo-lista-acolhidos">Lista de Acolhidos</h1>
-        <ul class="lista-acolhidos">
-            <%for (acolhido of acolhidos){%>
-                <li>
-                    <a href="/acolhido/<%= acolhido.id %>">
-                        <%= acolhido.nome %>
-                        <div>
-                            <span>
-                                <%if (user.tipo === "clinica" || user.tipo === "neurologista") { %>
-                                    Validade da prescrição:
-                                    <%= formatarData({ data: (acolhido.prescricaos[0] || {}).validade, fallback: '' }) %> 
-                                <% } %>
-                                Atualizado em:
-                                <%= formatarData({ data: (acolhido.prescricaos[0] || {}).updated_at, formato: 'DD/MM/YYYY HH:mm:ss', fallback: '---'}) %>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </main>
-</section>
-
 <div class="botoes botao-usuario ">
     <%if (user.tipo === "administrador") { %>
-        <a href="/usuario/novo"> Inserir Novo Usuário</a>
-        <a href="listaUsuarios"> Lista de Usuários</a>
-        <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+    <a href="/usuario/novo"> Inserir Novo Usuário</a>
+    <a href="listaUsuarios"> Lista de Usuários</a>
+    <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
     <% } else { %>
-        <a href="/usuario/<%= user.id %>/edit">
-            Alterar senha
-        </a>
-    <% } %> 
+    <a href="/usuario/<%= user.id %>/edit">
+        Alterar senha
+    </a>
+    <% } %>
 </div>
+
+<section class="section">
+    <section class="container">
+        <h1 class="title">Acolhidos</h1>
+        <div class="field is-grouped">
+            <p class="control is-expanded">
+                <input class="input is-large" type="text" placeholder="Buscar acolhido por nome">
+            </p>
+        </div>
+
+
+        <div class="container">
+            <div class="columns is-multiline">
+                <%for (acolhido of acolhidos) { %>
+                <div class="column is-4 acolhido-wrapper">
+                    <div class="card is-shady">
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-size-5 has-text-weight-bold">
+                                        <%= acolhido.nome %>
+                                    </p>
+                                    <p class="is-size-7">
+                                        <strong class="is-size-6"><%= idadeEmAnos(acolhido.nascimento) + ' anos'%></strong>
+                                        (nascido em
+                                        <strong class="is-size-7"><%= acolhido.nascimento %></strong>)
+                                    </p>
+                                <p>
+                                    <a href="/acolhido/<%= acolhido.id %>"><small>Histórico de prescrições</small></a>
+                                </p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="content">
+                                <p>
+                                    <span class="heading has-text-black">
+                                        <strong>Via de Alimentação</strong>
+                                    </span>
+                                    <span class="tag is-uppercase">
+                                        <%= acolhido.via_alimentacao %>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="heading has-text-black">
+                                        <strong> Peso</strong>
+                                    </span>
+                                    <span class="tag">
+                                        <%= acolhido.peso + ' kg'%>
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="heading has-text-black">
+                                        <strong> Alergias</strong>
+                                    </span>
+                                    <% if (acolhido.alergias) { %>
+                                    <div class="tags">
+                                        <% for (alergia of (acolhido.alergias || '').split(',')) { %>
+                                        <span class="tag is-warning is-uppercase">
+                                            <%= alergia %></span>
+                                        <%}%>
+                                    </div>
+                                    <% } else { %>
+                                    <div class="tags">
+                                        <span class="tag is-lowercase is-white"> Sem registros de alergia</span>
+                                    </div>
+                                    <% } %>
+                                </p>
+                                <hr>
+                                <p class="is-size-7">
+                                    Atualizado em
+                                    <b>
+                                        <time>
+                                            <%= formatarData({ 
+                                            data: (acolhido.prescricaos[0] || {}).updated_at, 
+                                            formato: 'DD/MM/YYYY', 
+                                            fallback: '---'
+                                        }) %>
+                                        </time>
+                                    </b>
+                                    às
+                                    <time>
+                                        <%= formatarData({ 
+                                            data: (acolhido.prescricaos[0] || {}).updated_at, 
+                                            formato: 'HH:mm:ss', 
+                                            fallback: '---'
+                                        }) %>
+                                    </time>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </section>
+</section>

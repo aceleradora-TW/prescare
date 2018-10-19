@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PresCare</title>
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-          crossorigin="anonymous">
+<html lang="pt-br" class="has-background-light">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/public/img/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/public/img/favicon/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/public/img/favicon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PresCare</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-          crossorigin="anonymous">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="/public/js/calculaIdade.js"></script>
-        <script src="/public/js/i18n/datepicker-pt-br.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    </head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/public/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/public/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/public/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-    <body class="body">
-        <header>
-            <div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-                <div class="nome-usuario">
-                    <i class="fas fa-user"></i> PresCare
-                </div>
-                
-                <div class="botao-sair">
-                    <a href="/logout">Sair
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/public/js/calculaIdade.js"></script>
+    <script src="/public/js/i18n/datepicker-pt-br.js"></script>
+</head>
+
+<body class="body">
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item prescare-logo" href="/">
+                    <img class="prescare-logo" src="/public/img/logoSemFundo.png" height="60">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a href="/logout">Sair <i class="fas fa-sign-out-alt"></i> </a>
+                    </div>
                 </div>
             </div>
-        </header>
+        </nav>
+    </header>
 
-        <div class="container">
-            <main class="main">
-                <%- body %>
-            </main>
-        </div>
-    </body>
+    <%- body %>
+
+</body>
+
 </html>
