@@ -1,14 +1,17 @@
 <%- contentFor('body') %>
-<div class="botoes botao-usuario ">
+<div class="section">
+    <section class="container">
     <%if (user.tipo === "administrador") { %>
-    <a href="/usuario/novo"> Inserir Novo Usuário</a>
-    <a href="listaUsuarios"> Lista de Usuários</a>
-    <a href="/acolhido/novo"> Inserir Novo Acolhido</a>
+        <a class="button is-link" href="/usuario/novo"> Inserir Novo Usuário</a>
+        <a class="button is-link" href="/listaUsuarios"> Lista de Usuários</a>
+        <a class="button is-link" href="/acolhido/novo"> Inserir Novo Acolhido</a>
     <% } else { %>
-    <a href="/usuario/<%= user.id %>/edit">
-        Alterar senha
-    </a>
+        <a class="button is-link" href="/usuario/<%= user.id %>/edit">
+            Alterar senha
+        </a>
     <% } %>
+
+    </section>
 </div>
 
 <section class="section">
@@ -26,13 +29,15 @@
                                         <%= acolhido.nome %>
                                     </p>
                                     <p class="is-size-7">
-                                        <strong class="is-size-6"><%= idadeEmAnos(acolhido.nascimento) + ' anos'%></strong>
+                                        <strong class="is-size-6">
+                                            <%= idadeEmAnos(acolhido.nascimento) + ' anos'%></strong>
                                         (nascido em
-                                        <strong class="is-size-7"><%= acolhido.nascimento %></strong>)
+                                        <strong class="is-size-7">
+                                            <%= acolhido.nascimento %></strong>)
                                     </p>
-                                <p>
-                                    <a href="/acolhido/<%= acolhido.id %>"><small>Histórico de prescrições</small></a>
-                                </p>
+                                    <p>
+                                        <a href="/acolhido/<%= acolhido.id %>"><small>Histórico de prescrições</small></a>
+                                    </p>
                                 </div>
                             </div>
                             <hr>

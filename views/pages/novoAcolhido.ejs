@@ -1,36 +1,42 @@
-<%- contentFor('body') %>  
+<%- contentFor('body') %>
 
-<form action="/acolhido/novo" method="POST">
-    <div class="form-group row">
-        <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome:</label>
-        <input type="text" name="nome" id="nome" class="form-control form-control-lg col-sm-8">
-    </div>
+<section class="hero">
+  <section class="hero-body">
+    <div class="container">
 
-    <div class="form-group row">
-        <label for="nascimento" class="col-sm-2 col-form-label col-form-label-lg">Data de nascimento:</label>
-        <input type="text" name="nascimento" id="nascimento" class="form-control form-control-lg col-sm-8">
-    </div>
+      <div class="column is-4 is-offset-4">
+        <h1 class="title">Novo Acolhido</h1>
+        <form action="/acolhido/novo" method="post">
+            <div class="field">
+                <label for="nome" class="label is-pulled-left">Nome</label>
+                <input type="text" class="input" name="nome">
+            </div>
 
-    <div class="form-group row">
-        <label for="peso" class="col-sm-2 col-form-label col-form-label-lg">Peso:</label>
-        <input type="text" name="peso" id="peso" class="form-control form-control-lg col-sm-8">
-    </div>
+            <div class="field">
+                <label for="nascimento" class="label is-pulled-left">Data de nascimento:</label>
+                <input type="text" name="nascimento" id="nascimento" class="input">
+            </div>
 
-    <div class="form-group row">
-        <label for="alergias" class="col-sm-2 col-form-label col-form-label-lg">Alergia:</label>
-        <input type="text" name="alergias" id="alergias" class="form-control form-control-lg col-sm-8">
-    </div>
+            <div class="field">
+                <label for="peso" class="label is-pulled-left">Peso:</label>
+                <input type="text" name="peso" id="peso" class="input">
+            </div>
 
-    <div class="form-group row">
-        <label for="via_alimentacao" class="col-sm-2 col-form-label col-form-label-lg">Via Alimentação:</label>
-        <input type="text" name="via_alimentacao" id="via_alimentacao" class="form-control form-control-lg col-sm-8">
-    </div>
-    
-    <div class="botoes">
-        <input type="submit" value="Salvar" class="form-control">
-    </div>
-</form>
+            <div class="field">
+                <label for="alergias" class="label is-pulled-left">Alergia:</label>
+                <input type="text" name="alergias" id="alergias" class="input">
+            </div>
 
-<div class="botoes">
-    <a href="/lista-acolhidos" class="form-control">Cancelar</a>
-</div>
+            <div class="field">
+                <label for="via_alimentacao" class="label is-pulled-left">Via Alimentação:</label>
+                <input type="text" name="via_alimentacao" id="via_alimentacao" class="input">
+            </div>
+
+            <div class="field">
+              <button class="button is-block is-fullwidth is-link" type="submit">Salvar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</section>
