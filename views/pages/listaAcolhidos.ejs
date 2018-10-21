@@ -20,14 +20,16 @@
         <div class="container">
             <div class="columns is-multiline">
                 <%for (acolhido of acolhidos) { %>
-                <div class="column is-4 acolhido-wrapper">
-                    <div class="card is-shady">
+                <div class="column is-4">
+                    <div class="card perfil-acolhido is-shady">
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                    <p class="title is-size-5 has-text-weight-bold">
+                                  <p>
+                                    <span class="title is-size-5 has-text-weight-bold">
                                         <%= acolhido.nome %>
-                                    </p>
+                                    </span>
+                                  </p>
                                     <p class="is-size-7">
                                         <strong class="is-size-6">
                                             <%= idadeEmAnos(acolhido.nascimento) + ' anos'%></strong>
@@ -76,26 +78,30 @@
                                     <% } %>
                                 </p>
                                 <hr>
-                                <p class="is-size-7">
+
+                                <span class="is-size-7">
                                     Atualizado em
                                     <b>
                                         <time>
-                                            <%= formatarData({ 
-                                            data: (acolhido.prescricaos[0] || {}).updated_at, 
-                                            formato: 'DD/MM/YYYY', 
+                                            <%= formatarData({
+                                            data: (acolhido.prescricaos[0] || {}).updated_at,
+                                            formato: 'DD/MM/YYYY',
                                             fallback: '---'
                                         }) %>
                                         </time>
                                     </b>
                                     às
                                     <time>
-                                        <%= formatarData({ 
-                                            data: (acolhido.prescricaos[0] || {}).updated_at, 
-                                            formato: 'HH:mm:ss', 
+                                        <%= formatarData({
+                                            data: (acolhido.prescricaos[0] || {}).updated_at,
+                                            formato: 'HH:mm:ss',
                                             fallback: '---'
                                         }) %>
                                     </time>
-                                </p>
+                                </span>
+                                <span class="is-pulled-right">
+                                  <a href="/acolhido/<%=acolhido.id%>/edit" class="button is-outlined is-dark"><small>Editar</small></a>
+                                </span>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
   <p class="nome-acolhido"> Nome:
     <%= acolhido.nome %>
   </p>
-  
+
   <form action="<%= updateUrl %>" method="POST">
       <div class="form-group row">
         <label for="nascimento" class="col-sm-2 col-form-label col-form-label-lg">Data de nascimento:</label>
@@ -31,9 +31,9 @@
       <div class="botoes">
         <input type="submit" value="Salvar" class="form-control">
       </div>
-      
+
   </form>
-  
+
     <div class="botoes">
       <% if (user.tipo === "administrador") { %>
         <form action="/acolhido/<%=acolhido.id%>/excluir" method="POST">
