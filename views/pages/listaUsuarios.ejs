@@ -4,18 +4,19 @@
     <a href="/lista-acolhidos">Voltar</a>
 </div>
 
-<section>
-    <main>
-        <h1 class="titulo-lista-acolhidos">Lista de Usuários</h1>
-        <ul class="lista-acolhidos">
-            <%for (usuario of usuarios){%>
-                <li>
-                    <a href="/usuario/<%= usuario.id %>">
-                        Nome: <%= usuario.nome %> | 
-                        Tipo de Usuário: <%= usuario.tipo %>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
-    </main>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Usuários</h1>
+    <div class="columns is-multiline">
+        <%for (usuario of usuarios){%>
+          <div class="column is-3">
+            <div class="box">
+              <p class="is-size-4 has-text-weight-bold"><%=usuario.nome%></p>
+              <p class="heading"><%=usuario.tipo%></p>
+              <a href="/usuario/<%=usuario.id%>">Editar</a>
+            </div>
+          </div>
+        <% } %>
+    </div>
+  </div>
 </section>
