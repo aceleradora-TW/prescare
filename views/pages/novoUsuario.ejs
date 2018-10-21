@@ -1,30 +1,38 @@
 <%- contentFor('body') %>
 
-<form action="/usuario/novo" method="POST">
-    <div class="form-group row">
-        <label for="nome" class="col-sm-1 col-form-label col-form-label-lg">Nome:</label>
-        <input type="text" name="nome" id="nome" class="form-control form-control-lg col-sm-6">
-    </div>
+<section class="hero">
+  <section class="hero-body">
+    <div class="container">
+      <div class="column is-4 is-offset-4">
+        <form action="/usuario/novo" method="POST">
+            <div class="field">
+                <label for="nome" class="label">Nome:</label>
+                <input type="text" name="nome" id="nome" class="input">
+            </div>
 
-    <div class="form-group row">
-        <label for="senha" class="col-sm-1 col-form-label col-form-label-lg">Senha:</label>
-        <input type="password" name="senha" id="senha" class="form-control form-control-lg col-sm-6">
-    </div>
+            <div class="field">
+                <label for="senha" class="label">Senha:</label>
+                <input type="password" name="senha" id="senha" class="input">
+            </div>
 
-    <div class="form-group tipo-usuario">
-        Tipo de Usuário:
-        <input type="radio" name="tipo" value="clinica"> Clínica
-        <input type="radio" name="tipo" value="neurologista"> Neurologista
-        <input type="radio" name="tipo" value="farmaceutica"> Farmacêutica
-        <input type="radio" name="tipo" value="administrador"> Administrador
-        <input type="radio" name="tipo" value="neutro"> Neutro
-    </div>
+            <div class="field">
+              <label for="tipo" class="label">Tipo de Usuário:</label>
+              <div class="select">
+                <select id="tipo" name="tipo">
+                   <option value="clinica"> Clínica </option>
+                   <option value="neurologista"> Neurologista </option>
+                   <option value="farmaceutica"> Farmacêutica </option>
+                   <option value="administrador"> Administrador </option>
+                   <option value="neutro"> Neutro </option>
+                </select>
+              </div>
+            </div>
 
-    <div class="botoes">
-        <input type="submit" value="Salvar" class="form-control">
+            <div class="field">
+              <button class="button is-block is-fullwidth is-link" type="submit">Salvar</button>
+            </div>
+        </form>
+      </div>
     </div>
-</form>
-
-<div class="botoes">
-    <a href="/listaUsuarios" class="form-control">Cancelar</a>
-</div>
+  </section>
+</section>
