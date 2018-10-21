@@ -99,9 +99,11 @@
                                         }) %>
                                     </time>
                                 </span>
+                                <% if (user.tipo === "clinica" || user.tipo === "neurologista" || user.tipo === "administrador") { %>
                                 <span class="is-pulled-right">
                                   <a href="/acolhido/<%=acolhido.id%>/edit" class="button is-outlined is-dark"><small>Editar</small></a>
                                 </span>
+                                <% } %>
                             </div>
                         </div>
                     </div>
