@@ -12,9 +12,9 @@ services:
     command: 'node app.js'
 
   database:
-    build:
-      context: .
-      dockerfile: Dockerfile.database
+    image: postgres:10.10
+    volumes:
+      - "${PWD}/docker-db-backup:/backup"
     environment:
       POSTGRES_USER: 'postgres'
       POSOTGRES_PASSWORD: 'prescare'

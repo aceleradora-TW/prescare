@@ -1,5 +1,0 @@
-FROM postgres:10.10
-
-RUN mkdir -p /docker-entrypoint-initdb.d
-
-COPY ./docker-db-init/* docker-entrypoint-initdb.d
