@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    user: node
+    working_dir: /app
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: 'postgres://postgres:prescare@database:5432/prescare'
+    command: 'node app.js'
+
+  database:
+    image: postgres:10.10
+    volumes:
+      - "${PWD}/docker-db-backup:/backup"
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSOTGRES_PASSWORD: 'prescare'
+      POSTGRES_DB: 'prescare'
+
