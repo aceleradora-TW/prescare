@@ -1,5 +1,5 @@
 fileignoreconfig:
-- filename: docker-compose.yml
-  checksum: f8ae8b42b8cb3037f97b9f9ae4272a090c7be00c848e13d985bca128619966c7
+- filename: package-lock.json
+  checksum: 25edf73f6eac9ef1aaa7c93ba2b57fe955c449a29ea0af8da2df0a07d1d54de1
   ignore_detectors: []
 scopeconfig: []

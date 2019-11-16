@@ -42,6 +42,7 @@
     "method-override": "~2.3.6",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
+    "passport": "^0.4.0",
     "passport-facebook": "~2.1.1",
     "passport-google-oauth": "~1.0.0",
     "passport-local": "~1.0.0",
@@ -55,7 +56,6 @@
     "eslint-plugin-jest": "^21.17.0",
     "jest": "^23.0.1",
     "nodemon": "^1.17.4",
-    "npx": "^10.2.0",
-    "passport": "^0.4.0"
+    "npx": "^10.2.0"
   }
 }
