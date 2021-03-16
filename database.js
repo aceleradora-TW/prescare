@@ -22,8 +22,10 @@ module.exports = {
         $like: Op.like
       },
       dialectOptions: {
-        ssl: process.env.DATABASE_URL ? true : false,
-        rejectUnauthorized: false
+        ssl: {
+          require: true,
+          rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+        }
       }
     })
   }

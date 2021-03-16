@@ -47,8 +47,8 @@
     "passport-google-oauth": "~1.0.0",
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.4",
-    "pg": "^7.18.2",
-    "sequelize": "^4.44.4",
+    "pg": "^8.2.1",
+    "sequelize": "^5.21.10",
     "winston": "^2.4.5"
   },
   "devDependencies": {
