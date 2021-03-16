@@ -20,6 +20,9 @@ module.exports = {
         $lt: Op.lt,
         $lte: Op.lte,
         $like: Op.like
+      },
+      dialectOptions: {
+        ssl: true
       }
     })
   }
