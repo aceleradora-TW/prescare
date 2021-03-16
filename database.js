@@ -5,7 +5,7 @@ const { logger } = require('./logger')
 
 module.exports = {
   connect() {
-    return new Sequelize(DATABASE_URL, {
+    return new Sequelize(DATABASE_URL+"?sslmode=require", {
       dialect: 'postgres',
       define: {
         underscored: true,
@@ -22,7 +22,10 @@ module.exports = {
         $like: Op.like
       },
       dialectOptions: {
-        ssl: true
+        ssl: {
+          require: true,
+          rejectUnauthorized: false
+        }
       }
     })
   }
