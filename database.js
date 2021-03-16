@@ -7,7 +7,6 @@ module.exports = {
   connect() {
     return new Sequelize(DATABASE_URL, {
       dialect: 'postgres',
-      protocol: 'postgres',
       define: {
         underscored: true,
         timestamps: false
@@ -23,9 +22,7 @@ module.exports = {
         $like: Op.like
       },
       dialectOptions: {
-        ssl: {
-            rejectUnauthorized: false
-        }
+        ssl: true /* for SSL config since Heroku gives you this out of the box */
       }
     })
   }
