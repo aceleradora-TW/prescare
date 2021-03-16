@@ -22,7 +22,8 @@ module.exports = {
         $like: Op.like
       },
       dialectOptions: {
-        ssl: true /* for SSL config since Heroku gives you this out of the box */
+        ssl: process.env.DATABASE_URL ? true : false,
+        rejectUnauthorized: false
       }
     })
   }
