@@ -54,7 +54,7 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^21.27.2",
-    "jest": "^23.6.0",
+    "jest": "^29.3.1",
     "nodemon": "^1.19.4",
     "npx": "^10.2.2"
   }
